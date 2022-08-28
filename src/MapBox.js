@@ -1,6 +1,13 @@
-import React, { useState, useEffect } from "react";
-import Map, { Marker, Popup } from "react-map-gl";
+import React, { useState } from "react";
+import Map, {
+  Marker,
+  Popup,
+  NavigationControl,
+  FullscreenControl,
+  GeolocateControl,
+} from "react-map-gl";
 import { initialData } from "./actions/initialData";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function MapBox() {
   const [viewport, setViewport] = useState({
@@ -14,6 +21,8 @@ export default function MapBox() {
     setShowPopup(!showPopup);
   };
 
+  const API_KEY =
+    "pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA";
 
   return (
     <Map
@@ -21,7 +30,7 @@ export default function MapBox() {
       style={{ width: "100vw", height: "100vh" }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
       onMove={(e) => setViewport(e.viewport)}
-      mapboxAccessToken="pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdidTBsN2EwNnNsM29vbHZvdG1obnI1In0.wMM7GfZWtSaf32bEFpBowg"
+      mapboxAccessToken={API_KEY}
     >
       {initialData.busRoutes.map((addressm) =>
         addressm.route.map((i) => (
@@ -50,6 +59,9 @@ export default function MapBox() {
           </>
         ))
       )}
+      <NavigationControl position="bottom-right" />
+      <FullscreenControl />
+      <GeolocateControl />
     </Map>
   );
 }
