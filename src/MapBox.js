@@ -21,7 +21,7 @@ export default function MapBox() {
       style={{ width: "100vw", height: "100vh" }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
       onMove={(e) => setViewport(e.viewport)}
-      mapboxAccessToken="pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDc4YWI5b3owN3U2M29zOXVvYnB3amw4In0.XEiN9BrQ_IMtm9c3TAcJYQ"
+      mapboxAccessToken="pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdidTBsN2EwNnNsM29vbHZvdG1obnI1In0.wMM7GfZWtSaf32bEFpBowg"
     >
       {initialData.busRoutes.map((addressm) =>
         addressm.route.map((i) => (
