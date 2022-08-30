@@ -53,7 +53,7 @@ export default function MapBox() {
     },
   };
 
-  console.log(initialData)
+  console.log(initialData);
 
   return (
     <Map
@@ -88,7 +88,7 @@ export default function MapBox() {
           >
             <img
               style={{ height: 50, width: 50, cursor: "pointer" }}
-              src="https://xuonginthanhpho.com/wp-content/uploads/2020/03/map-marker-icon.png"
+              src="https://ecobus.danang.gov.vn/images/markerred.png"
               alt="marker"
               onClick={handleTogglePopup}
             />
