@@ -19,30 +19,13 @@ export default function MapBox() {
     zoom: 16,
   });
 
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const handleTogglePopup = () => {
     setShowPopup(!showPopup);
   };
 
   const API_KEY =
     "pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA";
-
-  // const checkDistance = () => {
-  //   axios
-  //     .get(
-  //       `https://api.mapbox.com/directions/v5/mapbox/cycling/108.22371699783464,16.082620606761385;108.22133029968681,16.082657169371853?geometries=geojson&access_token=${API_KEY}`
-  //     )
-  //     .then((res) => {
-  //       const distance = res.data.routes[0].geometry.coordinates;
-  //       console.log(distance);
-  //       setDataCood(distance);
-  //     })
-  //     .catch((error) => console.log(error));
-  // };
-
-  // useEffect(() => {
-  //   checkDistance();
-  // }, []);
 
   const dataLine = {
     type: "Feature",
@@ -53,8 +36,7 @@ export default function MapBox() {
     },
   };
 
-  console.log(initialData);
-
+  console.log(initialData)
   return (
     <Map
       {...viewport}
