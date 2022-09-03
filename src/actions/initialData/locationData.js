@@ -1,4 +1,4 @@
-export const initialData = {
+export const locationData = {
   busRoutes: [
     {
       id: "bus-routes-1",

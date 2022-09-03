@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import Map, {
   Marker,
   Popup,
@@ -6,62 +6,77 @@ import Map, {
   FullscreenControl,
   GeolocateControl,
   Source,
-  Layer,
-} from "react-map-gl";
-import { initialData } from "./actions/initialData";
-import "mapbox-gl/dist/mapbox-gl.css";
-import { lineArt } from "./lineArt";
+  Layer
+} from 'react-map-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import { locationData } from '../actions/initialData/locationData'
+import { roadMapData } from '../actions/initialData/roadMapData'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import SideBar from './SideBar'
+import { Box, IconButton } from '@mui/material'
+import { ChevronRight } from '@mui/icons-material'
 
 export default function MapBox() {
   const [viewport, setViewport] = useState({
     latitude: 16.082620606761385,
     longitude: 108.22371699783464,
-    zoom: 16,
-  });
+    zoom: 16
+  })
 
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false)
   const handleTogglePopup = () => {
-    setShowPopup(!showPopup);
-  };
+    setShowPopup(!showPopup)
+  }
 
   const API_KEY =
-    "pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA";
+    'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA'
 
   const dataLine = {
-    type: "Feature",
+    type: 'Feature',
     properties: {},
     geometry: {
-      type: "LineString",
-      coordinates: lineArt,
-    },
-  };
+      type: 'LineString',
+      coordinates: roadMapData
+    }
+  }
 
-  console.log(initialData)
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <Map
       {...viewport}
-      style={{ width: "100vw", height: "100vh" }}
+      style={{ width: '100vw', height: '100vh' }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
-      onMove={(e) => setViewport(e.viewport)}
+      onMove={e => setViewport(e.viewport)}
       mapboxAccessToken={API_KEY}
     >
+      <Box sx={{ mr: 1 }}>
+        <IconButton
+          size="large"
+          color="inherit"
+          onClick={() => setIsOpen(true)}
+        >
+          <ChevronRight />
+        </IconButton>
+      </Box>
+      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
       <Source id="polylineLayer" type="geojson" data={dataLine}>
         <Layer
           id="lineLayer"
           type="line"
           source="my-data"
           layout={{
-            "line-join": "round",
-            "line-cap": "round",
+            'line-join': 'round',
+            'line-cap': 'round'
           }}
           paint={{
-            "line-color": "rgb(255, 0, 0)",
-            "line-width": 5,
+            'line-color': 'rgb(255, 0, 0)',
+            'line-width': 5
           }}
         />
       </Source>
-      {initialData.busRoutes.map((addressm) =>
-        addressm.route.map((i) => (
+      {locationData.busRoutes.map(addressm =>
+        addressm.route.map(i => (
           <Marker
             key={i.id}
             latitude={i.location.lat}
@@ -69,7 +84,7 @@ export default function MapBox() {
             anchor="bottom"
           >
             <img
-              style={{ height: 50, width: 50, cursor: "pointer" }}
+              style={{ height: 50, width: 50, cursor: 'pointer' }}
               src="https://ecobus.danang.gov.vn/images/markerred.png"
               alt="marker"
               onClick={handleTogglePopup}
@@ -92,5 +107,5 @@ export default function MapBox() {
       <FullscreenControl />
       <GeolocateControl />
     </Map>
-  );
+  )
 }

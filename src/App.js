@@ -1,14 +1,12 @@
-import React from "react";
-import "./App.css";
-import MapBox from "./MapBox";
-import "mapbox-gl/dist/mapbox-gl.css";
+import React from 'react'
+import MapBox from './components/MapBox'
 
 function App() {
   return (
     <div className="App">
       <MapBox />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
