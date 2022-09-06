@@ -12,15 +12,15 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { locationData } from '../actions/initialData/locationData'
 import { roadMapData } from '../actions/initialData/roadMapData'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import SideBar from './SideBar'
+import SideBar from './SideBar/SideBar'
 import { Box, IconButton } from '@mui/material'
 import { ChevronRight } from '@mui/icons-material'
 
 export default function MapBox() {
   const [viewport, setViewport] = useState({
-    latitude: 16.082620606761385,
-    longitude: 108.22371699783464,
-    zoom: 16
+    latitude: 16.06045710530602,
+    longitude: 108.2097851153426,
+    zoom: 17
   })
 
   const [showPopup, setShowPopup] = useState(false)
@@ -60,7 +60,7 @@ export default function MapBox() {
         </IconButton>
       </Box>
       <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Source id="polylineLayer" type="geojson" data={dataLine}>
+      {/* <Source id="polylineLayer" type="geojson" data={dataLine}>
         <Layer
           id="lineLayer"
           type="line"
@@ -102,10 +102,10 @@ export default function MapBox() {
             )}
           </Marker>
         ))
-      )}
+      )} */}
       <NavigationControl position="bottom-right" />
-      <FullscreenControl />
-      <GeolocateControl />
+      <FullscreenControl position="bottom-right" />
+      <GeolocateControl position="bottom-right" />
     </Map>
   )
 }
