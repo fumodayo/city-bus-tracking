@@ -3,6 +3,8 @@ import { Drawer, IconButton, Typography, Box, Tab, styled } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { ChevronLeft } from '@mui/icons-material'
 import './SideBar.scss'
+import BusRouter from '../BusRouter/BusRouter'
+import FindRouter from '../FindRouter/FindRouter'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -13,10 +15,10 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }))
 
 const SideBar = ({ isOpen, setIsOpen }) => {
-  const [value, setValue] = useState(0)
+  const [tabValue, setTabValue] = useState('1')
 
-  const handleChange = (e, newValue) => {
-    setValue(newValue)
+  const handleChangeTab = (e, newTabValue) => {
+    setTabValue(newTabValue)
   }
 
   return (
@@ -27,31 +29,35 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           <ChevronLeft fontSize="large" />
         </IconButton>
       </DrawerHeader>
-      <Box sx={{ width: 400, p: 3 }}>
+      <Box
+        sx={{
+          width: 400,
+          p: 3
+        }}
+      >
         <Box
           style={{
             width: '100%',
             color: '#3597E4',
             backgroundColor: 'inherit',
-            fontSize: '1.5rem',
-            display: 'flex',
-            padding: '0 1rem',
-            justifyContent: 'center',
-            alignItems: 'center'
+            fontSize: '1.5rem'
           }}
         >
-          <TabContext value={value}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <TabList
-                onChange={handleChange}
-                aria-label="lab API tabs example"
-              >
-                <Tab label="Item One" value="1" />
-                <Tab label="Item Two" value="2" />
+          <TabContext value={tabValue}>
+            <Box>
+              <TabList onChange={handleChangeTab} aria-label="lab">
+                <Tab style={{ width: '50%' }} label="Tra cuu" value="1" />
+                <Tab style={{ width: '50%' }} label="Tim tuyen" value="2" />
               </TabList>
             </Box>
-            {/* <TabPanel value="1">Item One</TabPanel>
-            <TabPanel value="2">Item Two</TabPanel> */}
+            <Box>
+              <TabPanel style={{ paddingLeft: '0' }} value="1">
+                <BusRouter />
+              </TabPanel>
+              <TabPanel style={{ paddingLeft: '0' }} value="2">
+                <FindRouter />
+              </TabPanel>
+            </Box>
           </TabContext>
         </Box>
       </Box>
