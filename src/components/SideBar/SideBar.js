@@ -24,7 +24,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
   return (
     <Drawer variant="persistent" hideBackdrop={true} open={isOpen}>
       <DrawerHeader>
-        <Typography>System Bus Router Danang:</Typography>
+        <Typography>Hệ thống xe buýt Đà Nẵng</Typography>
         <IconButton onClick={() => setIsOpen(false)}>
           <ChevronLeft fontSize="large" />
         </IconButton>
@@ -46,8 +46,8 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           <TabContext value={tabValue}>
             <Box>
               <TabList onChange={handleChangeTab} aria-label="lab">
-                <Tab style={{ width: '50%' }} label="Tra cuu" value="1" />
-                <Tab style={{ width: '50%' }} label="Tim tuyen" value="2" />
+                <Tab style={{ width: '50%' }} label="Tra cứu" value="1" />
+                <Tab style={{ width: '50%' }} label="Tìm tuyến" value="2" />
               </TabList>
             </Box>
             <Box>

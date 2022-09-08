@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { Box, InputBase, Paper, Tab, Typography } from '@mui/material'
+import {
+  Box,
+  InputBase,
+  Paper,
+  Tab,
+  Typography,
+  Radio
+} from '@mui/material'
 
 const FindRouter = () => {
   const [tabValue, setTabValue] = useState('1')
@@ -21,14 +28,14 @@ const FindRouter = () => {
       >
         <InputBase
           sx={{ ml: 1, flex: 1 }}
-          placeholder="Nhap dia diem xuat phat"
+          placeholder="Nhập địa điểm xuất phát"
         />
         <InputBase
           sx={{ ml: 1, flex: 1 }}
-          placeholder="Nhap dia diem ket thuc"
+          placeholder="Nhập địa điểm kết thúc"
         />
       </Paper>
-      <Typography>SO TUYEN TOI DA:</Typography>
+      <Typography>SỐ TUYẾN TỐI ĐA:</Typography>
       <TabContext value={tabValue}>
         <Box>
           <TabList onChange={handleChangeTab} aria-label="lab">
@@ -38,7 +45,7 @@ const FindRouter = () => {
         </Box>
         <Box>
           <TabPanel style={{ paddingLeft: '0' }} value="1">
-            1 tuyen
+            <Radio style={{borderRadius: '20px'}}/>
           </TabPanel>
           <TabPanel style={{ paddingLeft: '0' }} value="2">
             2 tuyen

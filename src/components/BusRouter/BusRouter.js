@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { Box, InputBase, Paper, Tab } from '@mui/material'
+import { Box, InputBase, Paper, Tab, Typography } from '@mui/material'
+import { busRouterData } from './busRouterData'
 
 const BusRouter = () => {
   const [tabValue, setTabValue] = useState('1')
@@ -14,8 +15,8 @@ const BusRouter = () => {
       <TabContext value={tabValue}>
         <Box>
           <TabList onChange={handleChangeTab} aria-label="lab">
-            <Tab style={{ width: '50%' }} label="Tuyen" value="1" />
-            <Tab style={{ width: '50%' }} label="Tram Dung" value="2" />
+            <Tab style={{ width: '50%' }} label="Tuyến" value="1" />
+            <Tab style={{ width: '50%' }} label="Trạm dừng" value="2" />
           </TabList>
         </Box>
         <Box>
@@ -31,10 +32,13 @@ const BusRouter = () => {
             >
               <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Nhap ten tuyen..."
-                inputProps={{ 'aria-label': 'search bus router' }}
+                placeholder="Nhập tên tuyến..."
+                inputProps={{ 'aria-label': 'Tìm tuyến xe buýt' }}
               />
             </Paper>
+            {busRouterData.map(busrouter => (
+              <Typography>{busrouter.name}</Typography>
+            ))}
           </TabPanel>
           <TabPanel style={{ width: '50%', paddingLeft: '0' }} value="2">
             <Paper
@@ -48,8 +52,8 @@ const BusRouter = () => {
             >
               <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Nhap ten tram dung..."
-                inputProps={{ 'aria-label': 'search bus stop' }}
+                placeholder="Nhập tên trạm dừng..."
+                inputProps={{ 'aria-label': 'Tìm kiếm trạm dừng' }}
               />
             </Paper>
           </TabPanel>
