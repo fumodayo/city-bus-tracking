@@ -1,5 +1,6 @@
 import React from 'react'
 import MapBox from './components/MapBox'
+import './App.scss'
 
 function App() {
   return (

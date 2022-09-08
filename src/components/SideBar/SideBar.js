@@ -22,8 +22,13 @@ const SideBar = ({ isOpen, setIsOpen }) => {
   }
 
   return (
-    <Drawer variant="persistent" hideBackdrop={true} open={isOpen}>
-      <DrawerHeader>
+    <Drawer
+      variant="persistent"
+      sx={{ overflowY: 'none' }}
+      hideBackdrop={true}
+      open={isOpen}
+    >
+      <DrawerHeader sx={{ overflowY: 'none' }}>
         <Typography>Hệ thống xe buýt Đà Nẵng</Typography>
         <IconButton onClick={() => setIsOpen(false)}>
           <ChevronLeft fontSize="large" />
