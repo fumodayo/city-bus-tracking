@@ -1,15 +1,46 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { Box, InputBase, Paper, Tab, Typography } from '@mui/material'
+import { Box, InputBase, Paper, Tab, Checkbox } from '@mui/material'
 import { busRouterData } from './busRouterData'
 import './BusRouter.scss'
 
 const BusRouter = () => {
   const [tabValue, setTabValue] = useState('1')
-
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
   }
+
+  const [checkedRoute, setCheckedRoute] = useState('')
+  const handleChangeRoute = e => {
+    setCheckedRoute(e)
+  }
+
+  const [search, setSearch] = useState('')
+  const handleChangeRouteBySearch = e => {
+    setSearch(e)
+  }
+
+  const [searchRoute, setSearchRoute] = useState([])
+  const searchHandle = search => {
+    setSearch(search)
+    if (search !== '') {
+      const newSearchList = busRouterData.filter(route => {
+        return Object.values(route)
+          .join(' ')
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      })
+      setSearchRoute(newSearchList)
+    } else {
+      setSearchRoute(busRouterData)
+    }
+  }
+
+  useEffect(() => {
+    searchHandle(search)
+  }, [search])
+
+  // console.log(checkedRoute)
 
   return (
     <div className="sidebar-busroute">
@@ -41,15 +72,12 @@ const BusRouter = () => {
                 sx={{ ml: 1, flex: 1 }}
                 placeholder="Nhập tên tuyến..."
                 inputProps={{ 'aria-label': 'Tìm tuyến xe buýt' }}
+                value={search}
+                onChange={e => handleChangeRouteBySearch(e.target.value)}
               />
             </Paper>
-            <Box
-              sx={{
-                overflowY: 'none',
-                margin: '1rem 0rem 2.5rem 0rem'
-              }}
-            >
-              {busRouterData.map(busrouter => (
+            <div className="scroll-content">
+              {searchRoute.map(busrouter => (
                 <div
                   key={busrouter.id}
                   className="row align-items-center h-100"
@@ -61,19 +89,30 @@ const BusRouter = () => {
                   </div>
 
                   <div className="small-7">
+                    <p className="code-route">{busrouter.name}</p>
                     <p
-                      className="code-route"
+                      style={{
+                        color: '#000',
+                        fontSize: '14px',
+                        fontWeight: 600
+                      }}
                     >
-                      {busrouter.name}
-                    </p>
-                    <p style={{ color: '#000', fontSize: '18px' }}>
                       {busrouter.description}
                     </p>
+                  </div>
+                  <div className="small-2">
+                    <div className="text-center">
+                      <Checkbox
+                        value={busrouter.nameBusRouter}
+                        sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }}
+                        onChange={e => handleChangeRoute(e.target.value)}
+                      />
+                    </div>
                   </div>
                   <hr></hr>
                 </div>
               ))}
-            </Box>
+            </div>
           </TabPanel>
           <TabPanel style={{ width: '50%', paddingLeft: '0' }} value="2">
             <Paper

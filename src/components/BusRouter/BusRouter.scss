@@ -1,40 +1,48 @@
-.small-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-  position: relative;
-  width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+.scroll-content {
+  flex: 1;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 1rem 0rem 2.5rem 0rem;
+  max-width: 100%;
 
-  .route-no {
-    color: #fff;
-    font-size: 1.7rem;
-    background: #3597e4;
-    border-radius: 10px;
-    padding: 15px;
+  .small-3 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    .route-no {
+      color: #fff;
+      font-size: 22px;
+      background: #3597e4;
+      border-radius: 10px;
+      padding: 15px;
+    }
   }
-}
 
-.small-7 {
-  flex: 0 0 58.333333%;
-  max-width: 58.333333%;
-  position: relative;
-  width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  .small-7 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
 
-  .code-route {
-    font-weight: 700;
-    color: #000;
-    font-size: 18px;
+    .code-route {
+      font-weight: 700;
+      color: #000;
+      font-size: 14px;
+    }
   }
-}
 
-.small-2 {
-  flex: 0 0 16.666667%;
-  max-width: 16.666667%;
-  position: relative;
-  width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  .small-2 {
+    flex: 0 0 10%;
+    max-width: 10%;
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }

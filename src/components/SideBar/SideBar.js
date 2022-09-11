@@ -56,10 +56,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               </TabList>
             </Box>
             <Box>
-              <TabPanel style={{ paddingLeft: '0' }} value="1">
+              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="1">
                 <BusRouter />
               </TabPanel>
-              <TabPanel style={{ paddingLeft: '0' }} value="2">
+              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2">
                 <FindRouter />
               </TabPanel>
             </Box>
