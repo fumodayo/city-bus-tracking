@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Map, {
   Marker,
   Popup,
@@ -42,6 +42,18 @@ export default function MapBox() {
 
   const [isOpen, setIsOpen] = useState(true)
 
+  // useEffect(() => {
+  //   const handleLoadBusRoutes = () => {
+  //     const MarkerLocation = locationData.busRoutes.find(
+  //       i => i.nameBusRouter === 'R4A'
+  //     ).route
+  //   }
+  //   handleLoadBusRoutes()
+  // }, [])
+
+  const [checkedRoute, setCheckedRoute] = useState('R4A')
+
+  console.log(checkedRoute)
   return (
     <Map
       {...viewport}
@@ -59,7 +71,12 @@ export default function MapBox() {
           <ChevronRight />
         </IconButton>
       </Box>
-      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <SideBar
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        checkedRoute={checkedRoute}
+        setCheckedRoute={setCheckedRoute}
+      />
       {/* <Source id="polylineLayer" type="geojson" data={dataLine}>
         <Layer
           id="lineLayer"
@@ -75,8 +92,10 @@ export default function MapBox() {
           }}
         />
       </Source>
-      {locationData.busRoutes.map(addressm =>
-        addressm.route.map(i => (
+      */}
+      {locationData.busRoutes
+        .find(item => item.nameBusRouter === checkedRoute)
+        .route.map(i => (
           <Marker
             key={i.id}
             latitude={i.location.lat}
@@ -101,8 +120,7 @@ export default function MapBox() {
               </Popup>
             )}
           </Marker>
-        ))
-      )} */}
+        ))}
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
       <GeolocateControl position="bottom-right" />

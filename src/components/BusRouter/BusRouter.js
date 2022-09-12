@@ -4,13 +4,13 @@ import { Box, InputBase, Paper, Tab, Checkbox } from '@mui/material'
 import { busRouterData } from './busRouterData'
 import './BusRouter.scss'
 
-const BusRouter = () => {
+const BusRouter = ({checkedRoute, setCheckedRoute}) => {
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
   }
 
-  const [checkedRoute, setCheckedRoute] = useState('')
+  
   const handleChangeRoute = e => {
     setCheckedRoute(e)
   }
@@ -40,7 +40,7 @@ const BusRouter = () => {
     searchHandle(search)
   }, [search])
 
-  // console.log(checkedRoute)
+
 
   return (
     <div className="sidebar-busroute">
