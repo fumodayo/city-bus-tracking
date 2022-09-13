@@ -778,6 +778,62 @@ export const locationData = {
           }
         }
       ]
+    },
+    {
+      id: 'bus-routes-2',
+      nameBusRouter: 'LK01',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-3',
+      nameBusRouter: 'R16',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-4',
+      nameBusRouter: 'R17A',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-5',
+      nameBusRouter: 'R6A',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
     }
   ]
 }

@@ -42,16 +42,16 @@ export default function MapBox() {
 
   const [isOpen, setIsOpen] = useState(true)
 
-  // useEffect(() => {
-  //   const handleLoadBusRoutes = () => {
-  //     const MarkerLocation = locationData.busRoutes.find(
-  //       i => i.nameBusRouter === 'R4A'
-  //     ).route
-  //   }
-  //   handleLoadBusRoutes()
-  // }, [])
-
+  const [markerLocation, setMarkerLocation] = useState([])
   const [checkedRoute, setCheckedRoute] = useState('R4A')
+
+  useEffect(() => {
+    const markerLocation = locationData.busRoutes.find(
+      i => i.nameBusRouter === checkedRoute
+    ).route
+    if(markerLocation)
+    setMarkerLocation(markerLocation)
+  }, [checkedRoute])
 
   console.log(checkedRoute)
   return (
@@ -93,9 +93,8 @@ export default function MapBox() {
         />
       </Source>
       */}
-      {locationData.busRoutes
-        .find(item => item.nameBusRouter === checkedRoute)
-        .route.map(i => (
+      {markerLocation &&
+        markerLocation.map(i => (
           <Marker
             key={i.id}
             latitude={i.location.lat}
