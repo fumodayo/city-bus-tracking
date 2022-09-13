@@ -4,13 +4,12 @@ import { Box, InputBase, Paper, Tab, Checkbox } from '@mui/material'
 import { busRouterData } from './busRouterData'
 import './BusRouter.scss'
 
-const BusRouter = ({checkedRoute, setCheckedRoute}) => {
+const BusRouter = ({ checkedRoute, setCheckedRoute }) => {
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
   }
 
-  
   const handleChangeRoute = e => {
     setCheckedRoute(e)
   }
@@ -39,8 +38,6 @@ const BusRouter = ({checkedRoute, setCheckedRoute}) => {
   useEffect(() => {
     searchHandle(search)
   }, [search])
-
-
 
   return (
     <div className="sidebar-busroute">
@@ -103,6 +100,7 @@ const BusRouter = ({checkedRoute, setCheckedRoute}) => {
                   <div className="small-2">
                     <div className="text-center">
                       <Checkbox
+                        id={busrouter.id}
                         value={busrouter.nameBusRouter}
                         sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }}
                         onChange={e => handleChangeRoute(e.target.value)}

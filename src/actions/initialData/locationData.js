@@ -834,6 +834,34 @@ export const locationData = {
           }
         }
       ]
+    },
+    {
+      id: 'bus-routes-6',
+      nameBusRouter: 'R15',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-7',
+      nameBusRouter: 'TMF',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
     }
   ]
 }
