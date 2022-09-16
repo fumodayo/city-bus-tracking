@@ -103,7 +103,7 @@ export default function MapBox() {
           >
             <img
               style={{ height: 50, width: 50, cursor: 'pointer' }}
-              src="https://ecobus.danang.gov.vn/images/markerred.png"
+              src="https://ecobus.danang.gov.vn/images/icon_busstop.png"
               alt="marker"
               onClick={handleTogglePopup}
             />
