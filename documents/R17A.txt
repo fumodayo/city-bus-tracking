@@ -1,0 +1,464 @@
+[
+    {
+        "id": 4677255836,
+        "name": "Cảng Sông Hàn",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22370549433006",
+            "lat": "16.082773958349943"
+        }
+    },
+    {
+        "id": 61604132497,
+        "name": "06 Trần Phú",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22271153886453",
+            "lat": "16.081395860117937"
+        }
+    },
+    {
+        "id": 7095512634,
+        "name": "Trường Tiếu học Lý Tự Trọng-12 Lý Tự Trọng",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22115048623048",
+            "lat": "16.07765331110762"
+        }
+    },
+    {
+        "id": 58961103332,
+        "name": "08-10 Nguyễn Thị Minh Khai",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.21765676769978",
+            "lat": "16.076188474540192"
+        }
+    },
+    {
+        "id": 36774102806,
+        "name": "100-102 Nguyễn Thị Minh Khai",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.21832462537047",
+            "lat": "16.072344140583418"
+        }
+    },
+    {
+        "id": 19814627094,
+        "name": "Công viên Hùng Vương",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22182417199608",
+            "lat": "16.068642366461734"
+        }
+    },
+    {
+        "id": 79200303425,
+        "name": "Nhà thờ Con Gà",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22321909972446",
+            "lat": "16.066753413493753"
+        }
+    },
+    {
+        "id": 19421612098,
+        "name": "TTHC Quận Hải Châu",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22311443091253",
+            "lat": "16.061960199089512"
+        }
+    },
+    {
+        "id": 34349760361,
+        "name": "Cổ Viện Chàm",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22354659653496",
+            "lat": "16.060872850102175"
+        }
+    },
+    {
+        "id": 74661387957,
+        "name": "60 Núi Thành",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22029129285603",
+            "lat": "16.052927353829574"
+        }
+    },
+    {
+        "id": 7272936056,
+        "name": "Tường rào Quân Đội đường Núi Thành",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.6802264736572",
+            "lat": "15.413315140048537"
+        }
+    },
+    {
+        "id": 85564921607,
+        "name": "256-258 Núi Thành",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22145836954671",
+            "lat": "16.043532953500577"
+        }
+    },
+    {
+        "id": 63374886775,
+        "name": "382 Núi Thành",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22225401926565",
+            "lat": "16.039331556764157"
+        }
+    },
+    {
+        "id": 89274406862,
+        "name": "484 Núi Thành",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.2223002676993",
+            "lat": "16.035375205437436"
+        }
+    },
+    {
+        "id": 57521471073,
+        "name": "582 Núi Thành",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22279948858281",
+            "lat": "16.031388897749853"
+        }
+    },
+    {
+        "id": 27689504605,
+        "name": "Đối diện Metro",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22006370786733",
+            "lat": "16.025959640177753"
+        }
+    },
+    {
+        "id": 2021107817,
+        "name": "8V Tâm Trí-54 đường CMT8",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.21459783673527",
+            "lat": "16.023181943361312"
+        }
+    },
+    {
+        "id": 51554716863,
+        "name": "178 CMT 8",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.2098120388637",
+            "lat": "16.01976135974883"
+        }
+    },
+    {
+        "id": 68831466670,
+        "name": "307-309 CMT 8",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.20397977324117",
+            "lat": "16.016608874400287"
+        }
+    },
+    {
+        "id": 67413619436,
+        "name": "492 CMT 8",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.1975606174179",
+            "lat": "16.01425337622708"
+        }
+    },
+    {
+        "id": 54703590857,
+        "name": "172 Trường Sơn",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.17454093275921",
+            "lat": "16.012202390414718"
+        }
+    },
+    {
+        "id": 14197004235,
+        "name": "Đối diện trường Quân sự QK5-Trường Sơn",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.16776686480158",
+            "lat": "16.01227838886498"
+        }
+    },
+    {
+        "id": 3215075884,
+        "name": "Bệnh viện Hòa Vang-Trường Sơn",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.15200138277066",
+            "lat": "16.008935717246743"
+        }
+    },
+    {
+        "id": 35389166354,
+        "name": "Trường TH Lâm Quang Thự-Quảng Xương",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.13748431593731",
+            "lat": "15.997469827027116"
+        }
+    },
+    {
+        "id": 41999854086,
+        "name": "TTHC huyện Hòa Vang-Trường Sơn",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.13998505467812",
+            "lat": "15.986683592142883"
+        }
+    }
+]
+
+[
+    {
+        "id": 88857772336,
+        "name": "TTHC Huyện hòa Vang",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.13998505467812",
+            "lat": "15.986683592142883"
+        }
+    },
+    {
+        "id": 94873573897,
+        "name": "Đối diện Trường TH Lâm Quang Thự- Quảng Xương",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.13749496249625",
+            "lat": "15.997288490875231"
+        }
+    },
+    {
+        "id": 11039529389,
+        "name": "Đối diện Bệnh viện Hòa Vang",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "16.008556176372267",
+            "lat": "Trường Sơn"
+        }
+    },
+    {
+        "id": 25130760462,
+        "name": "108.15185197819635",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "16.010423308084633",
+            "lat": "Đối diện 399 Trường Sơn"
+        }
+    },
+    {
+        "id": 62685450491,
+        "name": "108.16340611665899",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "16.011820552249905",
+            "lat": "Đối diện 172 Trường Sơn"
+        }
+    },
+    {
+        "id": 20756998426,
+        "name": "108.17423525617426",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "16.013821510527222",
+            "lat": "417 đường CMT 8"
+        }
+    },
+    {
+        "id": 46717819080,
+        "name": "108.19803741136677",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "294-296 đường CMT 8",
+            "lat": "Công an Q.Cẩm Lệ"
+        }
+    },
+    {
+        "id": 84634214269,
+        "name": "16.016765793464277",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "151 CMT 8",
+            "lat": "108.20352592131697"
+        }
+    },
+    {
+        "id": 89405715014,
+        "name": "16.019446947754705",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "Đối diện BV Tâm Trí",
+            "lat": "108.20983446954644"
+        }
+    },
+    {
+        "id": 93012127802,
+        "name": "25 CMT8",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.21474470520941",
+            "lat": "16.022689695393453"
+        }
+    },
+    {
+        "id": 46161024959,
+        "name": "Metro",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.21994316254656",
+            "lat": "16.02552738536685"
+        }
+    },
+    {
+        "id": 23706387470,
+        "name": "569 Núi Thành",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22280137840015",
+            "lat": "16.031086542765298"
+        }
+    },
+    {
+        "id": 27441514408,
+        "name": "Trạm Y Tế Hòa Cường Nam",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "16.03355123482309",
+            "lat": "499 Núi Thành"
+        }
+    },
+    {
+        "id": 25133919515,
+        "name": "108.22272051347235",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "16.039519097611326",
+            "lat": "Đối diện 378 Núi Thành"
+        }
+    },
+    {
+        "id": 59199933537,
+        "name": "108.22197578518251",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "16.0439561531718",
+            "lat": "257-259 Núi Thành"
+        }
+    },
+    {
+        "id": 76479117111,
+        "name": "108.22157063886398",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "Núi Thành",
+            "lat": "THPT Tây Sơn"
+        }
+    },
+    {
+        "id": 13217079162,
+        "name": "16.04802962803331",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "21 Núi Thành",
+            "lat": "108.22098028682488"
+        }
+    },
+    {
+        "id": 69254625564,
+        "name": "16.051258890299472",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "Đài DRT",
+            "lat": "108.22053546397083"
+        }
+    },
+    {
+        "id": 85659281279,
+        "name": "Đối diện 256 Bạch Đằng",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22417100027464",
+            "lat": "16.062288900699265"
+        }
+    },
+    {
+        "id": 21152625359,
+        "name": "Đối diện chợ Hàn",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22503843311276",
+            "lat": "16.068070841766207"
+        }
+    },
+    {
+        "id": 70722743325,
+        "name": "Đối diện 57-59 Hùng Vương",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.21975415318367",
+            "lat": "16.068528832155213"
+        }
+    },
+    {
+        "id": 82424080459,
+        "name": "49-51 Nguyễn Thị Minh Khai",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.21835869259584",
+            "lat": "16.07300840645708"
+        }
+    },
+    {
+        "id": 83901227449,
+        "name": "Đối diện 04 Nguyễn Thị Minh Khai",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "106.70445594804701",
+            "lat": "10.789623770646633"
+        }
+    },
+    {
+        "id": 8711037498,
+        "name": "07 Lý Tự Trọng",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "106.70529569668011",
+            "lat": "10.782567042641572"
+        }
+    },
+    {
+        "id": 67468376370,
+        "name": "Đối diện 12 Bạch Đằng",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.2238613010832",
+            "lat": "16.079729219300837"
+        }
+    },
+    {
+        "id": 45214678872,
+        "name": "Cảng Sông Hàn",
+        "nameLocationBusRoute": "R17A",
+        "location": {
+            "lng": "108.22372981864719",
+            "lat": "16.082635973507056"
+        }
+    }
+]

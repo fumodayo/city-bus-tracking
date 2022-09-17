@@ -1,111 +1,500 @@
-- Chiều đi:  Bến xe Trung tâm Đà Nẵng - Tôn Đức Thắng - Cầu vượt ngã Ba Huế (tầng 3) - Điện Biên Phủ - Huỳnh Ngọc Huệ - Hà Huy Tập - Thái Thị Bôi - Lê Độ - Võ Văn Tần - Hải Phòng - Ông Ích Khiêm - Nguyễn Hoàng - Nguyễn Văn Linh -  Cầu Rồng - Võ Văn Kiệt - Hồ Nghinh - Hà Kỳ Ngộ - Nguyễn Sáng - Nguyễn Huy Chương - Hoàng Sa - Thọ Quang.
+[
+    {
+        "id": 92537656386,
+        "name": "Bến xe Trung Tâm Đà Nẵng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.17281361795985",
+            "lat": "16.056814766688944"
+        }
+    },
+    {
+        "id": 86116568073,
+        "name": "139-141 Tôn Đức Thắng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.17438461534329",
+            "lat": "16.058944628076326"
+        }
+    },
+    {
+        "id": 44886024148,
+        "name": "32-34 Huỳnh Ngọc Huệ",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.18429071001977",
+            "lat": "16.064331876935636"
+        }
+    },
+    {
+        "id": 76255538017,
+        "name": "142-144 Huỳnh Ngọc Huệ",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.18594323515403",
+            "lat": "16.059821630705596"
+        }
+    },
+    {
+        "id": 82308340194,
+        "name": "Đối diện 224 Hà Huy Tập",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.19122769282565",
+            "lat": "16.06113070962569"
+        }
+    },
+    {
+        "id": 32358993576,
+        "name": "133-135 Hà Huy Tập",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.19204372590026",
+            "lat": "16.064920115847144"
+        }
+    },
+    {
+        "id": 12055787191,
+        "name": "257-259 Thái Thị Bôi",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.19336321240783",
+            "lat": "16.06840829230227"
+        }
+    },
+    {
+        "id": 64677543361,
+        "name": "65-67 Thái Thị Bôi",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.19949837007948",
+            "lat": "16.068544872784788"
+        }
+    },
+    {
+        "id": 2371180908,
+        "name": "09 Võ Văn Tân",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.20261067563168",
+            "lat": "16.06696363528391"
+        }
+    },
+    {
+        "id": 68440475157,
+        "name": "461 Hải Phòng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.20504210175947",
+            "lat": "16.068416516411386"
+        }
+    },
+    {
+        "id": 85539117539,
+        "name": "Ga Đà Nẵng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.20942758826695",
+            "lat": "16.071756349855292"
+        }
+    },
+    {
+        "id": 98858001194,
+        "name": "231 Hải Phòng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21101699706456",
+            "lat": "16.071468036643587"
+        }
+    },
+    {
+        "id": 45508765147,
+        "name": "248 - 250 Ông Ích Khiêm",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21390619891525",
+            "lat": "16.067899473420763"
+        }
+    },
+    {
+        "id": 12930656759,
+        "name": "Siêu thị Big C",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21409925604962",
+            "lat": "16.067110622995642"
+        }
+    },
+    {
+        "id": 95077375739,
+        "name": "162-164 Nguyễn Hoàng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21409377748238",
+            "lat": "16.061436779292432"
+        }
+    },
+    {
+        "id": 84317773434,
+        "name": "155-157 Nguyễn Văn Linh",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21519324494503",
+            "lat": "16.060464341370025"
+        }
+    },
+    {
+        "id": 48166599730,
+        "name": "Đối diện chùa Phước Ninh",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.2176892710729",
+            "lat": "16.060832496119318"
+        }
+    },
+    {
+        "id": 13783641504,
+        "name": "11-15 Nguyễn Văn Linh",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21658125234805",
+            "lat": "16.060627260397577"
+        }
+    },
+    {
+        "id": 70512678558,
+        "name": "Đầu cầu Rồng đường Võ Văn Kiệt",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.23341461324446",
+            "lat": "16.064090696504742"
+        }
+    },
+    {
+        "id": 73673096959,
+        "name": "Trụ điện CS 08T3 VVK",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.23594318357189",
+            "lat": "16.061943539188867"
+        }
+    },
+    {
+        "id": 24618054156,
+        "name": "Gần ngã tư Hồ Nghinh ~ Dương Đình Nghệ",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24710832686712",
+            "lat": "16.070471704647055"
+        }
+    },
+    {
+        "id": 43525170902,
+        "name": "Đối diện quán HaiYan đường Hồ Nghinh",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24351760816909",
+            "lat": "16.072718559204404"
+        }
+    },
+    {
+        "id": 33976955017,
+        "name": "Đối diện trường Chính trị",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24336523515419",
+            "lat": "16.07892800768678"
+        }
+    },
+    {
+        "id": 44845207665,
+        "name": "Motel Hương Việt đường Hà Kỳ Ngộ",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.2445471700796",
+            "lat": "16.082456223225332"
+        }
+    },
+    {
+        "id": 17105041922,
+        "name": "Đối diện 78 Nguyễn Sáng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24690215049759",
+            "lat": "16.086607619992254"
+        }
+    },
+    {
+        "id": 6399052588,
+        "name": "Bãi tắm Mân Thái",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.25047632201611",
+            "lat": "16.091643723446907"
+        }
+    },
+    {
+        "id": 75082605952,
+        "name": "Thọ Quang",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.25580184257181",
+            "lat": "16.102846282608617"
+        }
+    }
+]
 
-- Chiều về:  Thọ Quang - Hoàng Sa - Nguyễn Huy Chương - Nguyễn Sáng - Hà Kỳ Ngộ - Hồ Nghinh - Võ Văn Kiệt - Cầu Rồng - Nguyễn Văn Linh - Nguyễn Hoàng - Ông Ích Khiêm - Hải Phòng - Võ Văn Tần - Lê Độ - Thái Thị Bôi - Hà Huy Tập - Huỳnh Ngọc Huệ - Điện Biên Phủ - Cầu vượt ngã Ba Huế (tầng 3) - Tôn Đức Thắng - Bến xe Trung tâm Đà Nẵng.
-
-Điểm dừng chiều đi:
-
-
-Bến xe Trung Tâm Đà Nẵng,16.056814766688944, 108.17281361795985,
-139-141 Tôn Đức Thắng,16.058944628076326, 108.17438461534329
-
-32-34 Huỳnh Ngọc Huệ,16.064331876935636, 108.18429071001977,
-
-142-144 Huỳnh Ngọc Huệ,16.059821630705596, 108.18594323515403,
-
-Đối diện 224 Hà Huy Tập,16.06113070962569, 108.19122769282565,
-
-133-135 Hà Huy Tập,16.064920115847144, 108.19204372590026,
-
-257-259 Thái Thị Bôi,16.06840829230227, 108.19336321240783,
-
-65-67 Thái Thị Bôi,16.068544872784788, 108.19949837007948,
-
-09 Võ Văn Tân,16.06696363528391, 108.20261067563168,
-
-461 Hải Phòng,16.068416516411386, 108.20504210175947,
-
-Ga Đà Nẵng,16.071756349855292, 108.20942758826695,
-
-231 Hải Phòng,16.071468036643587, 108.21101699706456,
-
-248 - 250 Ông Ích Khiêm,16.067899473420763, 108.21390619891525,
-
-Siêu thị Big C,16.067110622995642, 108.21409925604962,
-
-162-164 Nguyễn Hoàng,16.061436779292432, 108.21409377748238,
-
-155-157 Nguyễn Văn Linh,16.060464341370025, 108.21519324494503,
-
-Đối diện chùa Phước Ninh,16.060832496119318, 108.2176892710729,
-
-11-15 Nguyễn Văn Linh,16.060627260397577, 108.21658125234805,
-
-Đầu cầu Rồng đường Võ Văn Kiệt,16.064090696504742, 108.23341461324446,
-20.Vườn cây Cảnh Công Thuấn
-
-Trụ điện CS 08T3 VVK,16.061943539188867, 108.23594318357189,
-
-Gần ngã tư Hồ Nghinh ~ Dương Đình Nghệ,16.070471704647055, 108.24710832686712,
-Đối diện quán HaiYan đường Hồ Nghinh,16.072718559204404, 108.24351760816909,
-Đối diện trường Chính trị,16.07892800768678, 108.24336523515419,
-
-Motel Hương Việt đường Hà Kỳ Ngộ,16.082456223225332, 108.2445471700796,
-Đối diện 78 Nguyễn Sáng,16.086607619992254, 108.24690215049759,
-
-Bãi tắm Mân Thái,16.091643723446907, 108.25047632201611,
-
-Thọ Quang,16.102846282608617, 108.25580184257181 
-
--------------------------------------------------------------------------------------------
-
-Điểm dừng chiều về:
-
-Thọ Quang,16.102846282608617,108.25580184257181,
-
-Đối diện bãi tắm Mân Thái,16.091128805759496, 108.24940638109608,
-
-Đối diện 75 Nguyễn Sáng,16.08689070710179, 108.24643337007961,
-
-Đối diện với Motel Hương Việt,13.77195379428213, 109.24187887931073,
-Trường Chính trị,16.079512573234176, 108.24303110175947,
-
-148-150 Hồ Nghinh,16.07299896295162, 108.24306801425864,
-
-Đối diện Golden Light Hotel,16.068554634046123, 108.24304008172129,
-Trụ điện CS49T1 đường Võ Văn Kiệt,16.062454898784427, 108.23852651055692,
-Quán nhậu Bé Hằng,16.065269777097893, 108.24672009895822,
-
-Đầu cầu Rồng đường Võ Văn Kiệt,16.062219061261505, 108.23329346894832,
-Công viên Nguyễn Văn Linh + Lê Đình Dương,16.061271666210708, 108.22121699990872,
-Chùa Phước Ninh,16.061085195929504, 108.21828815334159,
-
-102-104 Nguyễn Văn Linh,16.060839400543106, 108.21396275288534,
-153-155 Nguyễn Hoàng,16.06114218582193, 108.21389493244605,
-
-293 Ông Ích Khiêm,16.06904272401065, 108.21396153330342,
-
-239-241 Ông Ích Khiêm,16.069537252543135, 108.21400160816907,
-
-196 Hải Phòng,16.07150732222067, 108.21124889521379,
-
-Ga Đà Nẵng,16.0717048023125, 108.20959924964009,
-
-354 Hải Phòng,16.068100944104046, 108.20533860816906,
-
-78-80 Võ Văn Tân,16.067122032741878, 108.2025320351541,
-
-96-98 Thái Thị Bôi,16.068644188869797, 108.19904278727353,
-
-304 -306 Thái Thi Bôi,16.068374782645325, 108.1925678817213,
-
-Trường Tiểu học Huỳnh Ngọc Huệ,16.06387596082208, 108.19251388772965,
-238-240 Hà Huy Tập,16.060920570217267, 108.1906497272138,
-
-145-145b Huỳnh Ngọc Huệ,16.06131942961838, 108.18544909467644,
-37-39 Huỳnh Ngọc Huệ,16.06396744753392, 108.1844460909749,
-
-128 Tôn Đức Thắng,16.060062648905962, 108.176540736519,
-
-Bến xe Trung Tâm Đà Nẵng,16.056814766688944, 108.17281361795985
-
-
+[
+    {
+        "id": 12302050934,
+        "name": "Thọ Quang",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.25580184257181",
+            "lat": "16.102846282608617"
+        }
+    },
+    {
+        "id": 22906703510,
+        "name": "Đối diện bãi tắm Mân Thái",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24940638109608",
+            "lat": "16.091128805759496"
+        }
+    },
+    {
+        "id": 52358201690,
+        "name": "Đối diện 75 Nguyễn Sáng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24643337007961",
+            "lat": "16.08689070710179"
+        }
+    },
+    {
+        "id": 28080390250,
+        "name": "Đối diện với Motel Hương Việt",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "109.24187887931073",
+            "lat": "13.77195379428213"
+        }
+    },
+    {
+        "id": 58153209857,
+        "name": "Trường Chính trị",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24303110175947",
+            "lat": "16.079512573234176"
+        }
+    },
+    {
+        "id": 73004104654,
+        "name": "148-150 Hồ Nghinh",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24306801425864",
+            "lat": "16.07299896295162"
+        }
+    },
+    {
+        "id": 57828676579,
+        "name": "Đối diện Golden Light Hotel",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24304008172129",
+            "lat": "16.068554634046123"
+        }
+    },
+    {
+        "id": 35607638666,
+        "name": "Trụ điện CS49T1 đường Võ Văn Kiệt",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.23852651055692",
+            "lat": "16.062454898784427"
+        }
+    },
+    {
+        "id": 55318060007,
+        "name": "Quán nhậu Bé Hằng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.24672009895822",
+            "lat": "16.065269777097893"
+        }
+    },
+    {
+        "id": 75443160026,
+        "name": "Đầu cầu Rồng đường Võ Văn Kiệt",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.23329346894832",
+            "lat": "16.062219061261505"
+        }
+    },
+    {
+        "id": 9805423952,
+        "name": "Công viên Nguyễn Văn Linh + Lê Đình Dương",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.22121699990872",
+            "lat": "16.061271666210708"
+        }
+    },
+    {
+        "id": 49031956067,
+        "name": "Chùa Phước Ninh",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21828815334159",
+            "lat": "16.061085195929504"
+        }
+    },
+    {
+        "id": 11411501923,
+        "name": "102-104 Nguyễn Văn Linh",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21396275288534",
+            "lat": "16.060839400543106"
+        }
+    },
+    {
+        "id": 23874569540,
+        "name": "153-155 Nguyễn Hoàng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21389493244605",
+            "lat": "16.06114218582193"
+        }
+    },
+    {
+        "id": 96307260788,
+        "name": "293 Ông Ích Khiêm",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21396153330342",
+            "lat": "16.06904272401065"
+        }
+    },
+    {
+        "id": 59545139789,
+        "name": "239-241 Ông Ích Khiêm",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21400160816907",
+            "lat": "16.069537252543135"
+        }
+    },
+    {
+        "id": 37915889333,
+        "name": "196 Hải Phòng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.21124889521379",
+            "lat": "16.07150732222067"
+        }
+    },
+    {
+        "id": 38495511168,
+        "name": "Ga Đà Nẵng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.20959924964009",
+            "lat": "16.0717048023125"
+        }
+    },
+    {
+        "id": 60943340003,
+        "name": "354 Hải Phòng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.20533860816906",
+            "lat": "16.068100944104046"
+        }
+    },
+    {
+        "id": 91858796144,
+        "name": "78-80 Võ Văn Tân",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.2025320351541",
+            "lat": "16.067122032741878"
+        }
+    },
+    {
+        "id": 74504109497,
+        "name": "96-98 Thái Thị Bôi",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.19904278727353",
+            "lat": "16.068644188869797"
+        }
+    },
+    {
+        "id": 32486759065,
+        "name": "304 -306 Thái Thi Bôi",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.1925678817213",
+            "lat": "16.068374782645325"
+        }
+    },
+    {
+        "id": 21921815530,
+        "name": "Trường Tiểu học Huỳnh Ngọc Huệ",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.19251388772965",
+            "lat": "16.06387596082208"
+        }
+    },
+    {
+        "id": 61067471996,
+        "name": "238-240 Hà Huy Tập",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.1906497272138",
+            "lat": "16.060920570217267"
+        }
+    },
+    {
+        "id": 99406080068,
+        "name": "145-145b Huỳnh Ngọc Huệ",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.18544909467644",
+            "lat": "16.06131942961838"
+        }
+    },
+    {
+        "id": 8716625312,
+        "name": "37-39 Huỳnh Ngọc Huệ",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.1844460909749",
+            "lat": "16.06396744753392"
+        }
+    },
+    {
+        "id": 47347092055,
+        "name": "128 Tôn Đức Thắng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.176540736519",
+            "lat": "16.060062648905962"
+        }
+    },
+    {
+        "id": 76833318550,
+        "name": "Bến xe Trung Tâm Đà Nẵng",
+        "nameLocationBusRoute": "R15",
+        "location": {
+            "lng": "108.17281361795985",
+            "lat": "16.056814766688944"
+        }
+    }
+]

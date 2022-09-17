@@ -2,8 +2,8 @@ export const locationData = {
   busRoutes: [
     {
       id: 'bus-routes-1',
-      nameBusRouter: 'R4A',
-      name: 'R4A: Cảng Sông Hàn - Hòa Tiến',
+      nameBusRouter: 'R16',
+      name: 'R16: Kim Liên-Đại học Việt Hàn',
       title: 'Vé lượt: 6.000 đồng/lượt',
       directionRoute: 'turn',
       route: [
@@ -480,9 +480,9 @@ export const locationData = {
       ]
     },
     {
-      id: 'bus-routes-8',
-      nameBusRouter: 'R4A',
-      name: 'R4A: Cảng Sông Hàn - Hòa Tiến',
+      id: 'bus-routes-2',
+      nameBusRouter: 'R16',
+      name: 'R16: Kim Liên-Đại học Việt Hàn',
       title: 'Vé lượt: 6.000 đồng/lượt.',
       directionRoute: 'return',
       route: [
@@ -979,22 +979,10 @@ export const locationData = {
       ]
     },
     {
-      id: 'bus-routes-2',
-      nameBusRouter: 'LK01',
-      route: [
-        {
-          id: 45813725054,
-          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
-          location: {
-            lng: '108.11956612202619',
-            lat: '16.13548288580201'
-          }
-        }
-      ]
-    },
-    {
       id: 'bus-routes-3',
-      nameBusRouter: 'R16',
+      nameBusRouter: 'LK01',
+      name: 'LK01: Huế - Đà Nẵng',
+      directionRoute: 'turn',
       route: [
         {
           id: 45813725054,
@@ -1008,7 +996,9 @@ export const locationData = {
     },
     {
       id: 'bus-routes-4',
-      nameBusRouter: 'R17A',
+      nameBusRouter: 'LK01',
+      name: 'LK01: Huế - Đà Nẵng',
+      directionRoute: 'return',
       route: [
         {
           id: 45813725054,
@@ -1022,7 +1012,9 @@ export const locationData = {
     },
     {
       id: 'bus-routes-5',
-      nameBusRouter: 'R6A',
+      nameBusRouter: 'R4A',
+      name: 'R4A: Cảng Sông Hàn-Hòa Tiến',
+      directionRoute: 'turn',
       route: [
         {
           id: 45813725054,
@@ -1036,7 +1028,9 @@ export const locationData = {
     },
     {
       id: 'bus-routes-6',
-      nameBusRouter: 'R15',
+      nameBusRouter: 'R4A',
+      name: 'R4A: Cảng Sông Hàn-Hòa Tiến',
+      directionRoute: 'return',
       route: [
         {
           id: 45813725054,
@@ -1050,7 +1044,373 @@ export const locationData = {
     },
     {
       id: 'bus-routes-7',
+      nameBusRouter: 'R17A',
+      name: 'R17A: Cảng Sông Hàn-TTHC huyện Hòa Vang',
+      directionRoute: 'turn',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-8',
+      nameBusRouter: 'R17A',
+      name: 'R17A: Cảng Sông Hàn-TTHC huyện Hòa Vang',
+      directionRoute: 'return',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-9',
+      nameBusRouter: 'R6A',
+      name: 'R6A: Bến xe Trung tâm-Khu du lịch Non Nước',
+      directionRoute: 'turn',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-10',
+      nameBusRouter: 'R6A',
+      name: 'R6A: Bến xe Trung tâm-Khu du lịch Non Nước',
+      directionRoute: 'return',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-11',
+      nameBusRouter: 'R15',
+      name: 'R15: Bến xe Trung tâm-Thọ Quang',
+      directionRoute: 'turn',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-12',
+      nameBusRouter: 'R15',
+      name: 'R15: Bến xe Trung tâm-Thọ Quang',
+      directionRoute: 'return',
+      route: [
+        {
+          id: 45813725054,
+          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          location: {
+            lng: '108.11956612202619',
+            lat: '16.13548288580201'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-13',
       nameBusRouter: 'TMF',
+      name: 'TMF: Vũng Thùng-Công Viên 29/3-CV Biển Đông',
+      directionRoute: 'turn',
+      route: [
+        {
+          id: 42491940119,
+          name: 'Bãi đỗ xe P&R Bùi Dương Lịch',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.23233528172148',
+            lat: '16.089596452027948'
+          }
+        },
+        {
+          id: 92147724575,
+          name: 'Lô 113 Dương Vân Nga',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.23170445604995',
+            lat: '16.09018038297482'
+          }
+        },
+        {
+          id: 83606794816,
+          name: '210 Khúc Hạo',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.23283006584099',
+            lat: '16.09327339881682'
+          }
+        },
+        {
+          id: 54683792341,
+          name: 'Đối diện chung cư 4A Chu Huy Mân',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.2319829985396',
+            lat: '16.100049134307707'
+          }
+        },
+        {
+          id: 57880506167,
+          name: 'Chân cầu Thuận Phước (đường Lê Đức Thọ)',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.23087227107288',
+            lat: '16.100525238489954'
+          }
+        },
+        {
+          id: 1932850421,
+          name: 'Số 159 đường 3/2',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.21670569652743',
+            lat: '16.086920793564335'
+          }
+        },
+        {
+          id: 29418607097,
+          name: 'Trạm xe buýt Xuân Diệu',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.22105918673635',
+            lat: '16.087018063297776'
+          }
+        },
+        {
+          id: 91830857830,
+          name: 'Số 49 đường 3/2',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.22111312166172',
+            lat: '16.084826247894345'
+          }
+        },
+        {
+          id: 14104910878,
+          name: 'Số 6A Trần Phú',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.2231909309155',
+            lat: '16.082106568396938'
+          }
+        },
+        {
+          id: 66985654400,
+          name: 'Số 12 Lý Tự Trọng',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.22209592906462',
+            lat: '16.07817493273762'
+          }
+        },
+        {
+          id: 20565837196,
+          name: 'Số 08 Nguyễn Thị Minh Khai',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.21763531055706',
+            lat: '16.076188474539133'
+          }
+        },
+        {
+          id: 37674366828,
+          name: 'Bệnh viện C Đà Nẵng',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.21658562590044',
+            lat: '16.072705602420314'
+          }
+        },
+        {
+          id: 47506026529,
+          name: 'Số 29 Ngô Gia Tự',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.2175443486467',
+            lat: '16.070805189691914'
+          }
+        },
+        {
+          id: 53718845820,
+          name: 'Chợ Cồn',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: '108.21468171497818Số 331 Hùng Vương',
+            lat: '16.067980985813527'
+          }
+        },
+        {
+          id: 30362281048,
+          name: '16.066778972305134',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Số 85 Lý Thái Tổ',
+            lat: '108.2107167259004'
+          }
+        },
+        {
+          id: 2396878999,
+          name: '16.066298124006618',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Công viên 29/3',
+            lat: '108.20859256584069'
+          }
+        },
+        {
+          id: 1966615052,
+          name: '16.066076801988924',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'UBND phường Chính Gián',
+            lat: '108.20533927107289'
+          }
+        },
+        {
+          id: 96315555509,
+          name: '16.06475128762013',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Số 88 Nguyễn Tri Phương',
+            lat: '108.2030287044675'
+          }
+        },
+        {
+          id: 25619196315,
+          name: '16.062143499123433',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Số 387-389 Nguyễn Văn Linh',
+            lat: '108.20408398172111'
+          }
+        },
+        {
+          id: 65247996409,
+          name: '16.059178541339158',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Bệnh viện Hoàn Mỹ',
+            lat: '108.2080105235123'
+          }
+        },
+        {
+          id: 82717239342,
+          name: '16.059796941539833',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Số 153-155 Nguyễn Văn Linh',
+            lat: '108.21021013727344'
+          }
+        },
+        {
+          id: 41724044165,
+          name: '16.060494850414624',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Đối diện chủa Phước Ninh',
+            lat: '108.21516454124362'
+          }
+        },
+        {
+          id: 9885023032,
+          name: '16.060894356549625',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Số 11 Nguyễn Văn Linh (trước Ẩm thực Trần)',
+            lat: '108.21762489805799'
+          }
+        },
+        {
+          id: 67805395264,
+          name: '16.06097580039456',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Cầu Rồng (đầu cầu Rồng đường Võ Văn Kiệt)',
+            lat: '108.22246362351218'
+          }
+        },
+        {
+          id: 21683093671,
+          name: '16.06118181278639',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Vườn cây cảnh Công Thuấn',
+            lat: '108.23364302697073'
+          }
+        },
+        {
+          id: 93630554469,
+          name: '16.041610815914282',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Trụ điện CS 08T3 VWK (Gần White Sand Hotel)',
+            lat: '108.24332927371525'
+          }
+        },
+        {
+          id: 20400228825,
+          name: '16.06303028818767',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Nhà hàng Mỹ Hạnh',
+            lat: '108.24229179706441'
+          }
+        },
+        {
+          id: 342527798,
+          name: '16.065766888384157',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Gần Công viên Biển Đông',
+            lat: '108.2455055536616'
+          }
+        },
+        {
+          id: 95365410212,
+          name: '16.069358473241',
+          nameLocationBusRoute: 'TMF',
+          location: {
+            lng: 'Công viên Biển Đông (bãi tắm số 3)',
+            lat: '108.24539691463528'
+          }
+        }
+      ]
+    },
+    {
+      id: 'bus-routes-14',
+      nameBusRouter: 'TMF',
+      name: 'TMF: Vũng Thùng-Công Viên 29/3-CV Biển Đông',
       directionRoute: 'return',
       route: [
         {
@@ -1321,275 +1681,6 @@ export const locationData = {
           location: {
             lng: '108.23233528172148',
             lat: '16.089462440418036'
-          }
-        }
-      ]
-    },
-
-    {
-      id: 'bus-routes-11',
-      nameBusRouter: 'TMF',
-      directionRoute: 'turn',
-      route: [
-        {
-          id: 42491940119,
-          name: 'Bãi đỗ xe P&R Bùi Dương Lịch',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.23233528172148',
-            lat: '16.089596452027948'
-          }
-        },
-        {
-          id: 92147724575,
-          name: 'Lô 113 Dương Vân Nga',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.23170445604995',
-            lat: '16.09018038297482'
-          }
-        },
-        {
-          id: 83606794816,
-          name: '210 Khúc Hạo',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.23283006584099',
-            lat: '16.09327339881682'
-          }
-        },
-        {
-          id: 54683792341,
-          name: 'Đối diện chung cư 4A Chu Huy Mân',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.2319829985396',
-            lat: '16.100049134307707'
-          }
-        },
-        {
-          id: 57880506167,
-          name: 'Chân cầu Thuận Phước (đường Lê Đức Thọ)',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.23087227107288',
-            lat: '16.100525238489954'
-          }
-        },
-        {
-          id: 1932850421,
-          name: 'Số 159 đường 3/2',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.21670569652743',
-            lat: '16.086920793564335'
-          }
-        },
-        {
-          id: 29418607097,
-          name: 'Trạm xe buýt Xuân Diệu',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.22105918673635',
-            lat: '16.087018063297776'
-          }
-        },
-        {
-          id: 91830857830,
-          name: 'Số 49 đường 3/2',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.22111312166172',
-            lat: '16.084826247894345'
-          }
-        },
-        {
-          id: 14104910878,
-          name: 'Số 6A Trần Phú',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.2231909309155',
-            lat: '16.082106568396938'
-          }
-        },
-        {
-          id: 66985654400,
-          name: 'Số 12 Lý Tự Trọng',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.22209592906462',
-            lat: '16.07817493273762'
-          }
-        },
-        {
-          id: 20565837196,
-          name: 'Số 08 Nguyễn Thị Minh Khai',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.21763531055706',
-            lat: '16.076188474539133'
-          }
-        },
-        {
-          id: 37674366828,
-          name: 'Bệnh viện C Đà Nẵng',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.21658562590044',
-            lat: '16.072705602420314'
-          }
-        },
-        {
-          id: 47506026529,
-          name: 'Số 29 Ngô Gia Tự',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.2175443486467',
-            lat: '16.070805189691914'
-          }
-        },
-        {
-          id: 53718845820,
-          name: 'Chợ Cồn',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.21468171497818Số 331 Hùng Vương',
-            lat: '16.067980985813527'
-          }
-        },
-        {
-          id: 30362281048,
-          name: '16.066778972305134',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Số 85 Lý Thái Tổ',
-            lat: '108.2107167259004'
-          }
-        },
-        {
-          id: 2396878999,
-          name: '16.066298124006618',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Công viên 29/3',
-            lat: '108.20859256584069'
-          }
-        },
-        {
-          id: 1966615052,
-          name: '16.066076801988924',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'UBND phường Chính Gián',
-            lat: '108.20533927107289'
-          }
-        },
-        {
-          id: 96315555509,
-          name: '16.06475128762013',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Số 88 Nguyễn Tri Phương',
-            lat: '108.2030287044675'
-          }
-        },
-        {
-          id: 25619196315,
-          name: '16.062143499123433',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Số 387-389 Nguyễn Văn Linh',
-            lat: '108.20408398172111'
-          }
-        },
-        {
-          id: 65247996409,
-          name: '16.059178541339158',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Bệnh viện Hoàn Mỹ',
-            lat: '108.2080105235123'
-          }
-        },
-        {
-          id: 82717239342,
-          name: '16.059796941539833',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Số 153-155 Nguyễn Văn Linh',
-            lat: '108.21021013727344'
-          }
-        },
-        {
-          id: 41724044165,
-          name: '16.060494850414624',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Đối diện chủa Phước Ninh',
-            lat: '108.21516454124362'
-          }
-        },
-        {
-          id: 9885023032,
-          name: '16.060894356549625',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Số 11 Nguyễn Văn Linh (trước Ẩm thực Trần)',
-            lat: '108.21762489805799'
-          }
-        },
-        {
-          id: 67805395264,
-          name: '16.06097580039456',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Cầu Rồng (đầu cầu Rồng đường Võ Văn Kiệt)',
-            lat: '108.22246362351218'
-          }
-        },
-        {
-          id: 21683093671,
-          name: '16.06118181278639',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Vườn cây cảnh Công Thuấn',
-            lat: '108.23364302697073'
-          }
-        },
-        {
-          id: 93630554469,
-          name: '16.041610815914282',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Trụ điện CS 08T3 VWK (Gần White Sand Hotel)',
-            lat: '108.24332927371525'
-          }
-        },
-        {
-          id: 20400228825,
-          name: '16.06303028818767',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Nhà hàng Mỹ Hạnh',
-            lat: '108.24229179706441'
-          }
-        },
-        {
-          id: 342527798,
-          name: '16.065766888384157',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Gần Công viên Biển Đông',
-            lat: '108.2455055536616'
-          }
-        },
-        {
-          id: 95365410212,
-          name: '16.069358473241',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: 'Công viên Biển Đông (bãi tắm số 3)',
-            lat: '108.24539691463528'
           }
         }
       ]

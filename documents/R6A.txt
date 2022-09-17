@@ -1,0 +1,546 @@
+[
+    {
+        "id": 74185081170,
+        "name": "Bến Xe Trung Tâm Đà Nẵng",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.17255076349097",
+            "lat": "16.056546707526298"
+        }
+    },
+    {
+        "id": 90970909221,
+        "name": "44-46 Định Liệt",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.17407051888388",
+            "lat": "16.050780443734883"
+        }
+    },
+    {
+        "id": 36280109037,
+        "name": "Đối Diện 36-38 Nguyễn Đình Tứ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.17897394070707",
+            "lat": "16.05060919602556"
+        }
+    },
+    {
+        "id": 3584305759,
+        "name": "396 Tôn Đản",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18223062074273",
+            "lat": "16.04561575174085"
+        }
+    },
+    {
+        "id": 54313275708,
+        "name": "Trước THCS Nguyễn Công Tứ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.1834760638913",
+            "lat": "16.041761460005684"
+        }
+    },
+    {
+        "id": 6425632807,
+        "name": "618 Tôn Đản",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18403992852737",
+            "lat": "16.037076749017444"
+        }
+    },
+    {
+        "id": 26684790324,
+        "name": "43-45 Lê Trọng Tấn",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18640952853627",
+            "lat": "16.036646470831215"
+        }
+    },
+    {
+        "id": 45964210225,
+        "name": "862 Trường Chỉnh",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18783127249087",
+            "lat": "16.03416893458896"
+        }
+    },
+    {
+        "id": 84668751668,
+        "name": "Đối Diện Tường Rào Cty Chuyển Giao Công Nghệ K&H",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.201605302108",
+            "lat": "16.01750480345072"
+        }
+    },
+    {
+        "id": 91358449416,
+        "name": "Đối Diện 591-593 Trường Chỉnh",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.19328083351927",
+            "lat": "16.02186968465581"
+        }
+    },
+    {
+        "id": 81427850044,
+        "name": "303-305 Lê Ð",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.19593058350954",
+            "lat": "16.020348910443243"
+        }
+    },
+    {
+        "id": 32724856645,
+        "name": "203-205 Lê Ð",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20127284104092",
+            "lat": "16.02214480384408"
+        }
+    },
+    {
+        "id": 78935140120,
+        "name": "117 Lê Đại Hành",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20413987820609",
+            "lat": "16.023196663821288"
+        }
+    },
+    {
+        "id": 59477450033,
+        "name": "Đối Diện 60 Lê Đại Hành",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20704728545141",
+            "lat": "16.024024153354"
+        }
+    },
+    {
+        "id": 69335729775,
+        "name": "Đối Diện Vietronimex",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20881901638086",
+            "lat": "16.029780558977258"
+        }
+    },
+    {
+        "id": 58654954787,
+        "name": "513-515 Nguyễn Hữu Thọ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2091708322403",
+            "lat": "16.032925112304987"
+        }
+    },
+    {
+        "id": 96160267484,
+        "name": "Bệnh Viện Vinmec",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.21032037170467",
+            "lat": "16.037885218062495"
+        }
+    },
+    {
+        "id": 17490760532,
+        "name": "382 Núi Thành",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.22193149454841",
+            "lat": "16.03919168636934"
+        }
+    },
+    {
+        "id": 24767781690,
+        "name": "Công Viên Châu Á",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.22552100121993",
+            "lat": "16.0381492828506"
+        }
+    },
+    {
+        "id": 98226209917,
+        "name": "Đối Diện Helio Center",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.22381925114794",
+            "lat": "16.035979595840683"
+        }
+    },
+    {
+        "id": 86852012881,
+        "name": "Đối Diện Siêu Thị Lotte",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2287742224447",
+            "lat": "16.03457182474727"
+        }
+    },
+    {
+        "id": 78945214121,
+        "name": "Đối Diện Chùa Bà Đa",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24187511914056",
+            "lat": "16.037294345116663"
+        }
+    },
+    {
+        "id": 56971553182,
+        "name": "177 Ngũ Hành Sơn",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24223794038508",
+            "lat": "16.040445446244036"
+        }
+    },
+    {
+        "id": 29637134925,
+        "name": "310-312 Ngũ Hành Sơn",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24056932046521",
+            "lat": "16.04271930059801"
+        }
+    },
+    {
+        "id": 3448077026,
+        "name": "Tường Rào Cộng Đoàn TI",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24143278027668",
+            "lat": "16.04521550367426"
+        }
+    },
+    {
+        "id": 49781267181,
+        "name": "Đối Diện 31-93 Phan Tứ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24241287655195",
+            "lat": "16.04542476878549"
+        }
+    },
+    {
+        "id": 18636664358,
+        "name": "Pullman Resort",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2494749499536",
+            "lat": "16.039685781613255"
+        }
+    },
+    {
+        "id": 26290786726,
+        "name": "0lalani Resort",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.25429102858155",
+            "lat": "16.029739784191015"
+        }
+    },
+    {
+        "id": 28486828726,
+        "name": "Đối Diện Crowne Plaza",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.25521496414669",
+            "lat": "16.027597560634092"
+        }
+    },
+    {
+        "id": 77195537461,
+        "name": "Bãi Tắm Sơn Thủy",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2612770720921",
+            "lat": "16.015122781766966"
+        }
+    }
+]
+
+[
+    {
+        "id": 45798943743,
+        "name": "Bãi tắm Sơn Thủy",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2612770720921",
+            "lat": "16.015122781766966"
+        }
+    },
+    {
+        "id": 45825542054,
+        "name": "Crowne plaza",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2552588601655",
+            "lat": "16.027766721262175"
+        }
+    },
+    {
+        "id": 66669219044,
+        "name": "Fusion maia resort",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.25388840037341",
+            "lat": "16.030833827865607"
+        }
+    },
+    {
+        "id": 27166697600,
+        "name": "Pullman Resort",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24956688759082",
+            "lat": "16.039835810191605"
+        }
+    },
+    {
+        "id": 83181516244,
+        "name": "121 Phan Tứ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24758021291514",
+            "lat": "16.04691551055902"
+        }
+    },
+    {
+        "id": 70315632457,
+        "name": "Tường rào trường Trung cấp nghề số 5",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.23916766481852",
+            "lat": "16.04631418838364"
+        }
+    },
+    {
+        "id": 51890019942,
+        "name": "135-137 Ngũ Hành Sơn",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.23929111170031",
+            "lat": "16.045366697136547"
+        }
+    },
+    {
+        "id": 50589824213,
+        "name": "370 Ngũ Hành Sơn",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24178983829844",
+            "lat": "16.04038713769116"
+        }
+    },
+    {
+        "id": 44788036001,
+        "name": "Chùa Bà Đa",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.24067187102689",
+            "lat": "16.037235656901935"
+        }
+    },
+    {
+        "id": 13719452430,
+        "name": "Siêu thị Lotte",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.22880491832095",
+            "lat": "16.03477686497518"
+        }
+    },
+    {
+        "id": 47016421851,
+        "name": "Helio center",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2240278698016",
+            "lat": "16.036362781966044"
+        }
+    },
+    {
+        "id": 32604356680,
+        "name": "Công viên Châu Á",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2266941321326",
+            "lat": "16.03845972161026"
+        }
+    },
+    {
+        "id": 94539843020,
+        "name": "Quảng trường 2 Tháng 9",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.2226891886166",
+            "lat": "16.041311739309428"
+        }
+    },
+    {
+        "id": 7272978660,
+        "name": "Trước Công ty TNHH Kiểm toán và Kế toán AAC",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.21473709951198",
+            "lat": "16.04015465219853"
+        }
+    },
+    {
+        "id": 626027827,
+        "name": "300-302 Nguyễn Hữu Thọ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20978387780943",
+            "lat": "16.036277051641694"
+        }
+    },
+    {
+        "id": 8624634469,
+        "name": "430-432 Nguyễn Hữu Thọ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20883097273669",
+            "lat": "16.033013092331796"
+        }
+    },
+    {
+        "id": 51200246064,
+        "name": "Viettronimex",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20844317297122",
+            "lat": "16.0304704441411"
+        }
+    },
+    {
+        "id": 24997171155,
+        "name": "40-42 Lê Đại Hành",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20751315821",
+            "lat": "16.024312674874658"
+        }
+    },
+    {
+        "id": 25940070414,
+        "name": "86 Lê Đại Hành",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20434284715418",
+            "lat": "16.023430461922842"
+        }
+    },
+    {
+        "id": 97004575857,
+        "name": "172-174 Lê Đại Hành",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20106373315022",
+            "lat": "16.022470809935378"
+        }
+    },
+    {
+        "id": 70690368124,
+        "name": "328-330 Lê Đại Hành",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.19582307393559",
+            "lat": "16.020656584379388"
+        }
+    },
+    {
+        "id": 92946957192,
+        "name": "591-593 Trường Chinh",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.19342197043777",
+            "lat": "16.022170950662794"
+        }
+    },
+    {
+        "id": 38903499122,
+        "name": "Tường rào công ty chuyển giao công nghệ K&H",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.20170907307387",
+            "lat": "16.017484258218378"
+        }
+    },
+    {
+        "id": 7659391428,
+        "name": "517-519 Trường Chỉnh",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18827656308136",
+            "lat": "16.03400265520137"
+        }
+    },
+    {
+        "id": 8255542105,
+        "name": "64-66 Lê Trọng Tấn",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18597315353632",
+            "lat": "16.03666980102886"
+        }
+    },
+    {
+        "id": 77125021650,
+        "name": "489 Tôn Đẳn",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18359900045432",
+            "lat": "16.041267823703212"
+        }
+    },
+    {
+        "id": 38368178717,
+        "name": "413-415 Tôn Đản",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.18255655273518",
+            "lat": "16.04455428371741"
+        }
+    },
+    {
+        "id": 21217248760,
+        "name": "14-16 Nguyễn Đình Tứ",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.17948135756792",
+            "lat": "16.050846602107583"
+        }
+    },
+    {
+        "id": 49043958507,
+        "name": "Đối diện 44-46 Đỉnh Liệt",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.17421863820776",
+            "lat": "16.050754876658385"
+        }
+    },
+    {
+        "id": 49842891889,
+        "name": "Bến xe Trung tâm Đà Nẵng",
+        "nameLocationBusRoute": "R6A",
+        "location": {
+            "lng": "108.17254904465618",
+            "lat": "16.056620217918223"
+        }
+    }
+]
+
