@@ -31,29 +31,28 @@ export default function MapBox() {
   const API_KEY =
     'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA'
 
-  const dataLine = {
-    type: 'Feature',
-    properties: {},
-    geometry: {
-      type: 'LineString',
-      coordinates: roadMapData
-    }
-  }
+  // const dataLine = {
+  //   type: 'Feature',
+  //   properties: {},
+  //   geometry: {
+  //     type: 'LineString',
+  //     coordinates: roadMapData
+  //   }
+  // }
 
   const [isOpen, setIsOpen] = useState(true)
 
-  const [markerLocation, setMarkerLocation] = useState([])
-  const [checkedRoute, setCheckedRoute] = useState('R4A')
+  // const [markerLocation, setMarkerLocation] = useState([])
+  // const [checkedRoute, setCheckedRoute] = useState('R4A')
 
-  useEffect(() => {
-    const markerLocation = locationData.busRoutes.find(
-      i => i.nameBusRouter === checkedRoute
-    ).route
-    if(markerLocation)
-    setMarkerLocation(markerLocation)
-  }, [checkedRoute])
+  // useEffect(() => {
+  //   const markerLocation = locationData.busRoutes.find(
+  //     i => i.nameBusRouter === checkedRoute
+  //   ).route
+  //   if(markerLocation)
+  //   setMarkerLocation(markerLocation)
+  // }, [checkedRoute])
 
-  console.log(checkedRoute)
   return (
     <Map
       {...viewport}
@@ -74,8 +73,8 @@ export default function MapBox() {
       <SideBar
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        checkedRoute={checkedRoute}
-        setCheckedRoute={setCheckedRoute}
+        // checkedRoute={checkedRoute}
+        // setCheckedRoute={setCheckedRoute}
       />
       {/* <Source id="polylineLayer" type="geojson" data={dataLine}>
         <Layer
@@ -93,7 +92,7 @@ export default function MapBox() {
         />
       </Source>
       */}
-      {markerLocation &&
+      {/* {markerLocation &&
         markerLocation.map(i => (
           <Marker
             key={i.id}
@@ -119,7 +118,7 @@ export default function MapBox() {
               </Popup>
             )}
           </Marker>
-        ))}
+        ))} */}
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
       <GeolocateControl position="bottom-right" />

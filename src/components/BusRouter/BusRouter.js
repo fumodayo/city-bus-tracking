@@ -4,23 +4,22 @@ import { Box, InputBase, Paper, Tab, Checkbox } from '@mui/material'
 import { busRouterData } from './busRouterData'
 import './BusRouter.scss'
 
-const BusRouter = ({ checkedRoute, setCheckedRoute }) => {
+const BusRouter = () => {
+  // Handle event tab Tuyen / Tram dung
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
   }
 
-  const handleChangeRoute = e => {
-    setCheckedRoute(e)
-  }
-
+  // Get word input to search
   const [search, setSearch] = useState('')
-  const handleChangeRouteBySearch = e => {
+  const handleChangeWordSearch = e => {
     setSearch(e)
   }
 
+  // Handle filter search
   const [searchRoute, setSearchRoute] = useState([])
-  const searchHandle = search => {
+  const handleSearchListRoute = search => {
     setSearch(search)
     if (search !== '') {
       const newSearchList = busRouterData.filter(route => {
@@ -35,8 +34,19 @@ const BusRouter = ({ checkedRoute, setCheckedRoute }) => {
     }
   }
 
+  // Handle multi checkbox
+  const handleChangeCheckboxRoute = e => {
+    const { value: routeName, checked } = e.target
+    let tempRoute = searchRoute.map(route =>
+      route.nameBusRouter === routeName
+        ? { ...route, isChecked: checked }
+        : route
+    )
+    setSearchRoute(tempRoute)
+  }
+
   useEffect(() => {
-    searchHandle(search)
+    handleSearchListRoute(search)
   }, [search])
 
   return (
@@ -70,7 +80,7 @@ const BusRouter = ({ checkedRoute, setCheckedRoute }) => {
                 placeholder="Nhập tên tuyến..."
                 inputProps={{ 'aria-label': 'Tìm tuyến xe buýt' }}
                 value={search}
-                onChange={e => handleChangeRouteBySearch(e.target.value)}
+                onChange={e => handleChangeWordSearch(e.target.value)}
               />
             </Paper>
             <div className="scroll-content">
@@ -102,8 +112,9 @@ const BusRouter = ({ checkedRoute, setCheckedRoute }) => {
                       <Checkbox
                         id={busrouter.id}
                         value={busrouter.nameBusRouter}
+                        onChange={handleChangeCheckboxRoute}
+                        checked={busrouter?.isChecked || false}
                         sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }}
-                        onChange={e => handleChangeRoute(e.target.value)}
                       />
                     </div>
                   </div>
