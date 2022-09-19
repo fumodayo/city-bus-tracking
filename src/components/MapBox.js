@@ -41,17 +41,20 @@ export default function MapBox() {
   // }
 
   const [isOpen, setIsOpen] = useState(true)
+  const [searchRoute, setSearchRoute] = useState([])
 
-  // const [markerLocation, setMarkerLocation] = useState([])
-  // const [checkedRoute, setCheckedRoute] = useState('R4A')
+  const [markerLocation, setMarkerLocation] = useState([])
 
-  // useEffect(() => {
-  //   const markerLocation = locationData.busRoutes.find(
-  //     i => i.nameBusRouter === checkedRoute
-  //   ).route
-  //   if(markerLocation)
-  //   setMarkerLocation(markerLocation)
-  // }, [checkedRoute])
+  useEffect(() => {
+    const getRoutesCheckBox = searchRoute
+      .filter(i => i.isChecked)
+      .map(i => i.nameBusRouter)
+    const markerLocation = locationData.busRoutes.filter(i => {
+      return getRoutesCheckBox.indexOf(i.nameBusRouter) !== -1
+    }).filter(i => i.directionRoute === 'turn')
+    setMarkerLocation(markerLocation)
+    // console.log(markerLocation)
+  }, [searchRoute])
 
   return (
     <Map
@@ -73,8 +76,8 @@ export default function MapBox() {
       <SideBar
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        // checkedRoute={checkedRoute}
-        // setCheckedRoute={setCheckedRoute}
+        searchRoute={searchRoute}
+        setSearchRoute={setSearchRoute}
       />
       {/* <Source id="polylineLayer" type="geojson" data={dataLine}>
         <Layer

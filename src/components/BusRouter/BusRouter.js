@@ -4,7 +4,7 @@ import { Box, InputBase, Paper, Tab, Checkbox } from '@mui/material'
 import { busRouterData } from './busRouterData'
 import './BusRouter.scss'
 
-const BusRouter = () => {
+const BusRouter = ({ searchRoute, setSearchRoute }) => {
   // Handle event tab Tuyen / Tram dung
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
@@ -18,7 +18,6 @@ const BusRouter = () => {
   }
 
   // Handle filter search
-  const [searchRoute, setSearchRoute] = useState([])
   const handleSearchListRoute = search => {
     setSearch(search)
     if (search !== '') {
