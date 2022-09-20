@@ -15,6 +15,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import SideBar from './SideBar/SideBar'
 import { Box, IconButton } from '@mui/material'
 import { ChevronRight } from '@mui/icons-material'
+import busStop from '../images/icon_busstop.png'
 
 export default function MapBox() {
   const [viewport, setViewport] = useState({
@@ -49,11 +50,13 @@ export default function MapBox() {
     const getRoutesCheckBox = searchRoute
       .filter(i => i.isChecked)
       .map(i => i.nameBusRouter)
-    const markerLocation = locationData.busRoutes.filter(i => {
-      return getRoutesCheckBox.indexOf(i.nameBusRouter) !== -1
-    }).filter(i => i.directionRoute === 'turn')
+    const markerLocation = locationData.busRoutes
+      .filter(i => {
+        return getRoutesCheckBox.indexOf(i.nameBusRouter) !== -1
+      })
+      .filter(i => i.directionRoute === 'turn')
+      .map(i => i.route)
     setMarkerLocation(markerLocation)
-    // console.log(markerLocation)
   }, [searchRoute])
 
   return (
@@ -95,33 +98,35 @@ export default function MapBox() {
         />
       </Source>
       */}
-      {/* {markerLocation &&
-        markerLocation.map(i => (
-          <Marker
-            key={i.id}
-            latitude={i.location.lat}
-            longitude={i.location.lng}
-            anchor="bottom"
-          >
-            <img
-              style={{ height: 50, width: 50, cursor: 'pointer' }}
-              src="https://ecobus.danang.gov.vn/images/icon_busstop.png"
-              alt="marker"
-              onClick={handleTogglePopup}
-            />
-            {showPopup && (
-              <Popup
-                key={i.id}
-                latitude={i.location.lat}
-                longitude={i.location.lng}
-                anchor="top-right"
-                closeOnClick={false}
-              >
-                {i.name}
-              </Popup>
-            )}
-          </Marker>
-        ))} */}
+      {markerLocation &&
+        markerLocation.map(i =>
+          i.map(i => (
+            <Marker
+              key={i.id}
+              latitude={i.location.lat}
+              longitude={i.location.lng}
+              anchor="bottom"
+            >
+              <img
+                style={{ height: 40, width: 30, cursor: 'pointer' }}
+                src={busStop}
+                alt="marker"
+                onClick={handleTogglePopup}
+              />
+              {showPopup && (
+                <Popup
+                  key={i.id}
+                  latitude={i.location.lat}
+                  longitude={i.location.lng}
+                  anchor="top-right"
+                  closeOnClick={false}
+                >
+                  {i.name}
+                </Popup>
+              )}
+            </Marker>
+          ))
+        )}
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
       <GeolocateControl position="bottom-right" />
