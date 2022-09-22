@@ -14,7 +14,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar
 }))
 
-const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute }) => {
+const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute, allBusStop }) => {
   const [tabValue, setTabValue] = useState('1')
 
   const handleChangeTab = (e, newTabValue) => {
@@ -60,6 +60,7 @@ const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute }) => {
                 <BusRouter
                   searchRoute={searchRoute}
                   setSearchRoute={setSearchRoute}
+                  allBusStop={allBusStop}
                 />
               </TabPanel>
               <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2">

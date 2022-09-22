@@ -62,6 +62,18 @@ export default function MapBox() {
     //   i.every(i =>typeof(i.name) === 'string')))
   }, [searchRoute])
 
+  const [allBusStop, setAllBusStop] = useState([])
+  useEffect(() => {
+    const handleGetAllBusStop = () => {
+      const getAllBusStopInRoutes = locationData.busRoutes.map(i => i.route)
+      let allDataBusStop = []
+      allDataBusStop = [...allDataBusStop, getAllBusStopInRoutes].flat(2)
+      return allDataBusStop
+    }
+    const getData = handleGetAllBusStop()
+    setAllBusStop(getData)
+  }, [])
+
   return (
     <Map
       {...viewport}
@@ -84,6 +96,7 @@ export default function MapBox() {
         setIsOpen={setIsOpen}
         searchRoute={searchRoute}
         setSearchRoute={setSearchRoute}
+        allBusStop={allBusStop}
       />
       {/* <Source id="polylineLayer" type="geojson" data={dataLine}>
         <Layer

@@ -4,7 +4,7 @@ import { Box, InputBase, Paper, Tab, Checkbox } from '@mui/material'
 import { busRouterData } from './busRouterData'
 import './BusRouter.scss'
 
-const BusRouter = ({ searchRoute, setSearchRoute }) => {
+const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
   // Handle event tab Tuyen / Tram dung
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
@@ -122,7 +122,7 @@ const BusRouter = ({ searchRoute, setSearchRoute }) => {
               ))}
             </div>
           </TabPanel>
-          <TabPanel style={{ width: '50%', paddingLeft: '0' }} value="2">
+          <TabPanel style={{ paddingLeft: '0' }} value="2">
             <Paper
               component="form"
               sx={{
@@ -144,6 +144,34 @@ const BusRouter = ({ searchRoute, setSearchRoute }) => {
                 inputProps={{ 'aria-label': 'Tìm kiếm trạm dừng' }}
               />
             </Paper>
+            <div className="scroll-content">
+              {allBusStop.map((busstop,index) => (
+                <div
+                  key={index}
+                  className="row align-items-center h-100"
+                >
+                  <div className="small-3">
+                    <div className="route-no text-center">
+                      <span>{index+1}</span>
+                    </div>
+                  </div>
+
+                  <div className="small-7">
+                    <p
+                      style={{
+                        color: '#000',
+                        fontSize: '16px',
+                        fontWeight: 600
+                      }}
+                    >
+                      {busstop.name}
+                    </p>
+                  </div>
+                  
+                  <hr></hr>
+                </div>
+              ))}
+            </div>
           </TabPanel>
         </Box>
       </TabContext>
