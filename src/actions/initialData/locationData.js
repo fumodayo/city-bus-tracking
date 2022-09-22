@@ -1282,7 +1282,7 @@ export const locationData = {
       directionRoute: 'return',
       route: [
         {
-          id: 88857772336,
+          id: 55793403782,
           name: 'TTHC Huyện hòa Vang',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1291,7 +1291,7 @@ export const locationData = {
           }
         },
         {
-          id: 94873573897,
+          id: 40516563760,
           name: 'Đối diện Trường TH Lâm Quang Thự- Quảng Xương',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1300,71 +1300,62 @@ export const locationData = {
           }
         },
         {
-          id: 11039529389,
-          name: 'Đối diện Bệnh viện Hòa Vang',
+          id: 92751490323,
+          name: 'Đối diện Bệnh viện Hòa Vang-Trường Sơn',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '16.008556176372267',
-            lat: 'Trường Sơn'
+            lng: '108.15185197819635',
+            lat: '16.008556176372267'
           }
         },
         {
-          id: 25130760462,
-          name: '108.15185197819635',
+          id: 7081971696,
+          name: 'Đối diện 399 Trường Sơn',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '16.010423308084633',
-            lat: 'Đối diện 399 Trường Sơn'
+            lng: '108.16340611665899',
+            lat: '16.010423308084633'
           }
         },
         {
-          id: 62685450491,
-          name: '108.16340611665899',
+          id: 55961800941,
+          name: 'Đối diện 172 Trường Sơn',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '16.011820552249905',
-            lat: 'Đối diện 172 Trường Sơn'
+            lng: '108.17423525617426',
+            lat: '16.011820552249905'
           }
         },
         {
-          id: 20756998426,
-          name: '108.17423525617426',
+          id: 23911866279,
+          name: '417 đường CMT 8',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '16.013821510527222',
-            lat: '417 đường CMT 8'
+            lng: '108.19803741136677',
+            lat: '16.013821510527222'
           }
         },
         {
-          id: 46717819080,
-          name: '108.19803741136677',
+          id: 61882344428,
+          name: 'Công an Q.Cẩm Lệ-294-296 đường CMT-8',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '294-296 đường CMT 8',
-            lat: 'Công an Q.Cẩm Lệ'
+            lng: '108.20352592131697',
+            lat: '16.016765793464277'
           }
         },
         {
-          id: 84634214269,
-          name: '16.016765793464277',
+          id: 18526132259,
+          name: '151 CMT 8',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '151 CMT 8',
-            lat: '108.20352592131697'
+            lng: '108.20983446954644',
+            lat: '16.019446947754705'
           }
         },
         {
-          id: 89405715014,
-          name: '16.019446947754705',
-          nameLocationBusRoute: 'R17A',
-          location: {
-            lng: 'Đối diện BV Tâm Trí',
-            lat: '108.20983446954644'
-          }
-        },
-        {
-          id: 93012127802,
-          name: '25 CMT8',
+          id: 97353290422,
+          name: 'Đối diện BV Tâm Trí-25 CMT8',
           nameLocationBusRoute: 'R17A',
           location: {
             lng: '108.21474470520941',
@@ -1372,7 +1363,7 @@ export const locationData = {
           }
         },
         {
-          id: 46161024959,
+          id: 22758430561,
           name: 'Metro',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1381,7 +1372,7 @@ export const locationData = {
           }
         },
         {
-          id: 23706387470,
+          id: 95582325615,
           name: '569 Núi Thành',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1390,62 +1381,53 @@ export const locationData = {
           }
         },
         {
-          id: 27441514408,
-          name: 'Trạm Y Tế Hòa Cường Nam',
+          id: 44986223320,
+          name: 'Trạm Y Tế Hòa Cường Nam-499 Núi Thành',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '16.03355123482309',
-            lat: '499 Núi Thành'
+            lng: '108.22272051347235',
+            lat: '16.03355123482309'
           }
         },
         {
-          id: 25133919515,
-          name: '108.22272051347235',
+          id: 70529170858,
+          name: 'Đối diện 378 Núi Thành',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '16.039519097611326',
-            lat: 'Đối diện 378 Núi Thành'
+            lng: '108.22197578518251',
+            lat: '16.039519097611326'
           }
         },
         {
-          id: 59199933537,
-          name: '108.22197578518251',
+          id: 88223681897,
+          name: '257-259 Núi Thành',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '16.0439561531718',
-            lat: '257-259 Núi Thành'
+            lng: '108.22157063886398',
+            lat: '16.0439561531718'
           }
         },
         {
-          id: 76479117111,
-          name: '108.22157063886398',
+          id: 99036189111,
+          name: 'THPT Tây Sơn-Núi Thành',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: 'Núi Thành',
-            lat: 'THPT Tây Sơn'
+            lng: '108.22098028682488',
+            lat: '16.04802962803331'
           }
         },
         {
-          id: 13217079162,
-          name: '16.04802962803331',
+          id: 76437930018,
+          name: '21 Núi Thành',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '21 Núi Thành',
-            lat: '108.22098028682488'
+            lng: '108.22053546397083',
+            lat: '16.051258890299472'
           }
         },
         {
-          id: 69254625564,
-          name: '16.051258890299472',
-          nameLocationBusRoute: 'R17A',
-          location: {
-            lng: 'Đài DRT',
-            lat: '108.22053546397083'
-          }
-        },
-        {
-          id: 85659281279,
-          name: 'Đối diện 256 Bạch Đằng',
+          id: 98749031442,
+          name: 'Đài DRT-Đối diện 256 Bạch Đằng',
           nameLocationBusRoute: 'R17A',
           location: {
             lng: '108.22417100027464',
@@ -1453,7 +1435,7 @@ export const locationData = {
           }
         },
         {
-          id: 21152625359,
+          id: 7390936277,
           name: 'Đối diện chợ Hàn',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1462,7 +1444,7 @@ export const locationData = {
           }
         },
         {
-          id: 70722743325,
+          id: 41628433821,
           name: 'Đối diện 57-59 Hùng Vương',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1471,8 +1453,8 @@ export const locationData = {
           }
         },
         {
-          id: 82424080459,
-          name: '49-51 Nguyễn Thị Minh Khai',
+          id: 95110471169,
+          name: 'Trường Trần Phú-49-51 Nguyễn Thị Minh Khai',
           nameLocationBusRoute: 'R17A',
           location: {
             lng: '108.21835869259584',
@@ -1480,7 +1462,7 @@ export const locationData = {
           }
         },
         {
-          id: 83901227449,
+          id: 66371749636,
           name: 'Đối diện 04 Nguyễn Thị Minh Khai',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1489,7 +1471,7 @@ export const locationData = {
           }
         },
         {
-          id: 8711037498,
+          id: 97032148221,
           name: '07 Lý Tự Trọng',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1498,7 +1480,7 @@ export const locationData = {
           }
         },
         {
-          id: 67468376370,
+          id: 43443609063,
           name: 'Đối diện 12 Bạch Đằng',
           nameLocationBusRoute: 'R17A',
           location: {
@@ -1507,7 +1489,7 @@ export const locationData = {
           }
         },
         {
-          id: 45214678872,
+          id: 67258236053,
           name: 'Cảng Sông Hàn',
           nameLocationBusRoute: 'R17A',
           location: {

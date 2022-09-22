@@ -57,8 +57,9 @@ export default function MapBox() {
       .filter(i => i.directionRoute === 'return')
       .map(i => i.route)
     setMarkerLocation(markerLocation)
-    console.log(markerLocation.map(i =>
-      i.every(i =>typeof(i.name) === 'string')))
+    // validation route
+    // console.log(markerLocation.map(i =>
+    //   i.every(i =>typeof(i.name) === 'string')))
   }, [searchRoute])
 
   return (
