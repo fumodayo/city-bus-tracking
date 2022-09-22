@@ -54,9 +54,11 @@ export default function MapBox() {
       .filter(i => {
         return getRoutesCheckBox.indexOf(i.nameBusRouter) !== -1
       })
-      .filter(i => i.directionRoute === 'turn')
+      .filter(i => i.directionRoute === 'return')
       .map(i => i.route)
     setMarkerLocation(markerLocation)
+    console.log(markerLocation.map(i =>
+      i.every(i =>typeof(i.name) === 'string')))
   }, [searchRoute])
 
   return (
