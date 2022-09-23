@@ -32,6 +32,12 @@ export default function MapBox() {
   const API_KEY =
     'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA'
 
+  useEffect(() => {
+    const getRoutesLine = roadMapData.map(i =>i.lineRoute)
+    console.log(getRoutesLine)
+  },[])
+  
+  // input duy nhat 1 array
   // const dataLine = {
   //   type: 'Feature',
   //   properties: {},
@@ -108,12 +114,12 @@ export default function MapBox() {
             'line-cap': 'round'
           }}
           paint={{
-            'line-color': 'rgb(255, 0, 0)',
+            'line-color': '#ed9970',
             'line-width': 5
           }}
         />
-      </Source>
-      */}
+      </Source> */}
+     
       {markerLocation &&
         markerLocation.map(i =>
           i.map(i => (
