@@ -89,7 +89,10 @@ const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
                   className="row align-items-center h-100"
                 >
                   <div className="small-3">
-                    <div className="route-no text-center">
+                    <div
+                      className="route-no text-center"
+                      style={{ background: `${busrouter.color}` }}
+                    >
                       <span>{busrouter.nameBusRouter}</span>
                     </div>
                   </div>
@@ -145,14 +148,11 @@ const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
               />
             </Paper>
             <div className="scroll-content">
-              {allBusStop.map((busstop,index) => (
-                <div
-                  key={index}
-                  className="row align-items-center h-100"
-                >
+              {allBusStop.map((busstop, index) => (
+                <div key={index} className="row align-items-center h-100">
                   <div className="small-3">
                     <div className="route-no text-center">
-                      <span>{index+1}</span>
+                      <span>{index + 1}</span>
                     </div>
                   </div>
 
@@ -167,7 +167,7 @@ const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
                       {busstop.name}
                     </p>
                   </div>
-                  
+
                   <hr></hr>
                 </div>
               ))}

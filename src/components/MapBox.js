@@ -32,11 +32,6 @@ export default function MapBox() {
   const API_KEY =
     'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA'
 
-  useEffect(() => {
-    const getRoutesLine = roadMapData.map(i =>i.lineRoute)
-    console.log(getRoutesLine)
-  },[])
-  
   // input duy nhat 1 array
   // const dataLine = {
   //   type: 'Feature',
@@ -80,6 +75,20 @@ export default function MapBox() {
     setAllBusStop(getData)
   }, [])
 
+  useEffect(() => {
+    const getRoutesCheckBox = searchRoute
+      .filter(i => i.isChecked)
+      .map(i => i.nameBusRouter)
+
+    const getRoutesLine = roadMapData.filter(
+      i =>
+        getRoutesCheckBox.indexOf(i.name) !== -1 && i.directionRoute === 'turn'
+    ).map(i => i.lineRoute)
+    let allDataLineRoute = []
+    allDataLineRoute = [...allDataLineRoute, getRoutesLine].flat(2)
+    console.log(allDataLineRoute)
+  }, [searchRoute])
+
   return (
     <Map
       {...viewport}
@@ -119,7 +128,7 @@ export default function MapBox() {
           }}
         />
       </Source> */}
-     
+
       {markerLocation &&
         markerLocation.map(i =>
           i.map(i => (
