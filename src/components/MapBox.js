@@ -75,18 +75,36 @@ export default function MapBox() {
     setAllBusStop(getData)
   }, [])
 
+  const [allDataLineRoutes, setAllDataLineRoutes] = useState([])
   useEffect(() => {
     const getRoutesCheckBox = searchRoute
       .filter(i => i.isChecked)
       .map(i => i.nameBusRouter)
 
-    const getRoutesLine = roadMapData.filter(
-      i =>
-        getRoutesCheckBox.indexOf(i.name) !== -1 && i.directionRoute === 'turn'
-    ).map(i => i.lineRoute)
-    let allDataLineRoute = []
-    allDataLineRoute = [...allDataLineRoute, getRoutesLine].flat(2)
-    console.log(allDataLineRoute)
+    const handleGetAllDataLineRoutes = () => {
+      const getRoutesLine = roadMapData
+        .filter(
+          i =>
+            getRoutesCheckBox.indexOf(i.name) !== -1 &&
+            i.directionRoute === 'turn'
+        )
+        .map(i => {
+          return {
+            type: 'Feature',
+            properties: {},
+            color: i.color,
+            name: i.name,
+            directionRoute: i.directionRoute,
+            geometry: {
+              type: 'LineString',
+              coordinates: i.lineRoute
+            }
+          }
+        })
+      return getRoutesLine
+    }
+    const getData = handleGetAllDataLineRoutes()
+    setAllDataLineRoutes(getData)
   }, [searchRoute])
 
   return (
@@ -113,21 +131,25 @@ export default function MapBox() {
         setSearchRoute={setSearchRoute}
         allBusStop={allBusStop}
       />
-      {/* <Source id="polylineLayer" type="geojson" data={dataLine}>
-        <Layer
-          id="lineLayer"
-          type="line"
-          source="my-data"
-          layout={{
-            'line-join': 'round',
-            'line-cap': 'round'
-          }}
-          paint={{
-            'line-color': '#ed9970',
-            'line-width': 5
-          }}
-        />
-      </Source> */}
+
+      {allDataLineRoutes &&
+        allDataLineRoutes.map(i => (
+          <Source id="polylineLayer" type="geojson" data={i}>
+            <Layer
+              id="lineLayer"
+              type="line"
+              source="my-data"
+              layout={{
+                'line-join': 'round',
+                'line-cap': 'round'
+              }}
+              paint={{
+                'line-color': i.color,
+                'line-width': 5
+              }}
+            />
+          </Source>
+        ))}
 
       {markerLocation &&
         markerLocation.map(i =>
