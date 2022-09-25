@@ -32,16 +32,6 @@ export default function MapBox() {
   const API_KEY =
     'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA'
 
-  // input duy nhat 1 array
-  // const dataLine = {
-  //   type: 'Feature',
-  //   properties: {},
-  //   geometry: {
-  //     type: 'LineString',
-  //     coordinates: roadMapData
-  //   }
-  // }
-
   const [isOpen, setIsOpen] = useState(true)
   const [searchRoute, setSearchRoute] = useState([])
 
@@ -73,7 +63,7 @@ export default function MapBox() {
     }
     const getData = handleGetAllBusStop()
     setAllBusStop(getData)
-  }, [])
+  }, [allBusStop])
 
   const [allDataLineRoutes, setAllDataLineRoutes] = useState([])
   useEffect(() => {
