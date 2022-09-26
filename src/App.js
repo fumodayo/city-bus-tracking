@@ -1,5 +1,5 @@
 import React from 'react'
-import MapBox from './components/MapBox'
+import MapBox from './pages/MapBox'
 import './App.scss'
 
 function App() {

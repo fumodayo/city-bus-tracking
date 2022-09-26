@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { Box, InputBase, Paper, Tab, Checkbox } from '@mui/material'
+import { Box, InputBase, Paper, Tab } from '@mui/material'
 import { busRouterData } from './busRouterData'
 import './BusRouter.scss'
+import FilterRouter from 'components/FilterRouter/FilterRouter'
+import AllBusStop from 'components/AllBusStop/AllBusStop'
 
-const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
+const BusRouter = ({ searchRoute, setSearchRoute }) => {
   // Handle event tab Tuyen / Tram dung
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
@@ -17,8 +19,8 @@ const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
     setSearch(e)
   }
 
-  // Handle filter search
-  const handleSearchListRoute = search => {
+  useEffect(() => {
+    // Handle filter search
     setSearch(search)
     if (search !== '') {
       const newSearchList = busRouterData.filter(route => {
@@ -31,21 +33,6 @@ const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
     } else {
       setSearchRoute(busRouterData)
     }
-  }
-
-  // Handle multi checkbox
-  const handleChangeCheckboxRoute = e => {
-    const { value: routeName, checked } = e.target
-    let tempRoute = searchRoute.map(route =>
-      route.nameBusRouter === routeName
-        ? { ...route, isChecked: checked }
-        : route
-    )
-    setSearchRoute(tempRoute)
-  }
-
-  useEffect(() => {
-    handleSearchListRoute(search)
   }, [search])
 
   return (
@@ -83,46 +70,10 @@ const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
               />
             </Paper>
             <div className="scroll-content">
-              {searchRoute.map(busrouter => (
-                <div
-                  key={busrouter.id}
-                  className="row align-items-center h-100"
-                >
-                  <div className="small-3">
-                    <div
-                      className="route-no text-center"
-                      style={{ background: `${busrouter.color}` }}
-                    >
-                      <span>{busrouter.nameBusRouter}</span>
-                    </div>
-                  </div>
-
-                  <div className="small-7">
-                    <p className="code-route">{busrouter.name}</p>
-                    <p
-                      style={{
-                        color: '#000',
-                        fontSize: '14px',
-                        fontWeight: 600
-                      }}
-                    >
-                      {busrouter.description}
-                    </p>
-                  </div>
-                  <div className="small-2">
-                    <div className="text-center">
-                      <Checkbox
-                        id={busrouter.id}
-                        value={busrouter.nameBusRouter}
-                        onChange={handleChangeCheckboxRoute}
-                        checked={busrouter?.isChecked || false}
-                        sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }}
-                      />
-                    </div>
-                  </div>
-                  <hr></hr>
-                </div>
-              ))}
+              <FilterRouter
+                searchRoute={searchRoute}
+                setSearchRoute={setSearchRoute}
+              />
             </div>
           </TabPanel>
           <TabPanel style={{ paddingLeft: '0' }} value="2">
@@ -148,29 +99,7 @@ const BusRouter = ({ searchRoute, setSearchRoute, allBusStop }) => {
               />
             </Paper>
             <div className="scroll-content">
-              {allBusStop.map((busstop, index) => (
-                <div key={index} className="row align-items-center h-100">
-                  <div className="small-3">
-                    <div className="route-no text-center">
-                      <span>{index + 1}</span>
-                    </div>
-                  </div>
-
-                  <div className="small-7">
-                    <p
-                      style={{
-                        color: '#000',
-                        fontSize: '16px',
-                        fontWeight: 600
-                      }}
-                    >
-                      {busstop.name}
-                    </p>
-                  </div>
-
-                  <hr></hr>
-                </div>
-              ))}
+              <AllBusStop />
             </div>
           </TabPanel>
         </Box>

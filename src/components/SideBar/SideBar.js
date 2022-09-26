@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Drawer, IconButton, Typography, Box, Tab, styled } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { ChevronLeft } from '@mui/icons-material'
-import './SideBar.scss'
 import BusRouter from '../BusRouter/BusRouter'
 import FindRouter from '../FindRouter/FindRouter'
+import './SideBar.scss'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -14,7 +14,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar
 }))
 
-const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute, allBusStop }) => {
+const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute }) => {
   const [tabValue, setTabValue] = useState('1')
 
   const handleChangeTab = (e, newTabValue) => {
@@ -60,7 +60,6 @@ const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute, allBusStop })
                 <BusRouter
                   searchRoute={searchRoute}
                   setSearchRoute={setSearchRoute}
-                  allBusStop={allBusStop}
                 />
               </TabPanel>
               <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2">
