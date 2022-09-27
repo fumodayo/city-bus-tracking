@@ -1,7 +1,30 @@
-import React from 'react'
-import { Checkbox } from '@mui/material'
+import React, { useState, useEffect } from 'react'
+import { Checkbox, Paper, InputBase } from '@mui/material'
+import { busRouterData } from 'components/BusRouter/busRouterData'
 
 const FilterRouter = ({ searchRoute, setSearchRoute }) => {
+  // Get word input to search
+  const [search, setSearch] = useState('')
+  const handleChangeWordSearch = e => {
+    setSearch(e)
+  }
+
+  useEffect(() => {
+    // Handle filter search
+    setSearch(search)
+    if (search !== '') {
+      const newSearchList = busRouterData.filter(route => {
+        return Object.values(route)
+          .join(' ')
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      })
+      setSearchRoute(newSearchList)
+    } else {
+      setSearchRoute(busRouterData)
+    }
+  }, [search])
+
   // Handle multi checkbox
   const handleChangeCheckboxRoute = e => {
     const { value: routeName, checked } = e.target
@@ -15,43 +38,68 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
 
   return (
     <div className="filter-router">
-      {searchRoute.map(busrouter => (
-        <div key={busrouter.id} className="row align-items-center h-100">
-          <div className="small-3">
-            <div
-              className="route-no text-center"
-              style={{ background: `${busrouter.color}` }}
-            >
-              <span>{busrouter.nameBusRouter}</span>
+      <Paper
+        component="form"
+        sx={{
+          p: '2px 4px',
+          display: 'flex',
+          alignItems: 'center',
+          width: 320,
+          border: 'none',
+          borderRadius: '15px',
+          boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',
+          backgroundColor: '#ffffff',
+          height: '3em',
+          fontSize: '1rem'
+        }}
+      >
+        <InputBase
+          sx={{ ml: 1, flex: 1 }}
+          placeholder="Nhập tên tuyến..."
+          inputProps={{ 'aria-label': 'Tìm tuyến xe buýt' }}
+          value={search}
+          onChange={e => handleChangeWordSearch(e.target.value)}
+        />
+      </Paper>
+      <div className="scroll-content">
+        {searchRoute.map(busrouter => (
+          <div key={busrouter.id} className="row align-items-center h-100">
+            <div className="small-3">
+              <div
+                className="route-no text-center"
+                style={{ background: `${busrouter.color}` }}
+              >
+                <span>{busrouter.nameBusRouter}</span>
+              </div>
             </div>
-          </div>
 
-          <div className="small-7">
-            <p className="code-route">{busrouter.name}</p>
-            <p
-              style={{
-                color: '#000',
-                fontSize: '14px',
-                fontWeight: 600
-              }}
-            >
-              {busrouter.description}
-            </p>
-          </div>
-          <div className="small-2">
-            <div className="text-center">
-              <Checkbox
-                id={busrouter.id}
-                value={busrouter.nameBusRouter}
-                onChange={handleChangeCheckboxRoute}
-                checked={busrouter?.isChecked || false}
-                sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }}
-              />
+            <div className="small-7">
+              <p className="code-route">{busrouter.name}</p>
+              <p
+                style={{
+                  color: '#000',
+                  fontSize: '14px',
+                  fontWeight: 600
+                }}
+              >
+                {busrouter.description}
+              </p>
             </div>
+            <div className="small-2">
+              <div className="text-center">
+                <Checkbox
+                  id={busrouter.id}
+                  value={busrouter.nameBusRouter}
+                  onChange={handleChangeCheckboxRoute}
+                  checked={busrouter?.isChecked || false}
+                  sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }}
+                />
+              </div>
+            </div>
+            <hr></hr>
           </div>
-          <hr></hr>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
