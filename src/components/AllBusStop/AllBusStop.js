@@ -3,40 +3,31 @@ import { Paper, InputBase } from '@mui/material'
 import { locationData } from 'actions/initialData/locationData'
 
 const AllBusStop = () => {
-  // Get All Bus Stop
-  const [allBusStop, setAllBusStop] = useState([])
-  useEffect(() => {
-    const handleGetAllBusStop = () => {
-      const getAllBusStopInRoutes = locationData.busRoutes.map(i => i.route)
-      let allDataBusStop = []
-      allDataBusStop = [...allDataBusStop, getAllBusStopInRoutes].flat(2)
-      return allDataBusStop
-    }
-    const getData = handleGetAllBusStop()
-    setAllBusStop(getData)
-  }, [])
-
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
     setSearch(e)
   }
-  
-  // useEffect(() => {
-  //   // Handle filter search
-  //   setSearch(search)
-  //   if (search !== '') {
-  //     const newSearchList = locationData.filter(route => {
-  //       return Object.values(route)
-  //         .join(' ')
-  //         .toLowerCase()
-  //         .includes(search.toLowerCase())
-  //     })
-  //     setAllBusStop(newSearchList)
-  //   } else {
-  //     setAllBusStop(locationData)
-  //   }
-  // }, [search])
+
+  // Get All Bus Stop
+  const [allBusStop, setAllBusStop] = useState([])
+  useEffect(() => {
+    const getAllBusStopInRoutes = locationData.busRoutes.map(i => i.route)
+    const allData = [getAllBusStopInRoutes, ...getAllBusStopInRoutes].flat(2)
+    console.log(search)
+    if (search !== '') {
+      const newSearchList = allData.filter(location => {
+        return Object.values(location.name)
+          .join(' ')
+          .toLowerCase(' ')
+          .includes(search.toLowerCase())
+      })
+      setAllBusStop(newSearchList)
+    } else {
+      setAllBusStop(allData)
+    }
+  }, [search])
+  console.log(allBusStop)
 
   return (
     <div className="all-bus-stop">
