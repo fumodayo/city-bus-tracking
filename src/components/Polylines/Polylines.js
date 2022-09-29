@@ -14,7 +14,7 @@ const PolyLines = ({ searchRoute }) => {
         .filter(
           i =>
             getRoutesCheckBox.indexOf(i.name) !== -1 &&
-            i.directionRoute === 'turn'
+            i.directionRoute === 'return'
         )
         .map(i => {
           return {

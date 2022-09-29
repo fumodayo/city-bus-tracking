@@ -8,473 +8,507 @@ export const locationData = {
       directionRoute: 'turn',
       route: [
         {
-          id: 87731434789,
+          id: 41676731701,
           name: 'Số 171(Kim Liên) Nguyễn Văn Cừ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.11956612202619',
             lat: '16.13548288580201'
           }
         },
         {
-          id: 96845422623,
+          id: 29632809171,
           name: '101 Nguyễn Văn Cừ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.11943246536552',
             lat: '16.1330679589498'
           }
         },
         {
-          id: 81926296106,
-          name: 'Ximăng Ngũ Hành Sơn',
+          id: 53438980726,
+          name: 'Số 913 - 915 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.11930183932864',
             lat: '16.129617645548674'
           }
         },
         {
-          id: 74554420563,
+          id: 13261972499,
           name: '19 Nguyễn Văn Cừ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.12076170018832',
             lat: '16.12411291753288'
           }
         },
         {
-          id: 44316940929,
+          id: 31270191841,
           name: '957 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.12813319223163',
             lat: '16.113172832903878'
           }
         },
         {
-          id: 54418491502,
+          id: 81066036158,
           name: '817 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.1328678568374',
-            lat: '16.10496465057714'
+            lng: '108.13286592134278',
+            lat: '16.10496845723984'
           }
         },
         {
-          id: 63324351757,
-          name: 'Đối diện 546 Nguyễn Lương Bằng',
+          id: 5510081972,
+          name: 'Số 767(Đối Diện 536) Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.13502209210294',
-            lat: '16.10056869633681'
+            lng: '108.13502538849755',
+            lat: '16.100559049857242'
           }
         },
         {
-          id: 82580036751,
-          name: '497 Nguyễn Lương Bằng',
+          id: 46231575149,
+          name: 'Số 495 - 497 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14283634199731',
             lat: '16.090049322991707'
           }
         },
         {
-          id: 46579640464,
+          id: 94928953045,
           name: '421 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.1443112333489',
-            lat: '16.086529256802432'
+            lng: '108.14430889603847',
+            lat: '16.08652784640827'
           }
         },
         {
-          id: 81916931018,
+          id: 93057959639,
           name: '339 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14576615827266',
             lat: '16.083010841022624'
           }
         },
         {
-          id: 54198740827,
+          id: 83972586719,
           name: 'Bệnh viện tâm thần ( 191 Nguyễn Lương Bằng )',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.14718017413666',
-            lat: '16.079549495480258'
+            lng: '108.14718256545261',
+            lat: '16.079550289432646'
           }
         },
         {
-          id: 80569607013,
+          id: 4097270553,
           name: 'Trường Cao đẳng kế hoạch',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.14856629195059',
-            lat: '16.07616780566659'
+            lng: '108.14856333524123',
+            lat: '16.076183245107273'
           }
         },
         {
-          id: 52860967729,
-          name: '27 Nguyễn Lương Bằng',
+          id: 33283047093,
+          name: 'THCS Nguyễn Lương Bằng ( 27 Nguyễn Lương Bằng )',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14997593480217',
             lat: '16.07265158955931'
           }
         },
         {
-          id: 77685212671,
+          id: 80216016485,
           name: '755-757 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.15049382856223',
-            lat: '16.071478710446527'
+            lng: '108.15044654790096',
+            lat: '16.071460640131072'
           }
         },
         {
-          id: 79770831539,
+          id: 90522510881,
+          name: '657 Tôn Đức Thắng',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.15160502991218',
+            lat: '16.06879111285614'
+          }
+        },
+        {
+          id: 69204961942,
           name: 'Khu vui chơi trẻ em đường Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.1536851717758',
-            lat: '16.066212099622582'
+            lng: '108.15368239852161',
+            lat: '16.066210917274432'
           }
         },
         {
-          id: 12982204512,
-          name: '459 Tôn Đức Thắng',
+          id: 82235724744,
+          name: 'Bệnh viện đa khoa Liên Chiểu',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.15917738570323',
-            lat: '16.062519534602192'
+            lng: '108.1557597458739',
+            lat: '16.06480733201605'
           }
         },
         {
-          id: 98974615569,
+          id: 2507896143,
+          name: '459 - 461 Tôn Đức Thắng',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.15918458017227',
+            lat: '16.062517217613777'
+          }
+        },
+        {
+          id: 14560376168,
           name: 'Showroom Trường Hải',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.16293485105163',
-            lat: '16.060033556305154'
+            lng: '108.16293456797649',
+            lat: '16.060029568036004'
           }
         },
         {
-          id: 52947108309,
+          id: 99835005384,
           name: '341 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.16663084854403',
             lat: '16.05721701505328'
           }
         },
         {
-          id: 82482182061,
+          id: 42981263177,
+          name: '321-323 Tôn Đức Thắng',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.16785224436086',
+            lat: '16.056399740975724'
+          }
+        },
+        {
+          id: 1732068935,
+          name: '219-221 Tôn Đức Thắng',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.17156815178656',
+            lat: '16.056752479019856'
+          }
+        },
+        {
+          id: 47345524206,
           name: '137-139 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.17353822118451',
             lat: '16.05815482711118'
           }
         },
         {
-          id: 31666978666,
+          id: 14307816902,
           name: '559 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.18443206071548',
             lat: '16.06531725496157'
           }
         },
         {
-          id: 82425010997,
+          id: 2768131448,
           name: '407 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.18889948560606',
             lat: '16.06571373878797'
           }
         },
         {
-          id: 74821251484,
+          id: 56105380180,
           name: '311 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.19261595462079',
             lat: '16.06571987858083'
           }
         },
         {
-          id: 43922489013,
+          id: 20450427753,
           name: '135 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.198956789357',
             lat: '16.065451341801396'
           }
         },
         {
-          id: 15675839547,
-          name: 'Công viên 29/3',
-          nameLocationBusRoute: 'R16',
-
-          location: {
-            lng: '108.20535155147641',
-            lat: '16.06591589381512'
-          }
-        },
-        {
-          id: 43656245257,
+          id: 80890846647,
           name: 'Đối diện 36-38 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.20554552103773',
             lat: '16.065948404370776'
           }
         },
         {
-          id: 45843359043,
+          id: 69834623702,
           name: '85 Lý Thái Tổ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.20818666467244',
             lat: '16.06617381074443'
           }
         },
         {
-          id: 45396558844,
-          name: '331 Hùng Vương',
+          id: 36040062889,
+          name: 'Nhà thờ con Gà',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.21061748697342',
             lat: '16.06655732264574'
           }
         },
         {
-          id: 6167631324,
+          id: 16123558917,
+          name: '253 Hùng Vương',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.2143623108899',
+            lat: '16.067216379289228'
+          }
+        },
+        {
+          id: 71718856816,
           name: '103 Hùng Vương',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.21802419064903',
             lat: '16.06806363675924'
           }
         },
         {
-          id: 83347435081,
+          id: 74034539200,
           name: 'Công viên Hùng Vương',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.22185444676832',
             lat: '16.06853163858333'
           }
         },
         {
-          id: 17573683610,
+          id: 1130860509,
           name: 'ĐD 151 Trần Phú',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.22366291157324',
             lat: '16.067069408678766'
           }
         },
         {
-          id: 3374676643,
+          id: 4763853999,
           name: 'UBND quận Hải Châu',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.22316873828835',
             lat: '16.06201652169169'
           }
         },
         {
-          id: 89858615038,
+          id: 62395937589,
           name: 'Cầu Rồng (số chẵn đường Võ Văn Kiệt)',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.23362603960751',
             lat: '16.0612211977039'
           }
         },
         {
-          id: 8369007330,
+          id: 15955064606,
           name: 'BV Quận Sơn Trà',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.2352356061066',
             lat: '16.058210689752826'
           }
         },
         {
-          id: 32196152905,
+          id: 10088024323,
           name: 'Đối diện 1187 Ngô Quyền',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.23640435593668',
             lat: '16.05437724498843'
           }
         },
         {
-          id: 98012082089,
+          id: 55823419640,
+          name: 'Số 34 Ngũ Hành Sơn',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.23698155498312',
+            lat: '16.052593892650563'
+          }
+        },
+        {
+          id: 45991064962,
           name: '180 Ngũ Hành Sơn',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.23843515512749',
             lat: '16.047717526062446'
           }
         },
         {
-          id: 98135712830,
+          id: 9171890447,
+          name: 'Số 240 Ngũ Hành Sơn',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.23929240084374',
+            lat: '16.04538395543759'
+          }
+        },
+        {
+          id: 15450055374,
           name: '310A Ngũ Hành Sơn',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24056921979812',
             lat: '16.04269150637289'
           }
         },
         {
-          id: 77700863569,
+          id: 91398561601,
           name: '370 Ngũ Hành Sơn',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24178308931015',
             lat: '16.040365103273437'
           }
         },
         {
-          id: 81817889466,
+          id: 38963561433,
           name: 'Đối diện 40 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24360637369601',
             lat: '16.036762818002703'
           }
         },
         {
-          id: 67267908945,
-          name: 'Đài tưởng niệm liệt sĩ ngành bưu điện',
-          nameLocationBusRoute: 'R16',
-
-          location: {
-            lng: '108.24435346413753',
-            lat: '16.035307306640167'
-          }
-        },
-        {
-          id: 97025373656,
+          id: 13953554355,
           name: '160 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24575742606396',
             lat: '16.03258417569197'
           }
         },
         {
-          id: 45545025287,
+          id: 93406165171,
           name: '256 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24728405078287',
             lat: '16.02959699316708'
           }
         },
         {
-          id: 2470801107,
+          id: 93976290957,
           name: '376 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24936655066908',
             lat: '16.025458113763925'
           }
         },
         {
-          id: 59962125547,
+          id: 76579547966,
+          name: '402 Lê Văn Hiến',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.25141745647258',
+            lat: '16.021446201530225'
+          }
+        },
+        {
+          id: 59552601959,
           name: '470A Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.25320435969822',
             lat: '16.017997676571692'
           }
         },
         {
-          id: 45392174544,
+          id: 8053450406,
           name: '542 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.25544269233824',
             lat: '16.013469827365384'
           }
         },
         {
-          id: 9315598577,
+          id: 48855306667,
           name: '618 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.25858691929429',
             lat: '16.007074987947718'
           }
         },
         {
-          id: 34083495169,
-          name: 'E152 Trần Đại Nghĩa',
+          id: 74793147223,
+          name: '758 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.25601496154667',
-            lat: '15.982131593324999'
+            lng: '108.25931412296185',
+            lat: '15.998183275891124'
           }
         },
         {
-          id: 6013387895,
-          name: 'Bến xe buýt Đại học Việt Hàn',
+          id: 97856490250,
+          name: 'Đối diện Sân Tập Lái Xe Ô Tô Trần Đại Nghĩa',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.25452232447924',
-            lat: '15.974022216394241'
+            lng: '108.2571568409417',
+            lat: '15.98887492076652'
+          }
+        },
+        {
+          id: 66781014593,
+          name: 'E152 Trần Đại Nghĩa',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.2557789360975',
+            lat: '15.982664253652796'
+          }
+        },
+        {
+          id: 96052165091,
+          name: 'Kế VLXD Tấn Danh Trần Đại Nghĩa',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.25504300799523',
+            lat: '15.979234489563416'
+          }
+        },
+        {
+          id: 42991095455,
+          name: 'Trường Cao Đẳng Việt Hàn Nam Kỳ Khởi Nghĩa',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.2523825106433',
+            lat: '15.977785017951515'
           }
         }
       ]
@@ -487,490 +521,522 @@ export const locationData = {
       directionRoute: 'return',
       route: [
         {
-          id: 65998072548,
-          name: 'Bến xe buýt Đại học Việt Hàn',
+          id: 61728855973,
+          name: 'Trường Cao Đẳng Việt Hàn Nam Kỳ Khởi Nghĩa',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.25452232447924',
-            lat: '15.974022216394241'
+            lng: '108.2523825106433',
+            lat: '15.977785017951515'
           }
         },
         {
-          id: 78892793639,
-          name: 'Tổ 24 Đông Trà Trần Đại Nghĩa',
+          id: 27539133550,
+          name: 'Kế Cửa Hàng Thành Tín Hợp Trần Đại Nghĩa',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.25601409264209',
-            lat: '15.982128086847377'
+            lng: '108.25528311453743',
+            lat: '15.978946535249877'
           }
         },
         {
-          id: 93289146453,
-          name: 'E144 Trần Đại Nghĩa',
+          id: 17829743257,
+          name: 'Đối Diện Cửa Hàng Thiên Đại Phúc Trần Đại Nghĩa',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.25601555517423',
-            lat: '15.982134521508199'
+            lng: '108.25601582421558',
+            lat: '15.982135221646194'
           }
         },
         {
-          id: 14322857254,
+          id: 53841883061,
+          name: 'Vườn ươm cây xanh',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.25750440762585',
+            lat: '15.988818316410084'
+          }
+        },
+        {
+          id: 33425813124,
           name: 'Sân tập lái ô tô đường Trần Đại Nghĩa',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.25755685860983',
             lat: '15.989020788561273'
           }
         },
         {
-          id: 42362754823,
+          id: 65283430731,
+          name: 'Chùa non nước',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.25982201584416',
+            lat: '16.003205163671204'
+          }
+        },
+        {
+          id: 44879816236,
           name: '527 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.2598358826321',
             lat: '16.00160530322441'
           }
         },
         {
-          id: 87178343458,
-          name: '509 Lê Văn Hiến',
-          nameLocationBusRoute: 'R16',
-
-          location: {
-            lng: '108.25980398561187',
-            lat: '16.002526668270605'
-          }
-        },
-        {
-          id: 25110452237,
+          id: 87873268848,
           name: '415 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.25929677344821',
             lat: '16.006366877017168'
           }
         },
         {
-          id: 15069376752,
+          id: 49730763261,
+          name: 'Đối Diện 384 Lê Văn Hiến',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.2499148626708',
+            lat: '16.025205351468152'
+          }
+        },
+        {
+          id: 41116889656,
           name: '307 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.25730216701777',
             lat: '16.010303979794397'
           }
         },
         {
-          id: 35175917590,
+          id: 93772239098,
+          name: 'Đối Diện TTHC Quận Ngũ Hành Sơn Lê Văn Hiến',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.25427254912104',
+            lat: '16.01673949816027'
+          }
+        },
+        {
+          id: 45944436405,
           name: '127 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.25104161718339',
             lat: '16.022860356737205'
           }
         },
         {
-          id: 93317568594,
+          id: 26911198567,
+          name: 'Kế 81B Lê Văn Hiến',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.2479137141275',
+            lat: '16.029195778765065'
+          }
+        },
+        {
+          id: 57185266267,
           name: 'Doanh trại quân đội đường Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24558233887281',
             lat: '16.033630924778116'
           }
         },
         {
-          id: 35386941613,
-          name: '61 Lê Văn Hiến',
+          id: 87381075630,
+          name: 'Đối Diện 48 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.2455846530745',
-            lat: '16.03363255173983'
+            lng: '108.24417161092119',
+            lat: '16.03639766629436'
           }
         },
         {
-          id: 39004647078,
+          id: 27845805792,
           name: '175 Ngũ Hành Sơn',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24269273776413',
             lat: '16.039267980391422'
           }
         },
         {
-          id: 53400608901,
+          id: 84336197502,
           name: '133 Ngũ Hành Sơn',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.24081970838753',
             lat: '16.042832723761766'
           }
         },
         {
-          id: 39133576000,
+          id: 52008284660,
+          name: 'Trường trung cấp nghề số 5',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.23914304654016',
+            lat: '16.046407527589263'
+          }
+        },
+        {
+          id: 93221601453,
           name: 'Đại học Kinh Tế',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.23864826341214',
             lat: '16.047831351519566'
           }
         },
         {
-          id: 22495514685,
+          id: 74397801072,
+          name: 'Đài DRT',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.22418154571895',
+            lat: '16.062225998670506'
+          }
+        },
+        {
+          id: 70595935149,
+          name: 'Đối Diện Chợ Hàn',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.22505282365555',
+            lat: '16.068044699825915'
+          }
+        },
+        {
+          id: 60569441637,
           name: '29 Ngũ Hành Sơn',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.2374687610848',
             lat: '16.051795385002077'
           }
         },
         {
-          id: 50994473528,
+          id: 60938803919,
           name: '1093 Ngô Quyền',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.23596967118698',
             lat: '16.056546596467292'
           }
         },
         {
-          id: 55306533764,
+          id: 113160183,
           name: '1041 Ngô Quyền',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.23521413301363',
             lat: '16.059080611091073'
           }
         },
         {
-          id: 94846196975,
+          id: 75615411272,
           name: 'Cầu Rồng (số lẽ đường Võ Văn Kiệt)',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.23337367661787',
             lat: '16.061547643585026'
           }
         },
         {
-          id: 91750541361,
-          name: 'Bến chợ Hàn',
-          nameLocationBusRoute: 'R16',
-
-          location: {
-            lng: '108.22505952774726',
-            lat: '16.068023245407986'
-          }
-        },
-        {
-          id: 93832305324,
+          id: 67843805168,
           name: 'Đối diện 59 Hùng Vương',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.21974747888261',
             lat: '16.06851859096782'
           }
         },
         {
-          id: 88253421832,
+          id: 518628154,
           name: '192 Hùng Vương',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.21741182319265',
             lat: '16.068016981544414'
           }
         },
         {
-          id: 29175592992,
+          id: 33949453181,
           name: 'Chợ Cồn',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.21463722946298',
             lat: '16.06747745758302'
           }
         },
         {
-          id: 14676537321,
+          id: 48402907664,
           name: '10 Lý Thái Tổ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.20997834512136',
             lat: '16.066550421874894'
           }
         },
         {
-          id: 42829858884,
-          name: '130 Lý Thái Tổ',
+          id: 72183841801,
+          name: 'Số 14-16 Lý Thái Tổ',
           nameLocationBusRoute: 'R16',
-
+          location: {
+            lng: '108.20997698081376',
+            lat: '16.066553111656326'
+          }
+        },
+        {
+          id: 8921197898,
+          name: '26. 130 Lý Thái Tổ',
+          nameLocationBusRoute: 'R16',
           location: {
             lng: '108.20739171149656',
             lat: '16.066230361801473'
           }
         },
         {
-          id: 9066975286,
-          name: 'Siêu thị Nguyễn Kim',
-          nameLocationBusRoute: 'R16',
-
-          location: {
-            lng: '108.20344655109668',
-            lat: '16.066440031526586'
-          }
-        },
-        {
-          id: 27504953961,
+          id: 72116802951,
           name: '130 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.19934642887499',
             lat: '16.065790588557025'
           }
         },
         {
-          id: 22983652800,
+          id: 1627251237,
           name: '336 Dien Bien Phu',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.19298386072211',
             lat: '16.066008524369792'
           }
         },
         {
-          id: 30288277771,
-          name: '416 Điện Biên Phủ',
+          id: 78305396975,
+          name: 'Số 412 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
-            lng: '108.18939272362793',
-            lat: '16.06603870641431'
+            lng: '108.18938647677336',
+            lat: '16.066026819887053'
           }
         },
         {
-          id: 84915910556,
+          id: 58387183632,
           name: '570 Điện Biên Phủ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.18418540896684',
             lat: '16.06564047162372'
           }
         },
         {
-          id: 28462520249,
+          id: 36959527696,
           name: '128 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.17443186308077',
             lat: '16.059094783578992'
           }
         },
         {
-          id: 75654757293,
+          id: 69314526452,
           name: '210 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.17140503578477',
             lat: '16.056918657023267'
           }
         },
         {
-          id: 26302182035,
+          id: 13184302936,
           name: '294 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.16828799015995',
             lat: '16.056472157983634'
           }
         },
         {
-          id: 94952584852,
+          id: 26624030570,
           name: '422 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.16259227747018',
             lat: '16.0604808300658'
           }
         },
         {
-          id: 53054833976,
+          id: 51701714878,
           name: '552 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.1588978340965',
             lat: '16.06296035431722'
           }
         },
         {
-          id: 65176763680,
+          id: 49910955155,
           name: '640 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.15641694044808',
             lat: '16.064640588035267'
           }
         },
         {
-          id: 87488540249,
+          id: 34955299107,
           name: '758 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.15311494705684',
             lat: '16.06686431208779'
           }
         },
         {
-          id: 64431901465,
+          id: 53847728152,
           name: '806 Tôn Đức Thắng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.15191053145458',
             lat: '16.06856784996234'
           }
         },
         {
-          id: 5051978182,
+          id: 8966151605,
+          name: '900 Tôn Đức Thắng',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.15080992942696',
+            lat: '16.07122222081146'
+          }
+        },
+        {
+          id: 54971808840,
           name: '50 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.1502324692913',
             lat: '16.072703094968304'
           }
         },
         {
-          id: 501737312,
+          id: 15440934249,
           name: '138 Nguyễn Lương',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14853636339204',
             lat: '16.076877264440945'
           }
         },
         {
-          id: 60613272799,
+          id: 26634594712,
           name: '234 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14693498683692',
             lat: '16.08073493405139'
           }
         },
         {
-          id: 22847954379,
+          id: 10362929838,
           name: '290 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14601475919088',
             lat: '16.082993153100066'
           }
         },
         {
-          id: 67728978801,
+          id: 3588025760,
           name: '396 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14414723834219',
             lat: '16.087288466292577'
           }
         },
         {
-          id: 86742101459,
+          id: 40619766688,
           name: '438 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.14296086642372',
             lat: '16.090352775241932'
           }
         },
         {
-          id: 19814062450,
+          id: 71248161860,
           name: '546 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.1353780100409',
             lat: '16.100182516489177'
           }
         },
         {
-          id: 85725990482,
+          id: 96800441871,
           name: '636 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.13289700411802',
             lat: '16.105166546800323'
           }
         },
         {
-          id: 45159400082,
+          id: 20274740579,
           name: '788 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.12971616629946',
             lat: '16.110726592257993'
           }
         },
         {
-          id: 85024838671,
+          id: 41959909310,
           name: '922 Nguyễn Lương Bằng',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.12690586319908',
             lat: '16.114912963638453'
           }
         },
         {
-          id: 11703719158,
+          id: 63696236446,
           name: '52 Nguyễn Văn Cừ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.11990593830097',
             lat: '16.125726521072025'
           }
         },
         {
-          id: 46611370874,
+          id: 58772588367,
+          name: 'Số 126 Nguyễn Văn Cừ',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.1195137338104',
+            lat: '16.12933410894816'
+          }
+        },
+        {
+          id: 26394518915,
+          name: 'Số 230 Nguyễn Văn Cừ',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.1196697291987',
+            lat: '16.133090917661086'
+          }
+        },
+        {
+          id: 95050441416,
           name: '274 Nguyễn Văn Cừ',
           nameLocationBusRoute: 'R16',
-
           location: {
             lng: '108.11980751312127',
             lat: '16.13537674376428'
@@ -986,7 +1052,7 @@ export const locationData = {
       route: [
         {
           id: 45813725054,
-          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          name: 'Số 171(Kim Liên) Nguyễn Văn Cừ',
           location: {
             lng: '108.11956612202619',
             lat: '16.13548288580201'
