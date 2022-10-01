@@ -566,15 +566,6 @@ export const locationData = {
           }
         },
         {
-          id: 65283430731,
-          name: 'Chùa non nước',
-          nameLocationBusRoute: 'R16',
-          location: {
-            lng: '108.25982201584416',
-            lat: '16.003205163671204'
-          }
-        },
-        {
           id: 44879816236,
           name: '527 Lê Văn Hiến',
           nameLocationBusRoute: 'R16',
@@ -590,15 +581,6 @@ export const locationData = {
           location: {
             lng: '108.25929677344821',
             lat: '16.006366877017168'
-          }
-        },
-        {
-          id: 49730763261,
-          name: 'Đối Diện 384 Lê Văn Hiến',
-          nameLocationBusRoute: 'R16',
-          location: {
-            lng: '108.2499148626708',
-            lat: '16.025205351468152'
           }
         },
         {
@@ -626,6 +608,15 @@ export const locationData = {
           location: {
             lng: '108.25104161718339',
             lat: '16.022860356737205'
+          }
+        },
+        {
+          id: 49730763261,
+          name: 'Đối Diện 384 Lê Văn Hiến',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.2499148626708',
+            lat: '16.025205351468152'
           }
         },
         {
@@ -678,8 +669,8 @@ export const locationData = {
           name: 'Trường trung cấp nghề số 5',
           nameLocationBusRoute: 'R16',
           location: {
-            lng: '108.23914304654016',
-            lat: '16.046407527589263'
+            lng: '108.23914371375542',
+            lat: '16.046409842831526'
           }
         },
         {
@@ -689,24 +680,6 @@ export const locationData = {
           location: {
             lng: '108.23864826341214',
             lat: '16.047831351519566'
-          }
-        },
-        {
-          id: 74397801072,
-          name: 'Đài DRT',
-          nameLocationBusRoute: 'R16',
-          location: {
-            lng: '108.22418154571895',
-            lat: '16.062225998670506'
-          }
-        },
-        {
-          id: 70595935149,
-          name: 'Đối Diện Chợ Hàn',
-          nameLocationBusRoute: 'R16',
-          location: {
-            lng: '108.22505282365555',
-            lat: '16.068044699825915'
           }
         },
         {
@@ -745,6 +718,25 @@ export const locationData = {
             lat: '16.061547643585026'
           }
         },
+        {
+          id: 74397801072,
+          name: 'Đài DRT',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.22418154571895',
+            lat: '16.062225998670506'
+          }
+        },
+        {
+          id: 70595935149,
+          name: 'Đối Diện Chợ Hàn',
+          nameLocationBusRoute: 'R16',
+          location: {
+            lng: '108.22505282365555',
+            lat: '16.068044699825915'
+          }
+        },
+
         {
           id: 67843805168,
           name: 'Đối diện 59 Hùng Vương',
@@ -1134,11 +1126,11 @@ export const locationData = {
         },
         {
           id: 7095512634,
-          name: 'Trường Tiếu học Lý Tự Trọng-12 Lý Tự Trọng',
+          name: 'Trường Tiếu học Lý Tự Trọng',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '108.22115048623048',
-            lat: '16.07765331110762'
+            lng: '108.22111824390869',
+            lat: '16.077480452392216'
           }
         },
         {
@@ -1173,8 +1165,8 @@ export const locationData = {
           name: 'Nhà thờ Con Gà',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '108.22321909972446',
-            lat: '16.066753413493753'
+            lng: '108.22365484024257',
+            lat: '16.06704833435161'
           }
         },
         {
@@ -1205,15 +1197,6 @@ export const locationData = {
           }
         },
         {
-          id: 7272936056,
-          name: 'Tường rào Quân Đội đường Núi Thành',
-          nameLocationBusRoute: 'R17A',
-          location: {
-            lng: '108.6802264736572',
-            lat: '15.413315140048537'
-          }
-        },
-        {
           id: 85564921607,
           name: '256-258 Núi Thành',
           nameLocationBusRoute: 'R17A',
@@ -1227,8 +1210,8 @@ export const locationData = {
           name: '382 Núi Thành',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '108.22225401926565',
-            lat: '16.039331556764157'
+            lng: '108.22188772844409',
+            lat: '16.03917816749815'
           }
         },
         {
@@ -1281,8 +1264,8 @@ export const locationData = {
           name: '307-309 CMT 8',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '108.20397977324117',
-            lat: '16.016608874400287'
+            lng: '108.20426743727874',
+            lat: '16.016910178878508'
           }
         },
         {
@@ -1290,8 +1273,8 @@ export const locationData = {
           name: '492 CMT 8',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '108.1975606174179',
-            lat: '16.01425337622708'
+            lng: '108.19722599306887',
+            lat: '16.014011998066742'
           }
         },
         {
@@ -1317,8 +1300,8 @@ export const locationData = {
           name: 'Bệnh viện Hòa Vang-Trường Sơn',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '108.15200138277066',
-            lat: '16.008935717246743'
+            lng: '108.15177714912119',
+            lat: '16.008900160061106'
           }
         },
         {
@@ -1406,8 +1389,8 @@ export const locationData = {
           name: 'Công an Q.Cẩm Lệ-294-296 đường CMT-8',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '108.20352592131697',
-            lat: '16.016765793464277'
+            lng: '108.20369439047685',
+            lat: '16.016543336576326'
           }
         },
         {
@@ -1532,8 +1515,8 @@ export const locationData = {
           name: 'Đối diện 04 Nguyễn Thị Minh Khai',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '106.70445594804701',
-            lat: '10.789623770646633'
+            lng: '108.2177408262392',
+            lat: '16.076377898486523'
           }
         },
         {
@@ -1541,8 +1524,8 @@ export const locationData = {
           name: '07 Lý Tự Trọng',
           nameLocationBusRoute: 'R17A',
           location: {
-            lng: '106.70529569668011',
-            lat: '10.782567042641572'
+            lng: '108.22146544492753',
+            lat: '16.07744137952605'
           }
         },
         {
@@ -2365,8 +2348,8 @@ export const locationData = {
           name: 'Đối diện bãi tắm Mân Thái',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.24940638109608',
-            lat: '16.091128805759496'
+            lng: '108.24958272481612',
+            lat: '16.08962421497768'
           }
         },
         {
@@ -2410,17 +2393,8 @@ export const locationData = {
           name: 'Trụ điện CS49T1 đường Võ Văn Kiệt',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.23852651055692',
-            lat: '16.062454898784427'
-          }
-        },
-        {
-          id: 55318060007,
-          name: 'Quán nhậu Bé Hằng',
-          nameLocationBusRoute: 'R15',
-          location: {
-            lng: '108.24672009895822',
-            lat: '16.065269777097893'
+            lng: '108.23914341937743',
+            lat: '16.062398193833534'
           }
         },
         {
@@ -2428,8 +2402,8 @@ export const locationData = {
           name: 'Đầu cầu Rồng đường Võ Văn Kiệt',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.23329346894832',
-            lat: '16.062219061261505'
+            lng: '108.23341988550607',
+            lat: '16.061602632340048'
           }
         },
         {
@@ -2455,8 +2429,8 @@ export const locationData = {
           name: '102-104 Nguyễn Văn Linh',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.21396275288534',
-            lat: '16.060839400543106'
+            lng: '108.21400763359591',
+            lat: '16.060442371875514'
           }
         },
         {
@@ -2464,8 +2438,8 @@ export const locationData = {
           name: '153-155 Nguyễn Hoàng',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.21389493244605',
-            lat: '16.06114218582193'
+            lng: '108.21373613139498',
+            lat: '16.06099977066448'
           }
         },
         {
@@ -2473,8 +2447,8 @@ export const locationData = {
           name: '293 Ông Ích Khiêm',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.21396153330342',
-            lat: '16.06904272401065'
+            lng: '108.21366870804562',
+            lat: '16.068917893168248'
           }
         },
         {
@@ -2482,8 +2456,8 @@ export const locationData = {
           name: '239-241 Ông Ích Khiêm',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.21400160816907',
-            lat: '16.069537252543135'
+            lng: '108.21356915527501',
+            lat: '16.069380067228117'
           }
         },
         {
@@ -2491,8 +2465,8 @@ export const locationData = {
           name: '196 Hải Phòng',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.21124889521379',
-            lat: '16.07150732222067'
+            lng: '108.21131514715765',
+            lat: '16.071376243733095'
           }
         },
         {
@@ -2500,8 +2474,8 @@ export const locationData = {
           name: 'Ga Đà Nẵng',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.20959924964009',
-            lat: '16.0717048023125'
+            lng: '108.20878226569181',
+            lat: '16.07083699113692'
           }
         },
         {
@@ -2509,8 +2483,8 @@ export const locationData = {
           name: '354 Hải Phòng',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.20533860816906',
-            lat: '16.068100944104046'
+            lng: '108.20495421676767',
+            lat: '16.068132150037908'
           }
         },
         {
@@ -2518,8 +2492,8 @@ export const locationData = {
           name: '78-80 Võ Văn Tân',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.2025320351541',
-            lat: '16.067122032741878'
+            lng: '108.20297718261132',
+            lat: '16.06707871581367'
           }
         },
         {
@@ -2527,8 +2501,8 @@ export const locationData = {
           name: '96-98 Thái Thị Bôi',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.19904278727353',
-            lat: '16.068644188869797'
+            lng: '108.19902274604908',
+            lat: '16.068337575316537'
           }
         },
         {
@@ -2536,8 +2510,8 @@ export const locationData = {
           name: '304 -306 Thái Thi Bôi',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.1925678817213',
-            lat: '16.068374782645325'
+            lng: '108.1929241927722',
+            lat: '16.068077959291408'
           }
         },
         {
@@ -2545,8 +2519,8 @@ export const locationData = {
           name: 'Trường Tiểu học Huỳnh Ngọc Huệ',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.19251388772965',
-            lat: '16.06387596082208'
+            lng: '108.19193264028002',
+            lat: '16.063773448083477'
           }
         },
         {
@@ -2563,8 +2537,8 @@ export const locationData = {
           name: '145-145b Huỳnh Ngọc Huệ',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.18544909467644',
-            lat: '16.06131942961838'
+            lng: '108.18511695269814',
+            lat: '16.061259258484476'
           }
         },
         {
@@ -2572,8 +2546,8 @@ export const locationData = {
           name: '37-39 Huỳnh Ngọc Huệ',
           nameLocationBusRoute: 'R15',
           location: {
-            lng: '108.1844460909749',
-            lat: '16.06396744753392'
+            lng: '108.1838792823056',
+            lat: '16.06409754770248'
           }
         },
         {
@@ -2876,8 +2850,8 @@ export const locationData = {
           name: 'Công viên Biển Đông',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.24539664408782',
-            lat: '16.073975508486903'
+            lng: '108.24534581841353',
+            lat: '16.069870570409137'
           }
         },
         {
@@ -2894,17 +2868,8 @@ export const locationData = {
           name: 'Quán A.Hạnh (đổi diện nhà hàng Mỹ Hạnh)',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.24516481470955',
-            lat: '16.06537274495064'
-          }
-        },
-        {
-          id: 67204062501,
-          name: 'Quán nhậu Bé Hằng',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.24123143999181',
-            lat: '16.066753691408152'
+            lng: '108.2451660715857',
+            lat: '16.06501606984501'
           }
         },
         {
@@ -2912,8 +2877,8 @@ export const locationData = {
           name: 'Cầu Rồng (đầu cầu Rồng đường Võ Văn Kiệt)',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.23338733919981',
-            lat: '16.061728920237563'
+            lng: '108.2333865167005',
+            lat: '16.06156006312343'
           }
         },
         {
@@ -2921,8 +2886,8 @@ export const locationData = {
           name: 'Đối diện 31 Nguyễn Văn Linh',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.22107086637783',
-            lat: '16.06093200044228'
+            lng: '108.22120061781818',
+            lat: '16.061067553367664'
           }
         },
         {
@@ -2930,8 +2895,8 @@ export const locationData = {
           name: 'Chùa Phước Ninh',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.21788045758035',
-            lat: '16.061147056281264'
+            lng: '108.21785569130134',
+            lat: '16.06094568797249'
           }
         },
         {
@@ -2939,8 +2904,8 @@ export const locationData = {
           name: 'Số 102 Nguyễn Văn Linh',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.21429534679581',
-            lat: '16.06089095090125'
+            lng: '108.21486843083582',
+            lat: '16.060570120513376'
           }
         },
         {
@@ -2948,8 +2913,8 @@ export const locationData = {
           name: 'Số 248 Nguyễn Văn Linh',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.20873249467647',
-            lat: '16.059858862429873'
+            lng: '108.20825848043214',
+            lat: '16.059568437502918'
           }
         },
         {
@@ -2962,30 +2927,12 @@ export const locationData = {
           }
         },
         {
-          id: 46318440213,
-          name: 'Công viên 29/3 (gần cổng phụ)',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.20534999995438',
-            lat: '16.066058759835308'
-          }
-        },
-        {
           id: 81912355890,
           name: 'Công viên 29/3',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.20386827111854',
-            lat: '16.066145900950676'
-          }
-        },
-        {
-          id: 47659062731,
-          name: 'Siêu thị Nguyễn Kim',
-          nameLocationBusRoute: 'TMF',
-          location: {
-            lng: '108.20339736437228',
-            lat: '16.066487836137288'
+            lng: '108.2053558901375',
+            lat: '16.065925749788946'
           }
         },
         {
@@ -2993,8 +2940,8 @@ export const locationData = {
           name: 'Số 130 Lý Thái Tổ',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.2077053179601',
-            lat: '16.066476316086327'
+            lng: '108.20740176017873',
+            lat: '16.06617723980762'
           }
         },
         {
@@ -3002,8 +2949,8 @@ export const locationData = {
           name: 'Số 10 Lý Thái Tổ',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.20735946028836',
-            lat: '16.06595868515106'
+            lng: '108.2071322303662',
+            lat: '16.066112105979837'
           }
         },
         {
@@ -3011,8 +2958,8 @@ export const locationData = {
           name: 'Đối diện chợ Cồn',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.21421766662219',
-            lat: '16.066983671574384'
+            lng: '108.21437180363968',
+            lat: '16.067245634853055'
           }
         },
         {
@@ -3029,8 +2976,8 @@ export const locationData = {
           name: 'Số 39-41 Hải Phòng',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.21862854549259',
-            lat: '16.07243011584698'
+            lng: '108.21786867184434',
+            lat: '16.072274397074214'
           }
         },
         {
@@ -3038,8 +2985,8 @@ export const locationData = {
           name: 'Tường rào THPT Trần Phú',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.21943811981092',
-            lat: '16.073622305467765'
+            lng: '108.2183568498475',
+            lat: '16.07301839813329'
           }
         },
         {
@@ -3047,8 +2994,8 @@ export const locationData = {
           name: 'Ð/d 04 Nguyễn Thị Minh Khai',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '106.70415554119894',
-            lat: '10.789771318885467'
+            lng: '108.2177408262392',
+            lat: '16.076377898486523'
           }
         },
         {
@@ -3056,8 +3003,8 @@ export const locationData = {
           name: 'Số 07 Lý Tự Trọng',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '106.70518153934816',
-            lat: '10.782542701777423'
+            lng: '108.22146544492753',
+            lat: '16.07744137952605'
           }
         },
         {
@@ -3065,8 +3012,8 @@ export const locationData = {
           name: 'Đối diện 12 Bạch Đằng',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.22495496047078',
-            lat: '16.07698957365275'
+            lng: '108.22386807543666',
+            lat: '16.079630442089805'
           }
         },
         {
@@ -3074,8 +3021,8 @@ export const locationData = {
           name: 'Số 24 đường 3/2',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.22178914679603',
-            lat: '16.08449414820474'
+            lng: '108.22146916035234',
+            lat: '16.084284258869403'
           }
         },
         {
@@ -3083,8 +3030,8 @@ export const locationData = {
           name: 'Bãi đỗ xe Xuân Diệu',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.22194968267982',
-            lat: '16.087615979031625'
+            lng: '108.2200964927403',
+            lat: '16.08701083235654'
           }
         },
         {
@@ -3092,8 +3039,8 @@ export const locationData = {
           name: 'Số 192 đường 3/2',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.21666238727364',
-            lat: '16.087150502136694'
+            lng: '108.2164932269446',
+            lat: '16.08706437171103'
           }
         },
         {
@@ -3101,8 +3048,8 @@ export const locationData = {
           name: 'Chân cầu Thuận Phước',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.23084554223708',
-            lat: '16.10061339025664'
+            lng: '108.2309313868278',
+            lat: '16.100247727287464'
           }
         },
         {
@@ -3110,8 +3057,8 @@ export const locationData = {
           name: 'Chung cư Chu Huy Mân',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.23146199981744',
-            lat: '16.097302635907404'
+            lng: '108.23174034797788',
+            lat: '16.096638374779165'
           }
         },
         {
@@ -3119,8 +3066,8 @@ export const locationData = {
           name: 'Số 281 Khúc Hạo',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.23227217933345',
-            lat: '16.093385198671633'
+            lng: '108.23256463286097',
+            lat: '16.09280173245668'
           }
         },
         {
@@ -3128,8 +3075,8 @@ export const locationData = {
           name: 'Đối diện lô 113 Dương Vân Nga',
           nameLocationBusRoute: 'TMF',
           location: {
-            lng: '108.23117874566478',
-            lat: '16.090623661323967'
+            lng: '108.23094614874866',
+            lat: '16.090558355564852'
           }
         },
         {
