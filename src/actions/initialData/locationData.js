@@ -1075,11 +1075,291 @@ export const locationData = {
       directionRoute: 'turn',
       route: [
         {
-          id: 45813725054,
-          name: '1. Số 171(Kim Liên) Nguyễn Văn Cừ',
+          id: 16738996829,
+          name: 'Cảng Sông Hàn',
+          nameLocationBusRoute: 'R4A',
           location: {
-            lng: '108.11956612202619',
-            lat: '16.13548288580201'
+            lng: '108.22373539714997',
+            lat: '16.082622488559792'
+          }
+        },
+        {
+          id: 96534531693,
+          name: '20 Đống Đa',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.22080749112735',
+            lat: '16.082442262480814'
+          }
+        },
+        {
+          id: 66874241697,
+          name: '104-106 Đống Đa',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21866622578328',
+            lat: '16.080846681098016'
+          }
+        },
+        {
+          id: 90091923291,
+          name: '240 Đống Đa',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21634214523567',
+            lat: '16.07735109250178'
+          }
+        },
+        {
+          id: 69356868879,
+          name: '322 Đống Đa',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21486006875192',
+            lat: '16.075146363593603'
+          }
+        },
+        {
+          id: 30866566611,
+          name: 'Chợ Tam Giác',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21350920202813',
+            lat: '16.07304754472222'
+          }
+        },
+        {
+          id: 43954804335,
+          name: 'Siêu thị BigC',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21414968927846',
+            lat: '16.06671067943846'
+          }
+        },
+        {
+          id: 24224554343,
+          name: '522-524 Ông Ích Khiêm',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21524217769469',
+            lat: '16.063914638901146'
+          }
+        },
+        {
+          id: 85012725359,
+          name: '618 Ông Ích Khiêm',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21659304984732',
+            lat: '16.06120650364192'
+          }
+        },
+        {
+          id: 11211852261,
+          name: '11-15 Nguyễn Văn Linh',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21606974429214',
+            lat: '16.060495515557168'
+          }
+        },
+        {
+          id: 6201917869,
+          name: 'Đối Diện Chùa Phước Ninh',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21770742471998',
+            lat: '16.060701218906388'
+          }
+        },
+        {
+          id: 98459035487,
+          name: 'Công viên Apec',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.22297389483775',
+            lat: '16.05881971533636'
+          }
+        },
+        {
+          id: 40466335018,
+          name: '152A-154 Đường 2/9',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.2220825286856',
+            lat: '16.051422409087756'
+          }
+        },
+        {
+          id: 62964668698,
+          name: '214-216 Đường 2/9',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.22244333000998',
+            lat: '16.047377717355666'
+          }
+        },
+        {
+          id: 40675849120,
+          name: '264-266 Nui Thanh 48',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.22145177653864',
+            lat: '16.0431885951292'
+          }
+        },
+        {
+          id: 75222735090,
+          name: 'Nút giao Lê Thanh Nghị - đường 30/4',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21842312380464',
+            lat: '16.04057989123785'
+          }
+        },
+        {
+          id: 26802440723,
+          name: 'Trước Công Ty Kiểm Toán & Kế toán AAC',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.21473525105212',
+            lat: '16.040135250027227'
+          }
+        },
+        {
+          id: 59621625940,
+          name: '300-302 Nguyễn Hữu Thọ',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.20973178755769',
+            lat: '16.03626088661962'
+          }
+        },
+        {
+          id: 21936158344,
+          name: '432-434 Nguyễn Hữu Thọ',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.2088633935457',
+            lat: '16.03294622570042'
+          }
+        },
+        {
+          id: 51083822769,
+          name: 'Viettrolimex-Nguyễn Hữu Thọ',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.20847814481236',
+            lat: '16.03044399142489'
+          }
+        },
+        {
+          id: 52047590015,
+          name: '40-42 Lê Đại Hành',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.20750088310731',
+            lat: '16.02432236373561'
+          }
+        },
+        {
+          id: 34109196786,
+          name: 'Ban nghĩa trang TP',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.20432685227635',
+            lat: '16.02343559925508'
+          }
+        },
+        {
+          id: 68582728863,
+          name: 'Dệt may Hòa Thọ',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.20320561865236',
+            lat: '16.02006834748365'
+          }
+        },
+        {
+          id: 42426829559,
+          name: '307-309 đường CMT8',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.20425967895206',
+            lat: '16.016929092832047'
+          }
+        },
+        {
+          id: 61531415022,
+          name: '492 đường CMT8',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.1972225081628',
+            lat: '16.01403691032848'
+          }
+        },
+        {
+          id: 18523528372,
+          name: 'Trước Trung Tâm GDTX Số 3',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.19116550241041',
+            lat: '16.004826844508724'
+          }
+        },
+        {
+          id: 52274489356,
+          name: 'Ngã ba DT605 giao Quốc lộ 1A',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.1919671582678',
+            lat: '15.993832228125905'
+          }
+        },
+        {
+          id: 74348139509,
+          name: 'Đối Diện Trụ Điện 238',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.19088323683629',
+            lat: '15.992601168621881'
+          }
+        },
+        {
+          id: 97018882414,
+          name: 'Trường tiểu học Số 2 Hòa Tiến',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.18147451549397',
+            lat: '15.968812373973853'
+          }
+        },
+        {
+          id: 93856378022,
+          name: 'Gần kiệt 12 thôn Lệ Sơn Bắc',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.17954650785964',
+            lat: '15.962571010356013'
+          }
+        },
+        {
+          id: 65595071565,
+          name: 'Gần nhà thuốc số 1 thôn Lệ Sơn Bắc',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.17981410434453',
+            lat: '15.959531241800514'
+          }
+        },
+        {
+          id: 916017829,
+          name: 'Hòa Tiến (Nghĩa trang xã Hòa Tiến)',
+          nameLocationBusRoute: 'R4A',
+          location: {
+            lng: '108.17859432663842',
+            lat: '15.953196751501668'
           }
         }
       ]

@@ -9,30 +9,28 @@ const PolyLines = ({ searchRoute }) => {
       .filter(i => i.isChecked)
       .map(i => i.nameBusRouter)
 
-    const handleGetAllDataLineRoutes = () => {
-      const getRoutesLine = roadMapData
-        .filter(
-          i =>
-            getRoutesCheckBox.indexOf(i.name) !== -1 &&
-            i.directionRoute === 'return'
-        )
-        .map(i => {
-          return {
-            type: 'Feature',
-            properties: {},
-            color: i.color,
-            name: i.name,
-            directionRoute: i.directionRoute,
-            geometry: {
-              type: 'LineString',
-              coordinates: i.lineRoute
-            }
+    const getRoutesLine = roadMapData
+      .filter(
+        i =>
+          getRoutesCheckBox.indexOf(i.name) !== -1 &&
+          i.directionRoute === 'turn'
+      )
+      .map(i => {
+        return {
+          type: 'Feature',
+          properties: {},
+          color: i.color,
+          name: i.name,
+          directionRoute: i.directionRoute,
+          geometry: {
+            type: 'LineString',
+            coordinates: i.lineRoute
           }
-        })
-      return getRoutesLine
-    }
-    const getData = handleGetAllDataLineRoutes()
-    setAllDataLineRoutes(getData)
+        }
+      })
+
+    setAllDataLineRoutes(getRoutesLine)
+    console.log(getRoutesLine)
   }, [searchRoute])
 
   return (
