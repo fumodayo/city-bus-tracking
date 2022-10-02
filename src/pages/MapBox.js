@@ -16,8 +16,24 @@ export default function MapBox() {
   const [viewport, setViewport] = useState(MAP_BOX_DEFAULT)
 
   const [isOpen, setIsOpen] = useState(true)
-  
+
   const [searchRoute, setSearchRoute] = useState([])
+
+  const data = {
+    positionOptions: {
+      enableHighAccuracy: true
+    },
+    // When active the map will receive updates to the device's location as it changes.
+    trackUserLocation: true
+    // Draw an arrow next to the location dot to indicate which direction the device is heading.
+  }
+
+  console.log(
+    navigator.geolocation.getCurrentPosition(function (position) {
+      const coordinates = [position.coords.latitude, position.coords.longitude]
+      return coordinates
+    })
+  )
 
   return (
     <Map
@@ -49,7 +65,11 @@ export default function MapBox() {
 
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
-      <GeolocateControl position="bottom-right" />
+      <GeolocateControl
+        data={data}
+        onGeolocate={e => console.log(e.target._map._markers[0]._lngLat)}
+        position="bottom-right"
+      />
     </Map>
   )
 }
