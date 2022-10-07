@@ -10,10 +10,17 @@ import { ChevronRight } from '@mui/icons-material'
 import PolyLines from '../components/Polylines/Polylines'
 import MarkerBusStop from '../components/MarkerBusStop/MarkerBusStop'
 import SideBar from '../components/SideBar/SideBar'
-import { API_KEY_MAPBOX, MAP_BOX_DEFAULT } from 'config/constant'
+import { API_KEY_MAPBOX } from 'config/constant'
 
 export default function MapBox() {
-  const [viewport, setViewport] = useState(MAP_BOX_DEFAULT)
+  const [viewport, setViewport] = useState({
+    width: '100%',
+    height: '100%',
+    latitude: 16.06045710530602,
+    longitude: 108.2097851153426,
+    zoom: 12.721197192553936
+  })
+  const _onViewportChange = e => setViewport(e.viewport)
 
   const [isOpen, setIsOpen] = useState(true)
 
@@ -28,19 +35,12 @@ export default function MapBox() {
     // Draw an arrow next to the location dot to indicate which direction the device is heading.
   }
 
-  console.log(
-    navigator.geolocation.getCurrentPosition(function (position) {
-      const coordinates = [position.coords.latitude, position.coords.longitude]
-      return coordinates
-    })
-  )
-
   return (
     <Map
       {...viewport}
       style={{ width: '100vw', height: '100vh' }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
-      onMove={e => setViewport(e.viewport)}
+      onMove={_onViewportChange}
       mapboxAccessToken={API_KEY_MAPBOX}
     >
       <Box sx={{ mr: 1 }}>

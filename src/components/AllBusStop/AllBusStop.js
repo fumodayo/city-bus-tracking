@@ -12,9 +12,8 @@ const AllBusStop = () => {
   // Get All Bus Stop
   const [allBusStop, setAllBusStop] = useState([])
   useEffect(() => {
-    const getAllBusStopInRoutes = locationData.busRoutes.map(i => i.route)
+    const getAllBusStopInRoutes = locationData.map(i => i.route)
     const allData = [getAllBusStopInRoutes, ...getAllBusStopInRoutes].flat(2)
-    console.log(search)
     if (search !== '') {
       const newSearchList = allData.filter(location => {
         return Object.values(location.name)
@@ -27,7 +26,6 @@ const AllBusStop = () => {
       setAllBusStop(allData)
     }
   }, [search])
-  console.log(allBusStop)
 
   return (
     <div className="all-bus-stop">

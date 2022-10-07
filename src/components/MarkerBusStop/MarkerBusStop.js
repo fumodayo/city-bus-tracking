@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Marker, Popup } from 'react-map-gl'
 import busStop from 'images/icon_busstop.png'
 import { locationData } from 'actions/initialData/locationData'
@@ -10,7 +10,7 @@ const MarkerBusStop = ({ searchRoute }) => {
     const getRoutesCheckBox = searchRoute
       .filter(i => i.isChecked)
       .map(i => i.nameBusRouter)
-    const markerLocation = locationData.busRoutes
+    const markerLocation = locationData
       .filter(i => {
         return getRoutesCheckBox.indexOf(i.nameBusRouter) !== -1
       })
