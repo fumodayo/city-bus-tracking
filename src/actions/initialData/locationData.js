@@ -3,8 +3,20 @@ export const locationData = [
     id: 'bus-routes-1',
     nameBusRouter: 'R16',
     name: 'R16: Kim Liên-Đại học Việt Hàn',
-    title: 'Vé lượt: 6.000 đồng/lượt',
     directionRoute: 'turn',
+    drivingJourney: `Kim Liên - Nguyễn Văn Cừ - Cầu Nam Ô - Nguyễn Lương Bằng - Tôn Đức Thắng -
+     Cầu vượt ngã 3 Huế (tầng 3) - Điện Biên Phủ - Lý Thái Tổ - Hùng Vương - Trần Phú - 
+     Cầu Rồng - Ngô Quyền - Ngũ Hành Sơn - Lê Văn Hiến - Trần Đại Nghĩa - Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa).`,
+    lineDistance: '31,63km',
+    operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
+    price: [
+      'Vé lượt: 6.000 đồng/lượt',
+      'Vé tháng ưu tiên 65.000 đồng/tháng.',
+      'Vé tháng không ưu tiên 130.000 đồng/tháng.'
+    ],
+    linkMonthlyTicket: 'https://www.danangbus.vn/thu-tuc-lam-ve-thang.html',
+    linkOnline:
+      'https://www.danangbus.vn/tin-tuc/tin-tuc/huong-dan-dang-ky-the-ve-thang-truc-tuyen-1135.html',
     route: [
       {
         id: 41676731701,

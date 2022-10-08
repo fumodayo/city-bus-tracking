@@ -23,7 +23,8 @@
   //    span
   //     a
 
-  const arrTitle = ['1. Bãi tắm biển Mỹ Khê', '2. Bãi tắm Phạm Văn Đồng',
+  const arrTitle = [
+    '1. Bãi tắm biển Mỹ Khê', '2. Bãi tắm Phạm Văn Đồng',
     '3. Bãi tắm Bắc Mỹ An', '4. Bãi biển Xuân Thiều', '5. Bãi biển Nam Ô hay Rạn Nam Ô',
     '6. Hồ Xanh', '7. Làng bích họa Tam Thanh', '8. Rạn Nam Ô', '9. Giếng Trời',
     '10. Rừng thông Bồ Bồ', '11. Làng cổ Phong Nam', '12. Suối Mơ  ', '13. Chợ cồn Đà Nẵng ',
@@ -48,7 +49,8 @@
     '50. Bar Sky36', '51. Du thuyền Sông Hàn', '52. Chợ đêm Helio ', '53. Chợ đêm Sơn Trà',
     '54. Chợ đêm Hòa Khánh', '55. Oq Lounge Pub']
 
-  const arrImage = ["Bãi tắm biển Mỹ Khê Đà Nẵng",
+  const arrImage = [
+    "Bãi tắm biển Mỹ Khê Đà Nẵng",
     "https://gotadi.com/tour/wp-content/uploads/2021/10/bai-tam-my-khe.jpg",
     "Bãi biển Phạm Văn Đồng tại Đà Nẵng tại Phạm Văn Đồng, Phước Mỹ, Sơn Trà, Đà Nẵng",
     "https://gotadi.com/tour/wp-content/uploads/2021/10/bai-bien-pham-van-dong-dep-nhat-da-nang.jpg",
@@ -160,9 +162,10 @@
     "https://gotadi.com/tour/wp-content/uploads/2021/10/bar-qq-dia-chi-vui-choi-da-nang.jpg"]
 
   const arrLocation =
-    ["https://www.google.com/maps/place/B%C3%A3i+bi%E1%BB%83n+M%E1%BB%B9+Kh%C3%AA/@16.0619421,108.247174,16z/data=!3m1!4b1!4m5!3m4!1s0x31421782f7fa0ee3:0xeafb8ba272ee55ac!8m2!3d16.0616944!4d108.2469346?hl=vi-VN", 'dọc đường Võ Nguyên Giáp, Phước Mỹ, Sơn Trà, Đà Nẵng ',
+    [
+      "https://www.google.com/maps/place/B%C3%A3i+bi%E1%BB%83n+M%E1%BB%B9+Kh%C3%AA/@16.0619421,108.247174,16z/data=!3m1!4b1!4m5!3m4!1s0x31421782f7fa0ee3:0xeafb8ba272ee55ac!8m2!3d16.0616944!4d108.2469346?hl=vi-VN", 'dọc đường Võ Nguyên Giáp, Phước Mỹ, Sơn Trà, Đà Nẵng ',
       "https://www.google.com/maps/place/B%C3%A3i+t%E1%BA%AFm+Ph%E1%BA%A1m+V%C4%83n+%C4%90%E1%BB%93ng/@16.0851616,108.2549248,14z/data=!3m1!4b1!4m5!3m4!1s0x3142178599738b33:0xf208a358691762b3!8m2!3d16.0732782!4d108.2468342?hl=vi-VN", 'Phạm Văn Đồng, Phước Mỹ, Sơn Trà, Đà Nẵng',
-      "https://www.google.com/maps/place/B%C3%A3i+bi%E1%BB%83n+M%E1%BB%B9+Kh%C3%AA/@16.0619421,108.247174,16z/data=!4m5!3m4!1s0x31421782f7fa0ee3:0xeafb8ba272ee55ac!8m2!3d16.0616944!4d108.2469346?hl=vi-VN", 'Bắc Mỹ, Ngũ Hành Sơn,Đà Nẵng ',
+      "https://www.google.com/maps/place/B%C3%A3i+bi%E1%BB%83n+M%E1%BB%B9+Kh%C3%AA/@16.0619421,108.247174,16z/data=!4m5!3m4!1s0x31421782f7fa0ee3:0xeafb8ba272ee55ac!8m2!3d16.0616944!4d108.2469346?hl=vi-VN", 'Bắc Mỹ, Ngũ Hành Sơn, Đà Nẵng ',
       "https://www.google.com/maps/place/Khu+du+l%E1%BB%8Bch+Xu%C3%A2n+Thi%E1%BB%81u/@16.093323,108.1423384,17z/data=!3m1!4b1!4m5!3m4!1s0x314219688b89d5f3:0x7dbc59291183491e!8m2!3d16.0933179!4d108.1445271?hl=vi-VN", 'đường Nguyễn Tất Thành, Hòa hiệp Nam, Liên Chiểu, Đà Nẵng ',
       "https://www.google.com/maps/place/R%E1%BA%A1n+Nam+%C3%94/@16.1177177,108.128796,17z/data=!4m9!1m2!2m1!1zYsOjaSBiaeG7g24gbmFtIMO0!3m5!1s0x31421f581f4c250b:0x90b2dcadf1d415f0!8m2!3d16.1177177!4d108.1309847!15sChJiw6NpIGJp4buDbiBuYW0gw7RaFCISYsOjaSBiaeG7g24gbmFtIMO0kgESdG91cmlzdF9hdHRyYWN0aW9umgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJaTUdWTFMyWkJFQUU?hl=vi-VN", 'Nam Ô 1, Liên Chiểu, Đà Nẵng',
       "https://www.google.com/maps/place/H%E1%BB%93+Xanh+%C4%90%C3%A0+N%E1%BA%B5ng/@16.0986692,108.2680636,17z/data=!3m1!4b1!4m5!3m4!1s0x314217dbf8ec4287:0xa5a20948363ade!8m2!3d16.0986692!4d108.2680636?hl=vi-VN", 'Hoàng Sa, Thọ Quang, Sơn Trà Đà Nẵng',
@@ -183,6 +186,7 @@
       "https://www.google.com/maps/place/Cung+th%E1%BB%83+thao+Ti%C3%AAn+S%C6%A1n/@16.0368435,108.2263914,17z/data=!3m1!4b1!4m5!3m4!1s0x314219e91ac18ded:0x62fbb8d47ec96199!8m2!3d16.0368435!4d108.2263914?hl=vi-VN", 'Phan Đăng Lưu, Hòa Cường, Hải Châu, Đà Nẵng ',
       "https://www.google.com/maps/place/C%E1%BA%A7u+V%C3%A0ng+-+B%C3%A0+N%C3%A0+Hills/@15.9950734,107.9963662,17z/data=!3m1!4b1!4m5!3m4!1s0x3141f7f503abc03b:0x9d023df40751a196!8m2!3d15.994992!4d107.9963497?hl=vi-VN", 'xã Hòa Vang, huyện Hòa Vang, Đà Nẵng',
       "https://www.google.com/maps/place/B%C3%A3i+Ch%C3%A1y/@16.1009412,108.2687841,17z/data=!3m1!4b1!4m5!3m4!1s0x314217d915f40f77:0x3ddd2ed4a988a1ed!8m2!3d16.1009412!4d108.2687841?hl=vi-VN", 'gần chùa Linh Ứng, Sơn Trà, Đà Nẵng ',
+      'Thọ Quang, Sơn Trà, Đà Nẵng', 'Thọ Quang, Sơn Trà, Đà Nẵng',
       "https://www.google.com/maps/place/Khu+%C4%90i%E1%BB%87n+%E1%BA%A2nh+v%C3%A0+D%C3%A3+Ngo%E1%BA%A1i+%C4%90%C3%A0+N%E1%BA%B5ng,+Nguy%E1%BB%85n+H%E1%BB%AFu+An,+N%E1%BA%A1i+Hi%C3%AAn+%C4%90%C3%B4ng,+S%C6%A1n+Tr%C3%A0,+%C4%90%C3%A0+N%E1%BA%B5ng+550000,+Vi%E1%BB%87t+Nam/@16.1012417,108.2259294,14z/data=!3m1!4b1!4m5!3m4!1s0x31421805882d0b87:0xb5aab2cee6f31a56!8m2!3d16.101242!4d108.2259294?hl=vi-VN", 'Nguyễn Hữu An, Nại Hiên Đông, Sơn Trà, Đà Nẵng',
       "https://www.google.com/maps/place/%C4%90%C3%A8o+H%E1%BA%A3i+V%C3%A2n/@16.1999997,108.133333,14z/data=!3m1!4b1!4m5!3m4!1s0x31422151a4984555:0x9a66217b26b3f759!8m2!3d16.2!4d108.133333?hl=vi-VN", 'ranh giới giữa tỉnh thừa Thiên Huế và thành phố Đà Nẵng ',
       "https://www.google.com/maps/place/C%C3%A2y+%C4%90a+Ng%C3%A0n+N%C4%83m/@16.1225629,108.3317224,17z/data=!3m1!4b1!4m5!3m4!1s0x31423de2829a7adb:0x7b42afa6407a77f7!8m2!3d16.1225629!4d108.3317224?hl=vi-VN", 'bán đảo Sơn Trà, Thọ Quang, Sơn Trà, Đà Nẵng',
@@ -191,6 +195,7 @@
       "https://www.google.com/maps/place/Nguy%E1%BB%85n+V%C4%83n+Tr%E1%BB%97i+Bridge,+%C4%90%C3%A0+N%E1%BA%B5ng+550000,+Vi%E1%BB%87t+Nam/@16.0502116,108.2299527,17z/data=!4m5!3m4!1s0x314219d9c23596bd:0x19d755779a2b23b7!8m2!3d16.0502116!4d108.2299527?hl=vi-VN", 'Duy Tân, Hải Châu, Đà Nẵng',
       "https://www.google.com/maps/place/C%E1%BA%A7u+Tr%E1%BA%A7n+Th%E1%BB%8B+L%C3%BD/@16.0502174,108.2289446,17z/data=!3m1!4b1!4m5!3m4!1s0x3142194116f58883:0x87dd93f9c20b9c30!8m2!3d16.0502174!4d108.2289446?hl=vi-VN", 'Hòa Cường, Hải Châu, Đà Nẵng ',
       "https://www.google.com/maps/place/T%C6%B0%E1%BB%A3ng+C%C3%A1+Ch%C3%A9p+h%C3%B3a+R%E1%BB%93ng/@16.0629429,108.2297821,17z/data=!3m1!4b1!4m5!3m4!1s0x3142198c825000e1:0x9b011fe03c346db3!8m2!3d16.0629429!4d108.2297821?hl=vi-VN", 'Trần Hưng Đạo, quận Sơn Trà, Đà Nẵng',
+      'Lê Văn Duyệt, Nại Hiên Đông, Sơn Trà, Đà Nẵng ', 'Lê Văn Duyệt, Nại Hiên Đông, Sơn Trà, Đà Nẵng ',
       "https://www.google.com/maps/place/B%C3%A1n+%C4%91%E1%BA%A3o+S%C6%A1n+Tr%C3%A0/@16.1266563,108.2756956,12z/data=!3m1!4b1!4m5!3m4!1s0x31423d72d1be522d:0x1e7339a6534e4e7!8m2!3d16.1159837!4d108.273341?hl=vi-VN", 'bán đảo Sơn Trà, Đà Nẵng',
       "https://www.google.com/maps/place/La%CC%80ng+Bi%CC%81ch+ho%CC%A3a+%C4%90a%CC%80+N%C4%83%CC%83ng-+Da+Nang+Fresco+Village/@16.0607217,108.2200138,17z/data=!3m1!4b1!4m5!3m4!1s0x314219cc7844ab91:0x436db6a820a059c!8m2!3d16.0607217!4d108.2200154?hl=vi-VN", 'hẻm 75 Nguyễn Văn Linh, Hải Châu, Đà Nẵng ',
       "https://www.google.com/maps/place/%C4%91%E1%BB%89nh+B%C3%A0n+C%E1%BB%9D/@16.1199859,108.2759459,14z/data=!3m1!4b1!4m5!3m4!1s0x31423d71a211a64f:0xb65a8033e2183c23!8m2!3d16.1199862!4d108.2759459?hl=vi-VN", 'bán đảo Sơn Trà, Sơn Trà, Đà Nẵng',
@@ -211,7 +216,100 @@
       "https://www.google.com/maps/place/Du+Thuy%E1%BB%81n+S%C3%B4ng+H%C3%A0n/@16.0778638,108.2238246,17z/data=!3m1!4b1!4m5!3m4!1s0x31421921068f310d:0xfaa27019db3d4fba!8m2!3d16.0778638!4d108.2238246?hl=vi-VN", '24 Bạch Đằng, Hải Châu 1, Hải Châu, Đà Nẵng',
       "https://www.google.com/maps/place/Ch%E1%BB%A3+%C4%91%C3%AAm+Helio+(Khu+%E1%BA%A8m+th%E1%BB%B1c+%C4%91%C3%AAm+Helio%EF%BC%89/@16.0372462,108.2244753,17z/data=!3m1!4b1!4m5!3m4!1s0x314219e891faca05:0x7fd538a95a570da!8m2!3d16.0372462!4d108.2244753?hl=vi-VN", 'đường 2 tháng 9, Hải Châu, Đà Nẵng',
       "https://www.google.com/maps/place/Ch%E1%BB%A3+%C4%90%C3%AAm+S%C6%A1n+Tr%C3%A0/@16.0615978,108.2319855,17z/data=!3m1!4b1!4m5!3m4!1s0x3142195a335892bd:0x8f53976f3c0fe60!8m2!3d16.0615978!4d108.2319855?hl=vi-VN", 'Mai Hắc Đế, An Hải Trung, Sơn Trà, Đà Nẵng ',
+      'Âu Cơ, Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng', 'Âu Cơ, Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng',
       "https://www.google.com/maps/place/Oq+Lounge+Pub/@16.0794866,108.2236767,17z/data=!3m1!4b1!4m5!3m4!1s0x31421946747f0e01:0x391b7d6f4ec32617!8m2!3d16.0794838!4d108.22365?hl=vi-VN", 'số 18 - 20 Bạch Đằng, Thạch Thang, Hải Châu, Đà Nẵng']
+
+  const arrCoord = [
+    '16.0619421', '108.247174',
+    '16.0851616', '108.2549248',
+    '16.0619421', '108.247174',
+    '16.093323', '108.1423384',
+    '16.1177177', '108.128796',
+    '16.0986692', '108.2680636',
+    '15.6030913', '108.5348098',
+    '16.1177177', '108.1309847',
+    '16.0347599', '107.9909156',
+    '15.9186608', '108.1481266',
+    '15.9865505', '108.1933323',
+    '15.9964899', '107.9953379',
+    '16.0680564', '108.2121195',
+    '16.1266563', '108.2756956',
+    '16.0034977', '108.2636607',
+    '16.060681', '108.2235363',
+    '16.0956067', '108.2428156',
+    '16.0763364', '108.2216104',
+    '16.0934606', '108.2512793',
+    '16.0036074', '108.26569',
+    '16.0368435', '108.2263914',
+    '15.9950734', '107.9963662',
+    '16.1009412', '108.2687841',
+    'Thọ Quang, Sơn Trà, Đà Nẵng', 'Thọ Quang, Sơn Trà, Đà Nẵng',
+    '16.1012417', '108.2259294',
+    '16.1999997', '108.133333',
+    '16.1225629', '108.3317224',
+    '16.03878', '108.2448585',
+    '16.0950642', '108.2181178',
+    '16.0502116', '108.2299527',
+    '16.0502174', '108.2289446',
+    '16.0629429', '108.2297821',
+    'Lê Văn Duyệt, Nại Hiên Đông', 'Lê Văn Duyệt, Nại Hiên Đông',
+    '16.1266563', '108.2756956',
+    '16.0607217', '108.2200138',
+    '16.1199859', '108.2759459',
+    '16.0666851', '108.2230073',
+    '16.0691374', '108.2453792',
+    '16.0703173', '108.2458368',
+    '15.9977042', '107.9880665',
+    '16.0920725', '105.9030161',
+    '16.1266563', '108.2756956',
+    '16.0988164', '108.2243972',
+    '16.0497241', '108.2122817',
+    '15.9678479', '108.0198634',
+    '16.0721459', '108.226776',
+    '16.0545235', '108.2203505',
+    '16.0632799', '108.2296041',
+    '10.983709', '106.6484097',
+    '16.077401', '108.2237974',
+    '16.0778638', '108.2238246',
+    '16.0372462', '108.2244753',
+    '16.0615978', '108.2319855',
+    'Âu Cơ, Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng', 'Âu Cơ, Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng'
+    , '16.0794866', '108.2236767',]
+
+  // console.log(arrTitle.length)
+  // console.log(arrImage.length)
+  // console.log(arrLocation.length)
+  // console.log(arrCoord.length)
+
+  let b = []
+  const getData = () => {
+    return {
+      id: Math.floor(Math.random() * 100000000000),
+      title: arrTitle[0],
+      image: arrImage[1],
+      imageDesc: arrImage[0],
+      description: '',
+      locationLink: arrLocation[0],
+      locationName: arrLocation[1],
+      location: {
+        lng: arrCoord[1],
+        lat: arrCoord[0]
+      }
+    }
+  }
+
+  // setInterval(() => {
+
+  //   c = getData()
+  //   b = [...b, c]
+  //   console.log(b)
+  //   arrTitle.splice(0, 1)
+  //   arrImage.splice(0, 2)
+  //   arrLocation.splice(0, 2)
+  //   arrCoord.splice(0, 2)
+
+  // }, 1000)
+
 </script>
 
 </html>
