@@ -17,6 +17,7 @@
     "mapbox-gl": "^2.9.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
+    "react-countdown": "^2.3.2",
     "react-dom": "^18.2.0",
     "react-map-gl": "^7.0.17",
     "react-scripts": "5.0.1",
