@@ -1,3 +1,4 @@
+// 392
 export const locationData = [
   {
     id: 'bus-routes-1',
@@ -1229,7 +1230,7 @@ export const locationData = [
       },
       {
         id: 51083822769,
-        name: 'Viettrolimex-Nguyễn Hữu Thọ',
+        name: 'Viettronimex-Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R4A',
         location: {
           lng: '108.20847814481236',

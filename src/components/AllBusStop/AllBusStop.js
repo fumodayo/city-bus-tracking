@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Paper, InputBase } from '@mui/material'
 import { locationData } from 'actions/initialData/locationData'
+import { cloneDeep } from 'lodash'
 
 const AllBusStop = () => {
   // Get word input to search
@@ -11,19 +12,28 @@ const AllBusStop = () => {
 
   // Get All Bus Stop
   const [allBusStop, setAllBusStop] = useState([])
+
+  cloneDeep(locationData)
   useEffect(() => {
-    const getAllBusStopInRoutes = locationData.map(i => i.route)
-    const allData = [getAllBusStopInRoutes, ...getAllBusStopInRoutes].flat(2)
+    const getAllBusStopInRoutes = locationData.map(i =>
+      i.route.map(i => {
+        let a = []
+        a = [...a, i.name]
+        a.flat(2)
+        return a
+      })
+    ).flat(2)
+
     if (search !== '') {
-      const newSearchList = allData.filter(location => {
-        return Object.values(location.name)
-          .join(' ')
-          .toLowerCase(' ')
+      const newSearchList = getAllBusStopInRoutes.filter(name => {
+        return Object.values(name)
+          .join('')
+          .toLowerCase('')
           .includes(search.toLowerCase())
       })
       setAllBusStop(newSearchList)
     } else {
-      setAllBusStop(allData)
+      setAllBusStop(getAllBusStopInRoutes)
     }
   }, [search])
 
@@ -53,11 +63,11 @@ const AllBusStop = () => {
         />
       </Paper>
       <div className="scroll-content">
-        {allBusStop.map((busstop, index) => (
+        {allBusStop.map((name, index) => (
           <div key={index} className="row align-items-center h-100">
-            <div className="small-3">
+            <div className="small-3 mt-10">
               <div className="route-no text-center">
-                <span>{index + 1}</span>
+                <span style={{ fontWeight: 600 }}>{index + 1}</span>
               </div>
             </div>
 
@@ -66,10 +76,11 @@ const AllBusStop = () => {
                 style={{
                   color: '#000',
                   fontSize: '16px',
-                  fontWeight: 600
+                  fontWeight: 600,
+                  margin: '5px'
                 }}
               >
-                {busstop.name}
+                {name}
               </p>
             </div>
             <hr></hr>
