@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import { Drawer, IconButton, Typography, Box, Tab, styled } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { ChevronLeft } from '@mui/icons-material'
-import BusRouter from '../BusRouter/BusRouter'
-import FindRouter from '../FindRouter/FindRouter'
-import './SideBar.scss'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -14,13 +11,13 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar
 }))
 
-const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute }) => {
+const BusStop = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const [tabValue, setTabValue] = useState('1')
 
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
   }
-
   return (
     <Drawer
       variant="persistent"
@@ -29,7 +26,7 @@ const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute }) => {
       open={isOpen}
     >
       <DrawerHeader sx={{ overflowY: 'none' }}>
-        <Typography>Hệ thống xe buýt Đà Nẵng</Typography>
+        <Typography>Ten bus stop</Typography>
         <IconButton onClick={() => setIsOpen(false)}>
           <ChevronLeft fontSize="large" />
         </IconButton>
@@ -51,20 +48,13 @@ const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute }) => {
           <TabContext value={tabValue}>
             <Box>
               <TabList onChange={handleChangeTab} aria-label="lab">
-                <Tab style={{ width: '50%' }} label="Tra cứu" value="1" />
-                <Tab style={{ width: '50%' }} label="Tìm tuyến" value="2" />
+                <Tab style={{ width: '50%' }} label="Xe sắp tới trạm" value="1" />
+                <Tab style={{ width: '50%' }} label="Tuyến đi qua" value="2" />
               </TabList>
             </Box>
             <Box>
-              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="1">
-                <BusRouter
-                  searchRoute={searchRoute}
-                  setSearchRoute={setSearchRoute}
-                />
-              </TabPanel>
-              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2">
-                <FindRouter />
-              </TabPanel>
+              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="1"></TabPanel>
+              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2"></TabPanel>
             </Box>
           </TabContext>
         </Box>
@@ -73,4 +63,4 @@ const SideBar = ({ isOpen, setIsOpen, searchRoute, setSearchRoute }) => {
   )
 }
 
-export default SideBar
+export default BusStop

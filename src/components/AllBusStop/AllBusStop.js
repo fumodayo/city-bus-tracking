@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Paper, InputBase } from '@mui/material'
 import { locationData } from 'actions/initialData/locationData'
 import { cloneDeep } from 'lodash'
+import FormInput from 'components/Common/FormInput'
 
 const AllBusStop = () => {
   // Get word input to search
@@ -15,21 +16,20 @@ const AllBusStop = () => {
 
   cloneDeep(locationData)
   useEffect(() => {
-    const getAllBusStopInRoutes = locationData.map(i =>
-      i.route.map(i => {
-        let a = []
-        a = [...a, i.name]
-        a.flat(2)
-        return a
-      })
-    ).flat(2)
+    const getAllBusStopInRoutes = locationData
+      .map(i =>
+        i.route.map(i => {
+          let a = []
+          a = [...a, i.name]
+          a.flat(2)
+          return a
+        })
+      )
+      .flat(2)
 
     if (search !== '') {
       const newSearchList = getAllBusStopInRoutes.filter(name => {
-        return Object.values(name)
-          .join('')
-          .toLowerCase('')
-          .includes(search.toLowerCase())
+        return Object.values(name).join('').toLowerCase('').includes(search.toLowerCase())
       })
       setAllBusStop(newSearchList)
     } else {
@@ -54,13 +54,7 @@ const AllBusStop = () => {
           fontSize: '1rem'
         }}
       >
-        <InputBase
-          sx={{ ml: 1, flex: 1 }}
-          placeholder="Nhập tên trạm dừng..."
-          inputProps={{ 'aria-label': 'Tìm kiếm trạm dừng' }}
-          value={search}
-          onChange={e => handleChangeWordSearch(e.target.value)}
-        />
+        <FormInput onChange={handleChangeWordSearch} placeholder={'Nhập tên tuyến...'} />
       </Paper>
       <div className="scroll-content">
         {allBusStop.map((name, index) => (

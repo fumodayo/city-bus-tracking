@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Checkbox, Paper, InputBase } from '@mui/material'
 import { busRouterData } from 'components/BusRouter/busRouterData'
 import { useStore } from 'store'
+import FormInput from 'components/Common/FormInput'
 
 const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   const [state, dispatch] = useStore()
@@ -18,10 +19,7 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
     setSearch(search)
     if (search !== '') {
       const newSearchList = busRouterData.filter(route => {
-        return Object.values(route)
-          .join(' ')
-          .toLowerCase()
-          .includes(search.toLowerCase())
+        return Object.values(route).join('').toLowerCase().includes(search.toLowerCase())
       })
       setSearchRoute(newSearchList)
     } else {
@@ -33,9 +31,7 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   const handleChangeCheckboxRoute = e => {
     const { value: routeName, checked } = e.target
     let tempRoute = searchRoute.map(route =>
-      route.nameBusRouter === routeName
-        ? { ...route, isChecked: checked }
-        : route
+      route.nameBusRouter === routeName ? { ...route, isChecked: checked } : route
     )
     setSearchRoute(tempRoute)
   }
@@ -57,12 +53,9 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
           fontSize: '1rem'
         }}
       >
-        <InputBase
-          sx={{ ml: 1, flex: 1 }}
-          placeholder="Nhập tên tuyến..."
-          inputProps={{ 'aria-label': 'Tìm tuyến xe buýt' }}
-          value={search}
-          onChange={e => handleChangeWordSearch(e.target.value)}
+        <FormInput
+          onChange={handleChangeWordSearch}
+          placeholder={'Nhập tên tuyến...'}
         />
       </Paper>
       <div className="scroll-content">
