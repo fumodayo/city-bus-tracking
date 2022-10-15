@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Paper, InputBase } from '@mui/material'
+import { Paper } from '@mui/material'
 import { locationData } from 'actions/initialData/locationData'
 import { cloneDeep } from 'lodash'
 import FormInput from 'components/Common/FormInput'
+import CustomSidebar from 'components/Common/CustomSidebar'
 
 const AllBusStop = () => {
   // Get word input to search
@@ -37,6 +38,14 @@ const AllBusStop = () => {
     }
   }, [search])
 
+  const [showSidebar, setShowSidebar] = useState(false)
+  const [nameBusStop, setNameBusStop] = useState('')
+  const handleTarget = e => {
+    setNameBusStop(e.target.innerText)
+    setShowSidebar(showSidebar => !showSidebar)
+    console.log(showSidebar)
+  }
+
   return (
     <div className="all-bus-stop">
       <Paper
@@ -54,11 +63,18 @@ const AllBusStop = () => {
           fontSize: '1rem'
         }}
       >
-        <FormInput onChange={handleChangeWordSearch} placeholder={'Nhập tên tuyến...'} />
+        <FormInput
+          onChange={handleChangeWordSearch}
+          placeholder={'Nhập tên trạm dừng...'}
+        />
       </Paper>
       <div className="scroll-content">
         {allBusStop.map((name, index) => (
-          <div key={index} className="row align-items-center h-100">
+          <div
+            key={index}
+            className="row align-items-center h-100"
+            style={{ cursor: 'pointer' }}
+          >
             <div className="small-3 mt-10">
               <div className="route-no text-center">
                 <span style={{ fontWeight: 600 }}>{index + 1}</span>
@@ -73,6 +89,7 @@ const AllBusStop = () => {
                   fontWeight: 600,
                   margin: '5px'
                 }}
+                onClick={handleTarget}
               >
                 {name}
               </p>
@@ -80,6 +97,14 @@ const AllBusStop = () => {
             <hr></hr>
           </div>
         ))}
+        {showSidebar && (
+          <CustomSidebar
+            show={showSidebar}
+            name={nameBusStop}
+            tabLeft={'Xe sắp tới trạm'}
+            tabRight={'Tuyến đi qua'}
+          />
+        )}
       </div>
     </div>
   )

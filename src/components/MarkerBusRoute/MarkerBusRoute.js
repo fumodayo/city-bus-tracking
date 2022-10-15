@@ -3,7 +3,7 @@ import { Marker, Popup } from 'react-map-gl'
 import busStop from 'images/icon_busstop.png'
 import { locationData } from 'actions/initialData/locationData'
 
-const MarkerBusStop = ({ searchRoute }) => {
+const MarkerBusRoute = ({ searchRoute }) => {
   const [markerLocation, setMarkerLocation] = useState([])
 
   useEffect(() => {
@@ -61,4 +61,4 @@ const MarkerBusStop = ({ searchRoute }) => {
   )
 }
 
-export default MarkerBusStop
+export default MarkerBusRoute

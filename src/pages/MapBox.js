@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import Map, { NavigationControl, FullscreenControl, GeolocateControl } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import PolyLines from '../components/Polylines/Polylines'
-import MarkerBusStop from '../components/MarkerBusStop/MarkerBusStop'
+import MarkerBusRoute from 'components/MarkerBusRoute/MarkerBusRoute'
 import { API_KEY_MAPBOX } from 'config/constant'
-import CustomSidebar from 'components/Common/CustomSidebar'
-import BusRouter from 'components/BusRouter/BusRouter'
-import FindRouter from 'components/FindRouter/FindRouter'
+import Sidebar from 'components/Sidebar/Sidebar'
 
 export default function MapBox() {
   const [viewport, setViewport] = useState({
@@ -36,18 +34,11 @@ export default function MapBox() {
       onMove={_onViewportChange}
       mapboxAccessToken={API_KEY_MAPBOX}
     >
-      <CustomSidebar
-        show={true}
-        title={'Hệ thống xe buýt Đà Nẵng'}
-        tabLeft={'Tra cứu'}
-        tabRight={'Tìm tuyến'}
-        compLeft={<BusRouter searchRoute={searchRoute} setSearchRoute={setSearchRoute} />}
-        compRight={<FindRouter />}
-      />
+      <Sidebar searchRoute={searchRoute} setSearchRoute={setSearchRoute} />
 
       <PolyLines searchRoute={searchRoute} />
 
-      <MarkerBusStop searchRoute={searchRoute} />
+      <MarkerBusRoute searchRoute={searchRoute} />
 
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />

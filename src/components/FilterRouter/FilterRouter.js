@@ -6,7 +6,7 @@ import FormInput from 'components/Common/FormInput'
 
 const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   const [state, dispatch] = useStore()
-  console.log(state)
+  // console.log(state)
 
   // Get word input to search
   const [search, setSearch] = useState('')
