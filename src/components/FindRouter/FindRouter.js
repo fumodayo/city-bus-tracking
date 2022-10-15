@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import {
-  Box,
-  InputBase,
-  Paper,
-  Tab,
-  Typography,
-  Radio
-} from '@mui/material'
+import { Box, InputBase, Paper, Tab, Typography } from '@mui/material'
+import TravelExploreIcon from '@mui/icons-material/TravelExplore'
+import MarkerBlue from '../../images/markerblue.png'
+import MarkerRed from '../../images/markerred.png'
+import './FindRoute.scss'
 
 const FindRouter = () => {
   const [tabValue, setTabValue] = useState('1')
@@ -23,32 +20,55 @@ const FindRouter = () => {
         sx={{
           p: '2px 4px',
           alignItems: 'center',
-          width: 320
+          width: '90%',
+          border: 'none',
+          borderRadius: '15px',
+          boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',
+          backgroundColor: '#ffffff',
+          padding: '10px 0px',
+          position: 'relative',
+          margin: '1rem',
+          transition: 'all 2s ease'
         }}
       >
-        <InputBase
-          sx={{ ml: 1, flex: 1 }}
-          placeholder="Nhập địa điểm xuất phát"
-        />
-        <InputBase
-          sx={{ ml: 1, flex: 1 }}
-          placeholder="Nhập địa điểm kết thúc"
-        />
+        <div className="input-box pos-relative">
+          <img src={MarkerRed} alt="marker-red" />
+          <InputBase
+            autoFocus
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="Nhập địa điểm xuất phát"
+          />
+          <TravelExploreIcon style={{ cursor: 'pointer' }} />
+        </div>
+        <div className="line"></div>
+        <div className="input-box pos-relative">
+          <img src={MarkerBlue} alt="marker-blue" />
+          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Nhập địa điểm kết thúc" />
+          <TravelExploreIcon style={{ cursor: 'pointer' }} />
+        </div>
       </Paper>
-      <Typography>SỐ TUYẾN TỐI ĐA:</Typography>
+      <Typography style={{ fontSize: '22px' }}>SỐ TUYẾN TỐI ĐA:</Typography>
       <TabContext value={tabValue}>
         <Box>
           <TabList onChange={handleChangeTab} aria-label="lab">
-            <Tab style={{ width: '50%' }} label="1 tuyen" value="1" />
-            <Tab style={{ width: '50%' }} label="2 tuyen" value="2" />
+            <Tab
+              style={{ width: '50%', textTransform: 'none' }}
+              label="1 tuyến"
+              value="1"
+            />
+            <Tab
+              style={{ width: '50%', textTransform: 'none' }}
+              label="2 tuyến"
+              value="2"
+            />
           </TabList>
         </Box>
         <Box>
           <TabPanel style={{ paddingLeft: '0' }} value="1">
-            <Radio style={{borderRadius: '20px'}}/>
+            Turn
           </TabPanel>
           <TabPanel style={{ paddingLeft: '0' }} value="2">
-            2 tuyen
+            Turn/ Return
           </TabPanel>
         </Box>
       </TabContext>

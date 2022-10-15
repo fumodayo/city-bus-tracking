@@ -16,7 +16,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const Sidebar = props => {
   const { searchRoute, setSearchRoute } = props
-  const [isOpen, setIsOpen] = useState(props.show)
+  const [isOpen, setIsOpen] = useState(true)
   const [tabValue, setTabValue] = useState('1')
 
   const handleChangeTab = (e, newTabValue) => {
@@ -63,8 +63,16 @@ const Sidebar = props => {
             <TabContext value={tabValue}>
               <Box>
                 <TabList onChange={handleChangeTab} aria-label="lab">
-                  <Tab style={{ width: '50%' }} label="Tra cứu" value="1" />
-                  <Tab style={{ width: '50%' }} label="Tìm tuyến" value="2" />
+                  <Tab
+                    style={{ width: '50%', textTransform: 'none' }}
+                    label="Tra cứu"
+                    value="1"
+                  />
+                  <Tab
+                    style={{ width: '50%', textTransform: 'none' }}
+                    label="Tìm tuyến"
+                    value="2"
+                  />
                 </TabList>
               </Box>
               <Box>

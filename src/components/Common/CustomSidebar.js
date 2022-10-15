@@ -54,8 +54,16 @@ const CustomSidebar = props => {
           <TabContext value={tabValue}>
             <Box>
               <TabList onChange={handleChangeTab} aria-label="lab">
-                <Tab style={{ width: '50%' }} label={tabLeft} value="1" />
-                <Tab style={{ width: '50%' }} label={tabRight} value="2" />
+                <Tab
+                  style={{ width: '50%', textTransform: 'none' }}
+                  label={tabLeft}
+                  value="1"
+                />
+                <Tab
+                  style={{ width: '50%', textTransform: 'none' }}
+                  label={tabRight}
+                  value="2"
+                />
               </TabList>
             </Box>
             <Box>

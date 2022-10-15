@@ -17,16 +17,21 @@ const BusRouter = ({ searchRoute, setSearchRoute }) => {
       <TabContext value={tabValue}>
         <Box>
           <TabList onChange={handleChangeTab} aria-label="lab">
-            <Tab style={{ width: '50%' }} label="Tuyến" value="1" />
-            <Tab style={{ width: '50%' }} label="Trạm dừng" value="2" />
+            <Tab
+              style={{ width: '50%', textTransform: 'none' }}
+              label="Tuyến"
+              value="1"
+            />
+            <Tab
+              style={{ width: '50%', textTransform: 'none' }}
+              label="Trạm dừng"
+              value="2"
+            />
           </TabList>
         </Box>
         <Box>
           <TabPanel style={{ paddingLeft: '0' }} value="1">
-            <FilterRouter
-              searchRoute={searchRoute}
-              setSearchRoute={setSearchRoute}
-            />
+            <FilterRouter searchRoute={searchRoute} setSearchRoute={setSearchRoute} />
           </TabPanel>
           <TabPanel style={{ paddingLeft: '0' }} value="2">
             <AllBusStop />
