@@ -67,7 +67,7 @@ export const locationData = [
       },
       {
         id: 5510081972,
-        name: 'Số 767(Đối Diện 536) Nguyễn Lương Bằng',
+        name: 'Số 767 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.13502538849755',
@@ -103,7 +103,7 @@ export const locationData = [
       },
       {
         id: 83972586719,
-        name: 'Bệnh viện tâm thần ( 191 Nguyễn Lương Bằng )',
+        name: 'Bệnh viện tâm thần',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.14718256545261',
@@ -121,7 +121,7 @@ export const locationData = [
       },
       {
         id: 33283047093,
-        name: 'THCS Nguyễn Lương Bằng ( 27 Nguyễn Lương Bằng )',
+        name: 'THCS Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.14997593480217',
@@ -148,7 +148,7 @@ export const locationData = [
       },
       {
         id: 69204961942,
-        name: 'Khu vui chơi trẻ em đường Tôn Đức Thắng',
+        name: 'Khu vui chơi trẻ em Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.15368239852161',
@@ -328,7 +328,7 @@ export const locationData = [
       },
       {
         id: 62395937589,
-        name: 'Cầu Rồng (số chẵn đường Võ Văn Kiệt)',
+        name: 'Cầu Rồng (Võ Văn Kiệt)',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.23362603960751',
@@ -481,7 +481,7 @@ export const locationData = [
       },
       {
         id: 97856490250,
-        name: 'Đối diện Sân Tập Lái Xe Ô Tô Trần Đại Nghĩa',
+        name: 'Đối diện Sân Tập Lái Xe Ô Tô',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.2571568409417',
@@ -508,7 +508,7 @@ export const locationData = [
       },
       {
         id: 42991095455,
-        name: 'Trường Cao Đẳng Việt Hàn Nam Kỳ Khởi Nghĩa',
+        name: 'Trường Cao Đẳng Việt Hàn',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.2523825106433',

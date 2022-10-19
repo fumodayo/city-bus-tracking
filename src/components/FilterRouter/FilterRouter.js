@@ -3,6 +3,9 @@ import { Checkbox, Paper, InputBase } from '@mui/material'
 import { busRouterData } from 'components/BusRouter/busRouterData'
 import { useStore } from 'store'
 import FormInput from 'components/Common/FormInput'
+import CustomSidebar from 'components/Common/CustomSidebar'
+import ListBusStop from 'components/ListBusStop/ListBusStop'
+import InfoBusRoute from 'components/InfoBusRoute/InfoBusRoute'
 
 const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   const [state, dispatch] = useStore()
@@ -36,6 +39,13 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
     setSearchRoute(tempRoute)
   }
 
+  const [showSidebar, setShowSidebar] = useState(false)
+  const [nameBusRoute, setNameBusRoute] = useState('')
+  const handleTarget = e => {
+    setNameBusRoute(e.target.innerText)
+    setShowSidebar(showSidebar => !showSidebar)
+  }
+
   return (
     <div className="filter-router">
       <Paper
@@ -53,20 +63,21 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
           fontSize: '1rem'
         }}
       >
-        <FormInput
-          onChange={handleChangeWordSearch}
-          placeholder={'Nhập tên tuyến...'}
-        />
+        <FormInput onChange={handleChangeWordSearch} placeholder={'Nhập tên tuyến...'} />
       </Paper>
       <div className="scroll-content">
         {searchRoute.map(busrouter => (
-          <div key={busrouter.id} className="row align-items-center h-100">
+          <div
+            style={{ cursor: 'pointer' }}
+            key={busrouter.id}
+            className="row align-items-center h-100"
+          >
             <div className="small-3">
               <div
                 className="route-no text-center"
                 style={{ background: `${busrouter.color}` }}
               >
-                <span>{busrouter.nameBusRouter}</span>
+                <span onClick={handleTarget}>{busrouter.nameBusRouter}</span>
               </div>
             </div>
 
@@ -96,6 +107,16 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
             <hr></hr>
           </div>
         ))}
+        {showSidebar && (
+          <CustomSidebar
+            show={showSidebar}
+            name={nameBusRoute}
+            tabLeft={'Xem lượt đi'}
+            tabRight={'Xem lượt về'}
+            compLeft={<ListBusStop nameBusRoute={nameBusRoute} />}
+            compRight={<InfoBusRoute nameBusRoute={nameBusRoute} />}
+          />
+        )}
       </div>
     </div>
   )

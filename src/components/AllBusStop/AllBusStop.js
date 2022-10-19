@@ -40,10 +40,10 @@ const AllBusStop = () => {
 
   const [showSidebar, setShowSidebar] = useState(false)
   const [nameBusStop, setNameBusStop] = useState('')
+  
   const handleTarget = e => {
     setNameBusStop(e.target.innerText)
     setShowSidebar(showSidebar => !showSidebar)
-    console.log(showSidebar)
   }
 
   return (
