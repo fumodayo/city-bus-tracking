@@ -5,9 +5,9 @@ export const locationData = [
     nameBusRouter: 'R16',
     name: 'R16: Kim Liên-Đại học Việt Hàn',
     directionRoute: 'turn',
-    drivingJourney: `Kim Liên - Nguyễn Văn Cừ - Cầu Nam Ô - Nguyễn Lương Bằng - Tôn Đức Thắng -
+    drivingJourney: `<strong>Kim Liên</strong> - Nguyễn Văn Cừ - Cầu Nam Ô - Nguyễn Lương Bằng - Tôn Đức Thắng -
      Cầu vượt ngã 3 Huế (tầng 3) - Điện Biên Phủ - Lý Thái Tổ - Hùng Vương - Trần Phú - 
-     Cầu Rồng - Ngô Quyền - Ngũ Hành Sơn - Lê Văn Hiến - Trần Đại Nghĩa - Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa).`,
+     Cầu Rồng - Ngô Quyền - Ngũ Hành Sơn - Lê Văn Hiến - Trần Đại Nghĩa - <strong>Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa).</strong>`,
     lineDistance: '31,63km',
     operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
     route: [
@@ -522,10 +522,10 @@ export const locationData = [
     nameBusRouter: 'R16',
     name: 'R16: Kim Liên-Đại học Việt Hàn',
     directionRoute: 'return',
-    drivingJourney: `Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa) - Trần Đại Nghĩa - Lê Văn Hiến -
+    drivingJourney: `<strong>Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa)</strong> - Trần Đại Nghĩa - Lê Văn Hiến -
      Ngũ Hành Sơn - Ngô Quyền - Cầu Rồng - Bạch Đằng - Hùng Vương - Lý Thái Tổ - Điện Biên Phủ - 
     Cầu vượt ngã 3 Huế (tầng 3) - Tôn Đức Thắng - Nguyễn Lương Bằng - Cầu Nam Ô - Nguyễn Văn Cừ - 
-    Kim Liên`,
+    <strong>Kim Liên</strong>`,
     lineDistance: '31,53km',
     operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
     route: [
