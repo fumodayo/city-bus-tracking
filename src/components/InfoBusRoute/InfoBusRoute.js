@@ -1,6 +1,7 @@
 import React from 'react'
 
-const InfoBusRoute = () => {
+const InfoBusRoute = ({nameBusRoute, turnRoute}) => {
+  
   return (
     <div>InfoBusRoute</div>
   )

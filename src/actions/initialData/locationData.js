@@ -531,7 +531,7 @@ export const locationData = [
     route: [
       {
         id: 61728855973,
-        name: 'Trường Cao Đẳng Việt Hàn Nam Kỳ Khởi Nghĩa',
+        name: 'Trường Cao Đẳng Việt Hàn',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.2523825106433',
@@ -540,7 +540,7 @@ export const locationData = [
       },
       {
         id: 27539133550,
-        name: 'Kế Cửa Hàng Thành Tín Hợp Trần Đại Nghĩa',
+        name: 'Kế Cửa Hàng Thành Tín Hợp',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.25528311453743',
@@ -567,7 +567,7 @@ export const locationData = [
       },
       {
         id: 33425813124,
-        name: 'Sân tập lái ô tô đường Trần Đại Nghĩa',
+        name: 'Sân tập lái ô tô Trần Đại Nghĩa',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.25755685860983',
@@ -603,7 +603,7 @@ export const locationData = [
       },
       {
         id: 93772239098,
-        name: 'Đối Diện TTHC Quận Ngũ Hành Sơn Lê Văn Hiến',
+        name: 'Đối Diện TTHC Quận Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         location: {
           lng: '108.25427254912104',

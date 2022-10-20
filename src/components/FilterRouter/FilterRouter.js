@@ -5,7 +5,6 @@ import { useStore } from 'store'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
 import ListBusStop from 'components/ListBusStop/ListBusStop'
-import InfoBusRoute from 'components/InfoBusRoute/InfoBusRoute'
 
 const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   const [state, dispatch] = useStore()
@@ -113,8 +112,8 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
             name={nameBusRoute}
             tabLeft={'Xem lượt đi'}
             tabRight={'Xem lượt về'}
-            compLeft={<ListBusStop nameBusRoute={nameBusRoute} />}
-            compRight={<InfoBusRoute nameBusRoute={nameBusRoute} />}
+            compLeft={<ListBusStop nameBusRoute={nameBusRoute} turnRoute={'turn'}/>}
+            compRight={<ListBusStop nameBusRoute={nameBusRoute} turnRoute={'return'} />}
           />
         )}
       </div>
