@@ -61,7 +61,8 @@ const ListBusStop = ({ nameBusRoute }) => {
                   margin: 0,
                   color: color,
                   fontSize: '18px',
-                  fontWeight: 600
+                  fontWeight: 600,
+                  cursor: 'pointer'
                 }}
               >
                 {step}

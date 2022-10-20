@@ -16,7 +16,7 @@
 
 .vertical-slider {
   width: 25%;
-  
+  margin-bottom: 50px;
 }
 
 .example-mark {
@@ -36,6 +36,7 @@
   width: 1.5rem;
   border-radius: 50%;
   right: calc(50% - 16px);
+  bottom: calc(50% - 16px);
   background: #8fbc8f;
 }
 
@@ -52,7 +53,7 @@
   background: #ddd;
 }
 
-.example-track.example-track {
+.example-track.example-track-0 {
   background: #8fbc8f;
 }
 
