@@ -1,9 +1,9 @@
 .scroll-content {
-  flex: 1;
-  overflow-y: hidden;
   overflow-x: hidden;
-  margin: 1rem 0rem 2.5rem 0rem;
+  overflow-y: scroll;
+  margin: 2rem 0rem 2.5rem 0rem;
   max-width: 100%;
+  max-height: 65vh;
 
   .small-3 {
     flex: 0 0 30%;

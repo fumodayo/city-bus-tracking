@@ -28,7 +28,7 @@ const Sidebar = props => {
   }
 
   return (
-    <>
+    <div className="sidebar">
       <Box
         sx={{
           backgroundColor: '#3597e4',
@@ -44,15 +44,8 @@ const Sidebar = props => {
           <ArrowRightOutlinedIcon fontSize="large" sx={{ color: '#fff' }} />
         </IconButton>
       </Box>
-      <Drawer
-        variant="persistent"
-        sx={{ overflowY: 'none' }}
-        hideBackdrop={true}
-        open={isOpen}
-      >
-        <DrawerHeader
-          sx={{ overflowY: 'none', position: 'relative', backgroundColor: '#3597E4' }}
-        >
+      <Drawer variant="persistent" hideBackdrop={true} open={isOpen}>
+        <DrawerHeader sx={{ position: 'relative', backgroundColor: '#3597E4' }}>
           <Typography style={{ fontWeight: '600', color: '#fff' }}>
             Hệ thống xe buýt Đà Nẵng
           </Typography>
@@ -63,7 +56,9 @@ const Sidebar = props => {
         <Box
           sx={{
             width: 400,
-            p: 3
+            height: '100%',
+            p: 3,
+            overflow: 'hidden',
           }}
         >
           <Box
@@ -90,10 +85,10 @@ const Sidebar = props => {
                 </TabList>
               </Box>
               <Box>
-                <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="1">
+                <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
                   <BusRouter searchRoute={searchRoute} setSearchRoute={setSearchRoute} />
                 </TabPanel>
-                <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2">
+                <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
                   <FindRouter />
                 </TabPanel>
               </Box>
@@ -101,7 +96,7 @@ const Sidebar = props => {
           </Box>
         </Box>
       </Drawer>
-    </>
+    </div>
   )
 }
 

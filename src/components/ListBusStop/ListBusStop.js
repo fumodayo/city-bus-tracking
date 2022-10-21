@@ -35,22 +35,20 @@ const ListBusStop = ({ nameBusRoute, turnRoute }) => {
   return (
     <div className="list-bus-station">
       <TabContext value={tabValue}>
-        <Box>
-          <TabList onChange={handleChangeTab} aria-label="lab">
-            <Tab
-              style={{ width: '50%', textTransform: 'none' }}
-              label="Trạm dừng"
-              value="1"
-            />
-            <Tab
-              style={{ width: '50%', textTransform: 'none' }}
-              label="Thông tin"
-              value="2"
-            />
-          </TabList>
-        </Box>
-        <Box>
-          <TabPanel style={{ paddingLeft: '0' }} value="1">
+        <TabList onChange={handleChangeTab} aria-label="lab">
+          <Tab
+            style={{ width: '50%', textTransform: 'none' }}
+            label="Trạm dừng"
+            value="1"
+          />
+          <Tab
+            style={{ width: '50%', textTransform: 'none' }}
+            label="Thông tin"
+            value="2"
+          />
+        </TabList>
+        <div className="scroll-list-bus-stop-content">
+          <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
             <div className="list-bus-stop">
               <ReactSlider
                 className="vertical-slider"
@@ -99,10 +97,10 @@ const ListBusStop = ({ nameBusRoute, turnRoute }) => {
               </div>
             </div>
           </TabPanel>
-          <TabPanel style={{ paddingLeft: '0' }} value="2">
-            <InfoBusRoute nameBusRoute={nameBusRoute} turnRoute={turnRoute} />
-          </TabPanel>
-        </Box>
+        </div>
+        <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
+          <InfoBusRoute nameBusRoute={nameBusRoute} turnRoute={turnRoute} />
+        </TabPanel>
       </TabContext>
     </div>
   )

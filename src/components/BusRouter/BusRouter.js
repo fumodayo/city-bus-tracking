@@ -30,10 +30,10 @@ const BusRouter = ({ searchRoute, setSearchRoute }) => {
           </TabList>
         </Box>
         <Box>
-          <TabPanel style={{ paddingLeft: '0' }} value="1">
+          <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
             <FilterRouter searchRoute={searchRoute} setSearchRoute={setSearchRoute} />
           </TabPanel>
-          <TabPanel style={{ paddingLeft: '0' }} value="2">
+          <TabPanel style={{ padding: '12px 0px 10px 0px'}} value="2">
             <AllBusStop />
           </TabPanel>
         </Box>

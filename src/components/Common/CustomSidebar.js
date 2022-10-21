@@ -44,7 +44,9 @@ const CustomSidebar = props => {
       <Box
         sx={{
           width: 400,
-          p: 3
+          height: '100%',
+          p: 3,
+          overflow: 'hidden'
         }}
       >
         <Box
@@ -71,10 +73,10 @@ const CustomSidebar = props => {
               </TabList>
             </Box>
             <Box>
-              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="1">
+              <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
                 {compLeft}
               </TabPanel>
-              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2">
+              <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
                 {compRight}
               </TabPanel>
             </Box>
