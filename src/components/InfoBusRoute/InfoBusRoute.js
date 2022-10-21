@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { informationBusRouteData } from 'actions/initialData/informationBusRouteData'
 import { locationData } from 'actions/initialData/locationData'
 import HTMLReactParser from 'html-react-parser'
+import DirectionsBusIcon from '@mui/icons-material/DirectionsBus'
+import AirportShuttleIcon from '@mui/icons-material/AirportShuttle'
+import PaidIcon from '@mui/icons-material/Paid'
 import './InfoBusRoute.scss'
 
 const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
@@ -23,7 +26,10 @@ const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
     <div className="info-bus-route">
       {busRouteData.map((bus, id) => (
         <div key={id}>
-          <h1 className="header-info">Thông tin tuyến:</h1>
+          <h1 className="header-info">
+            <DirectionsBusIcon />
+            Thông tin tuyến:
+          </h1>
           <div className="info">
             <label>Mã số tuyến:</label>
             <span>{bus.nameBusRouter}</span>
@@ -44,7 +50,10 @@ const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
         </div>
       ))}
 
-      <h1 className="header-info">Thông tin xe:</h1>
+      <h1 className="header-info">
+        <AirportShuttleIcon />
+        Thông tin xe:
+      </h1>
       <div className="info">
         <label>Nhãn hiệu: </label>
         <span>{ticketBusData.busName}</span>
@@ -59,7 +68,10 @@ const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
       </div>
 
       <hr />
-      <h1 className="header-info">Thông tin vé:</h1>
+      <h1 className="header-info">
+        <PaidIcon />
+        Thông tin vé:
+      </h1>
       {ticketBusData.ticketPrice && (
         <div>
           <div className="info">

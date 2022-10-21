@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Drawer, IconButton, Typography, Box, Tab, styled } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { ChevronLeft } from '@mui/icons-material'
-import { ChevronRight } from '@mui/icons-material'
 import BusRouter from 'components/BusRouter/BusRouter'
 import FindRouter from 'components/FindRouter/FindRouter'
+import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
+import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -29,9 +29,19 @@ const Sidebar = props => {
 
   return (
     <>
-      <Box sx={{ mr: 1 }}>
-        <IconButton size="large" color="inherit" onClick={toggleOpenSidebar(true)}>
-          <ChevronRight />
+      <Box
+        sx={{
+          backgroundColor: '#3597e4',
+          width: '3rem',
+          height: '3.5rem',
+          position: 'absolute',
+          boxShadow: '0.19rem 0 0.375rem 0 rgb(0 0 0 / 16%)',
+          borderTopRightRadius: '0.3rem',
+          borderBottomRightRadius: '0.3rem'
+        }}
+      >
+        <IconButton onClick={toggleOpenSidebar(true)}>
+          <ArrowRightOutlinedIcon fontSize="large" sx={{ color: '#fff' }} />
         </IconButton>
       </Box>
       <Drawer
@@ -40,10 +50,14 @@ const Sidebar = props => {
         hideBackdrop={true}
         open={isOpen}
       >
-        <DrawerHeader sx={{ overflowY: 'none' }}>
-          <Typography>Hệ thống xe buýt Đà Nẵng</Typography>
+        <DrawerHeader
+          sx={{ overflowY: 'none', position: 'relative', backgroundColor: '#3597E4' }}
+        >
+          <Typography style={{ fontWeight: '600', color: '#fff' }}>
+            Hệ thống xe buýt Đà Nẵng
+          </Typography>
           <IconButton onClick={toggleOpenSidebar(false)}>
-            <ChevronLeft fontSize="large" />
+            <ArrowLeftOutlinedIcon fontSize="large" sx={{ color: '#fff' }} />
           </IconButton>
         </DrawerHeader>
         <Box

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Drawer, IconButton, Typography, Box, Tab, styled } from '@mui/material'
+import { Drawer, IconButton, Box, Tab, styled, Typography } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { ChevronLeft } from '@mui/icons-material'
+import { Close } from '@mui/icons-material'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -31,10 +31,14 @@ const CustomSidebar = props => {
       hideBackdrop={true}
       open={isOpen}
     >
-      <DrawerHeader sx={{ overflowY: 'none' }}>
-        <Typography>{name}</Typography>
+      <DrawerHeader
+        sx={{ overflowY: 'none', position: 'relative', backgroundColor: '#3597E4' }}
+      >
+        <Typography style={{ fontSize: '18px', fontWeight: '600', color: '#fff' }}>
+          {name}
+        </Typography>
         <IconButton onClick={toggleOpenSidebar(false)}>
-          <ChevronLeft fontSize="large" />
+          <Close fontSize="medium" sx={{ color: '#fff' }} />
         </IconButton>
       </DrawerHeader>
       <Box
