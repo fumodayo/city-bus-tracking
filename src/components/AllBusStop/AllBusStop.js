@@ -40,7 +40,7 @@ const AllBusStop = () => {
 
   const [showSidebar, setShowSidebar] = useState(false)
   const [nameBusStop, setNameBusStop] = useState('')
-  
+
   const handleTarget = e => {
     setNameBusStop(e.target.innerText)
     setShowSidebar(showSidebar => !showSidebar)
@@ -60,7 +60,7 @@ const AllBusStop = () => {
           boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',
           backgroundColor: '#ffffff',
           height: '3em',
-          fontSize: '1rem',
+          fontSize: '1rem'
         }}
       >
         <FormInput
@@ -99,7 +99,7 @@ const AllBusStop = () => {
         ))}
         {showSidebar && (
           <CustomSidebar
-            show={showSidebar}
+            show={true}
             name={nameBusStop}
             tabLeft={'Xe sắp tới trạm'}
             tabRight={'Tuyến đi qua'}

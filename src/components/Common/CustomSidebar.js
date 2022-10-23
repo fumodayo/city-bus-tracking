@@ -20,10 +20,6 @@ const CustomSidebar = props => {
     setTabValue(newTabValue)
   }
 
-  const toggleOpenSidebar = newOpen => () => {
-    setIsOpen(newOpen)
-  }
-
   return (
     <Drawer
       variant="persistent"
@@ -37,7 +33,7 @@ const CustomSidebar = props => {
         <Typography style={{ fontSize: '18px', fontWeight: '600', color: '#fff' }}>
           {name}
         </Typography>
-        <IconButton onClick={toggleOpenSidebar(false)}>
+        <IconButton onClick={() => setIsOpen(false)}>
           <Close fontSize="medium" sx={{ color: '#fff' }} />
         </IconButton>
       </DrawerHeader>

@@ -40,6 +40,7 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
 
   const [showSidebar, setShowSidebar] = useState(false)
   const [nameBusRoute, setNameBusRoute] = useState('')
+
   const handleTarget = e => {
     setNameBusRoute(e.target.innerText)
     setShowSidebar(showSidebar => !showSidebar)
@@ -82,15 +83,7 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
 
             <div className="small-7">
               <p className="code-route">{busrouter.name}</p>
-              <p
-                style={{
-                  color: '#000',
-                  fontSize: '14px',
-                  fontWeight: 600
-                }}
-              >
-                {busrouter.description}
-              </p>
+              <p className="code-desc">{busrouter.description}</p>
             </div>
             <div className="small-2">
               <div className="text-center">
@@ -108,11 +101,11 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
         ))}
         {showSidebar && (
           <CustomSidebar
-            show={showSidebar}
+            show={true}
             name={nameBusRoute}
             tabLeft={'Xem lượt đi'}
             tabRight={'Xem lượt về'}
-            compLeft={<ListBusStop nameBusRoute={nameBusRoute} turnRoute={'turn'}/>}
+            compLeft={<ListBusStop nameBusRoute={nameBusRoute} turnRoute={'turn'} />}
             compRight={<ListBusStop nameBusRoute={nameBusRoute} turnRoute={'return'} />}
           />
         )}

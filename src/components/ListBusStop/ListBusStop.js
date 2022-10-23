@@ -2,7 +2,7 @@ import { locationData } from 'actions/initialData/locationData'
 import React, { useEffect, useState } from 'react'
 import ReactSlider from 'react-slider'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { Box, Tab } from '@mui/material'
+import { Tab } from '@mui/material'
 import './listbusstop.scss'
 import InfoBusRoute from 'components/InfoBusRoute/InfoBusRoute'
 
