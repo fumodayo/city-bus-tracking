@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Checkbox, Paper, InputBase } from '@mui/material'
+import { Checkbox, Paper } from '@mui/material'
 import { busRouterData } from 'components/BusRouter/busRouterData'
-import { useStore } from 'store'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
 import ListBusStop from 'components/ListBusStop/ListBusStop'
 
 const FilterRouter = ({ searchRoute, setSearchRoute }) => {
-  const [state, dispatch] = useStore()
-  // console.log(state)
-
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
