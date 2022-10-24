@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Marker, Popup } from 'react-map-gl'
 import busStop from 'images/icon_busstop.png'
 import { locationData } from 'actions/initialData/locationData'
+import './MarkerBusRouter.scss'
 
 const MarkerBusRoute = ({ searchRoute }) => {
   const [markerLocation, setMarkerLocation] = useState([])
@@ -45,10 +46,11 @@ const MarkerBusRoute = ({ searchRoute }) => {
             />
             {showPopup && (
               <Popup
+                className="popup-form"
                 key={i.id}
                 latitude={i.location.lat}
                 longitude={i.location.lng}
-                anchor="top-right"
+                anchor="top"
                 closeOnClick={false}
               >
                 {i.name}

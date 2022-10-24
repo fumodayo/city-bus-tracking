@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Source, Layer } from 'react-map-gl'
 import { roadMapData } from 'actions/initialData/roadMapData'
 
 const PolyLines = ({ searchRoute }) => {
-
   const [allDataLineRoutes, setAllDataLineRoutes] = useState([])
 
+  // console.log(searchRoute)
   useEffect(() => {
     const getRoutesCheckBox = searchRoute
       .filter(i => i.isChecked)
@@ -13,9 +13,7 @@ const PolyLines = ({ searchRoute }) => {
 
     const getRoutesLine = roadMapData
       .filter(
-        i =>
-          getRoutesCheckBox.indexOf(i.name) !== -1 &&
-          i.directionRoute === 'turn'
+        i => getRoutesCheckBox.indexOf(i.name) !== -1 && i.directionRoute === 'turn'
       )
       .map(i => {
         return {

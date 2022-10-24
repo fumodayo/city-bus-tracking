@@ -6,10 +6,11 @@ export const locationData = [
     name: 'R16: Kim Liên-Đại học Việt Hàn',
     directionRoute: 'turn',
     drivingJourney: `<strong>Kim Liên</strong> - Nguyễn Văn Cừ - Cầu Nam Ô - Nguyễn Lương Bằng - Tôn Đức Thắng -
-     Cầu vượt ngã 3 Huế (tầng 3) - Điện Biên Phủ - Lý Thái Tổ - Hùng Vương - Trần Phú - 
-     Cầu Rồng - Ngô Quyền - Ngũ Hành Sơn - Lê Văn Hiến - Trần Đại Nghĩa - <strong>Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa).</strong>`,
+    Cầu vượt ngã 3 Huế (tầng 3) - Điện Biên Phủ - Lý Thái Tổ - Hùng Vương - Trần Phú - 
+    Cầu Rồng - Ngô Quyền - Ngũ Hành Sơn - Lê Văn Hiến - Trần Đại Nghĩa - <strong>Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa).</strong>`,
     lineDistance: '31,63km',
     operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
+    color: '#ff1956',
     route: [
       {
         id: 41676731701,
@@ -523,11 +524,12 @@ export const locationData = [
     name: 'R16: Kim Liên-Đại học Việt Hàn',
     directionRoute: 'return',
     drivingJourney: `<strong>Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa)</strong> - Trần Đại Nghĩa - Lê Văn Hiến -
-     Ngũ Hành Sơn - Ngô Quyền - Cầu Rồng - Bạch Đằng - Hùng Vương - Lý Thái Tổ - Điện Biên Phủ - 
+    Ngũ Hành Sơn - Ngô Quyền - Cầu Rồng - Bạch Đằng - Hùng Vương - Lý Thái Tổ - Điện Biên Phủ - 
     Cầu vượt ngã 3 Huế (tầng 3) - Tôn Đức Thắng - Nguyễn Lương Bằng - Cầu Nam Ô - Nguyễn Văn Cừ - 
     <strong>Kim Liên</strong>`,
     lineDistance: '31,53km',
     operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
+    color: '#ff1956',
     route: [
       {
         id: 61728855973,
@@ -1056,6 +1058,7 @@ export const locationData = [
     Chợ Lệ Trạch -<strong>Hòa Tiến (Khu đất đối diện Nghĩa trang xã Hòa Tiến)</strong>`,
     lineDistance: '20,00 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30p/chuyến)',
+    color: '#089669',
     route: [
       {
         id: 16738996829,
@@ -1353,12 +1356,13 @@ export const locationData = [
     name: 'R4A: Cảng Sông Hàn-Hòa Tiến',
     directionRoute: 'return',
     drivingJourney: `<strong>Hòa Tiến (DT605, đối diện Nghĩa trang xã Hòa Tiến) </strong>-
-     Chợ Lệ Trạch - ĐT605 - QL1A - Cầu Đỏ - Trường Chinh - CMT8 - Ông Ích Đường - Lê Đại Hành -
-      Nguyễn Hữu Thọ - Đường 30/4 - Núi  Thành - Tiểu  La - 
+    Chợ Lệ Trạch - ĐT605 - QL1A - Cầu Đỏ - Trường Chinh - CMT8 - Ông Ích Đường - Lê Đại Hành -
+    Nguyễn Hữu Thọ - Đường 30/4 - Núi  Thành - Tiểu  La - 
     Đường 2/9 - Nguyễn Văn Linh - Ông Ích Khiêm - Đống Đa - 
     <strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt.</strong>`,
     lineDistance: '20,00 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30p/chuyến)',
+    color: '#089669',
     route: [
       {
         id: 39502269135,
@@ -1665,10 +1669,11 @@ export const locationData = [
     name: 'R17A: Cảng Sông Hàn-TTHC huyện Hòa Vang',
     directionRoute: 'turn',
     drivingJourney: `<strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt) </strong>- Trần Phú - Lý Tự Trọng -
-     Nguyễn Thị Minh Khai - Hùng Vương - Trần Phú - Trưng Nữ Vương - Núi Thành - Cách Mạng Tháng 8 - 
-     Cầu Vượt Hòa Cầm - Trường Sơn - Quốc lộ 14B - Quảng Xương - <strong> TTHC Huyện Hòa Vang.</strong>`,
+    Nguyễn Thị Minh Khai - Hùng Vương - Trần Phú - Trưng Nữ Vương - Núi Thành - Cách Mạng Tháng 8 - 
+    Cầu Vượt Hòa Cầm - Trường Sơn - Quốc lộ 14B - Quảng Xương - <strong> TTHC Huyện Hòa Vang.</strong>`,
     lineDistance: '20,00 km',
     operatingTime: 'Từ 06h00 đến 19h00 (15 phút/chuyến)',
+    color: '#360ec0',
     route: [
       {
         id: 4677255836,
@@ -1898,6 +1903,7 @@ export const locationData = [
     Nguyễn Thị Minh Khai - Lý Tự Trọng - Bạch Đằng - <strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt).</strong>`,
     lineDistance: '20,20 km',
     operatingTime: 'Từ 06h00 đến 19h00 (15 phút/chuyến)',
+    color: '#360ec0',
     route: [
       {
         id: 55793403782,
@@ -2128,6 +2134,7 @@ export const locationData = [
     Phan Tứ - Võ Nguyên Giáp - Trường Sa - Non Nước - <strong>KDL Non Nước.</strong>`,
     lineDistance: '21,80 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    color: '#76a103',
     route: [
       {
         id: 74185081170,
@@ -2394,6 +2401,7 @@ export const locationData = [
     Tú Mỡ - Nguyễn Văn Tạo - Cao Sơn Pháo - <strong>Bến Xe Trung Tâm Đà Nẵng.</strong>`,
     lineDistance: '21,40 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    color: '#76a103',
     route: [
       {
         id: 45798943743,
@@ -2669,6 +2677,7 @@ export const locationData = [
      Nguyễn Sáng - Nguyễn Huy Chương - Hoàng Sa - <strong>Thọ Quang</strong>`,
     lineDistance: '16,16 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    color: '#9340a3',
     route: [
       {
         id: 92537656386,
@@ -2926,6 +2935,7 @@ export const locationData = [
     Cầu vượt ngã Ba Huế (tầng 3) - Tôn Đức Thắng - <strong>Bến xe Trung tâm Đà Nẵng</strong>`,
     lineDistance: '16,16 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    color: '#9340a3',
     route: [
       {
         id: 12302050934,
@@ -3175,6 +3185,7 @@ export const locationData = [
     Võ Nguyên Giáp - <strong>CV Biển Đông</strong>`,
     lineDistance: '16,1 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    color: '#f4529d',
     route: [
       {
         id: 54081045721,
@@ -3451,6 +3462,7 @@ export const locationData = [
      - Bùi Dương Lịch - <strong>BX Bùi Dương Lịch</strong>`,
     lineDistance: '16,5 km',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    color: '#f4529d',
     route: [
       {
         id: 45910068255,

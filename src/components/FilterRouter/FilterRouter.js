@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Checkbox, Paper } from '@mui/material'
-import { busRouterData } from 'components/BusRouter/busRouterData'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
 import ListBusStop from 'components/ListBusStop/ListBusStop'
+import { useDispatch } from 'react-redux'
+import { searchFilterChange } from 'redux/actions'
+import { locationData } from 'actions/initialData/locationData'
+import { cloneDeep } from 'lodash'
 
 const FilterRouter = ({ searchRoute, setSearchRoute }) => {
+  // const [searchRoute, setSearchRoute] = useState([])
+  // const dispatch = useDispatch()
+  // dispatch(searchFilterChange(searchRoute))
+
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
@@ -15,13 +22,15 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   useEffect(() => {
     // Handle filter search
     setSearch(search)
+    cloneDeep(locationData)
+    const busRoutesData = locationData.filter(route => route.directionRoute === 'turn')
     if (search !== '') {
-      const newSearchList = busRouterData.filter(route => {
+      const newSearchList = busRoutesData.filter(route => {
         return Object.values(route).join('').toLowerCase().includes(search.toLowerCase())
       })
       setSearchRoute(newSearchList)
     } else {
-      setSearchRoute(busRouterData)
+      setSearchRoute(busRoutesData)
     }
   }, [search])
 
@@ -78,8 +87,8 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
             </div>
 
             <div className="small-7">
-              <p className="code-route">{busrouter.name}</p>
-              <p className="code-desc">{busrouter.description}</p>
+              <p className="code-route">{busrouter.nameBusRouter}</p>
+              <p className="code-desc">{busrouter.name}</p>
             </div>
             <div className="small-2">
               <div className="text-center">
