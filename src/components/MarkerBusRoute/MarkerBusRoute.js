@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Marker, Popup } from 'react-map-gl'
 import busStop from 'images/icon_busstop.png'
+import { useSelector } from 'react-redux'
+import { searchTextSelector } from 'redux/selectors'
 import { locationData } from 'actions/initialData/locationData'
 import './MarkerBusRouter.scss'
 
-const MarkerBusRoute = ({ searchRoute }) => {
+const MarkerBusRoute = () => {
   const [markerLocation, setMarkerLocation] = useState([])
 
+  const searchRoute = useSelector(searchTextSelector)
   useEffect(() => {
     const getRoutesCheckBox = searchRoute
       .filter(i => i.isChecked)

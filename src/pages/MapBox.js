@@ -15,9 +15,6 @@ export default function MapBox() {
     zoom: 12.721197192553936
   })
   const _onViewportChange = e => setViewport(e.viewport)
-
-  const [searchRoute, setSearchRoute] = useState([])
-
   const data = {
     positionOptions: {
       enableHighAccuracy: true
@@ -34,11 +31,11 @@ export default function MapBox() {
       onMove={_onViewportChange}
       mapboxAccessToken={API_KEY_MAPBOX}
     >
-      <Sidebar searchRoute={searchRoute} setSearchRoute={setSearchRoute} />
+      <Sidebar />
 
-      <PolyLines searchRoute={searchRoute} />
+      <PolyLines />
 
-      <MarkerBusRoute searchRoute={searchRoute} />
+      <MarkerBusRoute />
 
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />

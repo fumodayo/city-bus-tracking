@@ -14,8 +14,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar
 }))
 
-const Sidebar = props => {
-  const { searchRoute, setSearchRoute } = props
+const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true)
   const [tabValue, setTabValue] = useState('1')
 
@@ -58,7 +57,7 @@ const Sidebar = props => {
             width: 400,
             height: '100%',
             p: 3,
-            overflow: 'hidden',
+            overflow: 'hidden'
           }}
         >
           <Box
@@ -86,7 +85,7 @@ const Sidebar = props => {
               </Box>
               <Box>
                 <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
-                  <BusRouter searchRoute={searchRoute} setSearchRoute={setSearchRoute} />
+                  <BusRouter />
                 </TabPanel>
                 <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
                   <FindRouter />

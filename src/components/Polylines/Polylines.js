@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { Source, Layer } from 'react-map-gl'
 import { roadMapData } from 'actions/initialData/roadMapData'
+import { useSelector } from 'react-redux'
+import { searchTextSelector } from 'redux/selectors'
 
-const PolyLines = ({ searchRoute }) => {
+const PolyLines = () => {
   const [allDataLineRoutes, setAllDataLineRoutes] = useState([])
+  const searchRoutes = useSelector(searchTextSelector)
 
-  // console.log(searchRoute)
   useEffect(() => {
-    const getRoutesCheckBox = searchRoute
+    const getRoutesCheckBox = searchRoutes
       .filter(i => i.isChecked)
       .map(i => i.nameBusRouter)
 
     const getRoutesLine = roadMapData
-      .filter(
-        i => getRoutesCheckBox.indexOf(i.name) !== -1 && i.directionRoute === 'turn'
-      )
+      .filter(i => getRoutesCheckBox.indexOf(i.name) !== -1)
       .map(i => {
         return {
           type: 'Feature',
@@ -29,7 +29,7 @@ const PolyLines = ({ searchRoute }) => {
       })
 
     setAllDataLineRoutes(getRoutesLine)
-  }, [searchRoute])
+  }, [searchRoutes])
 
   return (
     <div className="polyline">
