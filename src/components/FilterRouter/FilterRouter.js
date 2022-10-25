@@ -8,10 +8,8 @@ import { searchFilterChange } from 'redux/actions'
 import { locationData } from 'actions/initialData/locationData'
 import { cloneDeep } from 'lodash'
 
-const FilterRouter = ({ searchRoute, setSearchRoute }) => {
-  // const [searchRoute, setSearchRoute] = useState([])
-  // const dispatch = useDispatch()
-  // dispatch(searchFilterChange(searchRoute))
+const FilterRouter = () => {
+  const [searchRoute, setSearchRoute] = useState([])
 
   // Get word input to search
   const [search, setSearch] = useState('')
@@ -22,8 +20,8 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   useEffect(() => {
     // Handle filter search
     setSearch(search)
-    cloneDeep(locationData)
-    const busRoutesData = locationData.filter(route => route.directionRoute === 'turn')
+    const busdata = cloneDeep(locationData)
+    const busRoutesData = busdata.filter(route => route.directionRoute === 'turn')
     if (search !== '') {
       const newSearchList = busRoutesData.filter(route => {
         return Object.values(route).join('').toLowerCase().includes(search.toLowerCase())
@@ -37,11 +35,16 @@ const FilterRouter = ({ searchRoute, setSearchRoute }) => {
   // Handle multi checkbox
   const handleChangeCheckboxRoute = e => {
     const { value: routeName, checked } = e.target
-    let tempRoute = searchRoute.map(route =>
+    const busroutesdatachangebycheckbox = searchRoute.map(route =>
       route.nameBusRouter === routeName ? { ...route, isChecked: checked } : route
     )
-    setSearchRoute(tempRoute)
+    setSearchRoute(busroutesdatachangebycheckbox)
   }
+
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(searchFilterChange(searchRoute))
+  }, [searchRoute])
 
   const [showSidebar, setShowSidebar] = useState(false)
   const [nameBusRoute, setNameBusRoute] = useState('')

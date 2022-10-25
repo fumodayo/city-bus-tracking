@@ -5,7 +5,7 @@ import './BusRouter.scss'
 import FilterRouter from 'components/FilterRouter/FilterRouter'
 import AllBusStop from 'components/AllBusStop/AllBusStop'
 
-const BusRouter = ({ searchRoute, setSearchRoute }) => {
+const BusRouter = () => {
   // Handle event tab Tuyen / Tram dung
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
@@ -31,9 +31,9 @@ const BusRouter = ({ searchRoute, setSearchRoute }) => {
         </Box>
         <Box>
           <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
-            <FilterRouter searchRoute={searchRoute} setSearchRoute={setSearchRoute} />
+            <FilterRouter />
           </TabPanel>
-          <TabPanel style={{ padding: '12px 0px 10px 0px'}} value="2">
+          <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
             <AllBusStop />
           </TabPanel>
         </Box>
