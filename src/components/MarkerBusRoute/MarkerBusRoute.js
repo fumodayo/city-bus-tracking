@@ -27,8 +27,15 @@ const MarkerBusRoute = () => {
   }, [searchRoute])
 
   const [showPopup, setShowPopup] = useState(false)
-  const handleTogglePopup = () => {
-    setShowPopup(!showPopup)
+
+  const mouseEnter = e => {
+    e.preventDefault()
+    setShowPopup(true)
+  }
+
+  const mouseLeave = e => {
+    e.preventDefault()
+    setShowPopup(false)
   }
 
   return (
@@ -42,10 +49,11 @@ const MarkerBusRoute = () => {
             anchor="bottom"
           >
             <img
-              style={{ height: 40, width: 30, cursor: 'pointer' }}
+              style={{ height: 45, width: 30, cursor: 'pointer' }}
               src={busStop}
               alt="marker"
-              onClick={handleTogglePopup}
+              onMouseEnter={mouseEnter}
+              onMouseLeave={mouseLeave}
             />
             {showPopup && (
               <Popup
@@ -55,6 +63,7 @@ const MarkerBusRoute = () => {
                 longitude={i.location.lng}
                 anchor="top"
                 closeOnClick={false}
+                closeButton={false}
               >
                 {i.name}
               </Popup>
