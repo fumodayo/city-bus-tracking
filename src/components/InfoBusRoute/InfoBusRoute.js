@@ -72,7 +72,7 @@ const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
         <PaidIcon />
         Thông tin vé:
       </h1>
-      {ticketBusData.ticketPrice && (
+      {ticketBusData?.ticketPrice && (
         <div>
           <div className="info">
             <label>Vé lượt: </label>

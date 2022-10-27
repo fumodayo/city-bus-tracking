@@ -65,7 +65,7 @@ const MarkerBusRoute = () => {
                 closeOnClick={false}
                 closeButton={false}
               >
-                {i.name}
+                {`Trạm dừng: ${i.name}`}
               </Popup>
             )}
           </Marker>

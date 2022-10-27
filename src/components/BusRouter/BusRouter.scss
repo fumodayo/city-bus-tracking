@@ -5,40 +5,41 @@
   max-width: 100%;
   max-height: 70vh;
 
-  .small-3 {
-    flex: 0 0 30%;
-    max-width: 30%;
-    position: relative;
-    padding: 10px;
+    .small-3 {
+      flex: 0 0 30%;
+      max-width: 30%;
+      position: relative;
+      padding: 10px;
 
-    .route-no {
-      color: #fff;
-      font-size: 22px;
-      background: #3597e4;
-      border-radius: 10px;
-      padding: 15px;
-    }
-  }
-
-  .small-7 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    position: relative;
-    color: #000;
-    font-size: 14px;
-    font-weight: 600;
-
-    .code-route {
-      font-size: 14.5px;
-      &:hover {
-        color: #3597e4;
+      .route-no {
+        color: #fff;
+        font-size: 22px;
+        background: #3597e4;
+        border-radius: 10px;
+        padding: 15px;
       }
     }
+
+    .small-7 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      position: relative;
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+
+      .code-route {
+        font-size: 14.5px;
+        &:hover {
+          color: #3597e4;
+        }
+      }
+    }
+
+    .small-2 {
+      flex: 0 0 10%;
+      max-width: 10%;
+      position: relative;
+    }
   }
 
-  .small-2 {
-    flex: 0 0 10%;
-    max-width: 10%;
-    position: relative;
-  }
-}

@@ -20,7 +20,7 @@ export default function MapBox() {
       enableHighAccuracy: true
     },
     // When active the map will receive updates to the device's location as it changes.
-    trackUserLocation: true
+    trackUserLocation: true,
     // Draw an arrow next to the location dot to indicate which direction the device is heading.
   }
   return (

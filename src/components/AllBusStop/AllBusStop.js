@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Paper } from '@mui/material'
 import { locationData } from 'actions/initialData/locationData'
-import { cloneDeep } from 'lodash'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
+import RouteThrough from 'components/RouteThrough/RouteThrough'
+import BusLocation from 'components/BusLocation/BusLocation'
 
 const AllBusStop = () => {
   // Get word input to search
@@ -15,15 +16,14 @@ const AllBusStop = () => {
   // Get All Bus Stop
   const [allBusStop, setAllBusStop] = useState([])
 
-  cloneDeep(locationData)
   useEffect(() => {
     const getAllBusStopInRoutes = locationData
       .map(i =>
         i.route.map(i => {
-          let a = []
-          a = [...a, i.name]
-          a.flat(2)
-          return a
+          let busstop = []
+          busstop = [...busstop, i.name]
+          busstop.flat(2)
+          return busstop
         })
       )
       .flat(2)
@@ -43,7 +43,7 @@ const AllBusStop = () => {
 
   const handleTarget = e => {
     setNameBusStop(e.target.innerText)
-    setShowSidebar(showSidebar => !showSidebar)
+    setShowSidebar(!showSidebar)
   }
 
   return (
@@ -103,6 +103,8 @@ const AllBusStop = () => {
             name={nameBusStop}
             tabLeft={'Xe sắp tới trạm'}
             tabRight={'Tuyến đi qua'}
+            compLeft={<BusLocation />}
+            compRight={<RouteThrough nameBusStop={nameBusStop} />}
           />
         )}
       </div>

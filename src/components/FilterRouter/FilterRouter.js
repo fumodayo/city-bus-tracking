@@ -51,7 +51,7 @@ const FilterRouter = () => {
 
   const handleTarget = e => {
     setNameBusRoute(e.target.innerText)
-    setShowSidebar(showSidebar => !showSidebar)
+    setShowSidebar(!showSidebar)
   }
 
   return (
@@ -104,7 +104,7 @@ const FilterRouter = () => {
                 />
               </div>
             </div>
-            <hr></hr>
+            <hr style={{marginTop: '5px'}}></hr>
           </div>
         ))}
         {showSidebar && (
