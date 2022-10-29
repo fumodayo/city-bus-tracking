@@ -5,6 +5,7 @@ import PolyLines from '../components/Polylines/Polylines'
 import MarkerBusRoute from 'components/MarkerBusRoute/MarkerBusRoute'
 import { API_KEY_MAPBOX } from 'config/constant'
 import Sidebar from 'components/Sidebar/Sidebar'
+import MarkerTravel from 'components/MarkerTravel/MarkerTravel'
 
 export default function MapBox() {
   const [viewport, setViewport] = useState({
@@ -20,7 +21,7 @@ export default function MapBox() {
       enableHighAccuracy: true
     },
     // When active the map will receive updates to the device's location as it changes.
-    trackUserLocation: true,
+    trackUserLocation: true
     // Draw an arrow next to the location dot to indicate which direction the device is heading.
   }
   return (
@@ -37,6 +38,7 @@ export default function MapBox() {
 
       <MarkerBusRoute />
 
+      <MarkerTravel />
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
       <GeolocateControl

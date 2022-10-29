@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux'
 import { searchFilterChange } from 'redux/actions'
 import { locationData } from 'actions/initialData/locationData'
 import { cloneDeep } from 'lodash'
+import TravelLocation from 'components/TravelLocation/TravelLocation'
 
 const FilterRouter = () => {
   const [searchRoute, setSearchRoute] = useState([])
@@ -74,25 +75,7 @@ const FilterRouter = () => {
         <FormInput onChange={handleChangeWordSearch} placeholder={'Nhập tên tuyến...'} />
       </Paper>
       <div className="scroll-content">
-        <div style={{ cursor: 'pointer' }} className="row align-items-center h-100">
-          <div className="small-3">
-            <div className="route-no travel text-center">
-              <span onClick={handleTarget}>Travel</span>
-            </div>
-          </div>
-
-          <div className="small-7">
-            <p className="code-route">Tourist Destinations</p>
-            <p className="code-desc">Địa điểm du lịch nổi tiếng tại Đà Nẵng</p>
-          </div>
-          <div className="small-2">
-            <div className="text-center">
-              <Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 30 } }} />
-            </div>
-          </div>
-          <hr style={{ marginTop: '5px' }}></hr>
-        </div>
-
+        <TravelLocation />
         {searchRoute.map(busrouter => (
           <div
             style={{ cursor: 'pointer' }}
