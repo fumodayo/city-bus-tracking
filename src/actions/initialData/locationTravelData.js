@@ -120,8 +120,8 @@ export const locationTravelData = [
       'https://www.google.com/maps/place/L%C3%A0ng+b%C3%ADch+h%E1%BB%8Da+Tam+Thanh/@15.6030913,108.5348098,15z/data=!4m9!1m2!2m1!1zTMOgbmcgYsOtY2ggaOG7jWEgVGFtIFRoYW5o!3m5!1s0x3169db944cfa9265:0x178f0a22c6deb046!8m2!3d15.6030913!4d108.5435645!15sChtMw6BuZyBiw61jaCBo4buNYSBUYW0gVGhhbmiSARJ0b3VyaXN0X2F0dHJhY3Rpb24?hl=vi-VN',
     locationName: 'Thanh Niên, Tp. Tam Kỳ, Quảng Nam, Việt Nam',
     location: {
-      lng: '108.5348098',
-      lat: '15.6030913'
+      lng: '108.22003100773817',
+      lat: '16.06073174838991'
     }
   },
   {
@@ -680,8 +680,8 @@ export const locationTravelData = [
       'https://www.google.com/maps/place/Mikazuki+Water+Park+365/@16.0920725,105.9030161,7z/data=!4m9!1m2!2m1!1zY8O0bmcgdmnDqm4gbsaw4bubYyBNaWthenVraQ!3m5!1s0x31421991a401ca65:0xae18cd4b35f842b5!8m2!3d16.0921137!4d108.1442614!15sChxjw7RuZyB2acOqbiBuxrDhu5tjIE1pa2F6dWtpWh4iHGPDtG5nIHZpw6puIG7GsOG7m2MgbWlrYXp1a2mSARJ0b3VyaXN0X2F0dHJhY3Rpb26aASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUjVNWFpwZVRkM1JSQUI?hl=vi-VN',
     locationName: 'khu du lịch Xuân Thiều, Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng ',
     location: {
-      lng: '105.9030161',
-      lat: '16.0920725'
+      lng: '108.1441705467678',
+      lat: '16.092214307108208'
     }
   },
   {
@@ -807,8 +807,8 @@ export const locationTravelData = [
       'https://www.google.com/maps/place/Cafe+BB+Ph%E1%BB%91+%C4%91i+b%E1%BB%99+-+Ch%E1%BB%A3+%C4%91%C3%AAm+B%E1%BA%A1ch+%C4%90%E1%BA%B1ng/@10.983709,106.6484097,17z/data=!3m1!4b1!4m5!3m4!1s0x3174d146aebdc557:0xbe76ddcc6780bc53!8m2!3d10.9837005!4d106.6484128?hl=vi-VN',
     locationName: 'dọc bờ sông Hàn từ cầu Trần Thị Lý đi xuống',
     location: {
-      lng: '106.6484097',
-      lat: '10.983709'
+      lng: '108.22414639837552',
+      lat: '16.061476983446415'
     }
   },
   {
