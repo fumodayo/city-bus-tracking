@@ -4,7 +4,7 @@ import { Marker, Popup } from 'react-map-gl'
 import './MarkerTravel.scss'
 import MarkerTravelImage from 'components/MarkerTravelImages/MarkerTravelImage'
 import { useSelector } from 'react-redux'
-import { checkboxTravelChange } from 'redux/actions'
+import { checkboxTravelSelector } from 'redux/selectors'
 
 const MarkerTravel = () => {
   const [showPopup, setShowPopup] = useState(false)
@@ -19,11 +19,12 @@ const MarkerTravel = () => {
     setShowPopup(false)
   }
 
-  const isCheckedTravel = useSelector(checkboxTravelChange)
+  const isCheckedTravel = useSelector(checkboxTravelSelector)
+  console.log(isCheckedTravel)
 
   return (
     <div className="marker-travel">
-      {isCheckedTravel.payload.checkbox &&
+      {isCheckedTravel &&
         locationTravelData.map(i => (
           <Marker
             key={i.id}
