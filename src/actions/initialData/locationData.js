@@ -17,6 +17,7 @@ export const locationData = [
         name: 'Số 171(Kim Liên) Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
+        travelTime: 0,
         location: {
           lng: '108.11956612202619',
           lat: '16.13548288580201'
@@ -27,6 +28,7 @@ export const locationData = [
         name: '101 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
+        travelTime: 1,
         location: {
           lng: '108.11943246536552',
           lat: '16.1330679589498'
@@ -37,6 +39,7 @@ export const locationData = [
         name: 'Số 913 - 915 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
+        travelTime: 2,
         location: {
           lng: '108.11930183932864',
           lat: '16.129617645548674'
@@ -47,6 +50,7 @@ export const locationData = [
         name: '19 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
+        travelTime: 1,
         location: {
           lng: '108.12076170018832',
           lat: '16.12411291753288'

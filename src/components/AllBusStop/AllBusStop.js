@@ -103,7 +103,7 @@ const AllBusStop = () => {
             name={nameBusStop}
             tabLeft={'Xe sắp tới trạm'}
             tabRight={'Tuyến đi qua'}
-            compLeft={<BusLocation />}
+            compLeft={<BusLocation nameBusStop={nameBusStop} />}
             compRight={<RouteThrough nameBusStop={nameBusStop} />}
           />
         )}

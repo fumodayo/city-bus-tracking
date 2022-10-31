@@ -20,7 +20,6 @@ const MarkerTravel = () => {
   }
 
   const isCheckedTravel = useSelector(checkboxTravelSelector)
-  console.log(isCheckedTravel)
 
   return (
     <div className="marker-travel">
