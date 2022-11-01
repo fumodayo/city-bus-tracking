@@ -50,7 +50,9 @@ const MarkerTravel = () => {
                   <img
                     style={{
                       width: 140,
-                      height: 60
+                      height: 60,
+                      objectFit: 'cover',
+                      backgroundPosition: 'center'
                     }}
                     src={i.image}
                     alt={i.imageDesc}

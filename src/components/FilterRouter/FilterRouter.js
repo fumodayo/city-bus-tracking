@@ -80,7 +80,9 @@ const FilterRouter = () => {
           <div
             style={{ cursor: 'pointer' }}
             key={busrouter.id}
+            id={busrouter.id}
             className="row align-items-center h-100"
+            onClick={e => console.log(e.currentTarget.id)}
           >
             <div className="small-3">
               <div
