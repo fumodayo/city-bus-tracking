@@ -18,7 +18,7 @@ const MarkerBusRoute = () => {
       .filter(i => {
         return getRoutesCheckBox.indexOf(i.nameBusRouter) !== -1
       })
-      .filter(i => i.directionRoute === 'return')
+      .filter(i => i.directionRoute === 'turn')
       .map(i => i.route)
     setMarkerLocation(markerLocation)
     // validation route

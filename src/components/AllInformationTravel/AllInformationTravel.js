@@ -37,7 +37,7 @@ const AllInformationTravel = () => {
           p: '2px 4px',
           display: 'flex',
           alignItems: 'center',
-          width: 320,
+          width: 330,
           border: 'none',
           borderRadius: '15px',
           boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',

@@ -18,18 +18,17 @@ const TravelLocation = () => {
   const [isChecked, setIsChecked] = useState(false)
   const handleOnChangeChecked = () => {
     setIsChecked(!isChecked)
+    if (isChecked !== true) {
+      setIsOpen(true)
+    } else {
+      setIsOpen(false)
+    }
   }
 
-  const [showSidebar, setShowSidebar] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
-  const handleTarget = e => {
-    setShowSidebar(!showSidebar)
-  }
-
-  const [isOpen, setIsOpen] = useState(true)
-
-  const toggleOpenSidebar = newOpen => () => {
-    setIsOpen(newOpen)
+  const toggleOpenSidebar = () => {
+    setIsOpen(!isOpen)
   }
 
   const dispatch = useDispatch()
@@ -41,7 +40,7 @@ const TravelLocation = () => {
     <div className="travel-location">
       <div style={{ cursor: 'pointer' }} className="row align-items-center h-100">
         <div className="small-3">
-          <div className="route-no travel text-center" onClick={handleTarget}>
+          <div className="route-no travel text-center">
             <span>Travel</span>
           </div>
         </div>
@@ -63,14 +62,16 @@ const TravelLocation = () => {
         </div>
         <hr style={{ marginTop: '10px', border: '1px solid #2247c7' }}></hr>
       </div>
-      {showSidebar && (
+      {(isChecked || isOpen) && (
         <div className="sidebar-travel-location">
-          <Drawer variant="persistent" hideBackdrop={true} open={isOpen}>
+          <Drawer variant="persistent" anchor="right" hideBackdrop={true} open={isOpen}>
             <DrawerHeader sx={{ position: 'relative', backgroundColor: '#3597E4' }}>
-              <Typography style={{ fontWeight: '600', color: '#fff' }}>
+              <Typography
+                style={{ fontWeight: '600', color: '#fff', marginLeft: '10px' }}
+              >
                 Danh sách địa điểm du lịch tại Đà Nẵng
               </Typography>
-              <IconButton onClick={toggleOpenSidebar(false)}>
+              <IconButton onClick={toggleOpenSidebar}>
                 <Close fontSize="medium" sx={{ color: '#fff' }} />
               </IconButton>
             </DrawerHeader>

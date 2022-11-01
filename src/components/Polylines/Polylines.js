@@ -14,7 +14,9 @@ const PolyLines = () => {
       .map(i => i.nameBusRouter)
 
     const getRoutesLine = roadMapData
-      .filter(i => getRoutesCheckBox.indexOf(i.name) !== -1)
+      .filter(
+        i => getRoutesCheckBox.indexOf(i.name) !== -1 && i.directionRoute === 'turn'
+      )
       .map(i => {
         return {
           type: 'Feature',
