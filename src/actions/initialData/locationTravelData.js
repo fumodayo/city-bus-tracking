@@ -1,6 +1,6 @@
 export const locationTravelData = [
   {
-    id: 79574076363,
+    id: '79574076363',
     title: 'Bãi tắm biển Mỹ Khê',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-tam-my-khe.jpg',
@@ -16,7 +16,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 65250801297,
+    id: '65250801297',
     title: 'Bãi tắm Phạm Văn Đồng',
     typeLocation: 'discover',
     image:
@@ -34,7 +34,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 33384981461,
+    id: '33384981461',
     title: 'Bãi tắm Bắc Mỹ An',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/da-nang-bai-tam-my-an.jpg',
@@ -51,7 +51,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 11463867833,
+    id: '11463867833',
     title: 'Bãi biển Xuân Thiều',
     typeLocation: 'discover',
     image:
@@ -69,7 +69,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 44190397535,
+    id: '44190397535',
     title: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-bien-nam-o.jpg',
@@ -87,7 +87,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 62305724060,
+    id: '62305724060',
     title: 'Hồ Xanh',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/ho-xanh.jpg',
@@ -106,7 +106,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 83669998895,
+    id: '83669998895',
     title: 'Làng bích họa Tam Thanh',
     typeLocation: 'discover',
     image:
@@ -125,7 +125,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 45308854910,
+    id: '45308854910',
     title: 'Rạn Nam Ô',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/ran-nam-o-da-nang.jpg',
@@ -144,7 +144,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 22176237266,
+    id: '22176237266',
     title: 'Giếng Trời',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/gieng-troi-da-nang.jpg',
@@ -161,7 +161,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 41215850540,
+    id: '41215850540',
     title: 'Rừng thông Bồ Bồ',
     typeLocation: 'discover',
     image:
@@ -180,7 +180,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 37281954950,
+    id: '37281954950',
     title: 'Làng cổ Phong Nam',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/lang-co-phong-nam.jpg',
@@ -198,7 +198,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 33630923969,
+    id: '33630923969',
     title: 'Suối Mơ',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/suoi-mo-da-nang.jpg',
@@ -215,7 +215,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 49492376663,
+    id: '49492376663',
     title: 'Chợ cồn Đà Nẵng',
     typeLocation: 'discover',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/Cho-con-da-nang.jpg',
@@ -232,7 +232,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 5766846537,
+    id: '5766846537',
     title: 'Bán đảo Sơn Trà',
     typeLocation: 'discover',
     image:
@@ -257,7 +257,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 73779568661,
+    id: '73779568661',
     title: 'Ngũ Hành Sơn',
     typeLocation: 'cultural',
     image:
@@ -276,7 +276,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 87976900632,
+    id: '87976900632',
     title: 'Bảo tàng điêu khắc Chăm',
     typeLocation: 'cultural',
     image:
@@ -296,7 +296,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 78033227944,
+    id: '78033227944',
     title: 'Bảo tàng tranh 3D',
     typeLocation: 'cultural',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-tranh-3d.jpg',
@@ -311,7 +311,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 47557823325,
+    id: '47557823325',
     title: 'Bảo tàng Đà Nẵng',
     typeLocation: 'cultural',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-da-nang.jpg',
@@ -326,7 +326,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 4176434353,
+    id: '4176434353',
     title: 'Bảo tàng Hoàng Sa',
     typeLocation: 'cultural',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-hoang-sa.jpg',
@@ -341,7 +341,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 81131312099,
+    id: '81131312099',
     title: 'Làng đá mỹ nghệ Non Nước',
     typeLocation: 'cultural',
     image:
@@ -357,7 +357,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 75816154809,
+    id: '75816154809',
     title: 'Cung Văn hóa thể thao Tiên Sơn',
     typeLocation: 'cultural',
     image:
@@ -373,7 +373,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 70293316167,
+    id: '70293316167',
     title: 'Cầu Vàng',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-vang-da-nang.png',
@@ -388,7 +388,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 77713653030,
+    id: '77713653030',
     title: 'Bãi cỏ cháy',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-co-chay-da-nang-5.jpg',
@@ -403,7 +403,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 95210618094,
+    id: '95210618094',
     title: 'Bãi đá Obama',
     typeLocation: 'checking',
     image:
@@ -418,7 +418,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 29708546086,
+    id: '29708546086',
     title: 'Thuận Phước Field',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/thuan-phuoc-field-1.jpg',
@@ -433,7 +433,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 30373942220,
+    id: '30373942220',
     title: 'Đèo Hải Vân',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/deo-hai-van.jpg',
@@ -448,7 +448,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 62856526726,
+    id: '62856526726',
     title: 'Cây đa ngàn tuổi',
     typeLocation: 'checking',
     image:
@@ -464,7 +464,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 49396497912,
+    id: '49396497912',
     title: 'Ngôi nhà úp ngược',
     typeLocation: 'checking',
     image:
@@ -480,7 +480,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 92996158476,
+    id: '92996158476',
     title: 'Cầu Thuận Phước',
     typeLocation: 'checking',
     image:
@@ -496,7 +496,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 74172379705,
+    id: '74172379705',
     title: 'Cầu đi bộ Nguyễn Văn Trỗi',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-nguyen-van-troi.jpg',
@@ -511,7 +511,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 91164919481,
+    id: '91164919481',
     title: 'Cầu Trần Thị Lý',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/Cau-tran-thi-ly.jpeg',
@@ -526,7 +526,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 77845794883,
+    id: '77845794883',
     title: 'Tượng Cá chép hoá rồng',
     typeLocation: 'checking',
     image:
@@ -542,7 +542,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 32103782707,
+    id: '32103782707',
     title: 'Hải Đăng Thuận Phước',
     typeLocation: 'checking',
     image:
@@ -557,7 +557,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 33670815980,
+    id: '33670815980',
     title: 'Giàn hoa giấy sống ảo cực đẹp ở Đà Nẵng',
     typeLocation: 'checking',
     image:
@@ -573,7 +573,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 63929804028,
+    id: '63929804028',
     title: 'Đường Bích Họa',
     typeLocation: 'checking',
     image:
@@ -589,7 +589,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 52909641848,
+    id: '52909641848',
     title: 'Đỉnh Bàn Cờ',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/dinh-ban-co-da-nang-1.jpg',
@@ -604,7 +604,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 72077233920,
+    id: '72077233920',
     title: 'Nhà thờ Chính Tòa',
     typeLocation: 'checking',
     image:
@@ -620,7 +620,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 68274266330,
+    id: '68274266330',
     title: 'Con đường mùa đông Hàn Quốc',
     typeLocation: 'checking',
     image:
@@ -636,7 +636,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 6380486772,
+    id: '6380486772',
     title: 'Công viên Biển Đông',
     typeLocation: 'checking',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cong-vien-bien-dong.jpg',
@@ -651,7 +651,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 25718736615,
+    id: '25718736615',
     title: 'Khu du lịch Bà Nà Hills',
     typeLocation: 'center',
     image:
@@ -669,7 +669,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 56159745076,
+    id: '56159745076',
     title: 'Công viên nước Mikazuki',
     typeLocation: 'center',
     image:
@@ -685,7 +685,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 39768501178,
+    id: '39768501178',
     title: 'Công viên Châu Á Đà Nẵng - Asia Park',
     typeLocation: 'center',
     image:
@@ -701,7 +701,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 35940643680,
+    id: '35940643680',
     title: 'Công viên kỳ quan thế giới',
     typeLocation: 'center',
     image:
@@ -717,7 +717,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 65039952066,
+    id: '65039952066',
     title: 'Cocobay Đà Nẵng',
     typeLocation: 'center',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cocobay-da-nang.jpg',
@@ -732,7 +732,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 78376569698,
+    id: '78376569698',
     title: 'Công viên suối khoáng nóng núi Thần Tài',
     typeLocation: 'center',
     image:
@@ -748,7 +748,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 72012196038,
+    id: '72012196038',
     title: 'Cầu quay sông Hàn',
     typeLocation: 'night',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-quay-song-han.jpg',
@@ -764,7 +764,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 40203810766,
+    id: '40203810766',
     title: 'Cầu rồng',
     typeLocation: 'night',
     image:
@@ -782,7 +782,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 2801249623,
+    id: '2801249623',
     title: 'Cầu tình yêu',
     typeLocation: 'night',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-tinh-yeu-da-nang.jpg',
@@ -797,7 +797,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 36361148806,
+    id: '36361148806',
     title: 'Phố đi bộ Bạch Đằng',
     typeLocation: 'night',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/pho-di-bo-bach-dang-.jpg',
@@ -812,7 +812,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 9692457454,
+    id: '9692457454',
     title: 'Bar Sky36',
     typeLocation: 'night',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bar-sky36-da-nang.jpg',
@@ -827,7 +827,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 19213324269,
+    id: '19213324269',
     title: 'Du thuyền Sông Hàn',
     typeLocation: 'night',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/du-thuyen-song-han.jpg',
@@ -842,7 +842,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 50087877073,
+    id: '50087877073',
     title: 'Chợ đêm Helio',
     typeLocation: 'night',
     image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cho-dem-helio-da-nang.jpg',
@@ -857,7 +857,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 99319986222,
+    id: '99319986222',
     title: 'Chợ đêm Sơn Trà',
     typeLocation: 'night',
     image:
@@ -873,7 +873,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 34476186624,
+    id: '34476186624',
     title: 'Chợ đêm Hòa Khánh',
     typeLocation: 'night',
     image:
@@ -888,7 +888,7 @@ export const locationTravelData = [
     }
   },
   {
-    id: 35163044743,
+    id: '35163044743',
     title: 'Oq Lounge Pub',
     typeLocation: 'night',
     image:

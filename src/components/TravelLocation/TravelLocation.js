@@ -38,7 +38,7 @@ const TravelLocation = () => {
 
   return (
     <div className="travel-location">
-      <div style={{ cursor: 'pointer' }} className="row align-items-center h-100">
+      <div className="row align-items-center h-100">
         <div className="small-3">
           <div className="route-no travel text-center">
             <span>Travel</span>
