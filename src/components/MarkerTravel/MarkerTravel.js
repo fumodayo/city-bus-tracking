@@ -46,7 +46,19 @@ const MarkerTravel = () => {
                 closeOnClick={false}
                 closeButton={false}
               >
-                {`Địa điểm: ${i.title}`}
+                <div className="popup-content-custom">
+                  <img
+                    style={{
+                      width: 140,
+                      height: 60
+                    }}
+                    src={i.image}
+                    alt={i.imageDesc}
+                  />
+                  <span style={{ fontSize: '11px', fontWeight: 700 }}>
+                    Địa điểm: {i.title}
+                  </span>
+                </div>
               </Popup>
             )}
           </Marker>
