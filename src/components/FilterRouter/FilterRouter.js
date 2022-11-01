@@ -22,7 +22,7 @@ const FilterRouter = () => {
     // Handle filter search
     setSearch(search)
     const busdata = cloneDeep(locationData)
-    const busRoutesData = busdata.filter(route => route.directionRoute === 'turn')
+    const busRoutesData = busdata.filter(route => route.directionRoute === 'return')
     if (search !== '') {
       const newSearchList = busRoutesData.filter(route => {
         return Object.values(route).join('').toLowerCase().includes(search.toLowerCase())

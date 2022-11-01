@@ -34,7 +34,7 @@ const BusLocation = ({ nameBusStop }) => {
     const travelTime = objAfterFilter[0].travelTime * 60 * 1000
 
     setTimeData(travelTime)
-    if (realtime >= '6:00' && realtime <= '21:00') {
+    if (realtime >= '06:00' || realtime <= '21:00') {
       if (timestart.indexOf(realtime) !== -1) {
         setTimeData(travelTime)
       }
