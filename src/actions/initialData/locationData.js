@@ -9,11 +9,12 @@ export const locationData = [
     Cầu vượt ngã 3 Huế (tầng 3) - Điện Biên Phủ - Lý Thái Tổ - Hùng Vương - Trần Phú - 
     Cầu Rồng - Ngô Quyền - Ngũ Hành Sơn - Lê Văn Hiến - Trần Đại Nghĩa - <strong>Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa).</strong>`,
     lineDistance: '31,63km',
-    operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 21h00 (15 phút/chuyến)',
     color: '#ff1956',
     route: [
       {
-        id: 41676731701,
+        id: '41676731701',
         name: 'Số 171(Kim Liên) Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -24,7 +25,7 @@ export const locationData = [
         }
       },
       {
-        id: 29632809171,
+        id: '29632809171',
         name: '101 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -35,7 +36,7 @@ export const locationData = [
         }
       },
       {
-        id: 53438980726,
+        id: '53438980726',
         name: 'Số 913 - 915 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -46,7 +47,7 @@ export const locationData = [
         }
       },
       {
-        id: 13261972499,
+        id: '13261972499',
         name: '19 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -57,7 +58,7 @@ export const locationData = [
         }
       },
       {
-        id: 31270191841,
+        id: '31270191841',
         name: '957 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -68,7 +69,7 @@ export const locationData = [
         }
       },
       {
-        id: 81066036158,
+        id: '81066036158',
         name: '817 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -79,7 +80,7 @@ export const locationData = [
         }
       },
       {
-        id: 5510081972,
+        id: '5510081972',
         name: 'Số 767 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -90,7 +91,7 @@ export const locationData = [
         }
       },
       {
-        id: 46231575149,
+        id: '46231575149',
         name: 'Số 495 - 497 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -101,7 +102,7 @@ export const locationData = [
         }
       },
       {
-        id: 94928953045,
+        id: '94928953045',
         name: '421 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -112,7 +113,7 @@ export const locationData = [
         }
       },
       {
-        id: 93057959639,
+        id: '93057959639',
         name: '339 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -123,7 +124,7 @@ export const locationData = [
         }
       },
       {
-        id: 83972586719,
+        id: '83972586719',
         name: 'Bệnh viện tâm thần',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -134,7 +135,7 @@ export const locationData = [
         }
       },
       {
-        id: 4097270553,
+        id: '4097270553',
         name: 'Trường Cao đẳng kế hoạch',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -145,7 +146,7 @@ export const locationData = [
         }
       },
       {
-        id: 33283047093,
+        id: '33283047093',
         name: 'THCS Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -156,7 +157,7 @@ export const locationData = [
         }
       },
       {
-        id: 80216016485,
+        id: '80216016485',
         name: '755-757 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -167,7 +168,7 @@ export const locationData = [
         }
       },
       {
-        id: 90522510881,
+        id: '90522510881',
         name: '657 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -178,7 +179,7 @@ export const locationData = [
         }
       },
       {
-        id: 69204961942,
+        id: '69204961942',
         name: 'Khu vui chơi trẻ em Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -189,7 +190,7 @@ export const locationData = [
         }
       },
       {
-        id: 82235724744,
+        id: '82235724744',
         name: 'Bệnh viện đa khoa Liên Chiểu',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -200,7 +201,7 @@ export const locationData = [
         }
       },
       {
-        id: 2507896143,
+        id: '2507896143',
         name: '459 - 461 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -211,7 +212,7 @@ export const locationData = [
         }
       },
       {
-        id: 14560376168,
+        id: '14560376168',
         name: 'Showroom Trường Hải',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -222,7 +223,7 @@ export const locationData = [
         }
       },
       {
-        id: 99835005384,
+        id: '99835005384',
         name: '341 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -233,7 +234,7 @@ export const locationData = [
         }
       },
       {
-        id: 42981263177,
+        id: '42981263177',
         name: '321-323 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -244,7 +245,7 @@ export const locationData = [
         }
       },
       {
-        id: 1732068935,
+        id: '1732068935',
         name: '219-221 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -255,7 +256,7 @@ export const locationData = [
         }
       },
       {
-        id: 47345524206,
+        id: '47345524206',
         name: '137-139 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -266,7 +267,7 @@ export const locationData = [
         }
       },
       {
-        id: 14307816902,
+        id: '14307816902',
         name: '559 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -277,7 +278,7 @@ export const locationData = [
         }
       },
       {
-        id: 2768131448,
+        id: '2768131448',
         name: '407 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -288,7 +289,7 @@ export const locationData = [
         }
       },
       {
-        id: 56105380180,
+        id: '56105380180',
         name: '311 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -299,7 +300,7 @@ export const locationData = [
         }
       },
       {
-        id: 20450427753,
+        id: '20450427753',
         name: '135 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -310,7 +311,7 @@ export const locationData = [
         }
       },
       {
-        id: 80890846647,
+        id: '80890846647',
         name: 'Đối diện 36-38 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -321,7 +322,7 @@ export const locationData = [
         }
       },
       {
-        id: 69834623702,
+        id: '69834623702',
         name: '85 Lý Thái Tổ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -332,7 +333,7 @@ export const locationData = [
         }
       },
       {
-        id: 36040062889,
+        id: '36040062889',
         name: 'Nhà thờ con Gà',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -343,7 +344,7 @@ export const locationData = [
         }
       },
       {
-        id: 16123558917,
+        id: '16123558917',
         name: '253 Hùng Vương',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -354,7 +355,7 @@ export const locationData = [
         }
       },
       {
-        id: 71718856816,
+        id: '71718856816',
         name: '103 Hùng Vương',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -365,7 +366,7 @@ export const locationData = [
         }
       },
       {
-        id: 74034539200,
+        id: '74034539200',
         name: 'Công viên Hùng Vương',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -376,7 +377,7 @@ export const locationData = [
         }
       },
       {
-        id: 1130860509,
+        id: '1130860509',
         name: 'ĐD 151 Trần Phú',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -387,7 +388,7 @@ export const locationData = [
         }
       },
       {
-        id: 4763853999,
+        id: '4763853999',
         name: 'UBND quận Hải Châu',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -398,7 +399,7 @@ export const locationData = [
         }
       },
       {
-        id: 62395937589,
+        id: '62395937589',
         name: 'Cầu Rồng (Võ Văn Kiệt)',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -409,7 +410,7 @@ export const locationData = [
         }
       },
       {
-        id: 15955064606,
+        id: '15955064606',
         name: 'BV Quận Sơn Trà',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -420,7 +421,7 @@ export const locationData = [
         }
       },
       {
-        id: 10088024323,
+        id: '10088024323',
         name: 'Đối diện 1187 Ngô Quyền',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -431,7 +432,7 @@ export const locationData = [
         }
       },
       {
-        id: 55823419640,
+        id: '55823419640',
         name: 'Số 34 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -442,7 +443,7 @@ export const locationData = [
         }
       },
       {
-        id: 45991064962,
+        id: '45991064962',
         name: '180 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -453,7 +454,7 @@ export const locationData = [
         }
       },
       {
-        id: 9171890447,
+        id: '9171890447',
         name: 'Số 240 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -464,7 +465,7 @@ export const locationData = [
         }
       },
       {
-        id: 15450055374,
+        id: '15450055374',
         name: '310A Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -475,7 +476,7 @@ export const locationData = [
         }
       },
       {
-        id: 91398561601,
+        id: '91398561601',
         name: '370 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -486,7 +487,7 @@ export const locationData = [
         }
       },
       {
-        id: 38963561433,
+        id: '38963561433',
         name: 'Đối diện 40 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -497,7 +498,7 @@ export const locationData = [
         }
       },
       {
-        id: 13953554355,
+        id: '13953554355',
         name: '160 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -508,7 +509,7 @@ export const locationData = [
         }
       },
       {
-        id: 93406165171,
+        id: '93406165171',
         name: '256 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -519,7 +520,7 @@ export const locationData = [
         }
       },
       {
-        id: 93976290957,
+        id: '93976290957',
         name: '376 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -530,7 +531,7 @@ export const locationData = [
         }
       },
       {
-        id: 76579547966,
+        id: '76579547966',
         name: '402 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -541,7 +542,7 @@ export const locationData = [
         }
       },
       {
-        id: 59552601959,
+        id: '59552601959',
         name: '470A Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -552,7 +553,7 @@ export const locationData = [
         }
       },
       {
-        id: 8053450406,
+        id: '8053450406',
         name: '542 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -563,7 +564,7 @@ export const locationData = [
         }
       },
       {
-        id: 48855306667,
+        id: '48855306667',
         name: '618 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -574,7 +575,7 @@ export const locationData = [
         }
       },
       {
-        id: 74793147223,
+        id: '74793147223',
         name: '758 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -585,7 +586,7 @@ export const locationData = [
         }
       },
       {
-        id: 97856490250,
+        id: '97856490250',
         name: 'Đối diện Sân Tập Lái Xe Ô Tô',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -596,7 +597,7 @@ export const locationData = [
         }
       },
       {
-        id: 66781014593,
+        id: '66781014593',
         name: 'E152 Trần Đại Nghĩa',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -607,7 +608,7 @@ export const locationData = [
         }
       },
       {
-        id: 96052165091,
+        id: '96052165091',
         name: 'Kế VLXD Tấn Danh Trần Đại Nghĩa',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -618,7 +619,7 @@ export const locationData = [
         }
       },
       {
-        id: 42991095455,
+        id: '42991095455',
         name: 'Trường Cao Đẳng Việt Hàn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'turn',
@@ -640,11 +641,12 @@ export const locationData = [
     Cầu vượt ngã 3 Huế (tầng 3) - Tôn Đức Thắng - Nguyễn Lương Bằng - Cầu Nam Ô - Nguyễn Văn Cừ - 
     <strong>Kim Liên</strong>`,
     lineDistance: '31,53km',
-    operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 21h00 (15 phút/chuyến)',
     color: '#ff1956',
     route: [
       {
-        id: 61728855973,
+        id: '61728855973',
         name: 'Trường Cao Đẳng Việt Hàn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -655,7 +657,7 @@ export const locationData = [
         }
       },
       {
-        id: 27539133550,
+        id: '27539133550',
         name: 'Kế Cửa Hàng Thành Tín Hợp',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -666,7 +668,7 @@ export const locationData = [
         }
       },
       {
-        id: 17829743257,
+        id: '17829743257',
         name: 'Đối Diện Cửa Hàng Thiên Đại Phúc Trần Đại Nghĩa',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -677,7 +679,7 @@ export const locationData = [
         }
       },
       {
-        id: 53841883061,
+        id: '53841883061',
         name: 'Vườn ươm cây xanh',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -688,7 +690,7 @@ export const locationData = [
         }
       },
       {
-        id: 33425813124,
+        id: '33425813124',
         name: 'Sân tập lái ô tô Trần Đại Nghĩa',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -699,7 +701,7 @@ export const locationData = [
         }
       },
       {
-        id: 44879816236,
+        id: '44879816236',
         name: '527 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -710,7 +712,7 @@ export const locationData = [
         }
       },
       {
-        id: 87873268848,
+        id: '87873268848',
         name: '415 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -721,7 +723,7 @@ export const locationData = [
         }
       },
       {
-        id: 41116889656,
+        id: '41116889656',
         name: '307 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -732,7 +734,7 @@ export const locationData = [
         }
       },
       {
-        id: 93772239098,
+        id: '93772239098',
         name: 'Đối Diện TTHC Quận Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -743,7 +745,7 @@ export const locationData = [
         }
       },
       {
-        id: 45944436405,
+        id: '45944436405',
         name: '127 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -754,7 +756,7 @@ export const locationData = [
         }
       },
       {
-        id: 49730763261,
+        id: '49730763261',
         name: 'Đối Diện 384 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -765,7 +767,7 @@ export const locationData = [
         }
       },
       {
-        id: 26911198567,
+        id: '26911198567',
         name: 'Kế 81B Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -776,7 +778,7 @@ export const locationData = [
         }
       },
       {
-        id: 57185266267,
+        id: '57185266267',
         name: 'Doanh trại quân đội đường Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -787,7 +789,7 @@ export const locationData = [
         }
       },
       {
-        id: 87381075630,
+        id: '87381075630',
         name: 'Đối Diện 48 Lê Văn Hiến',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -798,7 +800,7 @@ export const locationData = [
         }
       },
       {
-        id: 27845805792,
+        id: '27845805792',
         name: '175 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -809,7 +811,7 @@ export const locationData = [
         }
       },
       {
-        id: 84336197502,
+        id: '84336197502',
         name: '133 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -820,7 +822,7 @@ export const locationData = [
         }
       },
       {
-        id: 52008284660,
+        id: '52008284660',
         name: 'Trường trung cấp nghề số 5',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -831,7 +833,7 @@ export const locationData = [
         }
       },
       {
-        id: 93221601453,
+        id: '93221601453',
         name: 'Đại học Kinh Tế',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -842,7 +844,7 @@ export const locationData = [
         }
       },
       {
-        id: 60569441637,
+        id: '60569441637',
         name: '29 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -853,7 +855,7 @@ export const locationData = [
         }
       },
       {
-        id: 60938803919,
+        id: '60938803919',
         name: '1093 Ngô Quyền',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -864,7 +866,7 @@ export const locationData = [
         }
       },
       {
-        id: 113160183,
+        id: '113160183',
         name: '1041 Ngô Quyền',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -875,7 +877,7 @@ export const locationData = [
         }
       },
       {
-        id: 75615411272,
+        id: '75615411272',
         name: 'Cầu Rồng (số lẽ đường Võ Văn Kiệt)',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -886,7 +888,7 @@ export const locationData = [
         }
       },
       {
-        id: 74397801072,
+        id: '74397801072',
         name: 'Đài DRT',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -897,7 +899,7 @@ export const locationData = [
         }
       },
       {
-        id: 70595935149,
+        id: '70595935149',
         name: 'Đối Diện Chợ Hàn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -909,7 +911,7 @@ export const locationData = [
       },
 
       {
-        id: 67843805168,
+        id: '67843805168',
         name: 'Đối diện 59 Hùng Vương',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -920,7 +922,7 @@ export const locationData = [
         }
       },
       {
-        id: 518628154,
+        id: '518628154',
         name: '192 Hùng Vương',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -931,7 +933,7 @@ export const locationData = [
         }
       },
       {
-        id: 33949453181,
+        id: '33949453181',
         name: 'Chợ Cồn',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -942,7 +944,7 @@ export const locationData = [
         }
       },
       {
-        id: 48402907664,
+        id: '48402907664',
         name: '10 Lý Thái Tổ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -953,7 +955,7 @@ export const locationData = [
         }
       },
       {
-        id: 72183841801,
+        id: '72183841801',
         name: 'Số 14-16 Lý Thái Tổ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -964,7 +966,7 @@ export const locationData = [
         }
       },
       {
-        id: 8921197898,
+        id: '8921197898',
         name: '130 Lý Thái Tổ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -975,7 +977,7 @@ export const locationData = [
         }
       },
       {
-        id: 72116802951,
+        id: '72116802951',
         name: '130 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -986,7 +988,7 @@ export const locationData = [
         }
       },
       {
-        id: 1627251237,
+        id: '1627251237',
         name: '336 Dien Bien Phu',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -997,7 +999,7 @@ export const locationData = [
         }
       },
       {
-        id: 78305396975,
+        id: '78305396975',
         name: 'Số 412 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1008,7 +1010,7 @@ export const locationData = [
         }
       },
       {
-        id: 58387183632,
+        id: '58387183632',
         name: '570 Điện Biên Phủ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1019,7 +1021,7 @@ export const locationData = [
         }
       },
       {
-        id: 36959527696,
+        id: '36959527696',
         name: '128 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1030,7 +1032,7 @@ export const locationData = [
         }
       },
       {
-        id: 69314526452,
+        id: '69314526452',
         name: '210 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1041,7 +1043,7 @@ export const locationData = [
         }
       },
       {
-        id: 13184302936,
+        id: '13184302936',
         name: '294 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1052,7 +1054,7 @@ export const locationData = [
         }
       },
       {
-        id: 26624030570,
+        id: '26624030570',
         name: '422 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1063,7 +1065,7 @@ export const locationData = [
         }
       },
       {
-        id: 51701714878,
+        id: '51701714878',
         name: '552 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1074,7 +1076,7 @@ export const locationData = [
         }
       },
       {
-        id: 49910955155,
+        id: '49910955155',
         name: '640 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1085,7 +1087,7 @@ export const locationData = [
         }
       },
       {
-        id: 34955299107,
+        id: '34955299107',
         name: '758 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1096,7 +1098,7 @@ export const locationData = [
         }
       },
       {
-        id: 53847728152,
+        id: '53847728152',
         name: '806 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1107,7 +1109,7 @@ export const locationData = [
         }
       },
       {
-        id: 8966151605,
+        id: '8966151605',
         name: '900 Tôn Đức Thắng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1118,7 +1120,7 @@ export const locationData = [
         }
       },
       {
-        id: 54971808840,
+        id: '54971808840',
         name: '50 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1129,7 +1131,7 @@ export const locationData = [
         }
       },
       {
-        id: 15440934249,
+        id: '15440934249',
         name: '138 Nguyễn Lương',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1140,7 +1142,7 @@ export const locationData = [
         }
       },
       {
-        id: 26634594712,
+        id: '26634594712',
         name: '234 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1151,7 +1153,7 @@ export const locationData = [
         }
       },
       {
-        id: 10362929838,
+        id: '10362929838',
         name: '290 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1162,7 +1164,7 @@ export const locationData = [
         }
       },
       {
-        id: 3588025760,
+        id: '3588025760',
         name: '396 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1173,7 +1175,7 @@ export const locationData = [
         }
       },
       {
-        id: 40619766688,
+        id: '40619766688',
         name: '438 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1184,7 +1186,7 @@ export const locationData = [
         }
       },
       {
-        id: 71248161860,
+        id: '71248161860',
         name: '546 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1195,7 +1197,7 @@ export const locationData = [
         }
       },
       {
-        id: 96800441871,
+        id: '96800441871',
         name: '636 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1206,7 +1208,7 @@ export const locationData = [
         }
       },
       {
-        id: 20274740579,
+        id: '20274740579',
         name: '788 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1217,7 +1219,7 @@ export const locationData = [
         }
       },
       {
-        id: 41959909310,
+        id: '41959909310',
         name: '922 Nguyễn Lương Bằng',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1228,7 +1230,7 @@ export const locationData = [
         }
       },
       {
-        id: 63696236446,
+        id: '63696236446',
         name: '52 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1239,7 +1241,7 @@ export const locationData = [
         }
       },
       {
-        id: 58772588367,
+        id: '58772588367',
         name: 'Số 126 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1250,7 +1252,7 @@ export const locationData = [
         }
       },
       {
-        id: 26394518915,
+        id: '26394518915',
         name: 'Số 230 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1261,7 +1263,7 @@ export const locationData = [
         }
       },
       {
-        id: 95050441416,
+        id: '95050441416',
         name: '274 Nguyễn Văn Cừ',
         nameLocationBusRoute: 'R16',
         directionLocationBusRoute: 'return',
@@ -1283,11 +1285,12 @@ export const locationData = [
     Nguyễn Hữu Thọ - Lê Đại Hành - Ông Ích Đường - CMT8 - Trường Chinh - Cầu Đỏ - QL1A - ĐT605 - 
     Chợ Lệ Trạch -<strong>Hòa Tiến (Khu đất đối diện Nghĩa trang xã Hòa Tiến)</strong>`,
     lineDistance: '20,00 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30p/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30p/chuyến)',
     color: '#089669',
     route: [
       {
-        id: 16738996829,
+        id: '16738996829',
         name: 'Cảng Sông Hàn',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1298,7 +1301,7 @@ export const locationData = [
         }
       },
       {
-        id: 96534531693,
+        id: '96534531693',
         name: '20 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1309,7 +1312,7 @@ export const locationData = [
         }
       },
       {
-        id: 66874241697,
+        id: '66874241697',
         name: '104-106 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1320,7 +1323,7 @@ export const locationData = [
         }
       },
       {
-        id: 90091923291,
+        id: '90091923291',
         name: '240 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1331,7 +1334,7 @@ export const locationData = [
         }
       },
       {
-        id: 69356868879,
+        id: '69356868879',
         name: '322 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1342,7 +1345,7 @@ export const locationData = [
         }
       },
       {
-        id: 30866566611,
+        id: '30866566611',
         name: 'Chợ Tam Giác',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1353,7 +1356,7 @@ export const locationData = [
         }
       },
       {
-        id: 43954804335,
+        id: '43954804335',
         name: 'Siêu thị BigC',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1364,7 +1367,7 @@ export const locationData = [
         }
       },
       {
-        id: 24224554343,
+        id: '24224554343',
         name: '522-524 Ông Ích Khiêm',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1375,7 +1378,7 @@ export const locationData = [
         }
       },
       {
-        id: 85012725359,
+        id: '85012725359',
         name: '618 Ông Ích Khiêm',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1386,7 +1389,7 @@ export const locationData = [
         }
       },
       {
-        id: 11211852261,
+        id: '11211852261',
         name: '11-15 Nguyễn Văn Linh',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1397,7 +1400,7 @@ export const locationData = [
         }
       },
       {
-        id: 6201917869,
+        id: '6201917869',
         name: 'Đối Diện Chùa Phước Ninh',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1408,7 +1411,7 @@ export const locationData = [
         }
       },
       {
-        id: 98459035487,
+        id: '98459035487',
         name: 'Công viên Apec',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1419,7 +1422,7 @@ export const locationData = [
         }
       },
       {
-        id: 40466335018,
+        id: '40466335018',
         name: '152A-154 Đường 2/9',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1430,7 +1433,7 @@ export const locationData = [
         }
       },
       {
-        id: 62964668698,
+        id: '62964668698',
         name: '214-216 Đường 2/9',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1441,7 +1444,7 @@ export const locationData = [
         }
       },
       {
-        id: 40675849120,
+        id: '40675849120',
         name: '264-266 Nui Thanh 48',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1452,7 +1455,7 @@ export const locationData = [
         }
       },
       {
-        id: 75222735090,
+        id: '75222735090',
         name: 'Nút giao Lê Thanh Nghị - đường 30/4',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1463,7 +1466,7 @@ export const locationData = [
         }
       },
       {
-        id: 26802440723,
+        id: '26802440723',
         name: 'Trước Công Ty Kiểm Toán & Kế toán AAC',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1474,7 +1477,7 @@ export const locationData = [
         }
       },
       {
-        id: 59621625940,
+        id: '59621625940',
         name: '300-302 Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1485,7 +1488,7 @@ export const locationData = [
         }
       },
       {
-        id: 21936158344,
+        id: '21936158344',
         name: '432-434 Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1496,7 +1499,7 @@ export const locationData = [
         }
       },
       {
-        id: 51083822769,
+        id: '51083822769',
         name: 'Viettronimex-Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1507,7 +1510,7 @@ export const locationData = [
         }
       },
       {
-        id: 52047590015,
+        id: '52047590015',
         name: '40-42 Lê Đại Hành',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1518,7 +1521,7 @@ export const locationData = [
         }
       },
       {
-        id: 34109196786,
+        id: '34109196786',
         name: 'Ban nghĩa trang TP',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1529,7 +1532,7 @@ export const locationData = [
         }
       },
       {
-        id: 68582728863,
+        id: '68582728863',
         name: 'Dệt may Hòa Thọ',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1540,7 +1543,7 @@ export const locationData = [
         }
       },
       {
-        id: 42426829559,
+        id: '42426829559',
         name: '307-309 đường CMT8',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1551,7 +1554,7 @@ export const locationData = [
         }
       },
       {
-        id: 61531415022,
+        id: '61531415022',
         name: '492 đường CMT8',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1562,7 +1565,7 @@ export const locationData = [
         }
       },
       {
-        id: 18523528372,
+        id: '18523528372',
         name: 'Trước Trung Tâm GDTX Số 3',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1573,7 +1576,7 @@ export const locationData = [
         }
       },
       {
-        id: 52274489356,
+        id: '52274489356',
         name: 'Ngã ba DT605 giao Quốc lộ 1A',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1584,7 +1587,7 @@ export const locationData = [
         }
       },
       {
-        id: 74348139509,
+        id: '74348139509',
         name: 'Đối Diện Trụ Điện 238',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1595,7 +1598,7 @@ export const locationData = [
         }
       },
       {
-        id: 97018882414,
+        id: '97018882414',
         name: 'Trường tiểu học Số 2 Hòa Tiến',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1606,7 +1609,7 @@ export const locationData = [
         }
       },
       {
-        id: 93856378022,
+        id: '93856378022',
         name: 'Gần kiệt 12 thôn Lệ Sơn Bắc',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1617,7 +1620,7 @@ export const locationData = [
         }
       },
       {
-        id: 65595071565,
+        id: '65595071565',
         name: 'Gần nhà thuốc số 1 thôn Lệ Sơn Bắc',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1628,7 +1631,7 @@ export const locationData = [
         }
       },
       {
-        id: 916017829,
+        id: '916017829',
         name: 'Hòa Tiến (Nghĩa trang xã Hòa Tiến)',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'turn',
@@ -1651,11 +1654,12 @@ export const locationData = [
     Đường 2/9 - Nguyễn Văn Linh - Ông Ích Khiêm - Đống Đa - 
     <strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt.</strong>`,
     lineDistance: '20,00 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30p/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30p/chuyến)',
     color: '#089669',
     route: [
       {
-        id: 39502269135,
+        id: '39502269135',
         name: 'Hòa Tiến (Nghĩa trang xã Hòa Tiến)',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1666,7 +1670,7 @@ export const locationData = [
         }
       },
       {
-        id: 59183290313,
+        id: '59183290313',
         name: 'Đối diện nhà thuốc số 1 thôn Lệ Sơn Bac',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1677,7 +1681,7 @@ export const locationData = [
         }
       },
       {
-        id: 50821777216,
+        id: '50821777216',
         name: 'Đối diện khu vực gần kiệt 12 thôn Lệ Sơn Bắc',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1688,7 +1692,7 @@ export const locationData = [
         }
       },
       {
-        id: 65235173933,
+        id: '65235173933',
         name: 'Đối Diện Trường Trung Học Số 2 Hòa Tiến',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1699,7 +1703,7 @@ export const locationData = [
         }
       },
       {
-        id: 45182862034,
+        id: '45182862034',
         name: 'Hòa Tiến (Trụ điện CS 44 238)',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1710,7 +1714,7 @@ export const locationData = [
         }
       },
       {
-        id: 23573396196,
+        id: '23573396196',
         name: 'Café Relax',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1721,7 +1725,7 @@ export const locationData = [
         }
       },
       {
-        id: 10442517034,
+        id: '10442517034',
         name: 'Trung tâm GDTX Số 3-Trường Chỉnh',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1732,7 +1736,7 @@ export const locationData = [
         }
       },
       {
-        id: 46631063044,
+        id: '46631063044',
         name: 'Trụ điện 25-2 Trường Chinh',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1743,7 +1747,7 @@ export const locationData = [
         }
       },
       {
-        id: 65740096867,
+        id: '65740096867',
         name: '417 đường CMT 8',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1754,7 +1758,7 @@ export const locationData = [
         }
       },
       {
-        id: 72946597275,
+        id: '72946597275',
         name: 'Công an Q.Cẩm Lệ/294-296 đường CMT8',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1765,7 +1769,7 @@ export const locationData = [
         }
       },
       {
-        id: 30746043510,
+        id: '30746043510',
         name: 'THPT Hòa Vang-Ông Ích Đường',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1776,7 +1780,7 @@ export const locationData = [
         }
       },
       {
-        id: 71805043217,
+        id: '71805043217',
         name: '117 Lê Đại Hành',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1787,7 +1791,7 @@ export const locationData = [
         }
       },
       {
-        id: 76585981816,
+        id: '76585981816',
         name: 'Đối diện 60 Lê Đại Hành',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1798,7 +1802,7 @@ export const locationData = [
         }
       },
       {
-        id: 43959961846,
+        id: '43959961846',
         name: 'Đối diện Viettronimex-Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1809,7 +1813,7 @@ export const locationData = [
         }
       },
       {
-        id: 26714586206,
+        id: '26714586206',
         name: '513-515 Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1820,7 +1824,7 @@ export const locationData = [
         }
       },
       {
-        id: 25813586770,
+        id: '25813586770',
         name: 'Bệnh viện Vinmex/325-327 Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1831,7 +1835,7 @@ export const locationData = [
         }
       },
       {
-        id: 24990088647,
+        id: '24990088647',
         name: 'Trụ CS20 Đường 30/4',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1842,7 +1846,7 @@ export const locationData = [
         }
       },
       {
-        id: 66251272726,
+        id: '66251272726',
         name: 'Nút giao Lê Thanh Nghị - đường 30/4',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1853,7 +1857,7 @@ export const locationData = [
         }
       },
       {
-        id: 13405869733,
+        id: '13405869733',
         name: '255-257 Núi Thành',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1864,7 +1868,7 @@ export const locationData = [
         }
       },
       {
-        id: 31966810005,
+        id: '31966810005',
         name: 'Nha hang Phi LO-đối diện 200-202 Đường 2/9',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1875,7 +1879,7 @@ export const locationData = [
         }
       },
       {
-        id: 44267836766,
+        id: '44267836766',
         name: 'Đối diện 154 Đường 2/9',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1886,7 +1890,7 @@ export const locationData = [
         }
       },
       {
-        id: 68629737419,
+        id: '68629737419',
         name: 'Công viên Apec-Đối diện 22 Đường 2/9',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1897,7 +1901,7 @@ export const locationData = [
         }
       },
       {
-        id: 34148814047,
+        id: '34148814047',
         name: 'Công viên Nguyễn Văn Linh-Đối diện 31 NVL',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1908,7 +1912,7 @@ export const locationData = [
         }
       },
       {
-        id: 43087418776,
+        id: '43087418776',
         name: 'Chùa Phước Ninh',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1919,7 +1923,7 @@ export const locationData = [
         }
       },
       {
-        id: 86368011311,
+        id: '86368011311',
         name: '415-417 Ông Ích Khiêm',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1930,7 +1934,7 @@ export const locationData = [
         }
       },
       {
-        id: 50628616350,
+        id: '50628616350',
         name: 'Xí nghiệp cấp nước-295-297 Ông Ích Khiêm',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1941,7 +1945,7 @@ export const locationData = [
         }
       },
       {
-        id: 16717795879,
+        id: '16717795879',
         name: 'Chợ Cồn',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1952,7 +1956,7 @@ export const locationData = [
         }
       },
       {
-        id: 79829950838,
+        id: '79829950838',
         name: '301 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1963,7 +1967,7 @@ export const locationData = [
         }
       },
       {
-        id: 7791359401,
+        id: '7791359401',
         name: '251-253 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1974,7 +1978,7 @@ export const locationData = [
         }
       },
       {
-        id: 52872741819,
+        id: '52872741819',
         name: '163-165 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1985,7 +1989,7 @@ export const locationData = [
         }
       },
       {
-        id: 84047252630,
+        id: '84047252630',
         name: '75 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -1996,7 +2000,7 @@ export const locationData = [
         }
       },
       {
-        id: 66602540268,
+        id: '66602540268',
         name: 'Đối diện 22 Đống Đa',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -2007,7 +2011,7 @@ export const locationData = [
         }
       },
       {
-        id: 17287841895,
+        id: '17287841895',
         name: 'Cảng Sông Hàn',
         nameLocationBusRoute: 'R4A',
         directionLocationBusRoute: 'return',
@@ -2028,11 +2032,12 @@ export const locationData = [
     Nguyễn Thị Minh Khai - Hùng Vương - Trần Phú - Trưng Nữ Vương - Núi Thành - Cách Mạng Tháng 8 - 
     Cầu Vượt Hòa Cầm - Trường Sơn - Quốc lộ 14B - Quảng Xương - <strong> TTHC Huyện Hòa Vang.</strong>`,
     lineDistance: '20,00 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (15 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (15 phút/chuyến)',
     color: '#360ec0',
     route: [
       {
-        id: 4677255836,
+        id: '4677255836',
         name: 'Cảng Sông Hàn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2043,7 +2048,7 @@ export const locationData = [
         }
       },
       {
-        id: 61604132497,
+        id: '61604132497',
         name: '06 Trần Phú',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2054,7 +2059,7 @@ export const locationData = [
         }
       },
       {
-        id: 7095512634,
+        id: '7095512634',
         name: 'Trường Tiếu học Lý Tự Trọng',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2065,7 +2070,7 @@ export const locationData = [
         }
       },
       {
-        id: 58961103332,
+        id: '58961103332',
         name: '08-10 Nguyễn Thị Minh Khai',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2076,7 +2081,7 @@ export const locationData = [
         }
       },
       {
-        id: 36774102806,
+        id: '36774102806',
         name: '100-102 Nguyễn Thị Minh Khai',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2087,7 +2092,7 @@ export const locationData = [
         }
       },
       {
-        id: 19814627094,
+        id: '19814627094',
         name: 'Công viên Hùng Vương',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2098,7 +2103,7 @@ export const locationData = [
         }
       },
       {
-        id: 79200303425,
+        id: '79200303425',
         name: 'Nhà thờ Con Gà',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2109,7 +2114,7 @@ export const locationData = [
         }
       },
       {
-        id: 19421612098,
+        id: '19421612098',
         name: 'TTHC Quận Hải Châu',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2120,7 +2125,7 @@ export const locationData = [
         }
       },
       {
-        id: 34349760361,
+        id: '34349760361',
         name: 'Cổ Viện Chàm',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2131,7 +2136,7 @@ export const locationData = [
         }
       },
       {
-        id: 74661387957,
+        id: '74661387957',
         name: '60 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2142,7 +2147,7 @@ export const locationData = [
         }
       },
       {
-        id: 85564921607,
+        id: '85564921607',
         name: '256-258 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2153,7 +2158,7 @@ export const locationData = [
         }
       },
       {
-        id: 63374886775,
+        id: '63374886775',
         name: '382 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2164,7 +2169,7 @@ export const locationData = [
         }
       },
       {
-        id: 89274406862,
+        id: '89274406862',
         name: '484 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2175,7 +2180,7 @@ export const locationData = [
         }
       },
       {
-        id: 57521471073,
+        id: '57521471073',
         name: '582 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2186,7 +2191,7 @@ export const locationData = [
         }
       },
       {
-        id: 27689504605,
+        id: '27689504605',
         name: 'Đối diện Metro',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2197,7 +2202,7 @@ export const locationData = [
         }
       },
       {
-        id: 2021107817,
+        id: '2021107817',
         name: '8V Tâm Trí-54 đường CMT8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2208,7 +2213,7 @@ export const locationData = [
         }
       },
       {
-        id: 51554716863,
+        id: '51554716863',
         name: '178 CMT 8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2219,7 +2224,7 @@ export const locationData = [
         }
       },
       {
-        id: 68831466670,
+        id: '68831466670',
         name: '307-309 CMT 8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2230,7 +2235,7 @@ export const locationData = [
         }
       },
       {
-        id: 67413619436,
+        id: '67413619436',
         name: '492 CMT 8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2241,7 +2246,7 @@ export const locationData = [
         }
       },
       {
-        id: 54703590857,
+        id: '54703590857',
         name: '172 Trường Sơn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2252,7 +2257,7 @@ export const locationData = [
         }
       },
       {
-        id: 14197004235,
+        id: '14197004235',
         name: 'Đối diện trường Quân sự QK5-Trường Sơn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2263,7 +2268,7 @@ export const locationData = [
         }
       },
       {
-        id: 3215075884,
+        id: '3215075884',
         name: 'Bệnh viện Hòa Vang-Trường Sơn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2274,7 +2279,7 @@ export const locationData = [
         }
       },
       {
-        id: 35389166354,
+        id: '35389166354',
         name: 'Trường TH Lâm Quang Thự-Quảng Xương',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2285,7 +2290,7 @@ export const locationData = [
         }
       },
       {
-        id: 41999854086,
+        id: '41999854086',
         name: 'TTHC huyện Hòa Vang-Trường Sơn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'turn',
@@ -2306,11 +2311,12 @@ export const locationData = [
     Cầu Vượt Hòa Cầm - CMT8 - Núi Thành - Phan Thành Tài- Đường 2/9 - Bạch Đằng - Hùng Vương - 
     Nguyễn Thị Minh Khai - Lý Tự Trọng - Bạch Đằng - <strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt).</strong>`,
     lineDistance: '20,20 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (15 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (15 phút/chuyến)',
     color: '#360ec0',
     route: [
       {
-        id: 55793403782,
+        id: '55793403782',
         name: 'TTHC Huyện hòa Vang',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2321,7 +2327,7 @@ export const locationData = [
         }
       },
       {
-        id: 40516563760,
+        id: '40516563760',
         name: 'Đối diện Trường TH Lâm Quang Thự- Quảng Xương',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2332,7 +2338,7 @@ export const locationData = [
         }
       },
       {
-        id: 92751490323,
+        id: '92751490323',
         name: 'Đối diện Bệnh viện Hòa Vang-Trường Sơn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2343,7 +2349,7 @@ export const locationData = [
         }
       },
       {
-        id: 7081971696,
+        id: '7081971696',
         name: 'Đối diện 399 Trường Sơn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2354,7 +2360,7 @@ export const locationData = [
         }
       },
       {
-        id: 55961800941,
+        id: '55961800941',
         name: 'Đối diện 172 Trường Sơn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2365,7 +2371,7 @@ export const locationData = [
         }
       },
       {
-        id: 23911866279,
+        id: '23911866279',
         name: '417 đường CMT 8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2376,7 +2382,7 @@ export const locationData = [
         }
       },
       {
-        id: 61882344428,
+        id: '61882344428',
         name: 'Công an Q.Cẩm Lệ-294-296 đường CMT-8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2387,7 +2393,7 @@ export const locationData = [
         }
       },
       {
-        id: 18526132259,
+        id: '18526132259',
         name: '151 CMT 8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2398,7 +2404,7 @@ export const locationData = [
         }
       },
       {
-        id: 97353290422,
+        id: '97353290422',
         name: 'Đối diện BV Tâm Trí-25 CMT8',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2409,7 +2415,7 @@ export const locationData = [
         }
       },
       {
-        id: 22758430561,
+        id: '22758430561',
         name: 'Metro',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2420,7 +2426,7 @@ export const locationData = [
         }
       },
       {
-        id: 95582325615,
+        id: '95582325615',
         name: '569 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2431,7 +2437,7 @@ export const locationData = [
         }
       },
       {
-        id: 44986223320,
+        id: '44986223320',
         name: 'Trạm Y Tế Hòa Cường Nam-499 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2442,7 +2448,7 @@ export const locationData = [
         }
       },
       {
-        id: 70529170858,
+        id: '70529170858',
         name: 'Đối diện 378 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2453,7 +2459,7 @@ export const locationData = [
         }
       },
       {
-        id: 88223681897,
+        id: '88223681897',
         name: '257-259 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2464,7 +2470,7 @@ export const locationData = [
         }
       },
       {
-        id: 99036189111,
+        id: '99036189111',
         name: 'THPT Tây Sơn-Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2475,7 +2481,7 @@ export const locationData = [
         }
       },
       {
-        id: 76437930018,
+        id: '76437930018',
         name: '21 Núi Thành',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2486,7 +2492,7 @@ export const locationData = [
         }
       },
       {
-        id: 98749031442,
+        id: '98749031442',
         name: 'Đài DRT-Đối diện 256 Bạch Đằng',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2497,7 +2503,7 @@ export const locationData = [
         }
       },
       {
-        id: 7390936277,
+        id: '7390936277',
         name: 'Đối diện chợ Hàn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2508,7 +2514,7 @@ export const locationData = [
         }
       },
       {
-        id: 41628433821,
+        id: '41628433821',
         name: 'Đối diện 57-59 Hùng Vương',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2519,7 +2525,7 @@ export const locationData = [
         }
       },
       {
-        id: 95110471169,
+        id: '95110471169',
         name: 'Trường Trần Phú-49-51 Nguyễn Thị Minh Khai',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2530,7 +2536,7 @@ export const locationData = [
         }
       },
       {
-        id: 66371749636,
+        id: '66371749636',
         name: 'Đối diện 04 Nguyễn Thị Minh Khai',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2541,7 +2547,7 @@ export const locationData = [
         }
       },
       {
-        id: 97032148221,
+        id: '97032148221',
         name: '07 Lý Tự Trọng',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2552,7 +2558,7 @@ export const locationData = [
         }
       },
       {
-        id: 43443609063,
+        id: '43443609063',
         name: 'Đối diện 12 Bạch Đằng',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2563,7 +2569,7 @@ export const locationData = [
         }
       },
       {
-        id: 67258236053,
+        id: '67258236053',
         name: 'Cảng Sông Hàn',
         nameLocationBusRoute: 'R17A',
         directionLocationBusRoute: 'return',
@@ -2585,11 +2591,12 @@ export const locationData = [
     Đường 30 Tháng 4 - Núi Thành - Phan Đăng Lưu - Đường 2 Tháng 9 - Cầu Tiên Sơn - Ngũ Hành Sơn - 
     Phan Tứ - Võ Nguyên Giáp - Trường Sa - Non Nước - <strong>KDL Non Nước.</strong>`,
     lineDistance: '21,80 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     color: '#76a103',
     route: [
       {
-        id: 74185081170,
+        id: '74185081170',
         name: 'Bến Xe Trung Tâm Đà Nẵng',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2600,7 +2607,7 @@ export const locationData = [
         }
       },
       {
-        id: 90970909221,
+        id: '90970909221',
         name: '44-46 Định Liệt',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2611,7 +2618,7 @@ export const locationData = [
         }
       },
       {
-        id: 36280109037,
+        id: '36280109037',
         name: 'Đối Diện 36-38 Nguyễn Đình Tứ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2622,7 +2629,7 @@ export const locationData = [
         }
       },
       {
-        id: 3584305759,
+        id: '3584305759',
         name: '396 Tôn Đản',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2633,7 +2640,7 @@ export const locationData = [
         }
       },
       {
-        id: 54313275708,
+        id: '54313275708',
         name: 'Trước THCS Nguyễn Công Tứ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2644,7 +2651,7 @@ export const locationData = [
         }
       },
       {
-        id: 6425632807,
+        id: '6425632807',
         name: '618 Tôn Đản',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2655,7 +2662,7 @@ export const locationData = [
         }
       },
       {
-        id: 26684790324,
+        id: '26684790324',
         name: '43-45 Lê Trọng Tấn',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2666,7 +2673,7 @@ export const locationData = [
         }
       },
       {
-        id: 45964210225,
+        id: '45964210225',
         name: '862 Trường Chỉnh',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2677,7 +2684,7 @@ export const locationData = [
         }
       },
       {
-        id: 91358449416,
+        id: '91358449416',
         name: 'Đối Diện 591-593 Trường Chỉnh',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2688,7 +2695,7 @@ export const locationData = [
         }
       },
       {
-        id: 81427850044,
+        id: '81427850044',
         name: '303-305 Lê Ð',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2699,7 +2706,7 @@ export const locationData = [
         }
       },
       {
-        id: 32724856645,
+        id: '32724856645',
         name: '203-205 Lê Ð',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2710,7 +2717,7 @@ export const locationData = [
         }
       },
       {
-        id: 78935140120,
+        id: '78935140120',
         name: '117 Lê Đại Hành',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2721,7 +2728,7 @@ export const locationData = [
         }
       },
       {
-        id: 59477450033,
+        id: '59477450033',
         name: 'Đối Diện 60 Lê Đại Hành',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2732,7 +2739,7 @@ export const locationData = [
         }
       },
       {
-        id: 69335729775,
+        id: '69335729775',
         name: 'Đối Diện Vietronimex',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2743,7 +2750,7 @@ export const locationData = [
         }
       },
       {
-        id: 58654954787,
+        id: '58654954787',
         name: '513-515 Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2754,7 +2761,7 @@ export const locationData = [
         }
       },
       {
-        id: 96160267484,
+        id: '96160267484',
         name: 'Bệnh Viện Vinmec',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2765,7 +2772,7 @@ export const locationData = [
         }
       },
       {
-        id: 17490760532,
+        id: '17490760532',
         name: '382 Núi Thành',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2776,7 +2783,7 @@ export const locationData = [
         }
       },
       {
-        id: 98226209917,
+        id: '98226209917',
         name: 'Đối Diện Helio Center',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2787,7 +2794,7 @@ export const locationData = [
         }
       },
       {
-        id: 86852012881,
+        id: '86852012881',
         name: 'Đối Diện Siêu Thị Lotte',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2798,7 +2805,7 @@ export const locationData = [
         }
       },
       {
-        id: 78945214121,
+        id: '78945214121',
         name: 'Đối Diện Chùa Bà Đa',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2809,7 +2816,7 @@ export const locationData = [
         }
       },
       {
-        id: 56971553182,
+        id: '56971553182',
         name: '177 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2820,7 +2827,7 @@ export const locationData = [
         }
       },
       {
-        id: 29637134925,
+        id: '29637134925',
         name: '310-312 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2831,7 +2838,7 @@ export const locationData = [
         }
       },
       {
-        id: 3448077026,
+        id: '3448077026',
         name: 'Tường Rào Cộng Đoàn TI',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2842,7 +2849,7 @@ export const locationData = [
         }
       },
       {
-        id: 49781267181,
+        id: '49781267181',
         name: 'Đối Diện 31-93 Phan Tứ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2853,7 +2860,7 @@ export const locationData = [
         }
       },
       {
-        id: 18636664358,
+        id: '18636664358',
         name: 'Pullman Resort',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2864,7 +2871,7 @@ export const locationData = [
         }
       },
       {
-        id: 26290786726,
+        id: '26290786726',
         name: '0lalani Resort',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2875,7 +2882,7 @@ export const locationData = [
         }
       },
       {
-        id: 28486828726,
+        id: '28486828726',
         name: 'Đối Diện Crowne Plaza',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2886,7 +2893,7 @@ export const locationData = [
         }
       },
       {
-        id: 77195537461,
+        id: '77195537461',
         name: 'Bãi Tắm Sơn Thủy',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'turn',
@@ -2908,11 +2915,12 @@ export const locationData = [
     Nguyễn Hữu Thọ - Lê Đại Hành - Trường Chinh - Lê Trọng Tấn - Tôn Đản - Nguyễn Đình Tứ - Đinh Liệt - 
     Tú Mỡ - Nguyễn Văn Tạo - Cao Sơn Pháo - <strong>Bến Xe Trung Tâm Đà Nẵng.</strong>`,
     lineDistance: '21,40 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     color: '#76a103',
     route: [
       {
-        id: 45798943743,
+        id: '45798943743',
         name: 'Bãi tắm Sơn Thủy',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -2923,7 +2931,7 @@ export const locationData = [
         }
       },
       {
-        id: 45825542054,
+        id: '45825542054',
         name: 'Crowne plaza',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -2934,7 +2942,7 @@ export const locationData = [
         }
       },
       {
-        id: 66669219044,
+        id: '66669219044',
         name: 'Fusion maia resort',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -2945,7 +2953,7 @@ export const locationData = [
         }
       },
       {
-        id: 27166697600,
+        id: '27166697600',
         name: 'Pullman Resort',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -2956,7 +2964,7 @@ export const locationData = [
         }
       },
       {
-        id: 83181516244,
+        id: '83181516244',
         name: '121 Phan Tứ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -2967,7 +2975,7 @@ export const locationData = [
         }
       },
       {
-        id: 70315632457,
+        id: '70315632457',
         name: 'Tường rào trường Trung cấp nghề số 5',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -2978,7 +2986,7 @@ export const locationData = [
         }
       },
       {
-        id: 51890019942,
+        id: '51890019942',
         name: '135-137 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -2989,7 +2997,7 @@ export const locationData = [
         }
       },
       {
-        id: 50589824213,
+        id: '50589824213',
         name: '370 Ngũ Hành Sơn',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3000,7 +3008,7 @@ export const locationData = [
         }
       },
       {
-        id: 44788036001,
+        id: '44788036001',
         name: 'Chùa Bà Đa',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3011,7 +3019,7 @@ export const locationData = [
         }
       },
       {
-        id: 13719452430,
+        id: '13719452430',
         name: 'Siêu thị Lotte',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3022,7 +3030,7 @@ export const locationData = [
         }
       },
       {
-        id: 47016421851,
+        id: '47016421851',
         name: 'Helio center',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3033,7 +3041,7 @@ export const locationData = [
         }
       },
       {
-        id: 32604356680,
+        id: '32604356680',
         name: 'Công viên Châu Á',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3044,7 +3052,7 @@ export const locationData = [
         }
       },
       {
-        id: 94539843020,
+        id: '94539843020',
         name: 'Quảng trường 2 Tháng 9',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3055,7 +3063,7 @@ export const locationData = [
         }
       },
       {
-        id: 7272978660,
+        id: '7272978660',
         name: 'Trước Công ty TNHH Kiểm toán và Kế toán AAC',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3066,7 +3074,7 @@ export const locationData = [
         }
       },
       {
-        id: 626027827,
+        id: '626027827',
         name: '300-302 Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3077,7 +3085,7 @@ export const locationData = [
         }
       },
       {
-        id: 8624634469,
+        id: '8624634469',
         name: '430-432 Nguyễn Hữu Thọ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3088,7 +3096,7 @@ export const locationData = [
         }
       },
       {
-        id: 51200246064,
+        id: '51200246064',
         name: 'Viettronimex',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3099,7 +3107,7 @@ export const locationData = [
         }
       },
       {
-        id: 24997171155,
+        id: '24997171155',
         name: '40-42 Lê Đại Hành',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3110,7 +3118,7 @@ export const locationData = [
         }
       },
       {
-        id: 25940070414,
+        id: '25940070414',
         name: '86 Lê Đại Hành',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3121,7 +3129,7 @@ export const locationData = [
         }
       },
       {
-        id: 97004575857,
+        id: '97004575857',
         name: '172-174 Lê Đại Hành',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3132,7 +3140,7 @@ export const locationData = [
         }
       },
       {
-        id: 70690368124,
+        id: '70690368124',
         name: '328-330 Lê Đại Hành',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3143,7 +3151,7 @@ export const locationData = [
         }
       },
       {
-        id: 92946957192,
+        id: '92946957192',
         name: '591-593 Trường Chinh',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3154,7 +3162,7 @@ export const locationData = [
         }
       },
       {
-        id: 7659391428,
+        id: '7659391428',
         name: '517-519 Trường Chỉnh',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3165,7 +3173,7 @@ export const locationData = [
         }
       },
       {
-        id: 8255542105,
+        id: '8255542105',
         name: '64-66 Lê Trọng Tấn',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3176,7 +3184,7 @@ export const locationData = [
         }
       },
       {
-        id: 77125021650,
+        id: '77125021650',
         name: '489 Tôn Đẳn',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3187,7 +3195,7 @@ export const locationData = [
         }
       },
       {
-        id: 38368178717,
+        id: '38368178717',
         name: '413-415 Tôn Đản',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3198,7 +3206,7 @@ export const locationData = [
         }
       },
       {
-        id: 21217248760,
+        id: '21217248760',
         name: '14-16 Nguyễn Đình Tứ',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3209,7 +3217,7 @@ export const locationData = [
         }
       },
       {
-        id: 49043958507,
+        id: '49043958507',
         name: 'Đối diện 44-46 Đỉnh Liệt',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3220,7 +3228,7 @@ export const locationData = [
         }
       },
       {
-        id: 49842891889,
+        id: '49842891889',
         name: 'Bến xe Trung tâm Đà Nẵng',
         nameLocationBusRoute: 'R6A',
         directionLocationBusRoute: 'return',
@@ -3242,11 +3250,12 @@ export const locationData = [
     Ông Ích Khiêm - Nguyễn Hoàng - Nguyễn Văn Linh -  Cầu Rồng - Võ Văn Kiệt - Hồ Nghinh - Hà Kỳ Ngộ -
      Nguyễn Sáng - Nguyễn Huy Chương - Hoàng Sa - <strong>Thọ Quang</strong>`,
     lineDistance: '16,16 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     color: '#9340a3',
     route: [
       {
-        id: 92537656386,
+        id: '92537656386',
         name: 'Bến xe Trung Tâm Đà Nẵng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3257,7 +3266,7 @@ export const locationData = [
         }
       },
       {
-        id: 86116568073,
+        id: '86116568073',
         name: '139-141 Tôn Đức Thắng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3268,7 +3277,7 @@ export const locationData = [
         }
       },
       {
-        id: 44886024148,
+        id: '44886024148',
         name: '32-34 Huỳnh Ngọc Huệ',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3279,7 +3288,7 @@ export const locationData = [
         }
       },
       {
-        id: 76255538017,
+        id: '76255538017',
         name: '142-144 Huỳnh Ngọc Huệ',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3290,7 +3299,7 @@ export const locationData = [
         }
       },
       {
-        id: 82308340194,
+        id: '82308340194',
         name: 'Đối diện 224 Hà Huy Tập',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3301,7 +3310,7 @@ export const locationData = [
         }
       },
       {
-        id: 32358993576,
+        id: '32358993576',
         name: '133-135 Hà Huy Tập',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3312,7 +3321,7 @@ export const locationData = [
         }
       },
       {
-        id: 12055787191,
+        id: '12055787191',
         name: '257-259 Thái Thị Bôi',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3323,7 +3332,7 @@ export const locationData = [
         }
       },
       {
-        id: 64677543361,
+        id: '64677543361',
         name: '65-67 Thái Thị Bôi',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3334,7 +3343,7 @@ export const locationData = [
         }
       },
       {
-        id: 2371180908,
+        id: '2371180908',
         name: '09 Võ Văn Tân',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3345,7 +3354,7 @@ export const locationData = [
         }
       },
       {
-        id: 68440475157,
+        id: '68440475157',
         name: '461 Hải Phòng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3356,7 +3365,7 @@ export const locationData = [
         }
       },
       {
-        id: 85539117539,
+        id: '85539117539',
         name: 'Ga Đà Nẵng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3367,7 +3376,7 @@ export const locationData = [
         }
       },
       {
-        id: 98858001194,
+        id: '98858001194',
         name: '231 Hải Phòng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3378,7 +3387,7 @@ export const locationData = [
         }
       },
       {
-        id: 45508765147,
+        id: '45508765147',
         name: '248 - 250 Ông Ích Khiêm',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3389,7 +3398,7 @@ export const locationData = [
         }
       },
       {
-        id: 12930656759,
+        id: '12930656759',
         name: 'Siêu thị Big C',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3400,7 +3409,7 @@ export const locationData = [
         }
       },
       {
-        id: 95077375739,
+        id: '95077375739',
         name: '162-164 Nguyễn Hoàng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3411,7 +3420,7 @@ export const locationData = [
         }
       },
       {
-        id: 84317773434,
+        id: '84317773434',
         name: '155-157 Nguyễn Văn Linh',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3422,7 +3431,7 @@ export const locationData = [
         }
       },
       {
-        id: 13783641504,
+        id: '13783641504',
         name: '11-15 Nguyễn Văn Linh',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3433,7 +3442,7 @@ export const locationData = [
         }
       },
       {
-        id: 48166599730,
+        id: '48166599730',
         name: 'Đối diện chùa Phước Ninh',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3444,7 +3453,7 @@ export const locationData = [
         }
       },
       {
-        id: 70512678558,
+        id: '70512678558',
         name: 'Đầu cầu Rồng đường Võ Văn Kiệt',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3455,7 +3464,7 @@ export const locationData = [
         }
       },
       {
-        id: 73673096959,
+        id: '73673096959',
         name: 'Trụ điện CS 08T3 VVK',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3466,7 +3475,7 @@ export const locationData = [
         }
       },
       {
-        id: 24618054156,
+        id: '24618054156',
         name: 'Gần ngã tư Hồ Nghinh ~ Dương Đình Nghệ',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3477,7 +3486,7 @@ export const locationData = [
         }
       },
       {
-        id: 43525170902,
+        id: '43525170902',
         name: 'Đối diện quán HaiYan đường Hồ Nghinh',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3488,7 +3497,7 @@ export const locationData = [
         }
       },
       {
-        id: 33976955017,
+        id: '33976955017',
         name: 'Đối diện trường Chính trị',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3499,7 +3508,7 @@ export const locationData = [
         }
       },
       {
-        id: 44845207665,
+        id: '44845207665',
         name: 'Motel Hương Việt đường Hà Kỳ Ngộ',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3510,7 +3519,7 @@ export const locationData = [
         }
       },
       {
-        id: 17105041922,
+        id: '17105041922',
         name: 'Đối diện 78 Nguyễn Sáng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3521,7 +3530,7 @@ export const locationData = [
         }
       },
       {
-        id: 6399052588,
+        id: '6399052588',
         name: 'Bãi tắm Mân Thái',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3532,7 +3541,7 @@ export const locationData = [
         }
       },
       {
-        id: 75082605952,
+        id: '75082605952',
         name: 'Thọ Quang',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'turn',
@@ -3554,11 +3563,12 @@ export const locationData = [
     Hải Phòng - Võ Văn Tần - Lê Độ - Thái Thị Bôi - Hà Huy Tập - Huỳnh Ngọc Huệ - Điện Biên Phủ - 
     Cầu vượt ngã Ba Huế (tầng 3) - Tôn Đức Thắng - <strong>Bến xe Trung tâm Đà Nẵng</strong>`,
     lineDistance: '16,16 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     color: '#9340a3',
     route: [
       {
-        id: 12302050934,
+        id: '12302050934',
         name: 'Thọ Quang',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3569,7 +3579,7 @@ export const locationData = [
         }
       },
       {
-        id: 22906703510,
+        id: '22906703510',
         name: 'Đối diện bãi tắm Mân Thái',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3580,7 +3590,7 @@ export const locationData = [
         }
       },
       {
-        id: 52358201690,
+        id: '52358201690',
         name: 'Đối diện 75 Nguyễn Sáng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3591,7 +3601,7 @@ export const locationData = [
         }
       },
       {
-        id: 58153209857,
+        id: '58153209857',
         name: 'Trường Chính trị',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3602,7 +3612,7 @@ export const locationData = [
         }
       },
       {
-        id: 73004104654,
+        id: '73004104654',
         name: '148-150 Hồ Nghinh',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3613,7 +3623,7 @@ export const locationData = [
         }
       },
       {
-        id: 57828676579,
+        id: '57828676579',
         name: 'Đối diện Golden Light Hotel',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3624,7 +3634,7 @@ export const locationData = [
         }
       },
       {
-        id: 35607638666,
+        id: '35607638666',
         name: 'Trụ điện CS49T1 đường Võ Văn Kiệt',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3635,7 +3645,7 @@ export const locationData = [
         }
       },
       {
-        id: 75443160026,
+        id: '75443160026',
         name: 'Đầu cầu Rồng đường Võ Văn Kiệt',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3646,7 +3656,7 @@ export const locationData = [
         }
       },
       {
-        id: 9805423952,
+        id: '9805423952',
         name: 'Công viên Nguyễn Văn Linh + Lê Đình Dương',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3657,7 +3667,7 @@ export const locationData = [
         }
       },
       {
-        id: 49031956067,
+        id: '49031956067',
         name: 'Chùa Phước Ninh',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3668,7 +3678,7 @@ export const locationData = [
         }
       },
       {
-        id: 11411501923,
+        id: '11411501923',
         name: '102-104 Nguyễn Văn Linh',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3679,7 +3689,7 @@ export const locationData = [
         }
       },
       {
-        id: 23874569540,
+        id: '23874569540',
         name: '153-155 Nguyễn Hoàng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3690,7 +3700,7 @@ export const locationData = [
         }
       },
       {
-        id: 96307260788,
+        id: '96307260788',
         name: '293 Ông Ích Khiêm',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3701,7 +3711,7 @@ export const locationData = [
         }
       },
       {
-        id: 59545139789,
+        id: '59545139789',
         name: '239-241 Ông Ích Khiêm',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3712,7 +3722,7 @@ export const locationData = [
         }
       },
       {
-        id: 37915889333,
+        id: '37915889333',
         name: '196 Hải Phòng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3723,7 +3733,7 @@ export const locationData = [
         }
       },
       {
-        id: 38495511168,
+        id: '38495511168',
         name: 'Ga Đà Nẵng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3734,7 +3744,7 @@ export const locationData = [
         }
       },
       {
-        id: 60943340003,
+        id: '60943340003',
         name: '354 Hải Phòng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3745,7 +3755,7 @@ export const locationData = [
         }
       },
       {
-        id: 91858796144,
+        id: '91858796144',
         name: '78-80 Võ Văn Tân',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3756,7 +3766,7 @@ export const locationData = [
         }
       },
       {
-        id: 74504109497,
+        id: '74504109497',
         name: '96-98 Thái Thị Bôi',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3767,7 +3777,7 @@ export const locationData = [
         }
       },
       {
-        id: 32486759065,
+        id: '32486759065',
         name: '304 -306 Thái Thi Bôi',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3778,7 +3788,7 @@ export const locationData = [
         }
       },
       {
-        id: 21921815530,
+        id: '21921815530',
         name: 'Trường Tiểu học Huỳnh Ngọc Huệ',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3789,7 +3799,7 @@ export const locationData = [
         }
       },
       {
-        id: 61067471996,
+        id: '61067471996',
         name: '238-240 Hà Huy Tập',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3800,7 +3810,7 @@ export const locationData = [
         }
       },
       {
-        id: 99406080068,
+        id: '99406080068',
         name: '145-145b Huỳnh Ngọc Huệ',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3811,7 +3821,7 @@ export const locationData = [
         }
       },
       {
-        id: 8716625312,
+        id: '8716625312',
         name: '37-39 Huỳnh Ngọc Huệ',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3822,7 +3832,7 @@ export const locationData = [
         }
       },
       {
-        id: 47347092055,
+        id: '47347092055',
         name: '128 Tôn Đức Thắng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3833,7 +3843,7 @@ export const locationData = [
         }
       },
       {
-        id: 76833318550,
+        id: '76833318550',
         name: 'Bến xe Trung Tâm Đà Nẵng',
         nameLocationBusRoute: 'R15',
         directionLocationBusRoute: 'return',
@@ -3856,11 +3866,12 @@ export const locationData = [
     Lý Thái Tổ - Điện Biên Phủ - Nguyễn Tri Phương - Nguyễn Văn Linh - Cầu Rồng - Võ Văn Kiệt - 
     Võ Nguyên Giáp - <strong>CV Biển Đông</strong>`,
     lineDistance: '16,1 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     color: '#f4529d',
     route: [
       {
-        id: 54081045721,
+        id: '54081045721',
         name: 'Bãi đỗ xe P&R Bùi Dương Lịch',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3871,7 +3882,7 @@ export const locationData = [
         }
       },
       {
-        id: 2364011826,
+        id: '2364011826',
         name: 'Lô 113 Dương Vân Nga',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3882,7 +3893,7 @@ export const locationData = [
         }
       },
       {
-        id: 53830511511,
+        id: '53830511511',
         name: '210 Khúc Hạo',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3893,7 +3904,7 @@ export const locationData = [
         }
       },
       {
-        id: 8877441930,
+        id: '8877441930',
         name: 'Đối diện chung cư 4A Chu Huy Mân',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3904,7 +3915,7 @@ export const locationData = [
         }
       },
       {
-        id: 20203022422,
+        id: '20203022422',
         name: 'Chân cầu Thuận Phước (đường Lê Đức Thọ)',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3915,7 +3926,7 @@ export const locationData = [
         }
       },
       {
-        id: 69026667540,
+        id: '69026667540',
         name: 'Số 159 đường 3/2',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3926,7 +3937,7 @@ export const locationData = [
         }
       },
       {
-        id: 56070147100,
+        id: '56070147100',
         name: 'Trạm xe buýt Xuân Diệu',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3937,7 +3948,7 @@ export const locationData = [
         }
       },
       {
-        id: 97247880364,
+        id: '97247880364',
         name: 'Số 49 đường 3/2',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3948,7 +3959,7 @@ export const locationData = [
         }
       },
       {
-        id: 60963280421,
+        id: '60963280421',
         name: 'Số 6A Trần Phú',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3959,7 +3970,7 @@ export const locationData = [
         }
       },
       {
-        id: 1127029287,
+        id: '1127029287',
         name: 'Số 12 Lý Tự Trọng',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3970,7 +3981,7 @@ export const locationData = [
         }
       },
       {
-        id: 73111337888,
+        id: '73111337888',
         name: 'Số 08 Nguyễn Thị Minh Khai',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3981,7 +3992,7 @@ export const locationData = [
         }
       },
       {
-        id: 69824385997,
+        id: '69824385997',
         name: 'Bệnh viện C Đà Nẵng',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -3992,7 +4003,7 @@ export const locationData = [
         }
       },
       {
-        id: 42165248347,
+        id: '42165248347',
         name: 'Số 29 Ngô Gia Tự',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4003,7 +4014,7 @@ export const locationData = [
         }
       },
       {
-        id: 14979932836,
+        id: '14979932836',
         name: 'Chợ Cồn',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4014,7 +4025,7 @@ export const locationData = [
         }
       },
       {
-        id: 17717925892,
+        id: '17717925892',
         name: 'Số 331 Hùng Vương',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4025,7 +4036,7 @@ export const locationData = [
         }
       },
       {
-        id: 35055415273,
+        id: '35055415273',
         name: 'Số 85 Lý Thái Tổ',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4036,7 +4047,7 @@ export const locationData = [
         }
       },
       {
-        id: 29208024612,
+        id: '29208024612',
         name: 'Công viên 29/3',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4047,7 +4058,7 @@ export const locationData = [
         }
       },
       {
-        id: 29542146191,
+        id: '29542146191',
         name: 'UBND phường Chính Gián',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4058,7 +4069,7 @@ export const locationData = [
         }
       },
       {
-        id: 42008343276,
+        id: '42008343276',
         name: 'Số 88 Nguyễn Tri Phương',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4069,7 +4080,7 @@ export const locationData = [
         }
       },
       {
-        id: 18500922565,
+        id: '18500922565',
         name: 'Số 387-389 Nguyễn Văn Linh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4080,7 +4091,7 @@ export const locationData = [
         }
       },
       {
-        id: 13083220178,
+        id: '13083220178',
         name: 'Bệnh viện Hoàn Mỹ',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4091,7 +4102,7 @@ export const locationData = [
         }
       },
       {
-        id: 40811109785,
+        id: '40811109785',
         name: 'Số 153-155 Nguyễn Văn Linh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4102,7 +4113,7 @@ export const locationData = [
         }
       },
       {
-        id: 49333626050,
+        id: '49333626050',
         name: 'Đối diện chủa Phước Ninh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4113,7 +4124,7 @@ export const locationData = [
         }
       },
       {
-        id: 58857259154,
+        id: '58857259154',
         name: 'Số 11 Nguyễn Văn Linh (trước Ẩm thực Trần)',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4124,7 +4135,7 @@ export const locationData = [
         }
       },
       {
-        id: 54759445506,
+        id: '54759445506',
         name: 'Cầu Rồng (đầu cầu Rồng đường Võ Văn Kiệt)',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4135,7 +4146,7 @@ export const locationData = [
         }
       },
       {
-        id: 55855132036,
+        id: '55855132036',
         name: 'Trụ điện CS 08T3 VWK (Gần White Sand Hotel)',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4146,7 +4157,7 @@ export const locationData = [
         }
       },
       {
-        id: 36126878977,
+        id: '36126878977',
         name: 'Nhà hàng Mỹ Hạnh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4157,7 +4168,7 @@ export const locationData = [
         }
       },
       {
-        id: 50720770897,
+        id: '50720770897',
         name: 'Gần Công viên Biển Đông',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4168,7 +4179,7 @@ export const locationData = [
         }
       },
       {
-        id: 39435663688,
+        id: '39435663688',
         name: 'Công viên Biển Đông (bãi tắm số 3)',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'turn',
@@ -4191,11 +4202,12 @@ export const locationData = [
      Xuân Diệu - Đường 3/2 -  Cầu Thuận Phước - Chu Huy Mân - Hồ Hán Thương - Khúc Hạo - Dương Vân Nga 
      - Bùi Dương Lịch - <strong>BX Bùi Dương Lịch</strong>`,
     lineDistance: '16,5 km',
-    operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
+    operatingTime:
+      'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     color: '#f4529d',
     route: [
       {
-        id: 45910068255,
+        id: '45910068255',
         name: 'Công viên Biển Đông',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4206,7 +4218,7 @@ export const locationData = [
         }
       },
       {
-        id: 72731004573,
+        id: '72731004573',
         name: 'Ð/d Công viên Biển Đông',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4217,7 +4229,7 @@ export const locationData = [
         }
       },
       {
-        id: 40952978766,
+        id: '40952978766',
         name: 'Quán A.Hạnh (đổi diện nhà hàng Mỹ Hạnh)',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4228,7 +4240,7 @@ export const locationData = [
         }
       },
       {
-        id: 41412736196,
+        id: '41412736196',
         name: 'Cầu Rồng (đầu cầu Rồng đường Võ Văn Kiệt)',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4239,7 +4251,7 @@ export const locationData = [
         }
       },
       {
-        id: 62243148018,
+        id: '62243148018',
         name: 'Đối diện 31 Nguyễn Văn Linh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4250,7 +4262,7 @@ export const locationData = [
         }
       },
       {
-        id: 49340348861,
+        id: '49340348861',
         name: 'Chùa Phước Ninh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4261,7 +4273,7 @@ export const locationData = [
         }
       },
       {
-        id: 48552454098,
+        id: '48552454098',
         name: 'Số 102 Nguyễn Văn Linh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4272,7 +4284,7 @@ export const locationData = [
         }
       },
       {
-        id: 28503131718,
+        id: '28503131718',
         name: 'Số 248 Nguyễn Văn Linh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4283,7 +4295,7 @@ export const locationData = [
         }
       },
       {
-        id: 85112145854,
+        id: '85112145854',
         name: 'Số 336-338 Nguyễn Văn Linh',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4294,7 +4306,7 @@ export const locationData = [
         }
       },
       {
-        id: 81912355890,
+        id: '81912355890',
         name: 'Công viên 29/3',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4305,7 +4317,7 @@ export const locationData = [
         }
       },
       {
-        id: 45519730315,
+        id: '45519730315',
         name: 'Số 130 Lý Thái Tổ',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4316,7 +4328,7 @@ export const locationData = [
         }
       },
       {
-        id: 96728724810,
+        id: '96728724810',
         name: 'Số 10 Lý Thái Tổ',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4327,7 +4339,7 @@ export const locationData = [
         }
       },
       {
-        id: 97148964723,
+        id: '97148964723',
         name: 'Đối diện chợ Cồn',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4338,7 +4350,7 @@ export const locationData = [
         }
       },
       {
-        id: 43226985925,
+        id: '43226985925',
         name: 'Số 38 Ngô Gia Tự',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4349,7 +4361,7 @@ export const locationData = [
         }
       },
       {
-        id: 56325263618,
+        id: '56325263618',
         name: 'Số 39-41 Hải Phòng',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4360,7 +4372,7 @@ export const locationData = [
         }
       },
       {
-        id: 21569062908,
+        id: '21569062908',
         name: 'Tường rào THPT Trần Phú',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4371,7 +4383,7 @@ export const locationData = [
         }
       },
       {
-        id: 35951809297,
+        id: '35951809297',
         name: 'Ð/d 04 Nguyễn Thị Minh Khai',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4382,7 +4394,7 @@ export const locationData = [
         }
       },
       {
-        id: 74609573555,
+        id: '74609573555',
         name: 'Số 07 Lý Tự Trọng',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4393,7 +4405,7 @@ export const locationData = [
         }
       },
       {
-        id: 15226395063,
+        id: '15226395063',
         name: 'Đối diện 12 Bạch Đằng',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4404,7 +4416,7 @@ export const locationData = [
         }
       },
       {
-        id: 17275955160,
+        id: '17275955160',
         name: 'Số 24 đường 3/2',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4415,7 +4427,7 @@ export const locationData = [
         }
       },
       {
-        id: 3791454796,
+        id: '3791454796',
         name: 'Bãi đỗ xe Xuân Diệu',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4426,7 +4438,7 @@ export const locationData = [
         }
       },
       {
-        id: 59439629766,
+        id: '59439629766',
         name: 'Số 192 đường 3/2',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4437,7 +4449,7 @@ export const locationData = [
         }
       },
       {
-        id: 16034454369,
+        id: '16034454369',
         name: 'Chân cầu Thuận Phước',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4448,7 +4460,7 @@ export const locationData = [
         }
       },
       {
-        id: 8056955304,
+        id: '8056955304',
         name: 'Chung cư Chu Huy Mân',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4459,7 +4471,7 @@ export const locationData = [
         }
       },
       {
-        id: 75614658139,
+        id: '75614658139',
         name: 'Số 281 Khúc Hạo',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4470,7 +4482,7 @@ export const locationData = [
         }
       },
       {
-        id: 95917873560,
+        id: '95917873560',
         name: 'Đối diện lô 113 Dương Vân Nga',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
@@ -4481,7 +4493,7 @@ export const locationData = [
         }
       },
       {
-        id: 38157354033,
+        id: '38157354033',
         name: 'Bãi đỗ xe P&R Bùi Dương Lịch',
         nameLocationBusRoute: 'TMF',
         directionLocationBusRoute: 'return',
