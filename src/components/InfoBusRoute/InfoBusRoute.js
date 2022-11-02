@@ -7,21 +7,29 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle'
 import PaidIcon from '@mui/icons-material/Paid'
 import './InfoBusRoute.scss'
 
-const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
-  const [busRouteData, setBusRouteData] = useState([])
-  const [ticketBusData, setTicketBusData] = useState({})
+const InfoBusRoute = ({
+  nameRouteGetList,
+  turnRoute
+}) => {
+  const [busRouteData, setBusRouteData] =
+    useState([])
+  const [ticketBusData, setTicketBusData] =
+    useState({})
 
   useEffect(() => {
     const listData = locationData
-      .filter(i => i.nameBusRouter === nameBusRoute && i.directionRoute === turnRoute)
+      .filter(
+        i =>
+          i.nameBusRouter === nameRouteGetList &&
+          i.directionRoute === turnRoute
+      )
       .map(i => i)
     setBusRouteData(listData)
 
     const ticketData = informationBusRouteData
     setTicketBusData(ticketData)
-  }, [nameBusRoute, turnRoute])
+  }, [nameRouteGetList, turnRoute])
 
-  console.log(ticketBusData)
   return (
     <div className="info-bus-route">
       {busRouteData.map((bus, id) => (
@@ -40,7 +48,11 @@ const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
           </div>
           <div className="info">
             <label>Tuyến: </label>
-            <span>{HTMLReactParser(bus.drivingJourney)}</span>
+            <span>
+              {HTMLReactParser(
+                bus.drivingJourney
+              )}
+            </span>
           </div>
           <div className="info">
             <label>Thời gian hoạt động: </label>
@@ -76,22 +88,32 @@ const InfoBusRoute = ({ nameBusRoute, turnRoute }) => {
         <div>
           <div className="info">
             <label>Vé lượt: </label>
-            <span>{ticketBusData.ticketPrice[0]}</span>
+            <span>
+              {ticketBusData.ticketPrice[0]}
+            </span>
           </div>
 
           <div className="info">
             <label>Vé tháng ưu tiên: </label>
-            <span>{ticketBusData.ticketPrice[1]}</span>
+            <span>
+              {ticketBusData.ticketPrice[1]}
+            </span>
           </div>
           <div className="info">
-            <label>Vé tháng không ưu tiên: </label>
-            <span>{ticketBusData.ticketPrice[2]}</span>
+            <label>
+              Vé tháng không ưu tiên:{' '}
+            </label>
+            <span>
+              {ticketBusData.ticketPrice[2]}
+            </span>
           </div>
         </div>
       )}
       <div className="info">
         <label>Đăng kí vé tháng tại: </label>
-        <a href={ticketBusData.linkOnline}>Đây.</a>
+        <a href={ticketBusData.linkOnline}>
+          Đây.
+        </a>
       </div>
     </div>
   )
