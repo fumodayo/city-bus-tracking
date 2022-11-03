@@ -64,8 +64,15 @@ const TravelLocation = () => {
       </div>
       {(isChecked || isOpen) && (
         <div className="sidebar-travel-location">
-          <Drawer variant="persistent" anchor="right" hideBackdrop={true} open={isOpen}>
-            <DrawerHeader sx={{ position: 'relative', backgroundColor: '#3597E4' }}>
+          <Drawer
+            variant="persistent"
+            anchor="right"
+            hideBackdrop={true}
+            open={isOpen}
+          >
+            <DrawerHeader
+              sx={{ position: 'relative', backgroundColor: '#3597E4' }}
+            >
               <Typography
                 style={{ fontWeight: '600', color: '#fff', marginLeft: '10px' }}
               >

@@ -43,7 +43,10 @@ const FindRouter = () => {
         <div className="line"></div>
         <div className="input-box pos-relative">
           <img src={MarkerBlue} alt="marker-blue" />
-          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Nhập địa điểm kết thúc" />
+          <InputBase
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="Nhập địa điểm kết thúc"
+          />
           <TravelExploreIcon style={{ cursor: 'pointer' }} />
         </div>
       </Paper>

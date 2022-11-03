@@ -1,9 +1,9 @@
 export const roadMapData = [
   {
     id: 'bus-routes-1',
-    name: 'R16',
+    codeBusRoute: 'R16',
     directionRoute: 'turn',
-    color: '#ff1956',
+    colorRoute: '#ff1956',
     lineRoute: [
       [108.1196, 16.135482],
       [108.1195, 16.133065],
@@ -208,9 +208,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-2',
-    name: 'R16',
+    codeBusRoute: 'R16',
     directionRoute: 'return',
-    color: '#ff1956',
+    colorRoute: '#ff1956',
     lineRoute: [
       [108.252383, 15.977838],
       [108.254936, 15.977824],
@@ -440,9 +440,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-3',
-    name: 'R4A',
+    codeBusRoute: 'R4A',
     directionRoute: 'turn',
-    color: '#089669',
+    colorRoute: '#089669',
     lineRoute: [
       [108.223603, 16.08261],
       [108.223593, 16.082706],
@@ -632,9 +632,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-4',
-    name: 'R4A',
+    codeBusRoute: 'R4A',
     directionRoute: 'return',
-    color: '#089669',
+    colorRoute: '#089669',
     lineRoute: [
       [108.178746, 15.953038],
       [108.178725, 15.953282],
@@ -803,9 +803,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-5',
-    name: 'R17A',
+    codeBusRoute: 'R17A',
     directionRoute: 'turn',
-    color: '#360ec0',
+    colorRoute: '#360ec0',
     lineRoute: [
       [108.223586, 16.08276],
       [108.223593, 16.082706],
@@ -964,9 +964,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-6',
-    name: 'R17A',
+    codeBusRoute: 'R17A',
     directionRoute: 'return',
-    color: '#360ec0',
+    colorRoute: '#360ec0',
     lineRoute: [
       [108.140081, 15.986615],
       [108.140955, 15.987794],
@@ -1115,9 +1115,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-7',
-    name: 'R6A',
+    codeBusRoute: 'R6A',
     directionRoute: 'turn',
-    color: '#76a103',
+    colorRoute: '#76a103',
     lineRoute: [
       [108.172605, 16.056559],
       [108.172563, 16.05674],
@@ -1249,9 +1249,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-8',
-    name: 'R6A',
+    codeBusRoute: 'R6A',
     directionRoute: 'return',
-    color: '#76a103',
+    colorRoute: '#76a103',
     lineRoute: [
       [108.261132, 16.015059],
       [108.259529, 16.018337],
@@ -1415,9 +1415,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-9',
-    name: 'R15',
+    codeBusRoute: 'R15',
     directionRoute: 'turn',
-    color: '#9340a3',
+    colorRoute: '#9340a3',
     lineRoute: [
       [108.172815, 16.056811],
       [108.172563, 16.05674],
@@ -1564,9 +1564,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-10',
-    name: 'R15',
+    codeBusRoute: 'R15',
     directionRoute: 'return',
-    color: '#9340a3',
+    colorRoute: '#9340a3',
     lineRoute: [
       [108.25577, 16.102828],
       [108.255981, 16.1025],
@@ -1726,9 +1726,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-11',
-    name: 'TMF',
+    codeBusRoute: 'TMF',
     directionRoute: 'turn',
-    color: '#f4529d',
+    colorRoute: '#f4529d',
     lineRoute: [
       [108.232335, 16.089449],
       [108.231857, 16.08945],
@@ -1880,9 +1880,9 @@ export const roadMapData = [
   },
   {
     id: 'bus-routes-12',
-    name: 'TMF',
+    codeBusRoute: 'TMF',
     directionRoute: 'return',
-    color: '#f4529d',
+    colorRoute: '#f4529d',
     lineRoute: [
       [108.245349, 16.06983],
       [108.245325, 16.070409],

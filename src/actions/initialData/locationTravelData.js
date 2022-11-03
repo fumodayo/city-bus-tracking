@@ -3,7 +3,8 @@ export const locationTravelData = [
     id: '79574076363',
     title: 'Bãi tắm biển Mỹ Khê',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-tam-my-khe.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-tam-my-khe.jpg',
     imageDesc: 'Bãi tắm biển Mỹ Khê Đà Nẵng',
     description: `Biển Mỹ Khê là 1 trong 6 bãi biển được mệnh danh đẹp nhất hành tinh, với biển xanh, cát vàng cùng những hàng dừa xanh mát. 
     Thêm đó là nhiều dịch vụ du lịch, hoạt động giải trí được tích hợp giúp nó thu hút đông đảo du khách.`,
@@ -37,7 +38,8 @@ export const locationTravelData = [
     id: '33384981461',
     title: 'Bãi tắm Bắc Mỹ An',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/da-nang-bai-tam-my-an.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/da-nang-bai-tam-my-an.jpg',
     imageDesc: 'Bãi tắm Bắc Mỹ An - Đà Nẵng',
     description: `Mỹ An nổi tiếng với bờ cát trắng mịn trải dài, làn nước trong vắt cùng nhiệt độ ổn định và khung cảnh huyền ảo, lãng mạn mỗi khi hoàng hôn buông xuống.
      Ngoài tắm biển ra, du khách còn có thể tận hưởng cảm giác cùng làn gió biển mát lạnh và tham gia những trò chơi thể thao trên biển hay khu nghỉ dưỡng gần đó như Lifestyle, Furama, 
@@ -72,7 +74,8 @@ export const locationTravelData = [
     id: '44190397535',
     title: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-bien-nam-o.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-bien-nam-o.jpg',
     imageDesc: 'Bãi biển Nam Ô - Đà Nẵng',
     description: `Tới với bãi Nam Ô, du khách sẽ tận mắt chiêm ngưỡng những rạn san hô hết sức phong phú và đa dạng, được hòa mình vào dòng nước biển mát lạnh và 
     tham gia các hoạt động câu cá, 
@@ -128,7 +131,8 @@ export const locationTravelData = [
     id: '45308854910',
     title: 'Rạn Nam Ô',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/ran-nam-o-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/ran-nam-o-da-nang.jpg',
     imageDesc: 'Rạn Nam Ô Đà Nẵng',
     description: `Với những hòn đá phủ đầy rêu xanh, làn nước trong veo phẳng lặng, rất đỗi hữu 
     tình và thơ mộng, đây là một thiên đường du lịch khiến bạn không khỏi ngỡ ngàng khi đặt chân đến.
@@ -147,7 +151,8 @@ export const locationTravelData = [
     id: '22176237266',
     title: 'Giếng Trời',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/gieng-troi-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/gieng-troi-da-nang.jpg',
     imageDesc: 'Giếng trời Đà Nẵng',
     description: `Những bạn thích phiêu lưu và mạo hiểm đừng bỏ qua Giếng Trời nhé! Vì đây là địa điểm 
     nằm trong cánh rừng nguyên sinh thuộc huyện Hòa Vang. Tới đây, bạn sẽ nghe thấy tiếng suối chảy róc rách,
@@ -173,7 +178,8 @@ export const locationTravelData = [
     tổ chức picnic bên hội bạn thân hay gia đình.`,
     locationLink:
       'https://www.google.com/maps/place/%C4%91%E1%BB%93i+B%E1%BB%93+B%E1%BB%93/@15.9186608,108.1481266,14z/data=!4m9!1m2!2m1!1zUuG7q25nIHRow7RuZyBC4buTIELhu5MgxJDDoCBO4bq1bmc!3m5!1s0x314204b88efc7637:0xbd0df21b76b8b108!8m2!3d15.9186608!4d108.1656361!15sCiNS4burbmcgdGjDtG5nIELhu5MgQuG7kyDEkMOgIE7hurVuZ1olIiNy4burbmcgdGjDtG5nIGLhu5MgYuG7kyDEkcOgIG7hurVuZ5IBBHBlYWuaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTkJiSEppWVhkM1JSQUI?hl=vi-VN',
-    locationName: 'xã Điện Tiến, Điện Bàn, Quảng Nam (cách thành phố Đà Nẵng 25 km)',
+    locationName:
+      'xã Điện Tiến, Điện Bàn, Quảng Nam (cách thành phố Đà Nẵng 25 km)',
     location: {
       lng: '108.1481266',
       lat: '15.9186608'
@@ -183,7 +189,8 @@ export const locationTravelData = [
     id: '37281954950',
     title: 'Làng cổ Phong Nam',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/lang-co-phong-nam.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/lang-co-phong-nam.jpg',
     imageDesc: 'Làng cổ Phong Nam',
     description: `Hãy ghé thăm nơi chôn rau cắt rốn của cụ ông ích Khiêm - một tài năng trong lịch sử Việt Nam
      hơn 100 tuổi này, bạn sẽ có cảm giác như đang quay ngược về thời gian trong quá khứ. Ngôi làng chào đón 
@@ -201,7 +208,8 @@ export const locationTravelData = [
     id: '33630923969',
     title: 'Suối Mơ',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/suoi-mo-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/suoi-mo-da-nang.jpg',
     imageDesc: 'Suối Mơ Đà Nẵng địa điểm vui chơi đà nẵng',
     description: `Bạn là một người yêu thiên nhiên và muốn đắm chìm trong thế giới chỉ có núi rừng, 
     sông suối? Với suối mơ, nơi mang đến cho bạn một không gian mát mẻ, trong lành cùng dòng thác nước 
@@ -218,7 +226,8 @@ export const locationTravelData = [
     id: '49492376663',
     title: 'Chợ cồn Đà Nẵng',
     typeLocation: 'discover',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/Cho-con-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/Cho-con-da-nang.jpg',
     imageDesc: 'Chợ Cồn Đà Nẵng',
     description: `Đây là khu chợ có thể nói là lớn và nổi tiếng nhất Đà Nẵng và được mệnh danh 
     là thiên đường ẩm thực, 
@@ -237,7 +246,8 @@ export const locationTravelData = [
     typeLocation: 'discover',
     image:
       'https://gotadi.com/tour/wp-content/uploads/2021/10/ban-dao-son-tra-da-nang.jpg',
-    imageDesc: 'Bán đảo Sơn Trà địa điểm vui chơi tại Đà Nẵng đẹp hoang sơ và hùng vĩ.',
+    imageDesc:
+      'Bán đảo Sơn Trà địa điểm vui chơi tại Đà Nẵng đẹp hoang sơ và hùng vĩ.',
     description: `Bạn không nên bỏ lỡ địa điểm du lịch Đà Nẵng miễn phí này nhé! Bán đảo Sơn Trà nằm cách 
     trung tâm thành phố Đà Nẵng chỉ khoảng 10km, sở hữu khu rừng nguyên sinh xanh mát với kiểu khí hậu trong 
     lành được thiên nhiên ban tặng. Ngoài ra, bán đảo Sơn Trà còn thu hút rất nhiều khách du lịch nhờ có những
@@ -262,7 +272,8 @@ export const locationTravelData = [
     typeLocation: 'cultural',
     image:
       'https://gotadi.com/tour/wp-content/uploads/2021/10/Nui-Ngu-Hanh-Son-Da-Nang.png',
-    imageDesc: 'Núi Ngũ Hành Sơn - địa điểm vui chơi check in nổi tiếng ở Đà Nẵng',
+    imageDesc:
+      'Núi Ngũ Hành Sơn - địa điểm vui chơi check in nổi tiếng ở Đà Nẵng',
     description: `Được xem là “Nam Thiên Thanh Thắng” với 5 ngọn núi Kim, Mộc, Thủy, Hỏa, Thổ, 
     nơi đây thuộc danh sách những địa điểm vui chơi Đà Nẵng mang nét tâm linh. Đến với nơi đây, 
     du khách không chỉ chinh phục được các ngọn núi của thắng cảnh Ngũ Hành Sơn, mà còn được tham quan 
@@ -299,7 +310,8 @@ export const locationTravelData = [
     id: '78033227944',
     title: 'Bảo tàng tranh 3D',
     typeLocation: 'cultural',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-tranh-3d.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-tranh-3d.jpg',
     imageDesc: 'Bảo tàng tranh 3D, Đà Nẵng',
     description: `Bảo tàng tranh 3D là sự kết hợp tinh tế giữa hình ảnh, âm thanh và ánh sáng, tạo nên những khung cảnh sống động như thật. Các bức tranh được vẽ lên tường, sàn nhà và trần nhà. Bạn có thể thỏa sức tạo dáng cùng người thân và bạn bè, cùng đắm chìm trong thế giới của những mộng mơ và trí tưởng tượng. Những điều đó chính là lý do khiến cho bảo tàng tranh 3D Đà Nẵng là một trong những địa điểm vui chơi Đà Nẵng được nhiều người săn đón.`,
     locationLink:
@@ -314,7 +326,8 @@ export const locationTravelData = [
     id: '47557823325',
     title: 'Bảo tàng Đà Nẵng',
     typeLocation: 'cultural',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-da-nang.jpg',
     imageDesc: 'Bảo tàng Đà Nẵng',
     description: `Bảo tàng Đà Nẵng là nơi lưu giữ những hiện vật lịch sử, những mẫu vật địa chất và bộ sưu tập văn hóa Sa Huỳnh, đồ gốm sứ, hiện vật văn hóa biển. Hơn thế nữa, đây là nơi mang tính giáo dục truyền thống yêu nước và là nơi giới thiệu hình ảnh Việt Nam đến bạn bè quốc tế.`,
     locationLink:
@@ -329,7 +342,8 @@ export const locationTravelData = [
     id: '4176434353',
     title: 'Bảo tàng Hoàng Sa',
     typeLocation: 'cultural',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-hoang-sa.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/bao-tang-hoang-sa.jpg',
     imageDesc: 'Bảo tàng Hoàng Sa Đà Nẵng',
     description: `Bảo tàng Hoàng Sa là một địa điểm vui chơi Đà Nẵng mà du khách không nên bỏ qua, nơi đây như một quần đảo Hoàng Sa thu nhỏ. Là một kho tàng chứng minh khẳng định chủ quyền quần đảo thiêng liêng của tổ quốc. Tại đây có cả hệ thống tư liệu hình ảnh sinh động giúp khách tới tham quan có thể hiểu rõ về lịch sử quần đảo Hoàng Sa.`,
     locationLink:
@@ -376,7 +390,8 @@ export const locationTravelData = [
     id: '70293316167',
     title: 'Cầu Vàng',
     typeLocation: 'checking',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-vang-da-nang.png',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-vang-da-nang.png',
     imageDesc: 'Cầu Vàng Đà Nẵng - địa điểm check in nổi tiếng của Đà Nẵng',
     description: `Cầu vàng là <strong>địa điểm vui chơi Đà Nẵng </strong>được rất nhiều du khách quan tâm trong thời gian gần đây, sở hữu kiến trúc độc lạ với đôi bàn tay khổng lồ nâng đỡ toàn bộ cây cầu trải dài như một dải lụa. Ở trên cầu, bạn sẽ được ngắm nhìn thành phố Đà Nẵng từ xa và cảm giác như là mình lạc trong chốn bồng lai tiên cảnh, thật tuyệt phải không nào?`,
     locationLink:
@@ -391,7 +406,8 @@ export const locationTravelData = [
     id: '77713653030',
     title: 'Bãi cỏ cháy',
     typeLocation: 'checking',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-co-chay-da-nang-5.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/bai-co-chay-da-nang-5.jpg',
     imageDesc: 'Bãi cỏ cháy - điểm check in lãng mạn tại Đà Nẵng',
     description: `Đây là <strong>địa điểm vui chơi Đà Nẵng </strong>thu hút rất nhiều bạn trẻ đến đây tham quan và chụp hình. Nơi đây đẹp nhất vào cuối hè hoặc đầu thu vì hoa nở rực rỡ và đẹp nhất. Đứng giữa một không gian thơ mộng, ngắm nhìn hồ Xanh rộng lớn và biển Sơn Trà, bạn sẽ có ngay cảm giác yên bình đến lạ thường…`,
     locationLink:
@@ -421,7 +437,8 @@ export const locationTravelData = [
     id: '29708546086',
     title: 'Thuận Phước Field',
     typeLocation: 'checking',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/thuan-phuoc-field-1.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/thuan-phuoc-field-1.jpg',
     imageDesc: 'Thuận Phước Field',
     description: `Là một địa điểm vui chơi Đà Nẵng, chụp ảnh đẹp mà bạn không thể bỏ qua. Như một Hà Lan thu nhỏ giữa lòng thành phố đáng sống, đến nơi đây, bạn sẽ có cảm giác như sống trong một thế giới cổ tích Châu Âu xinh đẹp, dưới những ánh nắng chiều nhẹ nhàng, cảm giác thật là cổ điển và thú vị biết bao. `,
     locationLink:
@@ -489,7 +506,8 @@ export const locationTravelData = [
     description: `Cầu Thuận Phước là cũng là một trong những điểm check in hấp dẫn du khách. Khác biệt so với những cây cầu khác, cầu Thuận Phước tuy không nổi tiếng bằng nhưng lại mang một vẻ đẹp trầm lắng, tinh tế khiến du khách phương xa phải lưu luyến. Cây cầu được xem là một trong những cây cầu treo võng dài nhất Việt Nam với tổng chiều dài gần 2 km. Đến đây vào buổi tối, bạn sẽ được nhìn ngắm cầu Thuận Phước vô cùng rực rỡ với vô số những ánh đèn màu và ngắm nhìn cảnh thành phố hoa lệ về đêm.`,
     locationLink:
       'https://www.google.com/maps/place/C%E1%BA%A7u+Thu%E1%BA%ADn+Ph%C6%B0%E1%BB%9Bc/@16.0950642,108.2181178,17z/data=!4m5!3m4!1s0x314219c8c3eb6863:0x637a9991d9c6d3d5!8m2!3d16.0950591!4d108.2203065?hl=vi-VN',
-    locationName: 'Cầu Thuận Phước, Thuận Phước, Hải Châu, Đà Nẵng 550000, Việt Nam',
+    locationName:
+      'Cầu Thuận Phước, Thuận Phước, Hải Châu, Đà Nẵng 550000, Việt Nam',
     location: {
       lng: '108.2181178',
       lat: '16.0950642'
@@ -499,7 +517,8 @@ export const locationTravelData = [
     id: '74172379705',
     title: 'Cầu đi bộ Nguyễn Văn Trỗi',
     typeLocation: 'checking',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-nguyen-van-troi.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-nguyen-van-troi.jpg',
     imageDesc: 'Cầu đi bộ Nguyễn Văn Trỗi - địa điểm vui chơi đà nẵng',
     description: `Đây là một <strong>địa điểm vui chơi Đà Nẵng </strong>không còn xa lạ đối với các bạn trẻ. Khác với những cây cầu khác, cầu Nguyễn Văn trỗi là cầu đi bộ  thường được mọi người lựa chọn để tản bộ, ngắm cảnh và tụ tập ăn uống rất thú vị và đang dần trở thành địa điểm chụp ảnh yêu thích của các nhiếp ảnh gia hay các tín đồ đam mê sống ảo.`,
     locationLink:
@@ -514,7 +533,8 @@ export const locationTravelData = [
     id: '91164919481',
     title: 'Cầu Trần Thị Lý',
     typeLocation: 'checking',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/Cau-tran-thi-ly.jpeg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/Cau-tran-thi-ly.jpeg',
     imageDesc: 'Cầu Trần Thị Lý - Đà Nẵng',
     description: `Nếu đã biết qua cầu Sông Hàn và cầu Rồng thì khi đến vui chơi tại Đà Nẵng du khách cũng đừng bỏ qua cây cầu Trần Thị Lý. Với chiều dài 700m nối liền hai bờ sông Hàn, mang thiết kế hiện đại và độc đáo khi sử dụng hệ thống văng dây 3 chiều, nhìn giống như cánh buồm căng gió vươn giữa biển khơi. Từ đây, bạn có thể phóng tầm mắt ngắm nhìn thành phố và tận hưởng làn gió mát dịu.`,
     locationLink:
@@ -592,7 +612,8 @@ export const locationTravelData = [
     id: '52909641848',
     title: 'Đỉnh Bàn Cờ',
     typeLocation: 'checking',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/dinh-ban-co-da-nang-1.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/dinh-ban-co-da-nang-1.jpg',
     imageDesc: 'Đỉnh Bàn Cờ Đà Nẵng',
     description: `Là một địa điểm có sức hút mãnh liệt đối với dân phượt và được đánh giá là một dốc đứng khá hiểm trở với núi non trùng trùng. Khi lên đến đỉnh Bàn Cờ, bạn sẽ nhìn thấy bao quát toàn thành phố và thả mình với mây trời.`,
     locationLink:
@@ -639,7 +660,8 @@ export const locationTravelData = [
     id: '6380486772',
     title: 'Công viên Biển Đông',
     typeLocation: 'checking',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cong-vien-bien-dong.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/cong-vien-bien-dong.jpg',
     imageDesc: 'địa điểm vui chơi đà nẵng Công viên biển Đông',
     description: `Công viên Biển Đông là một địa điểm vui chơi rất được yêu thích không riêng gì người dân thành phố Đà Nẵng, mà còn có cả khách du lịch. Hình ảnh của hàng ngàn con chim bồ câu trắng bay rợp trời, chính là điểm đặc biệt thu hút khách tới công viên này. Tới đây bạn có thể dạo biển, ngắm cảnh cùng bạn bè, người thân.`,
     locationLink:
@@ -720,7 +742,8 @@ export const locationTravelData = [
     id: '65039952066',
     title: 'Cocobay Đà Nẵng',
     typeLocation: 'center',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cocobay-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/cocobay-da-nang.jpg',
     imageDesc: 'Coco bay Đà Nẵng',
     description: `Cocobay là tổ hợp du lịch cùng với các dịch vụ giải trí tham quan và ăn uống được xem là địa điểm vui chơi Đà Nẵng hàng đầu mà bạn không thể bỏ lỡ. Bên cạnh các khu nghỉ dưỡng khách sạn sang trọng đạt chuẩn quốc tế, du khách còn có thể thỏa sức vui chơi với nhiều trò chơi khác nhau, trải nghiệm xe buýt hai tầng du hí khắp thành phố và tận hưởng nét ẩm thực đặc trưng từ Tây sang Đông, cùng lễ hội âm nhạc hàng đầu Việt Nam.`,
     locationLink:
@@ -751,7 +774,8 @@ export const locationTravelData = [
     id: '72012196038',
     title: 'Cầu quay sông Hàn',
     typeLocation: 'night',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-quay-song-han.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-quay-song-han.jpg',
     imageDesc:
       'Sẽ thật sự thiếu sót khi nhắc tới địa điểm vui chơi Đà Nẵng mà không kể tên cầu sông Hàn',
     description: `Hàn - cây cầu quay đầu tiên tại Việt Nam. Đây cũng là biểu tượng của thành phố Đà Nẵng và là niềm tự hào của người dân địa nơi đây. Đến nơi đây bạn sẽ thoả sức check in với cầu Sông Hàn, chiêm ngưỡng cảnh sắc lung linh của những ánh đèn đủ sắc màu phản chiếu xuống mặt nước và có cơ hội chiêm ngưỡng cây cầu quay góc 90 độ lúc 1 giờ đêm, chắc hẳn khi thực sự chứng kiến bạn sẽ có một trải nghiệm khó quên.`,
@@ -785,7 +809,8 @@ export const locationTravelData = [
     id: '2801249623',
     title: 'Cầu tình yêu',
     typeLocation: 'night',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-tinh-yeu-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/cau-tinh-yeu-da-nang.jpg',
     imageDesc: 'Cầu tình yêu Đà Nẵng',
     description: `Cầu tình yêu nằm bên bờ sông Hàn thơ mộng thuộc phía đông đường Trần Hưng Đạo. Cây cầu đặc biệt với sự xuất hiện của những ổ khóa tình yêu khắc tên hai người treo trên đó, mang ý nghĩa thể hiện cho tình yêu bền chặt không rời. Địa điểm lãng mạn này trở thành một địa điểm hẹn hò lý tưởng vào buổi tối của các cặp đôi.`,
     locationLink:
@@ -800,7 +825,8 @@ export const locationTravelData = [
     id: '36361148806',
     title: 'Phố đi bộ Bạch Đằng',
     typeLocation: 'night',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/pho-di-bo-bach-dang-.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/pho-di-bo-bach-dang-.jpg',
     imageDesc: 'Phố đi bộ Bạch Đằng ',
     description: `Đây cũng được xem là một địa điểm vui chơi tại Đà Nẵng thú vị. Chạy dọc theo bờ Tây sông Hàn, mỗi buổi tối thu hút rất nhiều du khách và người dân nơi đây lui tới vì không khí ở đây rất thoáng mát, dễ chịu, được thỏa sức ngắm nhìn những chiếc du thuyền đầy màu sắc, cảnh về đêm của thành phố.`,
     locationLink:
@@ -815,12 +841,14 @@ export const locationTravelData = [
     id: '9692457454',
     title: 'Bar Sky36',
     typeLocation: 'night',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/bar-sky36-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/bar-sky36-da-nang.jpg',
     imageDesc: 'Bar Sky 36 Đà Nẵng',
     description: `Sau một ngày khám phá các địa điểm vui chơi Đà Nẵng, vào ban đêm du khách có thể đến Bar Sky36 để giải trí. Bar Sky36 đang ở tầng 35 và 36 của khách sạn Novotel – khách sạn nghỉ dưỡng đẳng cấp.`,
     locationLink:
       'https://www.google.com/maps/place/Sky36+Bar/@16.077401,108.2237974,17z/data=!3m1!4b1!4m5!3m4!1s0x3142183ae54d6015:0xa61168c6e58166a2!8m2!3d16.077402!4d108.2238068?hl=vi-VN',
-    locationName: 'tầng 35 - 36 khách sạn Novotel, số 36 Bạch đằng, Hải Châu, Đà Nẵng',
+    locationName:
+      'tầng 35 - 36 khách sạn Novotel, số 36 Bạch đằng, Hải Châu, Đà Nẵng',
     location: {
       lng: '108.2237974',
       lat: '16.077401'
@@ -830,7 +858,8 @@ export const locationTravelData = [
     id: '19213324269',
     title: 'Du thuyền Sông Hàn',
     typeLocation: 'night',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/du-thuyen-song-han.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/du-thuyen-song-han.jpg',
     imageDesc: 'Du thuyền sông Hàn Đà Nẵng',
     description: `Đây là một địa điểm lãng mạn và các cặp đôi không thể bỏ qua, tại đây, bạn sẽ được đi trên du thuyền cùng người mình yêu ngắm cảnh thành phố về đêm, chiêm ngưỡng những cây cầu lung linh và cảnh vật hai bên sông thật lãng mạn và êm đềm.`,
     locationLink:
@@ -845,7 +874,8 @@ export const locationTravelData = [
     id: '50087877073',
     title: 'Chợ đêm Helio',
     typeLocation: 'night',
-    image: 'https://gotadi.com/tour/wp-content/uploads/2021/10/cho-dem-helio-da-nang.jpg',
+    image:
+      'https://gotadi.com/tour/wp-content/uploads/2021/10/cho-dem-helio-da-nang.jpg',
     imageDesc: 'Chợ đêm Helio Đà Nẵng',
     description: `Chợ đêm helio Đà Nẵng với gần 100 hàng mua sắm, hơn 150 gian hàng ẩm thực khác nhau, nên du khách khi đi đến <strong>địa điểm vui chơi Đà Nẵng</strong> này có thể thỏa sức lựa chọn. Ngoài ra, bạn còn được thưởng thức những màn trình diễn sôi động tại khu lễ hội.`,
     locationLink:

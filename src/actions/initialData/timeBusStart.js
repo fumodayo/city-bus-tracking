@@ -1,9 +1,9 @@
 export const timeBusStart = [
   {
     id: 'time-bus-start-1',
-    name: 'R16',
-    directionBusRoute: 'turn',
-    timestarts: [
+    codeBusRoute: 'R16',
+    directionRoute: 'turn',
+    startingTime: [
       '6:00',
       '6:15',
       '6:30',
@@ -43,9 +43,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-2',
-    name: 'R16',
-    directionBusRoute: 'return',
-    timestarts: [
+    codeBusRoute: 'R16',
+    directionRoute: 'return',
+    startingTime: [
       '6:00',
       '6:15',
       '6:30',
@@ -85,9 +85,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-3',
-    name: 'TMF',
-    directionBusRoute: 'turn',
-    timestarts: [
+    codeBusRoute: 'TMF',
+    directionRoute: 'turn',
+    startingTime: [
       '6:00',
       '6:40',
       '7:10',
@@ -119,9 +119,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-4',
-    name: 'TMF',
-    directionBusRoute: 'return',
-    timestarts: [
+    codeBusRoute: 'TMF',
+    directionRoute: 'return',
+    startingTime: [
       '6:00',
       '6:30',
       '7:10',
@@ -153,9 +153,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-5',
-    name: 'R4A',
-    directionBusRoute: 'turn',
-    timestarts: [
+    codeBusRoute: 'R4A',
+    directionRoute: 'turn',
+    startingTime: [
       '6:10',
       '6:40',
       '7:10',
@@ -187,9 +187,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-6',
-    name: 'R4A',
-    directionBusRoute: 'return',
-    timestarts: [
+    codeBusRoute: 'R4A',
+    directionRoute: 'return',
+    startingTime: [
       '6:00',
       '6:30',
       '7:10',
@@ -221,9 +221,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-7',
-    name: 'R15',
-    directionBusRoute: 'turn',
-    timestarts: [
+    codeBusRoute: 'R15',
+    directionRoute: 'turn',
+    startingTime: [
       '6:10',
       '6:40',
       '7:10',
@@ -255,9 +255,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-8',
-    name: 'R15',
-    directionBusRoute: 'return',
-    timestarts: [
+    codeBusRoute: 'R15',
+    directionRoute: 'return',
+    startingTime: [
       '6:00',
       '6:30',
       '7:10',
@@ -289,9 +289,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-9',
-    name: 'R17A',
-    directionBusRoute: 'turn',
-    timestarts: [
+    codeBusRoute: 'R17A',
+    directionRoute: 'turn',
+    startingTime: [
       '6:00',
       '6:15',
       '6:30',
@@ -332,9 +332,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-10',
-    name: 'R17A',
-    directionBusRoute: 'return',
-    timestarts: [
+    codeBusRoute: 'R17A',
+    directionRoute: 'return',
+    startingTime: [
       '6:00',
       '6:15',
       '6:30',
@@ -375,9 +375,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-11',
-    name: 'R6A',
-    directionBusRoute: 'turn',
-    timestarts: [
+    codeBusRoute: 'R6A',
+    directionRoute: 'turn',
+    startingTime: [
       '6:00',
       '6:40',
       '7:10',
@@ -409,9 +409,9 @@ export const timeBusStart = [
   },
   {
     id: 'time-bus-start-12',
-    name: 'R6A',
-    directionBusRoute: 'return',
-    timestarts: [
+    codeBusRoute: 'R6A',
+    directionRoute: 'return',
+    startingTime: [
       '6:00',
       '6:30',
       '7:10',

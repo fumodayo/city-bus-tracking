@@ -41,7 +41,10 @@ const AllInformationTravel = () => {
     const filterDataTravel = travelData.filter(travel => travel.title)
     if (search !== '') {
       const newSearchList = filterDataTravel.filter(route => {
-        return Object.values(route).join('').toLowerCase().includes(search.toLowerCase())
+        return Object.values(route)
+          .join('')
+          .toLowerCase()
+          .includes(search.toLowerCase())
       })
       setDataTravel(newSearchList)
     } else {
@@ -100,7 +103,11 @@ const AllInformationTravel = () => {
         cols={1}
       >
         {dataTravel.map(i => (
-          <ImageListItem key={i.id} id={i.id} onClick={handleGetIdListItemImage}>
+          <ImageListItem
+            key={i.id}
+            id={i.id}
+            onClick={handleGetIdListItemImage}
+          >
             <img
               style={{ width: 350, height: 260, paddingTop: '10px' }}
               src={i.image}
@@ -116,8 +123,15 @@ const AllInformationTravel = () => {
           </ImageListItem>
         ))}
         {isOpen && (
-          <Drawer variant="persistent" anchor="right" hideBackdrop={true} open={isOpen}>
-            <DrawerHeader sx={{ position: 'relative', backgroundColor: '#3597E4' }}>
+          <Drawer
+            variant="persistent"
+            anchor="right"
+            hideBackdrop={true}
+            open={isOpen}
+          >
+            <DrawerHeader
+              sx={{ position: 'relative', backgroundColor: '#3597E4' }}
+            >
               <Typography
                 style={{ fontWeight: '600', color: '#fff', marginLeft: '10px' }}
               >
@@ -155,7 +169,8 @@ const AllInformationTravel = () => {
                 <div className="info">
                   <label>Giới thiệu chung:</label>
                   <span>
-                    {locationTravel && HTMLReactParser(locationTravel?.description)}
+                    {locationTravel &&
+                      HTMLReactParser(locationTravel?.description)}
                   </span>
                 </div>
                 <div className="info">

@@ -48,13 +48,23 @@ const BusStop = () => {
           <TabContext value={tabValue}>
             <Box>
               <TabList onChange={handleChangeTab} aria-label="lab">
-                <Tab style={{ width: '50%' }} label="Xe sắp tới trạm" value="1" />
+                <Tab
+                  style={{ width: '50%' }}
+                  label="Xe sắp tới trạm"
+                  value="1"
+                />
                 <Tab style={{ width: '50%' }} label="Tuyến đi qua" value="2" />
               </TabList>
             </Box>
             <Box>
-              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="1"></TabPanel>
-              <TabPanel style={{ paddingLeft: '0', padding: 0 }} value="2"></TabPanel>
+              <TabPanel
+                style={{ paddingLeft: '0', padding: 0 }}
+                value="1"
+              ></TabPanel>
+              <TabPanel
+                style={{ paddingLeft: '0', padding: 0 }}
+                value="2"
+              ></TabPanel>
             </Box>
           </TabContext>
         </Box>

@@ -9,23 +9,26 @@ const PolyLines = () => {
   const searchRoutes = useSelector(searchTextSelector)
 
   useEffect(() => {
+    // filter array by checked & get array codeBusRoute
     const getRoutesCheckBox = searchRoutes
-      .filter(i => i.isChecked)
-      .map(i => i.nameBusRouter)
+      .filter(busroute => busroute.isChecked)
+      .map(busroute => busroute.codeBusRoute)
 
     const getRoutesLine = roadMapData
       .filter(
-        i => getRoutesCheckBox.indexOf(i.name) !== -1 && i.directionRoute === 'turn'
+        route =>
+          getRoutesCheckBox.indexOf(route.codeBusRoute) !== -1 &&
+          route.directionRoute === 'turn'
       )
-      .map(i => {
+      .map(lineroute => {
         return {
           type: 'Feature',
-          color: i.color,
-          name: i.name,
-          directionRoute: i.directionRoute,
+          color: lineroute.colorRoute,
+          name: lineroute.codeBusRoute,
+          directionRoute: lineroute.directionRoute,
           geometry: {
             type: 'LineString',
-            coordinates: i.lineRoute
+            coordinates: lineroute.lineRoute
           }
         }
       })

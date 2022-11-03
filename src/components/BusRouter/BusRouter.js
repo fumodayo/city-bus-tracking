@@ -6,7 +6,6 @@ import FilterRouter from 'components/FilterRouter/FilterRouter'
 import AllBusStop from 'components/AllBusStop/AllBusStop'
 
 const BusRouter = () => {
-  // Handle event tab Tuyen / Tram dung
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)

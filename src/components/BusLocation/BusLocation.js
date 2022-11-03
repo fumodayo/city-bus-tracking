@@ -1,11 +1,15 @@
-import { locationData } from 'actions/initialData/locationData'
+import { busStopData } from 'actions/initialData/busStopData'
 import { timeBusStart } from 'actions/initialData/timeBusStart'
 import React, { useEffect, useState } from 'react'
 import Countdown from 'react-countdown'
 
-const BusLocation = ({ nameBusStop }) => {
-  const [realtime, setRealtime] = useState('')
-  const [timeData, setTimeData] = useState(1000)
+const BusLocation = ({ idBusStop }) => {
+  const [getrealtime, setRealtime] = useState('')
+  const [timeBusStop, setTimeBusStop] = useState(1000)
+
+  const addZeroBeforeTime = time => {
+    return time < 10 ? '0' + time : time
+  }
 
   // Get current real time
   useEffect(() => {
@@ -13,7 +17,9 @@ const BusLocation = ({ nameBusStop }) => {
       const today = new Date()
 
       const currentTime =
-        addZeroBeforeTime(today.getHours()) + ':' + addZeroBeforeTime(today.getMinutes())
+        addZeroBeforeTime(today.getHours()) +
+        ':' +
+        addZeroBeforeTime(today.getMinutes())
       setRealtime(currentTime)
     }, 1000)
 
@@ -21,35 +27,39 @@ const BusLocation = ({ nameBusStop }) => {
   }, [])
 
   useEffect(() => {
-    const objAfterFilter = locationData
-      .map(i => i.route.filter(i => i.name === nameBusStop)[0])
-      .filter(n => n)
+    // get codeBusRoute && directionRoute in bus stop
+    const busStopFindById = busStopData.filter(
+      busstop => busstop.id === idBusStop
+    )[0]
+    const codeBusStop = busStopFindById.codeBusRoute
+    const directionBusStop = busStopFindById.directionRoute
 
-    const timestart = timeBusStart.filter(
+    // get array time bus starts
+    const allTimeBusStarts = timeBusStart.filter(
       route =>
-        route.name === objAfterFilter[0].nameLocationBusRoute &&
-        route.directionBusRoute === objAfterFilter[0].directionLocationBusRoute
-    )[0].timestarts
+        route.codeBusRoute === codeBusStop &&
+        route.directionRoute === directionBusStop
+    )[0].startingTime
 
-    const travelTime = objAfterFilter[0].travelTime * 60 * 1000
+    // Get travel time in bus stop
+    const busStopTravelTime = busStopFindById.travelTime * 60 * 1000
 
-    setTimeData(travelTime)
-    if (realtime >= '06:00' || realtime <= '21:00') {
-      if (timestart.indexOf(realtime) !== -1) {
-        setTimeData(travelTime)
+    setTimeBusStop(busStopTravelTime)
+
+    if (getrealtime >= '06:00' || getrealtime <= '21:00') {
+      if (allTimeBusStarts.indexOf(getrealtime) !== -1) {
+        setTimeBusStop(busStopTravelTime)
       }
     } else {
-      setTimeData(0)
+      setTimeBusStop(0)
     }
-  }, [realtime, nameBusStop])
-
-  const addZeroBeforeTime = time => {
-    return time < 10 ? '0' + time : time
-  }
+  }, [getrealtime, idBusStop])
 
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
-      return <span style={{ fontSize: '20px', color: '#000' }}>Xe đã đến bến</span>
+      return (
+        <span style={{ fontSize: '20px', color: '#000' }}>Xe đã đến bến</span>
+      )
     }
 
     const showTime = `${addZeroBeforeTime(hours)}:${addZeroBeforeTime(
@@ -58,7 +68,9 @@ const BusLocation = ({ nameBusStop }) => {
 
     return (
       <span style={{ fontSize: '20px', color: '#000' }}>
-        {showTime === '00:00:00' ? 'Xe chưa xuất bến' : `Xe còn ${showTime} sẽ tới bến`}
+        {showTime === '00:00:00'
+          ? 'Xe chưa xuất bến'
+          : `Xe còn ${showTime} sẽ tới bến`}
       </span>
     )
   }
@@ -66,7 +78,7 @@ const BusLocation = ({ nameBusStop }) => {
   return (
     <div className="bus-location-time-countdown">
       <Countdown
-        date={Date.now() + timeData}
+        date={Date.now() + timeBusStop}
         renderer={renderer}
         intervalDelay={0}
         precision={3}
