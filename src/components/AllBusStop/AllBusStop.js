@@ -6,6 +6,8 @@ import RouteThrough from 'components/RouteThrough/RouteThrough'
 import BusLocation from 'components/BusLocation/BusLocation'
 import { busStopData } from 'actions/initialData/busStopData'
 import { cloneDeep } from 'lodash'
+import { useDispatch } from 'react-redux'
+import { getIdBusStopOnClick } from 'redux/actions'
 
 const AllBusStop = () => {
   // Get word input to search
@@ -32,13 +34,18 @@ const AllBusStop = () => {
     }
   }, [search])
 
-  //
   const [showSidebar, setShowSidebar] = useState(false)
   const [idBusStop, setIdBusStop] = useState('')
   const handleTarget = e => {
     setIdBusStop(e.currentTarget.id)
     setShowSidebar(!showSidebar)
   }
+
+  // store id bus stop
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getIdBusStopOnClick(idBusStop))
+  }, [idBusStop])
 
   const [nameBusStop, setNameBusStop] = useState('')
   useEffect(() => {

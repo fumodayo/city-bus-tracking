@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Map, {
   NavigationControl,
   FullscreenControl,
@@ -11,10 +11,16 @@ import { API_KEY_MAPBOX } from 'config/constant'
 import Sidebar from 'components/Sidebar/Sidebar'
 import MarkerTravel from 'components/MarkerTravel/MarkerTravel'
 import { DEFAULT_MAPBOX_LOCATION } from 'utilities/constants'
-import { routesData } from 'actions/initialData/routesData'
+import { busStopData } from 'actions/initialData/busStopData'
+import { useSelector } from 'react-redux'
+import { getIdsBusStopSelector } from 'redux/selectors'
 
 export default function MapBox() {
-  const [viewport, setViewport] = useState(DEFAULT_MAPBOX_LOCATION)
+  const [viewport, setViewport] = useState({
+    latitude: 16.06045710530602,
+    longitude: 108.2097851153426,
+    zoom: 14
+  })
   const _onViewportChange = e => setViewport(e.viewport)
   const data = {
     positionOptions: {
@@ -25,11 +31,19 @@ export default function MapBox() {
     // Draw an arrow next to the location dot to indicate which direction the device is heading.
   }
 
-  // console.log(
-  //   routesData
-  //     .map(i => i.route.filter(i => i.id === '41676731701')[0])
-  //     .filter(n => n)[0]
-  // )
+  // Get id bus stop in all bus stop and move in the location on map
+  const getIdBusStop = useSelector(getIdsBusStopSelector)
+  useEffect(() => {
+    const busstopFilterById = busStopData.filter(i => i.id === getIdBusStop)
+    const locationBusStopData = busstopFilterById.map(busstop => {
+      return {
+        latitude: busstop.location.lat,
+        longitude: busstop.location.lng,
+        zoom: 14
+      }
+    })[0]
+    setViewport(locationBusStopData)
+  }, [getIdBusStop])
 
   return (
     <Map
@@ -40,9 +54,9 @@ export default function MapBox() {
       mapboxAccessToken={API_KEY_MAPBOX}
     >
       <Sidebar />
-       <PolyLines />
+      <PolyLines />
       <MarkerBusRoute />
-      
+
       <MarkerTravel />
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />

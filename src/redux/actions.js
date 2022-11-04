@@ -11,3 +11,10 @@ export const checkboxTravelChange = checked => {
     payload: checked
   }
 }
+
+export const getIdBusStopOnClick = text => {
+  return {
+    type: 'getIdBusStop',
+    payload: text
+  }
+}
