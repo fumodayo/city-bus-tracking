@@ -5,6 +5,9 @@ import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Tab } from '@mui/material'
 import './listbusstop.scss'
 import InfoBusRoute from 'components/InfoBusRoute/InfoBusRoute'
+import { useDispatch } from 'react-redux'
+import { getIdBusStopOnClick } from 'redux/actions'
+import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
 
 const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
   const [listDataBusStop, setListDataBusStop] = useState([])
@@ -14,13 +17,16 @@ const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
         busstop.codeBusRoute === nameCodeRoute &&
         busstop.directionRoute === turnRoute
     )
-
     setListDataBusStop(listData)
   }, [nameCodeRoute, turnRoute])
 
+  const dispatch = useDispatch()
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [idBusStop, setIdBusStop] = useState('')
   const handleStepIndexChange = (e, key) => {
-    console.log(e.currentTarget.id)
+    const idbusstop = e.currentTarget.id
+    setIdBusStop(idbusstop)
+    dispatch(getIdBusStopOnClick(idbusstop))
     setCurrentIndex(key)
   }
   const _handleSliderIndex = key => {
@@ -31,6 +37,19 @@ const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
   }
+
+  // get nameBusStop & locationBusStop by Id
+  const [nameBusStop, setNameBusStop] = useState('')
+  const [locationBusStop, setLocationBusStop] = useState({})
+  useEffect(() => {
+    const nameBusStopInList = busStopData.filter(i => i.id === idBusStop)[0]
+      ?.nameBusStop
+    setNameBusStop(nameBusStopInList)
+
+    const locationBusStopInList = busStopData.filter(i => i.id === idBusStop)[0]
+      ?.location
+    setLocationBusStop(locationBusStopInList)
+  }, [idBusStop])
 
   return (
     <div className="list-bus-station">
@@ -114,6 +133,12 @@ const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
           <InfoBusRoute nameCodeRoute={nameCodeRoute} turnRoute={turnRoute} />
         </TabPanel>
       </TabContext>
+      {locationBusStop && nameBusStop && (
+        <MarkerBusStop
+          nameBusStop={nameBusStop}
+          locationBusStop={locationBusStop}
+        />
+      )}
     </div>
   )
 }

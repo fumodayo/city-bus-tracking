@@ -48,8 +48,9 @@ const AllBusStop = () => {
     dispatch(getIdBusStopOnClick(idBusStop))
   }, [idBusStop])
 
+  // get nameBusStop & locationBusStop by Id
   const [nameBusStop, setNameBusStop] = useState('')
-  const [locationBusStop, setLocationBusStop] = useState()
+  const [locationBusStop, setLocationBusStop] = useState({})
   useEffect(() => {
     const nameBusStopInList = allBusStop.filter(i => i.id === idBusStop)[0]
       ?.nameBusStop
