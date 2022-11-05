@@ -51,6 +51,7 @@ const MarkerTravel = () => {
                     style={{
                       width: 140,
                       height: 60,
+                      borderRadius: '5px',
                       objectFit: 'cover',
                       backgroundPosition: 'center'
                     }}

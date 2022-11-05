@@ -70,6 +70,31 @@ const AllInformationTravel = () => {
     setIsOpen(!isOpen)
   }
 
+  const [nameTypeTravel, setNameTypeTravel] = useState('')
+  useEffect(() => {
+    let typeLocationTravel = ''
+    switch (locationTravel?.typeLocation) {
+      case 'discover':
+        typeLocationTravel = 'Địa điểm <strong>khám phá</strong>'
+        break
+      case 'cultural':
+        typeLocationTravel = 'Địa điểm <strong>văn hóa</strong>'
+        break
+      case 'checking':
+        typeLocationTravel = 'Địa điểm <strong>chụp ảnh đẹp</strong>'
+        break
+      case 'center':
+        typeLocationTravel = 'Trung tâm <strong>vui chơi - giải trí</strong>'
+        break
+      case 'night':
+        typeLocationTravel = 'Địa điểm <strong>vui chơi vào ban đêm</strong>'
+        break
+      default:
+        typeLocationTravel = 'Địa điểm <strong>vui chơi - giải trí</strong>'
+    }
+    setNameTypeTravel(typeLocationTravel)
+  }, [locationTravel])
+
   return (
     <div className="all-information-travel">
       <Paper
@@ -78,7 +103,7 @@ const AllInformationTravel = () => {
           p: '2px 4px',
           display: 'flex',
           alignItems: 'center',
-          width: 330,
+          width: 350,
           border: 'none',
           borderRadius: '15px',
           boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',
@@ -96,29 +121,38 @@ const AllInformationTravel = () => {
       <ImageList
         sx={{
           width: 350,
-          height: 800,
-          overflowX: 'hidden',
+          maxHeight: 800,
           cursor: 'pointer'
         }}
         cols={1}
       >
-        {dataTravel.map(i => (
+        {dataTravel.map(imageTravel => (
           <ImageListItem
-            key={i.id}
-            id={i.id}
+            key={imageTravel.id}
+            id={imageTravel.id}
             onClick={handleGetIdListItemImage}
           >
             <img
-              style={{ width: 350, height: 260, paddingTop: '10px' }}
-              src={i.image}
-              srcSet={i.image}
-              alt={i.imageDesc}
+              style={{
+                minWidth: 330,
+                maxHeight: 260,
+                paddingTop: '10px',
+                borderRadius: '30px'
+              }}
+              src={imageTravel.image}
+              srcSet={imageTravel.image}
+              alt={imageTravel.imageDesc}
               loading="lazy"
             />
             <ImageListItemBar
-              style={{ fontSize: '18px' }}
-              title={i.title}
-              subtitle={HTMLReactParser(i.description)}
+              style={{
+                fontSize: '18px',
+                minWidth: 330,
+                borderBottomLeftRadius: '30px',
+                borderBottomRightRadius: '30px'
+              }}
+              title={imageTravel.title}
+              subtitle={HTMLReactParser(imageTravel.description)}
             />
           </ImageListItem>
         ))}
@@ -163,7 +197,7 @@ const AllInformationTravel = () => {
                 <h1 className="header-info">Thông tin địa điểm:</h1>
                 <div className="info">
                   <label>Loại hình du lịch: </label>
-                  <span>{locationTravel?.typeLocation}</span>
+                  <span>{HTMLReactParser(nameTypeTravel)}</span>
                 </div>
                 <hr style={{ margin: '5px', border: '1px solid #000' }} />
                 <div className="info">
