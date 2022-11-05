@@ -8,6 +8,7 @@ import { busStopData } from 'actions/initialData/busStopData'
 import { cloneDeep } from 'lodash'
 import { useDispatch } from 'react-redux'
 import { getIdBusStopOnClick } from 'redux/actions'
+import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
 
 const AllBusStop = () => {
   // Get word input to search
@@ -48,10 +49,15 @@ const AllBusStop = () => {
   }, [idBusStop])
 
   const [nameBusStop, setNameBusStop] = useState('')
+  const [locationBusStop, setLocationBusStop] = useState()
   useEffect(() => {
     const nameBusStopInList = allBusStop.filter(i => i.id === idBusStop)[0]
       ?.nameBusStop
     setNameBusStop(nameBusStopInList)
+
+    const locationBusStopInList = allBusStop.filter(i => i.id === idBusStop)[0]
+      ?.location
+    setLocationBusStop(locationBusStopInList)
   }, [allBusStop, idBusStop])
 
   return (
@@ -107,14 +113,22 @@ const AllBusStop = () => {
           </div>
         ))}
         {showSidebar && (
-          <CustomSidebar
-            show={true}
-            name={nameBusStop}
-            tabLeft={'Xe sắp tới trạm'}
-            tabRight={'Tuyến đi qua'}
-            compLeft={<BusLocation idBusStop={idBusStop} />}
-            compRight={<RouteThrough idBusStop={idBusStop} />}
-          />
+          <>
+            <CustomSidebar
+              show={showSidebar}
+              name={nameBusStop}
+              tabLeft={'Xe sắp tới trạm'}
+              tabRight={'Tuyến đi qua'}
+              compLeft={<BusLocation idBusStop={idBusStop} />}
+              compRight={<RouteThrough idBusStop={idBusStop} />}
+            />
+            {locationBusStop && (
+              <MarkerBusStop
+                nameBusStop={nameBusStop}
+                locationBusStop={locationBusStop}
+              />
+            )}
+          </>
         )}
       </div>
     </div>

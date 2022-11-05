@@ -10,7 +10,6 @@ import MarkerBusRoute from 'components/MarkerBusRoute/MarkerBusRoute'
 import { API_KEY_MAPBOX } from 'config/constant'
 import Sidebar from 'components/Sidebar/Sidebar'
 import MarkerTravel from 'components/MarkerTravel/MarkerTravel'
-import { DEFAULT_MAPBOX_LOCATION } from 'utilities/constants'
 import { busStopData } from 'actions/initialData/busStopData'
 import { useSelector } from 'react-redux'
 import { getIdsBusStopSelector } from 'redux/selectors'
@@ -39,7 +38,7 @@ export default function MapBox() {
       return {
         latitude: busstop.location.lat,
         longitude: busstop.location.lng,
-        zoom: 14
+        zoom: 16
       }
     })[0]
     setViewport(locationBusStopData)

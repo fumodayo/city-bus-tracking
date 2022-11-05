@@ -12,8 +12,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }))
 
 const CustomSidebar = props => {
-  const { name, tabLeft, tabRight, compLeft, compRight } = props
-  const [isOpen, setIsOpen] = useState(props.show)
+  const { name, tabLeft, tabRight, compLeft, compRight, show } = props
+  const [isOpen, setIsOpen] = useState(show)
   const [tabValue, setTabValue] = useState('1')
 
   const handleChangeTab = (e, newTabValue) => {
@@ -28,9 +28,15 @@ const CustomSidebar = props => {
       open={isOpen}
     >
       <DrawerHeader
-        sx={{ overflowY: 'none', position: 'relative', backgroundColor: '#3597E4' }}
+        sx={{
+          overflowY: 'none',
+          position: 'relative',
+          backgroundColor: '#3597E4'
+        }}
       >
-        <Typography style={{ fontSize: '18px', fontWeight: '600', color: '#fff' }}>
+        <Typography
+          style={{ fontSize: '18px', fontWeight: '600', color: '#fff' }}
+        >
           {name}
         </Typography>
         <IconButton onClick={() => setIsOpen(false)}>
