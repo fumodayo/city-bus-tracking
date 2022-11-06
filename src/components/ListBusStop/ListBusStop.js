@@ -8,6 +8,7 @@ import InfoBusRoute from 'components/InfoBusRoute/InfoBusRoute'
 import { useDispatch } from 'react-redux'
 import { getIdBusStopOnClick } from 'redux/actions'
 import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
+import PolylineListBusStop from 'components/PolylineListBusStop/PolylineListBusStop'
 
 const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
   const [listDataBusStop, setListDataBusStop] = useState([])
@@ -139,6 +140,10 @@ const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
           locationBusStop={locationBusStop}
         />
       )}
+      <PolylineListBusStop
+        nameCodeRoute={nameCodeRoute}
+        turnRoute={turnRoute}
+      />
     </div>
   )
 }
