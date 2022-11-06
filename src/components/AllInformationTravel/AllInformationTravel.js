@@ -16,6 +16,8 @@ import HTMLReactParser from 'html-react-parser'
 import { cloneDeep } from 'lodash'
 import { Close } from '@mui/icons-material'
 import './AllInformationTravel.scss'
+import { useDispatch } from 'react-redux'
+import { getIdTravelLocationOnClick } from 'redux/actions'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -52,9 +54,12 @@ const AllInformationTravel = () => {
     }
   }, [search])
 
+  const dispatch = useDispatch()
   const [idItem, setItem] = useState('')
   const handleGetIdListItemImage = e => {
-    setItem(e.currentTarget.id)
+    const idLocation = e.currentTarget.id
+    dispatch(getIdTravelLocationOnClick(idLocation))
+    setItem(idLocation)
     setIsOpen(!isOpen)
   }
 

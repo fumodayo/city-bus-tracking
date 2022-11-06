@@ -56,6 +56,7 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
       )}
       {locationMarker?.map(marker => (
         <MarkerBusStop
+          key={marker.id}
           nameBusStop={marker.nameBusStop}
           locationBusStop={marker.location}
         />

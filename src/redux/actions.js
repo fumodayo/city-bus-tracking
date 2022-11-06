@@ -18,3 +18,10 @@ export const getIdBusStopOnClick = text => {
     payload: text
   }
 }
+
+export const getIdTravelLocationOnClick = text => {
+  return {
+    type: 'getIdTravelLocation',
+    payload: text
+  }
+}

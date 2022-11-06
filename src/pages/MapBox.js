@@ -12,7 +12,11 @@ import Sidebar from 'components/Sidebar/Sidebar'
 import MarkerTravel from 'components/MarkerTravel/MarkerTravel'
 import { busStopData } from 'actions/initialData/busStopData'
 import { useSelector } from 'react-redux'
-import { getIdsBusStopSelector } from 'redux/selectors'
+import {
+  getIdsBusStopSelector,
+  getIdsTravelLocationSelector
+} from 'redux/selectors'
+import { locationTravelData } from 'actions/initialData/locationTravelData'
 
 export default function MapBox() {
   const [viewport, setViewport] = useState({
@@ -33,16 +37,32 @@ export default function MapBox() {
   // Get id bus stop in all bus stop and move in the location on map
   const getIdBusStop = useSelector(getIdsBusStopSelector)
   useEffect(() => {
-    const busstopFilterById = busStopData.filter(i => i.id === getIdBusStop)
-    const locationBusStopData = busstopFilterById.map(busstop => {
-      return {
-        latitude: busstop.location.lat,
-        longitude: busstop.location.lng,
-        zoom: 16
-      }
-    })[0]
-    setViewport(locationBusStopData)
+    const busstopFilterById = busStopData
+      .filter(busstop => busstop.id === getIdBusStop)
+      .map(busstop => {
+        return {
+          latitude: busstop.location.lat,
+          longitude: busstop.location.lng,
+          zoom: 16
+        }
+      })[0]
+    setViewport(busstopFilterById)
   }, [getIdBusStop])
+
+  // Get id location travel in all information travel and move in the location on map
+  const getIdTravelLocation = useSelector(getIdsTravelLocationSelector)
+  useEffect(() => {
+    const locationTravelFilterById = locationTravelData
+      .filter(travel => travel.id === getIdTravelLocation)
+      .map(travel => {
+        return {
+          latitude: travel.location.lat,
+          longitude: travel.location.lng,
+          zoom: 16
+        }
+      })[0]
+    setViewport(locationTravelFilterById)
+  }, [getIdTravelLocation])
 
   return (
     <Map
