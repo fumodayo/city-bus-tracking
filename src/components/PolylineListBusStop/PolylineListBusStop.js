@@ -30,7 +30,8 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
 
     const listMarkerData = busStopData.filter(
       busstop =>
-        busstop.codeBusRoute === nameCodeRoute && busstop.directionRoute
+        busstop.codeBusRoute === nameCodeRoute &&
+        busstop.directionRoute === turnRoute
     )
     setLocationMarker(listMarkerData)
   }, [nameCodeRoute, turnRoute])
