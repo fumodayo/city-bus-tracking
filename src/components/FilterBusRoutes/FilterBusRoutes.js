@@ -2,14 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Checkbox, Paper } from '@mui/material'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
-import ListBusStop from 'components/ListBusStop/ListBusStop'
-import { useDispatch } from 'react-redux'
-import { searchFilterChange } from 'redux/actions'
 import { routesData } from 'actions/initialData/routesData'
 import { cloneDeep } from 'lodash'
-import TravelLocation from 'components/TravelLocation/TravelLocation'
 
-const FilterRouter = () => {
+const FilterBusRoutes = () => {
   const [searchRoute, setSearchRoute] = useState([])
 
   // Get word from input form to search
@@ -48,12 +44,6 @@ const FilterRouter = () => {
     )
     setSearchRoute(busroutesdatachangebycheckbox)
   }
-
-  // store search route
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(searchFilterChange(searchRoute))
-  }, [searchRoute])
 
   // show sidebar & get id in attribute element
   const [showSidebar, setShowSidebar] = useState(false)
@@ -97,47 +87,50 @@ const FilterRouter = () => {
         />
       </Paper>
       <div className="scroll-content">
-        <TravelLocation />
         {searchRoute.map(route => (
-          <div
-            style={{ cursor: 'pointer' }}
-            key={route.id}
-            id={route.id}
-            className="row align-items-center h-100"
-            onClick={handleGetIDRoute}
-          >
-            <div className="small-3">
+          <>
+            <div className="row align-items-center h-100 filter-routes-column">
               <div
-                className="route-no text-center"
-                style={{
-                  background: `${route.colorRoute}`
-                }}
+                style={{ cursor: 'pointer' }}
+                key={route.id}
+                id={route.id}
+                onClick={handleGetIDRoute}
+                className="filter-routes-row"
               >
-                <span>{route.codeBusRoute}</span>
-              </div>
-            </div>
+                <div className="small-3">
+                  <div
+                    className="route-no text-center"
+                    style={{
+                      background: `${route.colorRoute}`
+                    }}
+                  >
+                    <span>{route.codeBusRoute}</span>
+                  </div>
+                </div>
 
-            <div className="small-7">
-              <p className="code-route">{route.codeBusRoute}</p>
-              <p className="code-desc">{route.nameRoute}</p>
-            </div>
-            <div className="small-2">
-              <div className="text-center">
-                <Checkbox
-                  id={route.id}
-                  value={route.codeBusRoute}
-                  onChange={handleChangeCheckboxRoute}
-                  checked={route?.isChecked || false}
-                  sx={{
-                    '& .MuiSvgIcon-root': {
-                      fontSize: 30
-                    }
-                  }}
-                />
+                <div className="small-7">
+                  <p className="code-route">{route.codeBusRoute}</p>
+                  <p className="code-desc">{route.nameRoute}</p>
+                </div>
+              </div>
+              <div className="small-2">
+                <div className="text-center">
+                  <Checkbox
+                    id={route.id}
+                    value={route.codeBusRoute}
+                    onChange={handleChangeCheckboxRoute}
+                    checked={route?.isChecked || false}
+                    sx={{
+                      '& .MuiSvgIcon-root': {
+                        fontSize: 30
+                      }
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <hr style={{ marginTop: '5px' }}></hr>
-          </div>
+          </>
         ))}
         {showSidebar && (
           <CustomSidebar
@@ -145,12 +138,6 @@ const FilterRouter = () => {
             name={nameBusRoute}
             tabLeft={'Xem lượt đi'}
             tabRight={'Xem lượt về'}
-            compLeft={
-              <ListBusStop nameCodeRoute={nameCodeRoute} turnRoute={'turn'} />
-            }
-            compRight={
-              <ListBusStop nameCodeRoute={nameCodeRoute} turnRoute={'return'} />
-            }
           />
         )}
       </div>
@@ -158,4 +145,4 @@ const FilterRouter = () => {
   )
 }
 
-export default FilterRouter
+export default FilterBusRoutes

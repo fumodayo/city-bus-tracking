@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Drawer, IconButton, Typography, Box, Tab, styled } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import BusRouter from 'components/BusRouter/BusRouter'
-import FindRouter from 'components/FindRouter/FindRouter'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
+import BusRoutes from 'layers/BusRoutes/BusRoutes'
+import FindDirectionBusRoute from 'components/FindDirectionBusRoute/FindDirectionBusRoute'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -85,10 +85,10 @@ const Sidebar = () => {
               </Box>
               <Box>
                 <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
-                  <BusRouter />
+                  <BusRoutes />
                 </TabPanel>
                 <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
-                  <FindRouter />
+                  <FindDirectionBusRoute />
                 </TabPanel>
               </Box>
             </TabContext>

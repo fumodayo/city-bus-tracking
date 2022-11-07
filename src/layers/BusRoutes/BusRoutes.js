@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Box, Tab } from '@mui/material'
-import './BusRouter.scss'
-import FilterRouter from 'components/FilterRouter/FilterRouter'
+import './BusRoutes.scss'
+import FilterBusRoutes from 'components/FilterBusRoutes/FilterBusRoutes'
 import AllBusStop from 'components/AllBusStop/AllBusStop'
 
-const BusRouter = () => {
+const BusRoutes = () => {
   const [tabValue, setTabValue] = useState('1')
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
   }
 
   return (
-    <div className="sidebar-busroute">
+    <div className="sidebar-busroutes">
       <TabContext value={tabValue}>
         <Box>
           <TabList onChange={handleChangeTab} aria-label="lab">
@@ -30,7 +30,7 @@ const BusRouter = () => {
         </Box>
         <Box>
           <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
-            <FilterRouter />
+            <FilterBusRoutes />
           </TabPanel>
           <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
             <AllBusStop />
@@ -41,4 +41,4 @@ const BusRouter = () => {
   )
 }
 
-export default BusRouter
+export default BusRoutes

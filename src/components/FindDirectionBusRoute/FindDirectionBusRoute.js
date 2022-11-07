@@ -4,9 +4,9 @@ import { Box, InputBase, Paper, Tab, Typography } from '@mui/material'
 import TravelExploreIcon from '@mui/icons-material/TravelExplore'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
-import './FindRoute.scss'
+import './FindDirectionBusRoute.scss'
 
-const FindRouter = () => {
+const FindDirectionBusRoute = () => {
   const [tabValue, setTabValue] = useState('1')
 
   const handleChangeTab = (e, newTabValue) => {
@@ -14,7 +14,7 @@ const FindRouter = () => {
   }
 
   return (
-    <div className="sidebar-findrouter">
+    <div className="sidebar-find-direction-bus-route">
       <Paper
         component="form"
         sx={{
@@ -79,4 +79,4 @@ const FindRouter = () => {
   )
 }
 
-export default FindRouter
+export default FindDirectionBusRoute

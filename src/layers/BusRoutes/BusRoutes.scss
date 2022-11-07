@@ -5,18 +5,24 @@
   max-width: 100%;
   max-height: 70vh;
 
+  .filter-routes-row {
+    display: flex;
+    flex: 60%;
+  }
+
   .small-3 {
     flex: 0 0 30%;
     max-width: 30%;
     position: relative;
-    padding: 10px;
+    padding: 0px;
+    margin: 12px;
 
     .route-no {
       color: #fff;
       font-size: 24px;
       background: #3597e4;
       border-radius: 10px;
-      padding: 15px;
+      padding: 7px;
       font-weight: 600;
     }
     .travel {
@@ -36,6 +42,7 @@
 
     .code-route {
       font-size: 14.5px;
+      font-weight: 700;
       &:hover {
         color: #3597e4;
       }
@@ -43,8 +50,7 @@
   }
 
   .small-2 {
-    flex: 0 0 10%;
-    max-width: 10%;
-    position: relative;
+    display: flex;
+    flex: 10%;
   }
 }
