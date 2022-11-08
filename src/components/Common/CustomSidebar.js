@@ -35,7 +35,7 @@ const CustomSidebar = props => {
         }}
       >
         <Typography
-          style={{ fontSize: '16px', fontWeight: '600', color: '#fff' }}
+          style={{ fontSize: '18px', fontWeight: '600', color: '#fff' }}
         >
           {name}
         </Typography>

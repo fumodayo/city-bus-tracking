@@ -1,0 +1,68 @@
+.scroll-list-bus-stop-content {
+  max-height: 80vh;
+  overflow-y: scroll;
+
+  .list-bus-stop {
+    display: flex;
+    margin-top: 2rem;
+
+    .vertical-slider {
+      width: 25%;
+      margin-bottom: 50px;
+    }
+
+    .example-mark {
+      height: 1.5rem;
+      width: 1.5rem;
+      border: 3px solid #8fbc8f;
+      background-color: rgb(255, 255, 255);
+      cursor: pointer;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0px calc(19px);
+      right: calc(50% - 16px);
+    }
+
+    .example-mark.example-mark-active {
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      right: calc(50% - 16px);
+      background: #8fbc8f;
+    }
+
+    .example-mark.example-mark-completed {
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      right: calc(50% - 16px);
+      background: #8fbc8f;
+    }
+
+    .example-track {
+      position: relative;
+      background: #ddd;
+    }
+
+    .example-track.example-track-0 {
+      background: #8fbc8f;
+    }
+
+    .vertical-slider .example-track {
+      left: 23px;
+      width: 3px;
+    }
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 250px;
+
+    .steps-item {
+      display: flex;
+      min-height: 50px;
+    }
+  }
+}

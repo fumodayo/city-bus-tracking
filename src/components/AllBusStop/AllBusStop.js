@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Paper } from '@mui/material'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
+import RouteThrough from 'components/RouteThrough/RouteThrough'
+import BusLocation from 'components/BusLocation/BusLocation'
 import { busStopData } from 'actions/initialData/busStopData'
 import { cloneDeep } from 'lodash'
+import { useDispatch } from 'react-redux'
+import { getIdBusStopOnClick } from 'redux/actions'
 import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
 
 const AllBusStop = () => {
@@ -37,6 +41,12 @@ const AllBusStop = () => {
     setIdBusStop(e.currentTarget.id)
     setShowSidebar(!showSidebar)
   }
+
+  // store id bus stop
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getIdBusStopOnClick(idBusStop))
+  }, [idBusStop])
 
   // get nameBusStop & locationBusStop by Id
   const [nameBusStop, setNameBusStop] = useState('')
@@ -110,6 +120,8 @@ const AllBusStop = () => {
               name={nameBusStop}
               tabLeft={'Xe sắp tới trạm'}
               tabRight={'Tuyến đi qua'}
+              compLeft={<BusLocation idBusStop={idBusStop} />}
+              compRight={<RouteThrough idBusStop={idBusStop} />}
             />
             {locationBusStop && (
               <MarkerBusStop

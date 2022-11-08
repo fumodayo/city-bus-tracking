@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Checkbox, Paper } from '@mui/material'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
+import ListBusStop from 'components/ListBusStop/ListBusStop'
+import { useDispatch } from 'react-redux'
+import { searchFilterChange } from 'redux/actions'
 import { routesData } from 'actions/initialData/routesData'
 import { cloneDeep } from 'lodash'
+import TravelLocation from 'components/TravelLocation/TravelLocation'
 
-const FilterBusRoutes = () => {
+const FilterRouter = () => {
   const [searchRoute, setSearchRoute] = useState([])
 
   // Get word from input form to search
@@ -44,6 +48,12 @@ const FilterBusRoutes = () => {
     )
     setSearchRoute(busroutesdatachangebycheckbox)
   }
+
+  // store search route
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(searchFilterChange(searchRoute))
+  }, [searchRoute])
 
   // show sidebar & get id in attribute element
   const [showSidebar, setShowSidebar] = useState(false)
@@ -87,15 +97,15 @@ const FilterBusRoutes = () => {
         />
       </Paper>
       <div className="scroll-content">
+        <TravelLocation />
         {searchRoute.map(route => (
-          <>
-            <div className="row align-items-center h-100 filter-routes-column">
+          <div key={route.id}>
+            <div className="filters-routes-column">
               <div
                 style={{ cursor: 'pointer' }}
-                key={route.id}
                 id={route.id}
+                className="text-filters row align-items-center h-100"
                 onClick={handleGetIDRoute}
-                className="filter-routes-row"
               >
                 <div className="small-3">
                   <div
@@ -130,7 +140,7 @@ const FilterBusRoutes = () => {
               </div>
             </div>
             <hr style={{ marginTop: '5px' }}></hr>
-          </>
+          </div>
         ))}
         {showSidebar && (
           <CustomSidebar
@@ -138,6 +148,12 @@ const FilterBusRoutes = () => {
             name={nameBusRoute}
             tabLeft={'Xem lượt đi'}
             tabRight={'Xem lượt về'}
+            compLeft={
+              <ListBusStop nameCodeRoute={nameCodeRoute} turnRoute={'turn'} />
+            }
+            compRight={
+              <ListBusStop nameCodeRoute={nameCodeRoute} turnRoute={'return'} />
+            }
           />
         )}
       </div>
@@ -145,4 +161,4 @@ const FilterBusRoutes = () => {
   )
 }
 
-export default FilterBusRoutes
+export default FilterRouter
