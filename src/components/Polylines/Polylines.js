@@ -3,6 +3,7 @@ import { Source, Layer } from 'react-map-gl'
 import { roadMapData } from 'actions/initialData/roadMapData'
 import { useSelector } from 'react-redux'
 import { searchTextSelector } from 'redux/selectors'
+import PolylineBusRoute from 'components/PolylineBusRoute/PolylineBusRoute'
 
 const PolyLines = () => {
   const [allDataLineRoutes, setAllDataLineRoutes] = useState([])
@@ -32,29 +33,17 @@ const PolyLines = () => {
           }
         }
       })
-
-    setAllDataLineRoutes(getRoutesLine)
+    const geojson = {
+      type: 'FeatureCollection',
+      features: [...getRoutesLine, getRoutesLine].pop()
+    }
+    console.log(geojson)
+    setAllDataLineRoutes(geojson)
   }, [searchRoutes])
 
   return (
     <div className="polyline">
-      {allDataLineRoutes.map((item, index) => (
-        <Source key={index} id="polylineLayer" type="geojson" data={item}>
-          <Layer
-            id="lineLayer"
-            type="line"
-            source="my-data"
-            layout={{
-              'line-join': 'round',
-              'line-cap': 'round'
-            }}
-            paint={{
-              'line-color': item.color,
-              'line-width': 5
-            }}
-          />
-        </Source>
-      ))}
+      <PolylineBusRoute lineMap={allDataLineRoutes} />
     </div>
   )
 }
