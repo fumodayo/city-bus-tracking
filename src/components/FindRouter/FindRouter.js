@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { Box, InputBase, Paper, Tab, Typography } from '@mui/material'
+import { Box, Paper, Tab, Typography } from '@mui/material'
 import TravelExploreIcon from '@mui/icons-material/TravelExplore'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
 import './FindRoute.scss'
+import InputField from 'components/InputField/InputField'
 
 const FindRouter = () => {
   const [tabValue, setTabValue] = useState('1')
@@ -33,20 +34,13 @@ const FindRouter = () => {
       >
         <div className="input-box pos-relative">
           <img src={MarkerRed} alt="marker-red" />
-          <InputBase
-            autoFocus
-            sx={{ ml: 1, flex: 1 }}
-            placeholder="Nhập địa điểm xuất phát"
-          />
+          <InputField placeholder={'Nhập địa điểm bắt đầu'} />
           <TravelExploreIcon style={{ cursor: 'pointer' }} />
         </div>
         <div className="line"></div>
         <div className="input-box pos-relative">
           <img src={MarkerBlue} alt="marker-blue" />
-          <InputBase
-            sx={{ ml: 1, flex: 1 }}
-            placeholder="Nhập địa điểm kết thúc"
-          />
+          <InputField placeholder={'Nhập địa điểm kết thúc'} />
           <TravelExploreIcon style={{ cursor: 'pointer' }} />
         </div>
       </Paper>

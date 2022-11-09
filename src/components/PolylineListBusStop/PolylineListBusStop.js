@@ -8,7 +8,7 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
   const [artLineRoute, setArtLineRoute] = useState({})
   const [locationMarker, setLocationMarker] = useState([])
   useEffect(() => {
-    const getRoutesLine = roadMapData
+    let getRoutesLine = roadMapData
       .filter(
         route =>
           route.codeBusRoute === nameCodeRoute &&
@@ -25,8 +25,14 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
             coordinates: lineroute.lineRoute
           }
         }
-      })[0]
-    setArtLineRoute(getRoutesLine)
+      })
+
+    const geojson = {
+      type: 'FeatureCollection',
+      features: [...getRoutesLine, getRoutesLine].pop()
+    }
+
+    setArtLineRoute(geojson)
 
     const listMarkerData = busStopData.filter(
       busstop =>
@@ -38,23 +44,24 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
 
   return (
     <div className="polyline-list-bus-stop">
-      {artLineRoute && (
-        <Source id="polylineLayer" type="geojson" data={artLineRoute}>
-          <Layer
-            id="lineLayer"
-            type="line"
-            source="my-data"
-            layout={{
-              'line-join': 'round',
-              'line-cap': 'round'
-            }}
-            paint={{
-              'line-color': artLineRoute.color,
-              'line-width': 5
-            }}
-          />
-        </Source>
-      )}
+      {artLineRoute &&
+        artLineRoute?.features?.map(art => (
+          <Source id="polylineLayer" type="geojson" data={artLineRoute}>
+            <Layer
+              id="lineLayer"
+              type="line"
+              source="my-data"
+              layout={{
+                'line-join': 'round',
+                'line-cap': 'round'
+              }}
+              paint={{
+                'line-color': `${art?.color}`,
+                'line-width': 5
+              }}
+            />
+          </Source>
+        ))}
       {locationMarker?.map(marker => (
         <MarkerBusStop
           key={marker.id}

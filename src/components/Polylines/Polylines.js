@@ -37,7 +37,6 @@ const PolyLines = () => {
       type: 'FeatureCollection',
       features: [...getRoutesLine, getRoutesLine].pop()
     }
-    console.log(geojson)
     setAllDataLineRoutes(geojson)
   }, [searchRoutes])
 

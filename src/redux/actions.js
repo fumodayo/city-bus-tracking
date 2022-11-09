@@ -25,3 +25,10 @@ export const getIdTravelLocationOnClick = text => {
     payload: text
   }
 }
+
+export const searchLocationOnInput = text => {
+  return {
+    type: 'searchLocation',
+    payload: text
+  }
+}

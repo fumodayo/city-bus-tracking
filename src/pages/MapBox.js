@@ -14,7 +14,8 @@ import { busStopData } from 'actions/initialData/busStopData'
 import { useSelector } from 'react-redux'
 import {
   getIdsBusStopSelector,
-  getIdsTravelLocationSelector
+  getIdsTravelLocationSelector,
+  getLocationByInputSelector
 } from 'redux/selectors'
 import { locationTravelData } from 'actions/initialData/locationTravelData'
 
@@ -63,6 +64,20 @@ export default function MapBox() {
       })[0]
     setViewport(locationTravelFilterById)
   }, [getIdTravelLocation])
+
+  const getLocationByInput = useSelector(getLocationByInputSelector)
+  console.log(getLocationByInput)
+  useEffect(() => {
+    const searchLocationByInput = {
+      latitude: getLocationByInput[1],
+      longitude: getLocationByInput[0],
+      zoom: 16
+    }
+    
+    if (getLocationByInput[0] && getLocationByInput[1]) {
+      setViewport(searchLocationByInput)
+    }
+  }, [getLocationByInput])
 
   return (
     <Map
