@@ -2,7 +2,7 @@ import { roadMapData } from 'actions/initialData/roadMapData'
 import React, { useEffect, useState } from 'react'
 import { Layer, Source } from 'react-map-gl'
 import { busStopData } from 'actions/initialData/busStopData'
-import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
+import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
 
 const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
   const [artLineRoute, setArtLineRoute] = useState({})

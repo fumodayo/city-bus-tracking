@@ -7,10 +7,10 @@ import './listbusstop.scss'
 import InfoBusRoute from 'components/InfoBusRoute/InfoBusRoute'
 import { useDispatch } from 'react-redux'
 import { getIdBusStopOnClick } from 'redux/actions'
-import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
+import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
 import PolylineListBusStop from 'components/PolylineListBusStop/PolylineListBusStop'
 
-const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
+const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
   const [listDataBusStop, setListDataBusStop] = useState([])
   useEffect(() => {
     const listData = busStopData.filter(
@@ -148,4 +148,4 @@ const ListBusStop = ({ nameCodeRoute, turnRoute }) => {
   )
 }
 
-export default ListBusStop
+export default ListBusStopInRoute

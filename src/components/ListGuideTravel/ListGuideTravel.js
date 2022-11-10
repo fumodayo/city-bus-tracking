@@ -15,9 +15,9 @@ import {
 import HTMLReactParser from 'html-react-parser'
 import { cloneDeep } from 'lodash'
 import { Close } from '@mui/icons-material'
-import './AllInformationTravel.scss'
 import { useDispatch } from 'react-redux'
 import { getIdTravelLocationOnClick } from 'redux/actions'
+import './ListGuideTravel.scss'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -27,7 +27,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar
 }))
 
-const AllInformationTravel = () => {
+const ListGuideTravel = () => {
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
@@ -229,4 +229,4 @@ const AllInformationTravel = () => {
   )
 }
 
-export default AllInformationTravel
+export default ListGuideTravel

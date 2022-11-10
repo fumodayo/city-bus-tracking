@@ -1,7 +1,7 @@
-import getIdBusStopReducer from 'components/AllBusStop/IdBusStop'
-import filtersReducer from 'components/FilterRouter/FilterSlice'
-import checkboxReducer from 'components/TravelLocation/CheckboxTravelSlice'
-import getIdTravelLocationReducer from 'components/AllInformationTravel/IdTravelLocation'
+import getIdBusStopReducer from 'components/ListAllBusStop/IdBusStop'
+import filtersReducer from 'components/FilterRoutes/FilterSlice'
+import checkboxReducer from 'components/FilterTravelMap/CheckboxTravelSlice'
+import getIdTravelLocationReducer from 'components/ListGuideTravel/IdTravelLocation'
 import getLocationByInputReducer from 'components/InputField/InputSearchLocation'
 import { combineReducers } from 'redux'
 

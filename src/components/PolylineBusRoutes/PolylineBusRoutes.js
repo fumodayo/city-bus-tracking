@@ -3,9 +3,8 @@ import { Source, Layer } from 'react-map-gl'
 import { roadMapData } from 'actions/initialData/roadMapData'
 import { useSelector } from 'react-redux'
 import { searchTextSelector } from 'redux/selectors'
-import PolylineBusRoute from 'components/PolylineBusRoute/PolylineBusRoute'
 
-const PolyLines = () => {
+const PolylineBusRoutes = () => {
   const [allDataLineRoutes, setAllDataLineRoutes] = useState([])
   const searchRoutes = useSelector(searchTextSelector)
 
@@ -42,9 +41,25 @@ const PolyLines = () => {
 
   return (
     <div className="polyline">
-      <PolylineBusRoute lineMap={allDataLineRoutes} />
+      {allDataLineRoutes?.features?.map(art => (
+        <Source id="polylineLayer" type="geojson" data={allDataLineRoutes}>
+          <Layer
+            id="lineLayer"
+            type="line"
+            source="my-data"
+            layout={{
+              'line-join': 'round',
+              'line-cap': 'round'
+            }}
+            paint={{
+              'line-color': `${art?.color}`,
+              'line-width': 5
+            }}
+          />
+        </Source>
+      ))}
     </div>
   )
 }
 
-export default PolyLines
+export default PolylineBusRoutes

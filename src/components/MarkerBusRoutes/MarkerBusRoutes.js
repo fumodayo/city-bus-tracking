@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { searchTextSelector } from 'redux/selectors'
 import { routesData } from 'actions/initialData/routesData'
-import './MarkerBusRouter.scss'
 import { busStopData } from 'actions/initialData/busStopData'
-import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
+import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
+import './MarkerBusRoutes.scss'
 
-const MarkerBusRoute = () => {
+const MarkerBusRoutes = () => {
   const [markerLocation, setMarkerLocation] = useState([])
 
   const searchRoute = useSelector(searchTextSelector)
@@ -61,4 +61,4 @@ const MarkerBusRoute = () => {
   )
 }
 
-export default MarkerBusRoute
+export default MarkerBusRoutes

@@ -40,15 +40,21 @@ const MarkerTypeTravel = ({
             anchor="top"
             closeOnClick={false}
             closeButton={false}
+            style={{
+              maxWidth: 240,
+              maxHeight: 200,
+              padding: 0,
+              margin: 0,
+            }}
           >
             <div className="popup-content-custom">
               <img
                 style={{
-                  width: 140,
-                  height: 60,
+                  width: 236,
+                  height: 100,
                   borderRadius: '5px',
                   objectFit: 'cover',
-                  backgroundPosition: 'center'
+                  backgroundPosition: 'center',
                 }}
                 src={image}
                 alt={imageDesc}

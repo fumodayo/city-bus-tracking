@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Map, {
   NavigationControl,
   FullscreenControl,
   GeolocateControl
 } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import PolyLines from '../components/Polylines/Polylines'
-import MarkerBusRoute from 'components/MarkerBusRoute/MarkerBusRoute'
+import PolylineBusRoutes from '../components/PolylineBusRoutes/PolylineBusRoutes'
+import MarkerBusRoutes from 'components/MarkerBusRoutes/MarkerBusRoutes'
 import { API_KEY_MAPBOX } from 'config/constant'
-import Sidebar from 'components/Sidebar/Sidebar'
-import MarkerTravel from 'components/MarkerTravel/MarkerTravel'
+import HomeSidebar from 'components/HomeSidebar/HomeSidebar'
+import MarkerTravelLocation from 'components/MarkerTravelLocation/MarkerTravelLocation'
 import { busStopData } from 'actions/initialData/busStopData'
 import { useSelector } from 'react-redux'
 import {
@@ -18,12 +18,15 @@ import {
   getLocationByInputSelector
 } from 'redux/selectors'
 import { locationTravelData } from 'actions/initialData/locationTravelData'
+import { useRef } from 'react'
+import MapboxLanguage from '@mapbox/mapbox-gl-language'
 
-export default function MapBox() {
+export default function Home() {
   const [viewport, setViewport] = useState({
     latitude: 16.06045710530602,
     longitude: 108.2097851153426,
-    zoom: 14
+    zoom: 14,
+    customAttribution: 'buisonthai'
   })
   const _onViewportChange = e => setViewport(e.viewport)
   const data = {
@@ -65,33 +68,44 @@ export default function MapBox() {
     setViewport(locationTravelFilterById)
   }, [getIdTravelLocation])
 
+  // Get location in input search and flyTo in the location on map
   const getLocationByInput = useSelector(getLocationByInputSelector)
-  console.log(getLocationByInput)
   useEffect(() => {
-    const searchLocationByInput = {
-      latitude: getLocationByInput[1],
-      longitude: getLocationByInput[0],
-      zoom: 16
-    }
-    
     if (getLocationByInput[0] && getLocationByInput[1]) {
-      setViewport(searchLocationByInput)
+      mapRef.current.flyTo({
+        center: [getLocationByInput[0], getLocationByInput[1]]
+      })
     }
+    console.log(mapRef.current)
   }, [getLocationByInput])
+
+  const mapRef = useRef(null)
+  const mapRefCallback = useCallback(ref => {
+    if (ref !== null) {
+      //Set the actual ref we use elsewhere
+      mapRef.current = ref
+      const map = ref
+
+      //Add language control that updates map text i18n based on browser preferences
+      const language = new MapboxLanguage()
+      map.addControl(language)
+    }
+  }, [])
 
   return (
     <Map
       {...viewport}
       style={{ width: '100vw', height: '100vh' }}
-      mapStyle="mapbox://styles/mapbox/streets-v9"
+      mapStyle="mapbox://styles/mapbox/streets-v11"
       onMove={_onViewportChange}
       mapboxAccessToken={API_KEY_MAPBOX}
+      ref={mapRefCallback}
     >
-      <Sidebar />
-      <PolyLines />
-      <MarkerBusRoute />
+      <HomeSidebar />
+      <PolylineBusRoutes />
+      <MarkerBusRoutes />
 
-      <MarkerTravel />
+      <MarkerTravelLocation />
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
       <GeolocateControl

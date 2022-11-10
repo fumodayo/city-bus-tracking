@@ -1,11 +1,11 @@
 import React from 'react'
-import MapBox from './pages/MapBox'
+import Home from './pages/Home'
 import './App.scss'
 
 function App() {
   return (
     <div className="App">
-      <MapBox />
+      <Home />
     </div>
   )
 }

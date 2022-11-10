@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Checkbox, Paper } from '@mui/material'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
-import ListBusStop from 'components/ListBusStop/ListBusStop'
+import ListBusStopInRoute from 'components/ListBusStopInRoute/ListBusStopInRoute'
 import { useDispatch } from 'react-redux'
 import { searchFilterChange } from 'redux/actions'
 import { routesData } from 'actions/initialData/routesData'
 import { cloneDeep } from 'lodash'
-import TravelLocation from 'components/TravelLocation/TravelLocation'
+import FilterTravelMap from 'components/FilterTravelMap/FilterTravelMap'
 
-const FilterRouter = () => {
+const FilterRoutes = () => {
   const [searchRoute, setSearchRoute] = useState([])
 
   // Get word from input form to search
@@ -97,7 +97,7 @@ const FilterRouter = () => {
         />
       </Paper>
       <div className="scroll-content">
-        <TravelLocation />
+        <FilterTravelMap />
         {searchRoute.map(route => (
           <div key={route.id}>
             <div className="filters-routes-column">
@@ -149,10 +149,16 @@ const FilterRouter = () => {
             tabLeft={'Xem lượt đi'}
             tabRight={'Xem lượt về'}
             compLeft={
-              <ListBusStop nameCodeRoute={nameCodeRoute} turnRoute={'turn'} />
+              <ListBusStopInRoute
+                nameCodeRoute={nameCodeRoute}
+                turnRoute={'turn'}
+              />
             }
             compRight={
-              <ListBusStop nameCodeRoute={nameCodeRoute} turnRoute={'return'} />
+              <ListBusStopInRoute
+                nameCodeRoute={nameCodeRoute}
+                turnRoute={'return'}
+              />
             }
           />
         )}
@@ -161,4 +167,4 @@ const FilterRouter = () => {
   )
 }
 
-export default FilterRouter
+export default FilterRoutes

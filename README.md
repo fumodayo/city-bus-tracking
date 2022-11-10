@@ -10,30 +10,42 @@
 ```
 $PROJECT_ROOT
 │   # Page files
-├── MapBox (Home)
+├── Home
 │   # Component
 │   │
-│   ├──SideBar
+│   ├──HomeSidebar
 │   │   │
-│   │   ├──Filter Router
+│   │   ├──FindRoutes
 │   │   │     │
-│   │   │     ├──List Bus Stop (turn)
-│   │   │     │     │
-│   │   │     │     ├──Bus Stop
-│   │   │     │     │
-│   │   │     │     ├──Information Bus Route
-│   │   │     │     │
-│   │   │     ├──List Bus Stop (return)
+│   │   ├──BusRoutes
 │   │   │     │
-│   │   ├──All Bus Stop
-│   │   │     │
-│   │   │     ├──Countdown bus stop (Counting the waiting time for the car to arrive at the station)
-│   │   │     │
-│   │   │     ├──Bus route near bus stop (Bus stop near bus route)
-│   │   │     │
-│   ├──Marker Bus Stop
+│   │   │     ├──FilterRoutes
+│   │   │     │       │
+│   │   │     │       ├──FilterTravelMap
+│   │   │     │       │         │
+│   │   │     │       │         ├──ListGuideTravel
+│   │   │     │       │         │        │
+│   │   │     │       │         │        ├──MarkerTravelLocation (TravelType, TravelImage)
+│   │   │     │       │         │        │
+│   │   │     │       ├──ListBusStopInRoute
+│   │   │     │       │
+│   │   │     ├──ListAllBusStop
+│   │   │     │       │
+│   │   │     │       ├──BusLocation
+│   │   │     │       │
+│   │   │     │       ├──RouteThrough
+│   │   │     │       │
+│   ├──PolylineBusRoutes
 │   │
-│   ├──Polyline
+│   ├──MarkerBusRoutes
+│   # Common
+│   ├──MarkerBusStop
+│   │
+│   ├──ConfirmModal
+│   │
+│   ├──CustomSidebar
+│   │
+│   ├──FormInput
 │   # Static files for images
 └── public
 ```

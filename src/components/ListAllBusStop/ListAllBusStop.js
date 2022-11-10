@@ -8,9 +8,9 @@ import { busStopData } from 'actions/initialData/busStopData'
 import { cloneDeep } from 'lodash'
 import { useDispatch } from 'react-redux'
 import { getIdBusStopOnClick } from 'redux/actions'
-import MarkerBusStop from 'components/MarkerBusStop/MarkerBusStop'
+import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
 
-const AllBusStop = () => {
+const ListAllBusStop = () => {
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
@@ -136,4 +136,4 @@ const AllBusStop = () => {
   )
 }
 
-export default AllBusStop
+export default ListAllBusStop

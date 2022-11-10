@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { routesData } from 'actions/initialData/routesData'
 import { busStopData } from 'actions/initialData/busStopData'
-import ListBusStop from 'components/ListBusStop/ListBusStop'
+import ListBusStop from 'components/ListBusStopInRoute/ListBusStopInRoute'
 import CustomSidebar from 'components/Common/CustomSidebar'
 
 const RouteThrough = ({ idBusStop }) => {

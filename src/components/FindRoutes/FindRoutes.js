@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Box, Paper, Tab, Typography } from '@mui/material'
 import TravelExploreIcon from '@mui/icons-material/TravelExplore'
+import InputField from 'components/InputField/InputField'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
-import './FindRoute.scss'
-import InputField from 'components/InputField/InputField'
+import './FindRoutes.scss'
 
-const FindRouter = () => {
+const FindRoutes = () => {
   const [tabValue, setTabValue] = useState('1')
 
   const handleChangeTab = (e, newTabValue) => {
@@ -73,4 +73,4 @@ const FindRouter = () => {
   )
 }
 
-export default FindRouter
+export default FindRoutes

@@ -1,13 +1,11 @@
+import React from 'react'
 import { locationTravelData } from 'actions/initialData/locationTravelData'
-import React, { useEffect, useState } from 'react'
-import { Marker, Popup } from 'react-map-gl'
-import './MarkerTravel.scss'
-import MarkerTravelImage from 'components/MarkerTravelImages/MarkerTravelImage'
 import { useSelector } from 'react-redux'
 import { checkboxTravelSelector } from 'redux/selectors'
 import MarkerTypeTravel from 'components/MarkerTypeTravel/MarkerTypeTravel'
+import './MarkerTravelLocation.scss'
 
-const MarkerTravel = () => {
+const MarkerTravelLocation = () => {
   const isCheckedTravel = useSelector(checkboxTravelSelector)
   return (
     <div className="marker-travel">
@@ -25,4 +23,4 @@ const MarkerTravel = () => {
   )
 }
 
-export default MarkerTravel
+export default MarkerTravelLocation

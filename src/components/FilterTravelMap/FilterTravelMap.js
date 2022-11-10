@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Checkbox } from '@mui/material'
 import { Drawer, IconButton, Typography, Box, styled } from '@mui/material'
 import { Close } from '@mui/icons-material'
-import AllInformationTravel from 'components/AllInformationTravel/AllInformationTravel'
+import ListGuideTravel from 'components/ListGuideTravel/ListGuideTravel'
 import { useDispatch } from 'react-redux'
 import { checkboxTravelChange } from 'redux/actions'
 
@@ -14,7 +14,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar
 }))
 
-const TravelLocation = () => {
+const FilterTravelMap = () => {
   const [isChecked, setIsChecked] = useState(false)
   const handleOnChangeChecked = () => {
     setIsChecked(!isChecked)
@@ -90,7 +90,7 @@ const TravelLocation = () => {
                 overflow: 'hidden'
               }}
             >
-              <AllInformationTravel />
+              <ListGuideTravel />
             </Box>
           </Drawer>
         </div>
@@ -99,4 +99,4 @@ const TravelLocation = () => {
   )
 }
 
-export default TravelLocation
+export default FilterTravelMap

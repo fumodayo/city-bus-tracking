@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Box, Tab } from '@mui/material'
-import './BusRouter.scss'
-import FilterRouter from 'components/FilterRouter/FilterRouter'
-import AllBusStop from 'components/AllBusStop/AllBusStop'
+import FilterRoutes from 'components/FilterRoutes/FilterRoutes'
+import ListAllBusStop from 'components/ListAllBusStop/ListAllBusStop'
+import './BusRoutes.scss'
 
 const BusRouter = () => {
   const [tabValue, setTabValue] = useState('1')
@@ -30,10 +30,10 @@ const BusRouter = () => {
         </Box>
         <Box>
           <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
-            <FilterRouter />
+            <FilterRoutes />
           </TabPanel>
           <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
-            <AllBusStop />
+            <ListAllBusStop />
           </TabPanel>
         </Box>
       </TabContext>

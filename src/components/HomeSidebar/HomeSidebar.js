@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Drawer, IconButton, Typography, Box, Tab, styled } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import BusRouter from 'components/BusRouter/BusRouter'
-import FindRouter from 'components/FindRouter/FindRouter'
+import BusRoutes from 'components/BusRoutes/BusRoutes'
+import FindRoutes from 'components/FindRoutes/FindRoutes'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
 
@@ -14,7 +14,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar
 }))
 
-const Sidebar = () => {
+const HomeSidebar = () => {
   const [isOpen, setIsOpen] = useState(true)
   const [tabValue, setTabValue] = useState('1')
 
@@ -27,7 +27,7 @@ const Sidebar = () => {
   }
 
   return (
-    <div className="sidebar">
+    <div className="home-sidebar">
       <Box
         sx={{
           backgroundColor: '#3597e4',
@@ -85,10 +85,10 @@ const Sidebar = () => {
               </Box>
               <Box>
                 <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="1">
-                  <BusRouter />
+                  <BusRoutes />
                 </TabPanel>
                 <TabPanel style={{ padding: '12px 0px 10px 0px' }} value="2">
-                  <FindRouter />
+                  <FindRoutes />
                 </TabPanel>
               </Box>
             </TabContext>
@@ -99,4 +99,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default HomeSidebar
