@@ -9,7 +9,7 @@ const useInput = ({ initialValue }) => {
   const handleChange = async event => {
     setValue(event.target.value)
     try {
-      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${event.target.value}.json?access_token=${API_KEY_MAPBOX}&autocomplete=true&country=vn&limit=10`
+      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/Da%20Nang%20${event.target.value}.json?access_token=${API_KEY_MAPBOX}&autocomplete=true&country=vn&limit=10`
       const response = await fetch(endpoint)
       const results = await response.json()
       setSuggestions(results?.features)

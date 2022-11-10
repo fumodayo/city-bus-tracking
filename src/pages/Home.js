@@ -76,7 +76,6 @@ export default function Home() {
         center: [getLocationByInput[0], getLocationByInput[1]]
       })
     }
-    console.log(mapRef.current)
   }, [getLocationByInput])
 
   const mapRef = useRef(null)

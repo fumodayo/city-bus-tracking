@@ -34,13 +34,13 @@ const FindRoutes = () => {
       >
         <div className="input-box pos-relative">
           <img src={MarkerRed} alt="marker-red" />
-          <InputField placeholder={'Nhập địa điểm bắt đầu'} />
+          <InputField idInput={'begin'} placeholder={'Nhập địa điểm bắt đầu'} />
           <TravelExploreIcon style={{ cursor: 'pointer' }} />
         </div>
         <div className="line"></div>
         <div className="input-box pos-relative">
           <img src={MarkerBlue} alt="marker-blue" />
-          <InputField placeholder={'Nhập địa điểm kết thúc'} />
+          <InputField idInput={'end'} placeholder={'Nhập địa điểm kết thúc'} />
           <TravelExploreIcon style={{ cursor: 'pointer' }} />
         </div>
       </Paper>

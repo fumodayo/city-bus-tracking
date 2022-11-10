@@ -1,25 +1,52 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import useInput from 'hooks/useInput'
 import { InputBase } from '@mui/material'
 import { useDispatch } from 'react-redux'
 import { searchLocationOnInput } from 'redux/actions'
 
-const InputField = ({ placeholder }) => {
+const InputField = ({ idInput, placeholder }) => {
   const address = useInput('')
   const [location, setLocation] = useState([])
   const dispatch = useDispatch()
   dispatch(searchLocationOnInput(location))
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const inputRef = useRef()
+
+  useEffect(() => {
+    const handler = e => {
+      if (!inputRef.current.contains(e.target)) setIsOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+
+    return () => document.removeEventListener('mousedown', handler)
+  })
+
+  const [idDirection, setIdDirection] = useState('')
+  const handleOpenSuggestion = e => {
+    setIsOpen(!isOpen)
+    setIdDirection(e.target.id)
+  }
+
+  // get begin & end input direction
+  useEffect(() => {
+    console.log({ id: idDirection, location })
+  }, [idDirection, location])
+
   return (
-    <>
+    <div ref={inputRef}>
       <InputBase
         placeholder={placeholder}
         {...address}
         isTyping={address.value !== ''}
         sx={{ ml: 1, flex: 1 }}
+        autoComplete="off"
+        onClick={e => handleOpenSuggestion(e)}
+        id={idInput}
       />
-      {address.suggestions?.length > 0 && (
+      {address.suggestions?.length > 0 && isOpen && (
         <SuggestionWrapper>
           {address.suggestions.map((suggestion, index) => {
             return (
@@ -37,7 +64,7 @@ const InputField = ({ placeholder }) => {
           })}
         </SuggestionWrapper>
       )}
-    </>
+    </div>
   )
 }
 
@@ -50,7 +77,6 @@ const SuggestionWrapper = styled.div`
   box-shadow: 0px 0px 7px 2px rgb(0 0 0 / 15%);
   left: 0px;
   max-width: 320px;
-  min-width: 320px;
   padding: 10px 20px;
   border-radius: 0px 0px 10px 10px;
   z-index: 1000;

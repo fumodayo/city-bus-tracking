@@ -21,6 +21,7 @@ const FormInput = props => {
       type={inputType}
       className="input-class"
       name="input-form"
+      autoComplete="off"
     />
   )
 }
