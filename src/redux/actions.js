@@ -32,3 +32,10 @@ export const searchLocationOnInput = text => {
     payload: text
   }
 }
+
+export const getLocationDirectionsOnInput = text => {
+  return {
+    type: 'getLocationDirections',
+    payload: text
+  }
+}

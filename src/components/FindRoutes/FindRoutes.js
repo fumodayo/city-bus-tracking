@@ -1,11 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
-import { Box, Paper, Tab, Typography } from '@mui/material'
+import {
+  Box,
+  ListItem,
+  ListItemText,
+  Paper,
+  Tab,
+  Typography
+} from '@mui/material'
 import TravelExploreIcon from '@mui/icons-material/TravelExplore'
 import InputField from 'components/InputField/InputField'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
+import { API_KEY_MAPBOX } from 'config/constant'
 import './FindRoutes.scss'
+import { useSelector } from 'react-redux'
+import { getLocationDirectionsByInputSelector } from 'redux/selectors'
+import { Layer, Source } from 'react-map-gl'
 
 const FindRoutes = () => {
   const [tabValue, setTabValue] = useState('1')
@@ -14,62 +25,143 @@ const FindRoutes = () => {
     setTabValue(newTabValue)
   }
 
+  const points = useSelector(getLocationDirectionsByInputSelector)
+  const [beginPoint, setBeginPoint] = useState([])
+  const [endPoint, setEndPoint] = useState([])
+  const [directionLine, setDirectionLine] = useState([])
+  const [stepDirection, setStepDirection] = useState([])
+  useEffect(() => {
+    if (beginPoint.length !== 0 && endPoint.length !== 0) {
+      getRoute(beginPoint, endPoint)
+    }
+
+    async function getRoute(start, end) {
+      const query = await fetch(
+        `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${API_KEY_MAPBOX}`,
+        { method: 'GET' }
+      )
+      const json = await query.json()
+      const data = json.routes[0]
+      const route = data.geometry.coordinates
+      // data route render in map
+      const geojson = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'LineString',
+          coordinates: route
+        }
+      }
+      setDirectionLine(geojson)
+
+      // steps route
+      const steps = data.legs[0].steps
+      setStepDirection(steps)
+    }
+  }, [beginPoint, endPoint])
+
+  useEffect(() => {
+    let start,
+      end = []
+    if (points.id === 'begin') {
+      start = points.location
+      setBeginPoint(start)
+    }
+    if (points.id === 'end') {
+      end = points.location
+      setEndPoint(end)
+    }
+  }, [points])
+
   return (
-    <div className="sidebar-findrouter">
-      <Paper
-        component="form"
-        sx={{
-          p: '2px 4px',
-          alignItems: 'center',
-          width: '90%',
-          border: 'none',
-          borderRadius: '15px',
-          boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',
-          backgroundColor: '#ffffff',
-          padding: '10px 0px',
-          position: 'relative',
-          margin: '1rem',
-          transition: 'all 2s ease'
-        }}
-      >
-        <div className="input-box pos-relative">
-          <img src={MarkerRed} alt="marker-red" />
-          <InputField idInput={'begin'} placeholder={'Nhập địa điểm bắt đầu'} />
-          <TravelExploreIcon style={{ cursor: 'pointer' }} />
-        </div>
-        <div className="line"></div>
-        <div className="input-box pos-relative">
-          <img src={MarkerBlue} alt="marker-blue" />
-          <InputField idInput={'end'} placeholder={'Nhập địa điểm kết thúc'} />
-          <TravelExploreIcon style={{ cursor: 'pointer' }} />
-        </div>
-      </Paper>
-      <Typography style={{ fontSize: '22px' }}>SỐ TUYẾN TỐI ĐA:</Typography>
-      <TabContext value={tabValue}>
-        <Box>
-          <TabList onChange={handleChangeTab} aria-label="lab">
-            <Tab
-              style={{ width: '50%', textTransform: 'none' }}
-              label="1 tuyến"
-              value="1"
+    <>
+      <div className="sidebar-findrouter">
+        <Paper
+          component="form"
+          sx={{
+            p: '2px 4px',
+            alignItems: 'center',
+            width: '90%',
+            border: 'none',
+            borderRadius: '15px',
+            boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',
+            backgroundColor: '#ffffff',
+            padding: '10px 0px',
+            position: 'relative',
+            margin: '1rem',
+            transition: 'all 2s ease'
+          }}
+        >
+          <div className="input-box pos-relative">
+            <img src={MarkerRed} alt="marker-red" />
+            <InputField
+              idInput={'begin'}
+              placeholder={'Nhập địa điểm bắt đầu'}
             />
-            <Tab
-              style={{ width: '50%', textTransform: 'none' }}
-              label="2 tuyến"
-              value="2"
+            <TravelExploreIcon style={{ cursor: 'pointer' }} />
+          </div>
+          <div className="line"></div>
+          <div className="input-box pos-relative">
+            <img src={MarkerBlue} alt="marker-blue" />
+            <InputField
+              idInput={'end'}
+              placeholder={'Nhập địa điểm kết thúc'}
             />
-          </TabList>
-        </Box>
-        <Box>
-          <TabPanel style={{ paddingLeft: '0' }} value="1">
-            Turn
-          </TabPanel>
-          <TabPanel style={{ paddingLeft: '0' }} value="2">
-            Turn/ Return
-          </TabPanel>
-        </Box>
-      </TabContext>
-    </div>
+            <TravelExploreIcon style={{ cursor: 'pointer' }} />
+          </div>
+        </Paper>
+        <Typography style={{ fontSize: '22px' }}>SỐ TUYẾN TỐI ĐA:</Typography>
+        <TabContext value={tabValue}>
+          <Box>
+            <TabList onChange={handleChangeTab} aria-label="lab">
+              <Tab
+                style={{ width: '50%', textTransform: 'none' }}
+                label="1 tuyến"
+                value="1"
+              />
+              <Tab
+                style={{ width: '50%', textTransform: 'none' }}
+                label="2 tuyến"
+                value="2"
+              />
+            </TabList>
+          </Box>
+          <Box>
+            <TabPanel style={{ paddingLeft: '0' }} value="1">
+              <ListItem style={{ display: 'flex', flexDirection: 'column' }}>
+                {stepDirection.map(step => (
+                  <ListItemText
+                    style={{ textAlign: 'left', justifyContent: 'left' }}
+                  >
+                    {step.maneuver.instruction}
+                  </ListItemText>
+                ))}
+              </ListItem>
+            </TabPanel>
+            <TabPanel style={{ paddingLeft: '0' }} value="2">
+              Turn/ Return
+            </TabPanel>
+          </Box>
+        </TabContext>
+      </div>
+      {directionLine && (
+        <Source id="polylineLayer" type="geojson" data={directionLine}>
+          <Layer
+            id="lineLayer"
+            type="line"
+            source="my-data"
+            layout={{
+              'line-join': 'round',
+              'line-cap': 'round'
+            }}
+            paint={{
+              'line-color': '#00FFFF',
+              'line-width': 5
+            }}
+          />
+        </Source>
+      )}
+    </>
   )
 }
 

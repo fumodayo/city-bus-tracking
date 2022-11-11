@@ -9,3 +9,5 @@ export const getIdsBusStopSelector = state => state.getIdBusStop
 export const getIdsTravelLocationSelector = state => state.getIdTravelLocation
 
 export const getLocationByInputSelector = state => state.getLocationByInput
+
+export const getLocationDirectionsByInputSelector = state => state.getLocationDirectionsByInput

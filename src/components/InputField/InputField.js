@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import useInput from 'hooks/useInput'
 import { InputBase } from '@mui/material'
 import { useDispatch } from 'react-redux'
-import { searchLocationOnInput } from 'redux/actions'
+import {
+  getLocationDirectionsOnInput,
+  searchLocationOnInput
+} from 'redux/actions'
 
 const InputField = ({ idInput, placeholder }) => {
   const address = useInput('')
@@ -32,7 +35,7 @@ const InputField = ({ idInput, placeholder }) => {
 
   // get begin & end input direction
   useEffect(() => {
-    console.log({ id: idDirection, location })
+    dispatch(getLocationDirectionsOnInput({ id: idDirection, location }))
   }, [idDirection, location])
 
   return (
