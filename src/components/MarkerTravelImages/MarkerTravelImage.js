@@ -6,7 +6,7 @@ import DiscoverImage from 'images/icon_discover.png'
 import NightImage from 'images/icon_night.png'
 
 const MarkerTravelImage = ({ typeLocation, mouseEnter, mouseLeave }) => {
-  let image
+  let image = null
   switch (typeLocation) {
     case 'center':
       image = CenterImage

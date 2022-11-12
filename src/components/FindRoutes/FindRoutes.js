@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { TabContext, TabList, TabPanel } from '@mui/lab'
-import {
-  Box,
-  ListItem,
-  ListItemText,
-  Paper,
-  Tab,
-  Typography
-} from '@mui/material'
-import TravelExploreIcon from '@mui/icons-material/TravelExplore'
+import { Box, Paper, Typography } from '@mui/material'
 import InputField from 'components/InputField/InputField'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
@@ -16,21 +7,16 @@ import { API_KEY_MAPBOX } from 'config/constant'
 import './FindRoutes.scss'
 import { useSelector } from 'react-redux'
 import { getLocationDirectionsByInputSelector } from 'redux/selectors'
-import { Layer, Source } from 'react-map-gl'
+import { Layer, Marker, Source } from 'react-map-gl'
+import ArrowDirection from 'components/ArrowDirection/ArrowDirection'
 
 const FindRoutes = () => {
-  const [tabValue, setTabValue] = useState('1')
-
-  const handleChangeTab = (e, newTabValue) => {
-    setTabValue(newTabValue)
-  }
-
   const points = useSelector(getLocationDirectionsByInputSelector)
   const [beginPoint, setBeginPoint] = useState([])
   const [endPoint, setEndPoint] = useState([])
   const [directionLine, setDirectionLine] = useState([])
   const [stepDirection, setStepDirection] = useState([])
-  const [directionData, setDirectionData] = useState({})
+  const [directionData, setDirectionData] = useState(false)
   useEffect(() => {
     if (beginPoint.length !== 0 && endPoint.length !== 0) {
       getRoute(beginPoint, endPoint)
@@ -75,7 +61,7 @@ const FindRoutes = () => {
       setEndPoint(end)
     }
   }, [points])
-  console.log(stepDirection)
+
   return (
     <>
       <div className="sidebar-findrouter">
@@ -101,7 +87,6 @@ const FindRoutes = () => {
               idInput={'begin'}
               placeholder={'Nhập địa điểm bắt đầu'}
             />
-            <TravelExploreIcon style={{ cursor: 'pointer' }} />
           </div>
           <div className="line"></div>
           <div className="input-box pos-relative">
@@ -110,30 +95,64 @@ const FindRoutes = () => {
               idInput={'end'}
               placeholder={'Nhập địa điểm kết thúc'}
             />
-            <TravelExploreIcon style={{ cursor: 'pointer' }} />
           </div>
         </Paper>
         <Typography style={{ fontSize: '20px' }}>Dẫn đường:</Typography>
         <Box
-          style={{ paddingLeft: '0', maxHeight: '80vh', overflowY: 'scroll' }}
+          style={{
+            paddingLeft: '0',
+            maxHeight: '70vh',
+            overflowY: 'scroll'
+          }}
         >
-          {/* <Box>
-            <Typography>
-              Quãng đường: {Math.floor(directionData?.distance / 1000) | 0} km
-            </Typography>
-            <Typography>
-              Thời gian: {Math.floor(directionData?.duration / 60) | 0} phút
-            </Typography>
-          </Box> */}
-          <ListItem style={{ display: 'flex', flexDirection: 'column' }}>
+          {directionData && (
+            <Box>
+              <Typography style={{ color: '#000' }}>
+                Từ {beginPoint[0]}, {beginPoint[1]} đến {endPoint[0]},
+                {endPoint[1]}
+              </Typography>
+              <Typography style={{ color: '#000' }}>
+                Tổng thời gian: {Math.floor(directionData?.duration / 60)} phút{' '}
+                {`(`}
+                {Math.floor(directionData?.distance / 1000)} km{`)`}
+              </Typography>
+            </Box>
+          )}
+          <hr />
+          <Box
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              marginTop: '10px'
+            }}
+          >
             {stepDirection.map(step => (
-              <ListItemText
-                style={{ textAlign: 'left', justifyContent: 'left' }}
-              >
-                {step.maneuver.instruction}
-              </ListItemText>
+              <>
+                <ArrowDirection arrow={step.maneuver.modifier} />
+                <Typography
+                  style={{
+                    textAlign: 'left',
+                    justifyContent: 'left',
+                    lineHeight: '30px'
+                  }}
+                >
+                  {step.maneuver.instruction}
+                  <Typography style={{ color: '#000' }}>
+                    khoảng{' '}
+                    {step.distance > 1000
+                      ? `${Math.floor(step.distance / 1000)} km`
+                      : `${Math.floor(step.distance)} m`}
+                    {` (`}
+                    {step.duration > 60
+                      ? `${Math.floor(step.duration / 60)} phút`
+                      : `${Math.floor(step.duration)} giây`}
+                    {`)`}
+                    <hr />
+                  </Typography>
+                </Typography>
+              </>
             ))}
-          </ListItem>
+          </Box>
         </Box>
       </div>
       {directionLine && (
@@ -152,6 +171,28 @@ const FindRoutes = () => {
             }}
           />
         </Source>
+      )}
+      {beginPoint.length !== 0 && (
+        <Marker
+          latitude={beginPoint[1]}
+          longitude={beginPoint[0]}
+          anchor="bottom"
+        >
+          <img
+            style={{ height: 30, width: 30, cursor: 'pointer' }}
+            src={MarkerRed}
+            alt="marker"
+          />
+        </Marker>
+      )}
+      {endPoint.length !== 0 && (
+        <Marker latitude={endPoint[1]} longitude={endPoint[0]} anchor="bottom">
+          <img
+            style={{ height: 30, width: 30, cursor: 'pointer' }}
+            src={MarkerBlue}
+            alt="marker"
+          />
+        </Marker>
       )}
     </>
   )
