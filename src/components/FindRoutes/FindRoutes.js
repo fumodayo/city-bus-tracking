@@ -30,6 +30,7 @@ const FindRoutes = () => {
   const [endPoint, setEndPoint] = useState([])
   const [directionLine, setDirectionLine] = useState([])
   const [stepDirection, setStepDirection] = useState([])
+  const [directionData, setDirectionData] = useState({})
   useEffect(() => {
     if (beginPoint.length !== 0 && endPoint.length !== 0) {
       getRoute(beginPoint, endPoint)
@@ -37,13 +38,15 @@ const FindRoutes = () => {
 
     async function getRoute(start, end) {
       const query = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${API_KEY_MAPBOX}`,
+        `https://api.mapbox.com/directions/v5/mapbox/walking/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${API_KEY_MAPBOX}&language=vi`,
         { method: 'GET' }
       )
       const json = await query.json()
       const data = json.routes[0]
-      const route = data.geometry.coordinates
+      setDirectionData(data)
+
       // data route render in map
+      const route = data.geometry.coordinates
       const geojson = {
         type: 'Feature',
         properties: {},
@@ -72,7 +75,7 @@ const FindRoutes = () => {
       setEndPoint(end)
     }
   }, [points])
-
+  console.log(stepDirection)
   return (
     <>
       <div className="sidebar-findrouter">
@@ -110,39 +113,28 @@ const FindRoutes = () => {
             <TravelExploreIcon style={{ cursor: 'pointer' }} />
           </div>
         </Paper>
-        <Typography style={{ fontSize: '22px' }}>SỐ TUYẾN TỐI ĐA:</Typography>
-        <TabContext value={tabValue}>
-          <Box>
-            <TabList onChange={handleChangeTab} aria-label="lab">
-              <Tab
-                style={{ width: '50%', textTransform: 'none' }}
-                label="1 tuyến"
-                value="1"
-              />
-              <Tab
-                style={{ width: '50%', textTransform: 'none' }}
-                label="2 tuyến"
-                value="2"
-              />
-            </TabList>
-          </Box>
-          <Box>
-            <TabPanel style={{ paddingLeft: '0' }} value="1">
-              <ListItem style={{ display: 'flex', flexDirection: 'column' }}>
-                {stepDirection.map(step => (
-                  <ListItemText
-                    style={{ textAlign: 'left', justifyContent: 'left' }}
-                  >
-                    {step.maneuver.instruction}
-                  </ListItemText>
-                ))}
-              </ListItem>
-            </TabPanel>
-            <TabPanel style={{ paddingLeft: '0' }} value="2">
-              Turn/ Return
-            </TabPanel>
-          </Box>
-        </TabContext>
+        <Typography style={{ fontSize: '20px' }}>Dẫn đường:</Typography>
+        <Box
+          style={{ paddingLeft: '0', maxHeight: '80vh', overflowY: 'scroll' }}
+        >
+          {/* <Box>
+            <Typography>
+              Quãng đường: {Math.floor(directionData?.distance / 1000) | 0} km
+            </Typography>
+            <Typography>
+              Thời gian: {Math.floor(directionData?.duration / 60) | 0} phút
+            </Typography>
+          </Box> */}
+          <ListItem style={{ display: 'flex', flexDirection: 'column' }}>
+            {stepDirection.map(step => (
+              <ListItemText
+                style={{ textAlign: 'left', justifyContent: 'left' }}
+              >
+                {step.maneuver.instruction}
+              </ListItemText>
+            ))}
+          </ListItem>
+        </Box>
       </div>
       {directionLine && (
         <Source id="polylineLayer" type="geojson" data={directionLine}>
@@ -155,7 +147,7 @@ const FindRoutes = () => {
               'line-cap': 'round'
             }}
             paint={{
-              'line-color': '#00FFFF',
+              'line-color': '#00b0ff',
               'line-width': 5
             }}
           />
