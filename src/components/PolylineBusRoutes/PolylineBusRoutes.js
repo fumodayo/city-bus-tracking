@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Source, Layer } from 'react-map-gl'
-import { roadMapData } from 'actions/initialData/roadMapData'
 import { useSelector } from 'react-redux'
+import { useRoad } from 'hooks/useRoad'
 
 const PolylineBusRoutes = () => {
+  const road = useRoad()
   const [allDataLineRoutes, setAllDataLineRoutes] = useState([])
   const searchRoutes = useSelector(state => state.routes.filters)
 
   useEffect(() => {
-    const getRoutesLine = roadMapData
+    const getRoutesLine = road
       .filter(
         route =>
           searchRoutes.indexOf(route.codeBusRoute) !== -1 &&

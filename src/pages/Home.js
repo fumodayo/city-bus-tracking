@@ -9,11 +9,11 @@ import PolylineBusRoutes from '../components/PolylineBusRoutes/PolylineBusRoutes
 import MarkerBusRoutes from 'components/MarkerBusRoutes/MarkerBusRoutes'
 import HomeSidebar from 'components/HomeSidebar/HomeSidebar'
 import MarkerTravelLocation from 'components/BusRoutes/MarkerTravelLocation'
-import { busStopData } from 'actions/initialData/busStopData'
 import { useSelector } from 'react-redux'
-import { locationTravelData } from 'actions/initialData/locationTravelData'
 import MapboxLanguage from '@mapbox/mapbox-gl-language'
 import { MAPBOX_KEY } from 'mapbox/_consts'
+import { useBusStop } from 'hooks/useBusStop'
+import { useTravel } from 'hooks/useTravel'
 
 export default function Home() {
   const [viewport, setViewport] = useState({
@@ -32,10 +32,13 @@ export default function Home() {
     // Draw an arrow next to the location dot to indicate which direction the device is heading.
   }
 
+  const busStop = useBusStop()
+  const travel = useTravel()
+
   // Get id bus stop in all bus stop and move in the location on map
   const getIdBusStop = useSelector(state => state.routes.idBusStop)
   useEffect(() => {
-    const busstopFilterById = busStopData
+    const busstopFilterById = busStop
       .filter(busstop => busstop.id === getIdBusStop)
       .map(busstop => {
         return {
@@ -45,12 +48,12 @@ export default function Home() {
         }
       })[0]
     setViewport(busstopFilterById)
-  }, [getIdBusStop])
+  }, [getIdBusStop, busStop])
 
   // Get id location travel in all information travel and move in the location on map
   const getIdTravelLocation = useSelector(state => state.routes.idTravel)
   useEffect(() => {
-    const locationTravelFilterById = locationTravelData
+    const locationTravelFilterById = travel
       .filter(travel => travel.id === getIdTravelLocation)
       .map(travel => {
         return {
@@ -60,20 +63,17 @@ export default function Home() {
         }
       })[0]
     setViewport(locationTravelFilterById)
-  }, [getIdTravelLocation])
+  }, [getIdTravelLocation, travel])
 
   // Get location in input search and flyTo in the location on map
   const getLocationByInput = useSelector(state => state.routes.direction)
-  // useEffect(() => {
-  //   if (
-  //     getLocationByInput.location[0] !== undefined &&
-  //     getLocationByInput.location[1] !== undefined
-  //   ) {
-  //     mapRef.current.flyTo({
-  //       center: [getLocationByInput.location[0], getLocationByInput.location[1]]
-  //     })
-  //   }
-  // }, [getLocationByInput])
+  useEffect(() => {
+    if (getLocationByInput?.location[0]) {
+      mapRef.current.flyTo({
+        center: [getLocationByInput.location[0], getLocationByInput.location[1]]
+      })
+    }
+  }, [getLocationByInput])
 
   const mapRef = useRef(null)
   const mapRefCallback = useCallback(ref => {

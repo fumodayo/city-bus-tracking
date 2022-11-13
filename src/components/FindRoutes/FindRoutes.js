@@ -4,9 +4,9 @@ import InputField from 'components/FindRoutes/InputField'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
 import { Layer, Marker, Source } from 'react-map-gl'
-import ArrowDirection from 'components/ArrowDirection/ArrowDirection'
-import './FindRoutes.scss'
+import ArrowDirection from 'components/FindRoutes/ArrowDirection'
 import { useDirections } from 'hooks/useDirections'
+import './FindRoutes.scss'
 
 const FindRoutes = () => {
   const directions = useDirections()

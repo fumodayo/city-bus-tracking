@@ -1,4 +1,3 @@
-import { busStopData } from 'actions/initialData/busStopData'
 import React, { useEffect, useState } from 'react'
 import ReactSlider from 'react-slider'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
@@ -9,17 +8,19 @@ import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
 import PolylineListBusStop from 'components/BusRoutes/PolylineListBusStop'
 import { setIDBusStop } from 'redux/slices/routes'
 import './listbusstop.scss'
+import { useBusStop } from 'hooks/useBusStop'
 
 const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
+  const busStop = useBusStop()
   const [listDataBusStop, setListDataBusStop] = useState([])
   useEffect(() => {
-    const listData = busStopData.filter(
+    const listData = busStop.filter(
       busstop =>
         busstop.codeBusRoute === nameCodeRoute &&
         busstop.directionRoute === turnRoute
     )
     setListDataBusStop(listData)
-  }, [nameCodeRoute, turnRoute])
+  }, [nameCodeRoute, turnRoute, busStop])
 
   const dispatch = useDispatch()
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -43,14 +44,14 @@ const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
   const [nameBusStop, setNameBusStop] = useState('')
   const [locationBusStop, setLocationBusStop] = useState({})
   useEffect(() => {
-    const nameBusStopInList = busStopData.filter(i => i.id === idBusStop)[0]
+    const nameBusStopInList = busStop.filter(i => i.id === idBusStop)[0]
       ?.nameBusStop
     setNameBusStop(nameBusStopInList)
 
-    const locationBusStopInList = busStopData.filter(i => i.id === idBusStop)[0]
+    const locationBusStopInList = busStop.filter(i => i.id === idBusStop)[0]
       ?.location
     setLocationBusStop(locationBusStopInList)
-  }, [idBusStop])
+  }, [idBusStop, busStop])
 
   return (
     <div className="list-bus-station">

@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { routesData } from 'actions/initialData/routesData'
-import { busStopData } from 'actions/initialData/busStopData'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
+import { useBusRoutes } from 'hooks/useBusRoutes'
+import { useBusStop } from 'hooks/useBusStop'
 import './MarkerBusRoutes.scss'
 
 const MarkerBusRoutes = () => {
+  const busStop = useBusStop()
+  const routes = useBusRoutes()
+
   const [markerLocation, setMarkerLocation] = useState([])
 
   const searchRoute = useSelector(state => state.routes.filters)
 
   useEffect(() => {
     // get route by code bus route and directionRoute
-    const getRouteByCode = routesData.filter(
+    const getRouteByCode = routes.filter(
       marker =>
         searchRoute.indexOf(marker.codeBusRoute) !== -1 &&
         marker.directionRoute === 'turn'
@@ -29,7 +32,7 @@ const MarkerBusRoutes = () => {
     )
 
     // get all marker by compare array codeBusRoute & directionRoute
-    const getAllMarkerToBusStop = busStopData.filter(
+    const getAllMarkerToBusStop = busStop.filter(
       busstop =>
         getDirectionMarkerRoute.indexOf(busstop.directionRoute) !== -1 &&
         getCodeMarkerRoute.indexOf(busstop.codeBusRoute) !== -1
@@ -41,7 +44,7 @@ const MarkerBusRoutes = () => {
 
     // console.log(markerLocation.map(i =>
     //   i.every(i =>typeof(i.name) === 'string')))
-  }, [searchRoute])
+  }, [searchRoute, routes, busStop])
 
   return (
     <>

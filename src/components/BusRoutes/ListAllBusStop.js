@@ -4,13 +4,14 @@ import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
 import RouteThrough from 'components/BusRoutes/RouteThrough'
 import BusLocation from 'components/BusRoutes/BusLocation'
-import { busStopData } from 'actions/initialData/busStopData'
-import { cloneDeep } from 'lodash'
 import { useDispatch } from 'react-redux'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
 import { setIDBusStop } from 'redux/slices/routes'
+import { useBusStop } from 'hooks/useBusStop'
 
 const ListAllBusStop = () => {
+  const busStop = useBusStop()
+  
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
@@ -20,10 +21,9 @@ const ListAllBusStop = () => {
   const [allBusStop, setAllBusStop] = useState([])
 
   useEffect(() => {
-    const getAllBusStopInRoutes = cloneDeep(busStopData)
     // filter bus stop
     if (search !== '') {
-      const newSearchList = getAllBusStopInRoutes.filter(busstop => {
+      const newSearchList = busStop.filter(busstop => {
         return Object.values(busstop.nameBusStop)
           .join('')
           .toLowerCase('')
@@ -31,9 +31,9 @@ const ListAllBusStop = () => {
       })
       setAllBusStop(newSearchList)
     } else {
-      setAllBusStop(getAllBusStopInRoutes)
+      setAllBusStop(busStop)
     }
-  }, [search])
+  }, [search, busStop])
 
   const [showSidebar, setShowSidebar] = useState(false)
   const [idBusStop, setIdBusStop] = useState('')

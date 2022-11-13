@@ -6,7 +6,8 @@ import { useDispatch } from 'react-redux'
 import { setSearchLocation } from 'redux/slices/routes'
 
 const InputField = ({ idInput, placeholder }) => {
-  const address = useAutoSuggestions('')
+  const address = useAutoSuggestions()
+  const { value, handleChange } = address
   const [location, setLocation] = useState([])
   const dispatch = useDispatch()
 
@@ -44,7 +45,7 @@ const InputField = ({ idInput, placeholder }) => {
         onClick={e => handleOpenSuggestion(e)}
         id={idInput}
       />
-      {address.suggestions?.length > 0 && isOpen && (
+      {address?.suggestions.length > 0 && isOpen && (
         <SuggestionWrapper>
           {address.suggestions.map((suggestion, index) => {
             return (

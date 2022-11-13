@@ -1,14 +1,16 @@
-import { roadMapData } from 'actions/initialData/roadMapData'
 import React, { useEffect, useState } from 'react'
 import { Layer, Source } from 'react-map-gl'
-import { busStopData } from 'actions/initialData/busStopData'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
+import { useBusStop } from 'hooks/useBusStop'
+import { useRoad } from 'hooks/useRoad'
 
 const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
+  const busStop = useBusStop()
+  const road = useRoad()
   const [artLineRoute, setArtLineRoute] = useState({})
   const [locationMarker, setLocationMarker] = useState([])
   useEffect(() => {
-    let getRoutesLine = roadMapData
+    let getRoutesLine = road
       .filter(
         route =>
           route.codeBusRoute === nameCodeRoute &&
@@ -33,13 +35,13 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
     }
     setArtLineRoute(geojson)
 
-    const listMarkerData = busStopData.filter(
+    const listMarkerData = busStop.filter(
       busstop =>
         busstop.codeBusRoute === nameCodeRoute &&
         busstop.directionRoute === turnRoute
     )
     setLocationMarker(listMarkerData)
-  }, [nameCodeRoute, turnRoute])
+  }, [nameCodeRoute, turnRoute, busStop, road])
 
   return (
     <>

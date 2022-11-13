@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { locationTravelData } from 'actions/initialData/locationTravelData'
 import FormInput from 'components/Common/FormInput'
 import {
   ImageList,
@@ -13,11 +12,11 @@ import {
   styled
 } from '@mui/material'
 import HTMLReactParser from 'html-react-parser'
-import { cloneDeep } from 'lodash'
 import { Close } from '@mui/icons-material'
 import { useDispatch } from 'react-redux'
-import './ListGuideTravel.scss'
 import { setIDTravel } from 'redux/slices/routes'
+import { useTravel } from 'hooks/useTravel'
+import './ListGuideTravel.scss'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -28,6 +27,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }))
 
 const ListGuideTravel = () => {
+  const travels = useTravel()
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
@@ -39,8 +39,7 @@ const ListGuideTravel = () => {
   useEffect(() => {
     // Handle filter search
     setSearch(search)
-    const travelData = cloneDeep(locationTravelData)
-    const filterDataTravel = travelData.filter(travel => travel.title)
+    const filterDataTravel = travels.filter(travel => travel.title)
     if (search !== '') {
       const newSearchList = filterDataTravel.filter(route => {
         return Object.values(route)
@@ -52,7 +51,7 @@ const ListGuideTravel = () => {
     } else {
       setDataTravel(filterDataTravel)
     }
-  }, [search])
+  }, [search, travels])
 
   const dispatch = useDispatch()
   const [idItem, setItem] = useState('')
@@ -65,9 +64,9 @@ const ListGuideTravel = () => {
 
   const [locationTravel, setLocationTravel] = useState({})
   useEffect(() => {
-    const dataLocation = locationTravelData.filter(i => i.id === idItem)[0]
+    const dataLocation = travels.filter(i => i.id === idItem)[0]
     setLocationTravel(dataLocation)
-  }, [idItem])
+  }, [idItem, travels])
 
   const [isOpen, setIsOpen] = useState(false)
 

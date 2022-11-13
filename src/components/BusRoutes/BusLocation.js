@@ -1,16 +1,17 @@
-import { busStopData } from 'actions/initialData/busStopData'
-import { timeBusStart } from 'actions/initialData/timeBusStart'
+import { useBusStop } from 'hooks/useBusStop'
+import { useTimeBusStart } from 'hooks/useTimeBusStart'
 import React, { useEffect, useState } from 'react'
 import Countdown from 'react-countdown'
 
 const BusLocation = ({ idBusStop }) => {
   const [getrealtime, setRealtime] = useState('')
   const [timeBusStop, setTimeBusStop] = useState(1000)
+  const allBusStop = useBusStop()
+  const timeBusStart = useTimeBusStart()
 
   const addZeroBeforeTime = time => {
     return time < 10 ? '0' + time : time
   }
-
   // Get current real time
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,33 +28,35 @@ const BusLocation = ({ idBusStop }) => {
   }, [])
 
   useEffect(() => {
-    // get codeBusRoute && directionRoute in bus stop
-    const busStopFindById = busStopData.filter(
-      busstop => busstop.id === idBusStop
-    )[0]
-    const codeBusStop = busStopFindById.codeBusRoute
-    const directionBusStop = busStopFindById.directionRoute
+    if (allBusStop.length !== 0 && timeBusStart.length !== 0) {
+      // get codeBusRoute && directionRoute in bus stop
+      const busStopFindById = allBusStop.filter(
+        busstop => busstop.id === idBusStop
+      )[0]
+      const codeBusStop = busStopFindById.codeBusRoute
+      const directionBusStop = busStopFindById.directionRoute
 
-    // get array time bus starts
-    const allTimeBusStarts = timeBusStart.filter(
-      route =>
-        route.codeBusRoute === codeBusStop &&
-        route.directionRoute === directionBusStop
-    )[0].startingTime
+      // get array time bus starts
+      const allTimeBusStarts = timeBusStart.filter(
+        route =>
+          route.codeBusRoute === codeBusStop &&
+          route.directionRoute === directionBusStop
+      )[0].startingTime
 
-    // Get travel time in bus stop
-    const busStopTravelTime = busStopFindById.travelTime * 60 * 1000
+      // Get travel time in bus stop
+      const busStopTravelTime = busStopFindById.travelTime * 60 * 1000
 
-    setTimeBusStop(busStopTravelTime)
+      setTimeBusStop(busStopTravelTime)
 
-    if (getrealtime >= '06:00' || getrealtime <= '21:00') {
-      if (allTimeBusStarts.indexOf(getrealtime) !== -1) {
-        setTimeBusStop(busStopTravelTime)
+      if (getrealtime >= '06:00' || getrealtime <= '21:00') {
+        if (allTimeBusStarts.indexOf(getrealtime) !== -1) {
+          setTimeBusStop(busStopTravelTime)
+        }
+      } else {
+        setTimeBusStop(0)
       }
-    } else {
-      setTimeBusStop(0)
     }
-  }, [getrealtime, idBusStop])
+  }, [getrealtime, idBusStop, allBusStop, timeBusStart])
 
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {

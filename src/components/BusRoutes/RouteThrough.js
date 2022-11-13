@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from 'react'
-import { routesData } from 'actions/initialData/routesData'
-import { busStopData } from 'actions/initialData/busStopData'
 import ListBusStop from 'components/BusRoutes/ListBusStopInRoute'
 import CustomSidebar from 'components/Common/CustomSidebar'
+import { useBusRoutes } from 'hooks/useBusRoutes'
+import { useBusStop } from 'hooks/useBusStop'
 
 const RouteThrough = ({ idBusStop }) => {
+  const busStop = useBusStop()
+  const routes = useBusRoutes()
   const [routeThrough, setRouteThrough] = useState([])
 
   useEffect(() => {
-    const busStopFindById = busStopData.filter(
-      busstop => busstop.id === idBusStop
-    )[0]
-    const codeBusStop = busStopFindById.codeBusRoute
-    const directionBusStop = busStopFindById.directionRoute
-    const routebusthroungh = routesData.filter(
-      route =>
-        route.codeBusRoute === codeBusStop &&
-        route.directionRoute === directionBusStop
-    )[0]
-    setRouteThrough(routebusthroungh)
-  }, [idBusStop])
+    if (busStop.length !== 0) {
+      const busStopFindById = busStop.filter(
+        busstop => busstop.id === idBusStop
+      )[0]
+      const codeBusStop = busStopFindById.codeBusRoute
+      const directionBusStop = busStopFindById.directionRoute
+      const routebusthroungh = routes.filter(
+        route =>
+          route.codeBusRoute === codeBusStop &&
+          route.directionRoute === directionBusStop
+      )[0]
+      setRouteThrough(routebusthroungh)
+    }
+  }, [idBusStop, routes, busStop])
 
   const [openSidebar, setOpenSidebar] = useState(false)
   const handleOpenSidebarBusList = () => {
@@ -39,17 +43,17 @@ const RouteThrough = ({ idBusStop }) => {
                 className="route-no text-center"
                 style={{ background: `${routeThrough.colorRoute}` }}
               >
-                <span>{routeThrough.codeBusRoute}</span>
+                <span>{routeThrough?.codeBusRoute}</span>
               </div>
             </div>
 
             <div className="small-7">
-              <p className="code-route">{routeThrough.nameRoute}</p>
+              <p className="code-route">{routeThrough?.nameRoute}</p>
               <p
                 className="code-desc"
                 style={{ fontSize: '14.5px', color: '#1F8BAE' }}
               >
-                {routeThrough.directionRoute === 'turn'
+                {routeThrough?.directionRoute === 'turn'
                   ? 'Chiều đi'
                   : 'Chiều về'}
               </p>
@@ -61,18 +65,18 @@ const RouteThrough = ({ idBusStop }) => {
       {openSidebar && (
         <CustomSidebar
           show={true}
-          name={routeThrough.nameRoute}
+          name={routeThrough?.nameRoute}
           tabLeft={'Xem lượt đi'}
           tabRight={'Xem lượt về'}
           compLeft={
             <ListBusStop
-              nameCodeRoute={routeThrough.codeBusRoute}
+              nameCodeRoute={routeThrough?.codeBusRoute}
               turnRoute={'turn'}
             />
           }
           compRight={
             <ListBusStop
-              nameCodeRoute={routeThrough.codeBusRoute}
+              nameCodeRoute={routeThrough?.codeBusRoute}
               turnRoute={'return'}
             />
           }

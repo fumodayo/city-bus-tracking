@@ -4,14 +4,14 @@ import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
 import ListBusStopInRoute from 'components/BusRoutes/ListBusStopInRoute'
 import { useDispatch } from 'react-redux'
-import { routesData } from 'actions/initialData/routesData'
-import { cloneDeep } from 'lodash'
 import FilterTravelMap from 'components/BusRoutes/FilterTravelMap'
 import { setFilterRoutes } from 'redux/slices/routes'
+import { useBusRoutes } from 'hooks/useBusRoutes'
 
 const FilterRoutes = () => {
-  const [searchRoute, setSearchRoute] = useState([])
+  const routes = useBusRoutes()
 
+  const [searchRoute, setSearchRoute] = useState([])
   // Get word from input form to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
@@ -20,7 +20,6 @@ const FilterRoutes = () => {
 
   useEffect(() => {
     setSearch(search)
-    const routes = cloneDeep(routesData)
 
     const getBusRoutes = routes.filter(route => route.directionRoute === 'turn')
 
@@ -36,7 +35,7 @@ const FilterRoutes = () => {
     } else {
       setSearchRoute(getBusRoutes)
     }
-  }, [search])
+  }, [search, routes])
 
   // Get checked in list bus route
   const handleChangeCheckboxRoute = e => {
@@ -69,13 +68,12 @@ const FilterRoutes = () => {
   const [nameBusRoute, setNameBusRoute] = useState('')
   const [nameCodeRoute, setNameCodeRoute] = useState('')
   useEffect(() => {
-    const nameRoute = routesData.filter(i => i.id === busRouteId)[0]?.nameRoute
+    const nameRoute = routes.filter(i => i.id === busRouteId)[0]?.nameRoute
     setNameBusRoute(nameRoute)
 
-    const coderoute = routesData.filter(i => i.id === busRouteId)[0]
-      ?.codeBusRoute
+    const coderoute = routes.filter(i => i.id === busRouteId)[0]?.codeBusRoute
     setNameCodeRoute(coderoute)
-  }, [busRouteId])
+  }, [busRouteId, routes])
 
   return (
     <div className="filter-router">
