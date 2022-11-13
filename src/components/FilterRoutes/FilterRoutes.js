@@ -4,10 +4,10 @@ import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
 import ListBusStopInRoute from 'components/ListBusStopInRoute/ListBusStopInRoute'
 import { useDispatch } from 'react-redux'
-import { searchFilterChange } from 'redux/actions'
 import { routesData } from 'actions/initialData/routesData'
 import { cloneDeep } from 'lodash'
 import FilterTravelMap from 'components/FilterTravelMap/FilterTravelMap'
+import { setFilterRoutes } from 'redux/slices/routes'
 
 const FilterRoutes = () => {
   const [searchRoute, setSearchRoute] = useState([])
@@ -52,7 +52,10 @@ const FilterRoutes = () => {
   // store search route
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(searchFilterChange(searchRoute))
+    const routesChange = searchRoute
+      .filter(route => route.isChecked)
+      ?.map(i => i.codeBusRoute)
+    dispatch(setFilterRoutes(routesChange))
   }, [searchRoute])
 
   // show sidebar & get id in attribute element

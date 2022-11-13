@@ -6,12 +6,11 @@ import MarkerRed from '../../images/markerred.png'
 import { API_KEY_MAPBOX } from 'config/constant'
 import './FindRoutes.scss'
 import { useSelector } from 'react-redux'
-import { getLocationDirectionsByInputSelector } from 'redux/selectors'
 import { Layer, Marker, Source } from 'react-map-gl'
 import ArrowDirection from 'components/ArrowDirection/ArrowDirection'
 
 const FindRoutes = () => {
-  const points = useSelector(getLocationDirectionsByInputSelector)
+  const points = useSelector(state => state.routes.direction)
   const [beginPoint, setBeginPoint] = useState([])
   const [endPoint, setEndPoint] = useState([])
   const [directionLine, setDirectionLine] = useState([])

@@ -1,25 +1,27 @@
 import React from 'react'
 import { locationTravelData } from 'actions/initialData/locationTravelData'
 import { useSelector } from 'react-redux'
-import { checkboxTravelSelector } from 'redux/selectors'
 import MarkerTypeTravel from 'components/MarkerTypeTravel/MarkerTypeTravel'
 import './MarkerTravelLocation.scss'
 
 const MarkerTravelLocation = () => {
-  const isCheckedTravel = useSelector(checkboxTravelSelector)
+  const isCheckedTravel = useSelector(state => state.routes.checkboxTravel)
+
   return (
-    <div className="marker-travel">
+    <>
       {isCheckedTravel &&
-        locationTravelData.map(travel => (
-          <MarkerTypeTravel
-            name={travel.title}
-            typeLocation={travel.typeLocation}
-            image={travel.image}
-            imageDesc={travel.imageDesc}
-            location={travel.location}
-          />
+        locationTravelData.map((travel, index) => (
+          <div className="marker-travel" key={index}>
+            <MarkerTypeTravel
+              name={travel.title}
+              typeLocation={travel.typeLocation}
+              image={travel.image}
+              imageDesc={travel.imageDesc}
+              location={travel.location}
+            />
+          </div>
         ))}
-    </div>
+    </>
   )
 }
 

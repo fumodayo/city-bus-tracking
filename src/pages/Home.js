@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState, useRef } from 'react'
 import Map, {
   NavigationControl,
   FullscreenControl,
@@ -12,13 +12,7 @@ import HomeSidebar from 'components/HomeSidebar/HomeSidebar'
 import MarkerTravelLocation from 'components/MarkerTravelLocation/MarkerTravelLocation'
 import { busStopData } from 'actions/initialData/busStopData'
 import { useSelector } from 'react-redux'
-import {
-  getIdsBusStopSelector,
-  getIdsTravelLocationSelector,
-  getLocationByInputSelector
-} from 'redux/selectors'
 import { locationTravelData } from 'actions/initialData/locationTravelData'
-import { useRef } from 'react'
 import MapboxLanguage from '@mapbox/mapbox-gl-language'
 
 export default function Home() {
@@ -39,7 +33,7 @@ export default function Home() {
   }
 
   // Get id bus stop in all bus stop and move in the location on map
-  const getIdBusStop = useSelector(getIdsBusStopSelector)
+  const getIdBusStop = useSelector(state => state.routes.idBusStop)
   useEffect(() => {
     const busstopFilterById = busStopData
       .filter(busstop => busstop.id === getIdBusStop)
@@ -54,7 +48,7 @@ export default function Home() {
   }, [getIdBusStop])
 
   // Get id location travel in all information travel and move in the location on map
-  const getIdTravelLocation = useSelector(getIdsTravelLocationSelector)
+  const getIdTravelLocation = useSelector(state => state.routes.idTravel)
   useEffect(() => {
     const locationTravelFilterById = locationTravelData
       .filter(travel => travel.id === getIdTravelLocation)
@@ -69,11 +63,14 @@ export default function Home() {
   }, [getIdTravelLocation])
 
   // Get location in input search and flyTo in the location on map
-  const getLocationByInput = useSelector(getLocationByInputSelector)
+  const getLocationByInput = useSelector(state => state.routes.direction)
   useEffect(() => {
-    if (getLocationByInput[0] && getLocationByInput[1]) {
+    if (
+      getLocationByInput.location[0] !== undefined &&
+      getLocationByInput.location[1] !== undefined
+    ) {
       mapRef.current.flyTo({
-        center: [getLocationByInput[0], getLocationByInput[1]]
+        center: [getLocationByInput.location[0], getLocationByInput.location[1]]
       })
     }
   }, [getLocationByInput])

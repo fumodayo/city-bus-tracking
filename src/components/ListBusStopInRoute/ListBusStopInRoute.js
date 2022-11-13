@@ -6,9 +6,9 @@ import { Tab } from '@mui/material'
 import './listbusstop.scss'
 import InfoBusRoute from 'components/InfoBusRoute/InfoBusRoute'
 import { useDispatch } from 'react-redux'
-import { getIdBusStopOnClick } from 'redux/actions'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
 import PolylineListBusStop from 'components/PolylineListBusStop/PolylineListBusStop'
+import { setIDBusStop } from 'redux/slices/routes'
 
 const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
   const [listDataBusStop, setListDataBusStop] = useState([])
@@ -27,7 +27,7 @@ const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
   const handleStepIndexChange = (e, key) => {
     const idbusstop = e.currentTarget.id
     setIdBusStop(idbusstop)
-    dispatch(getIdBusStopOnClick(idbusstop))
+    dispatch(setIDBusStop(idBusStop))
     setCurrentIndex(key)
   }
   const _handleSliderIndex = key => {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { searchTextSelector } from 'redux/selectors'
 import { routesData } from 'actions/initialData/routesData'
 import { busStopData } from 'actions/initialData/busStopData'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
@@ -9,18 +8,13 @@ import './MarkerBusRoutes.scss'
 const MarkerBusRoutes = () => {
   const [markerLocation, setMarkerLocation] = useState([])
 
-  const searchRoute = useSelector(searchTextSelector)
+  const searchRoute = useSelector(state => state.routes.filters)
 
   useEffect(() => {
-    // filter array by checked & get array codeBusRoute
-    const getRoutesCheckBox = searchRoute
-      .filter(busroute => busroute.isChecked)
-      .map(busroute => busroute.codeBusRoute)
-
     // get route by code bus route and directionRoute
     const getRouteByCode = routesData.filter(
       marker =>
-        getRoutesCheckBox.indexOf(marker.codeBusRoute) !== -1 &&
+        searchRoute.indexOf(marker.codeBusRoute) !== -1 &&
         marker.directionRoute === 'turn'
     )
 
@@ -50,14 +44,16 @@ const MarkerBusRoutes = () => {
   }, [searchRoute])
 
   return (
-    <div className="marker-bus-stop">
-      {markerLocation.map(marker => (
-        <MarkerBusStop
-          nameBusStop={marker.nameBusStop}
-          locationBusStop={marker.location}
-        />
+    <>
+      {markerLocation.map((marker, index) => (
+        <div className="marker-bus-stop" key={index}>
+          <MarkerBusStop
+            nameBusStop={marker.nameBusStop}
+            locationBusStop={marker.location}
+          />
+        </div>
       ))}
-    </div>
+    </>
   )
 }
 

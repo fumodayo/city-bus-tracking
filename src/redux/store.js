@@ -1,9 +1,10 @@
-import { legacy_createStore as createStore } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import rootReducer from './reducer'
+import { configureStore } from '@reduxjs/toolkit'
+import routesReducer from './slices/routes'
 
-const composedEnhancers = composeWithDevTools()
-
-const store = createStore(rootReducer, composedEnhancers)
+const store = configureStore({
+  reducer: {
+    routes: routesReducer
+  }
+})
 
 export default store

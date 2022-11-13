@@ -3,16 +3,12 @@ import styled from 'styled-components'
 import useInput from 'hooks/useInput'
 import { InputBase } from '@mui/material'
 import { useDispatch } from 'react-redux'
-import {
-  getLocationDirectionsOnInput,
-  searchLocationOnInput
-} from 'redux/actions'
+import { setSearchLocation } from 'redux/slices/routes'
 
 const InputField = ({ idInput, placeholder }) => {
   const address = useInput('')
   const [location, setLocation] = useState([])
   const dispatch = useDispatch()
-  dispatch(searchLocationOnInput(location))
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -35,7 +31,7 @@ const InputField = ({ idInput, placeholder }) => {
 
   // get begin & end input direction
   useEffect(() => {
-    dispatch(getLocationDirectionsOnInput({ id: idDirection, location }))
+    dispatch(setSearchLocation({ id: idDirection, location }))
   }, [idDirection, location])
 
   return (

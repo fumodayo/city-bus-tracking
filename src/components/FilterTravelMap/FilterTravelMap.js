@@ -4,7 +4,7 @@ import { Drawer, IconButton, Typography, Box, styled } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import ListGuideTravel from 'components/ListGuideTravel/ListGuideTravel'
 import { useDispatch } from 'react-redux'
-import { checkboxTravelChange } from 'redux/actions'
+import { setCheckboxTravel } from 'redux/slices/routes'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -33,7 +33,7 @@ const FilterTravelMap = () => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(checkboxTravelChange(isChecked))
+    dispatch(setCheckboxTravel(isChecked))
   }, [isChecked])
 
   return (

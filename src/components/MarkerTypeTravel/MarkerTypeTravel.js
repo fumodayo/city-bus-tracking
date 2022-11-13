@@ -44,7 +44,7 @@ const MarkerTypeTravel = ({
               maxWidth: 240,
               maxHeight: 200,
               padding: 0,
-              margin: 0,
+              margin: 0
             }}
           >
             <div className="popup-content-custom">
@@ -54,7 +54,7 @@ const MarkerTypeTravel = ({
                   height: 100,
                   borderRadius: '5px',
                   objectFit: 'cover',
-                  backgroundPosition: 'center',
+                  backgroundPosition: 'center'
                 }}
                 src={image}
                 alt={imageDesc}

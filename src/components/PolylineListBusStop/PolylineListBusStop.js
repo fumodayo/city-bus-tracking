@@ -31,7 +31,6 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
       type: 'FeatureCollection',
       features: [...getRoutesLine, getRoutesLine].pop()
     }
-
     setArtLineRoute(geojson)
 
     const listMarkerData = busStopData.filter(
@@ -43,24 +42,26 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
   }, [nameCodeRoute, turnRoute])
 
   return (
-    <div className="polyline-list-bus-stop">
+    <>
       {artLineRoute &&
-        artLineRoute?.features?.map(art => (
-          <Source id="polylineLayer" type="geojson" data={artLineRoute}>
-            <Layer
-              id="lineLayer"
-              type="line"
-              source="my-data"
-              layout={{
-                'line-join': 'round',
-                'line-cap': 'round'
-              }}
-              paint={{
-                'line-color': `${art?.color}`,
-                'line-width': 5
-              }}
-            />
-          </Source>
+        artLineRoute?.features?.map((art, index) => (
+          <div className="polyline-list-bus-stop" key={index}>
+            <Source id="polylineLayer" type="geojson" data={artLineRoute}>
+              <Layer
+                id="lineLayer"
+                type="line"
+                source="my-data"
+                layout={{
+                  'line-join': 'round',
+                  'line-cap': 'round'
+                }}
+                paint={{
+                  'line-color': `${art?.color}`,
+                  'line-width': 5
+                }}
+              />
+            </Source>
+          </div>
         ))}
       {locationMarker?.map(marker => (
         <MarkerBusStop
@@ -69,7 +70,7 @@ const PolylineListBusStop = ({ nameCodeRoute, turnRoute }) => {
           locationBusStop={marker.location}
         />
       ))}
-    </div>
+    </>
   )
 }
 

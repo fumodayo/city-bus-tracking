@@ -7,8 +7,8 @@ import BusLocation from 'components/BusLocation/BusLocation'
 import { busStopData } from 'actions/initialData/busStopData'
 import { cloneDeep } from 'lodash'
 import { useDispatch } from 'react-redux'
-import { getIdBusStopOnClick } from 'redux/actions'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
+import { setIDBusStop } from 'redux/slices/routes'
 
 const ListAllBusStop = () => {
   // Get word input to search
@@ -45,7 +45,7 @@ const ListAllBusStop = () => {
   // store id bus stop
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(getIdBusStopOnClick(idBusStop))
+    dispatch(setIDBusStop(idBusStop))
   }, [idBusStop])
 
   // get nameBusStop & locationBusStop by Id
