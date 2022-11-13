@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Box, Tab } from '@mui/material'
-import FilterRoutes from 'components/FilterRoutes/FilterRoutes'
-import ListAllBusStop from 'components/ListAllBusStop/ListAllBusStop'
+import FilterRoutes from './FilterRoutes'
+import ListAllBusStop from './ListAllBusStop'
 import './BusRoutes.scss'
 
 const BusRouter = () => {

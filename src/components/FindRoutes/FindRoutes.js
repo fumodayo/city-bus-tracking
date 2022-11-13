@@ -1,65 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Box, Paper, Typography } from '@mui/material'
-import InputField from 'components/InputField/InputField'
+import InputField from 'components/FindRoutes/InputField'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
-import { API_KEY_MAPBOX } from 'config/constant'
-import './FindRoutes.scss'
-import { useSelector } from 'react-redux'
 import { Layer, Marker, Source } from 'react-map-gl'
 import ArrowDirection from 'components/ArrowDirection/ArrowDirection'
+import './FindRoutes.scss'
+import { useDirections } from 'hooks/useDirections'
 
 const FindRoutes = () => {
-  const points = useSelector(state => state.routes.direction)
-  const [beginPoint, setBeginPoint] = useState([])
-  const [endPoint, setEndPoint] = useState([])
-  const [directionLine, setDirectionLine] = useState([])
-  const [stepDirection, setStepDirection] = useState([])
-  const [directionData, setDirectionData] = useState(false)
-  useEffect(() => {
-    if (beginPoint.length !== 0 && endPoint.length !== 0) {
-      getRoute(beginPoint, endPoint)
-    }
-
-    async function getRoute(start, end) {
-      const query = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/walking/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${API_KEY_MAPBOX}&language=vi`,
-        { method: 'GET' }
-      )
-      const json = await query.json()
-      const data = json.routes[0]
-      setDirectionData(data)
-
-      // data route render in map
-      const route = data.geometry.coordinates
-      const geojson = {
-        type: 'Feature',
-        properties: {},
-        geometry: {
-          type: 'LineString',
-          coordinates: route
-        }
-      }
-      setDirectionLine(geojson)
-
-      // steps route
-      const steps = data.legs[0].steps
-      setStepDirection(steps)
-    }
-  }, [beginPoint, endPoint])
-
-  useEffect(() => {
-    let start,
-      end = []
-    if (points.id === 'begin') {
-      start = points.location
-      setBeginPoint(start)
-    }
-    if (points.id === 'end') {
-      end = points.location
-      setEndPoint(end)
-    }
-  }, [points])
+  const directions = useDirections()
 
   return (
     <>
@@ -104,19 +54,21 @@ const FindRoutes = () => {
             overflowY: 'scroll'
           }}
         >
-          {directionData && (
-            <Box>
+          <Box>
+            {directions?.beginCords && (
               <Typography style={{ color: '#000' }}>
-                Từ {beginPoint[0]}, {beginPoint[1]} đến {endPoint[0]},
-                {endPoint[1]}
+                Từ {directions?.beginCords[0]}, {directions?.beginCords[1]} đến{' '}
+                {directions?.endCords[0]},{directions?.endCords[1]}
               </Typography>
+            )}
+            {Object.keys(directions).length !== 0 && (
               <Typography style={{ color: '#000' }}>
-                Tổng thời gian: {Math.floor(directionData?.duration / 60)} phút{' '}
+                Tổng thời gian: {Math.floor(directions?.duration / 60)} phút{' '}
                 {`(`}
-                {Math.floor(directionData?.distance / 1000)} km{`)`}
+                {Math.floor(directions?.distance / 1000)} km{`)`}
               </Typography>
-            </Box>
-          )}
+            )}
+          </Box>
           <hr />
           <Box
             style={{
@@ -125,37 +77,38 @@ const FindRoutes = () => {
               marginTop: '10px'
             }}
           >
-            {stepDirection.map(step => (
-              <>
-                <ArrowDirection arrow={step.maneuver.modifier} />
-                <Typography
-                  style={{
-                    textAlign: 'left',
-                    justifyContent: 'left',
-                    lineHeight: '30px'
-                  }}
-                >
-                  {step.maneuver.instruction}
-                  <Typography style={{ color: '#000' }}>
-                    khoảng{' '}
-                    {step.distance > 1000
-                      ? `${Math.floor(step.distance / 1000)} km`
-                      : `${Math.floor(step.distance)} m`}
-                    {` (`}
-                    {step.duration > 60
-                      ? `${Math.floor(step.duration / 60)} phút`
-                      : `${Math.floor(step.duration)} giây`}
-                    {`)`}
-                    <hr />
+            {directions?.steps &&
+              directions?.steps.map(step => (
+                <>
+                  <ArrowDirection arrow={step?.guide} />
+                  <Typography
+                    style={{
+                      textAlign: 'left',
+                      justifyContent: 'left',
+                      lineHeight: '30px'
+                    }}
+                  >
+                    {step.name}
+                    <Typography style={{ color: '#000' }}>
+                      khoảng{' '}
+                      {step?.distance > 1000
+                        ? `${Math.floor(step?.distance / 1000)} km`
+                        : `${Math.floor(step?.distance)} m`}
+                      {` (`}
+                      {step?.duration > 60
+                        ? `${Math.floor(step?.duration / 60)} phút`
+                        : `${Math.floor(step?.duration)} giây`}
+                      {`)`}
+                      <hr />
+                    </Typography>
                   </Typography>
-                </Typography>
-              </>
-            ))}
+                </>
+              ))}
           </Box>
         </Box>
       </div>
-      {directionLine && (
-        <Source id="polylineLayer" type="geojson" data={directionLine}>
+      {directions?.map && (
+        <Source id="polylineLayer" type="geojson" data={directions?.map}>
           <Layer
             id="lineLayer"
             type="line"
@@ -171,27 +124,31 @@ const FindRoutes = () => {
           />
         </Source>
       )}
-      {beginPoint.length !== 0 && (
-        <Marker
-          latitude={beginPoint[1]}
-          longitude={beginPoint[0]}
-          anchor="bottom"
-        >
-          <img
-            style={{ height: 30, width: 30, cursor: 'pointer' }}
-            src={MarkerRed}
-            alt="marker"
-          />
-        </Marker>
-      )}
-      {endPoint.length !== 0 && (
-        <Marker latitude={endPoint[1]} longitude={endPoint[0]} anchor="bottom">
-          <img
-            style={{ height: 30, width: 30, cursor: 'pointer' }}
-            src={MarkerBlue}
-            alt="marker"
-          />
-        </Marker>
+      {directions?.beginCords && directions?.endCords && (
+        <>
+          <Marker
+            latitude={directions?.beginCords[1]}
+            longitude={directions?.beginCords[0]}
+            anchor="bottom"
+          >
+            <img
+              style={{ height: 30, width: 30, cursor: 'pointer' }}
+              src={MarkerRed}
+              alt="marker"
+            />
+          </Marker>
+          <Marker
+            latitude={directions?.endCords[1]}
+            longitude={directions?.endCords[0]}
+            anchor="bottom"
+          >
+            <img
+              style={{ height: 30, width: 30, cursor: 'pointer' }}
+              src={MarkerBlue}
+              alt="marker"
+            />
+          </Marker>
+        </>
       )}
     </>
   )

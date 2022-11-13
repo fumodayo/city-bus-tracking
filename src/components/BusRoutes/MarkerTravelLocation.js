@@ -1,7 +1,7 @@
 import React from 'react'
 import { locationTravelData } from 'actions/initialData/locationTravelData'
 import { useSelector } from 'react-redux'
-import MarkerTypeTravel from 'components/MarkerTypeTravel/MarkerTypeTravel'
+import MarkerTypeTravel from 'components/BusRoutes/MarkerTypeTravel'
 import './MarkerTravelLocation.scss'
 
 const MarkerTravelLocation = () => {

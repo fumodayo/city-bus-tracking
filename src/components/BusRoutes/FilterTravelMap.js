@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Checkbox } from '@mui/material'
 import { Drawer, IconButton, Typography, Box, styled } from '@mui/material'
 import { Close } from '@mui/icons-material'
-import ListGuideTravel from 'components/ListGuideTravel/ListGuideTravel'
+import ListGuideTravel from './ListGuideTravel'
 import { useDispatch } from 'react-redux'
 import { setCheckboxTravel } from 'redux/slices/routes'
 

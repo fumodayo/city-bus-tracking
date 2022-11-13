@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import useInput from 'hooks/useInput'
+import { useAutoSuggestions } from 'hooks/useAutoSuggestions'
 import { InputBase } from '@mui/material'
 import { useDispatch } from 'react-redux'
 import { setSearchLocation } from 'redux/slices/routes'
 
 const InputField = ({ idInput, placeholder }) => {
-  const address = useInput('')
+  const address = useAutoSuggestions('')
   const [location, setLocation] = useState([])
   const dispatch = useDispatch()
 
@@ -39,7 +39,6 @@ const InputField = ({ idInput, placeholder }) => {
       <InputBase
         placeholder={placeholder}
         {...address}
-        isTyping={address.value !== ''}
         sx={{ ml: 1, flex: 1 }}
         autoComplete="off"
         onClick={e => handleOpenSuggestion(e)}
@@ -52,12 +51,12 @@ const InputField = ({ idInput, placeholder }) => {
               <Suggestion
                 key={index}
                 onClick={() => {
-                  address.setValue(suggestion.place_name)
+                  address.setValue(suggestion.name)
                   address.setSuggestions([])
-                  setLocation(suggestion.center)
+                  setLocation(suggestion.coordinates)
                 }}
               >
-                {suggestion.place_name}
+                {suggestion.name}
               </Suggestion>
             )
           })}

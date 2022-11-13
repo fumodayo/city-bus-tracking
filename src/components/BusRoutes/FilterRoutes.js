@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Checkbox, Paper } from '@mui/material'
 import FormInput from 'components/Common/FormInput'
 import CustomSidebar from 'components/Common/CustomSidebar'
-import ListBusStopInRoute from 'components/ListBusStopInRoute/ListBusStopInRoute'
+import ListBusStopInRoute from 'components/BusRoutes/ListBusStopInRoute'
 import { useDispatch } from 'react-redux'
 import { routesData } from 'actions/initialData/routesData'
 import { cloneDeep } from 'lodash'
-import FilterTravelMap from 'components/FilterTravelMap/FilterTravelMap'
+import FilterTravelMap from 'components/BusRoutes/FilterTravelMap'
 import { setFilterRoutes } from 'redux/slices/routes'
 
 const FilterRoutes = () => {

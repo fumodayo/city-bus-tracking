@@ -1,4 +1,4 @@
-import MarkerTravelImage from 'components/MarkerTravelImages/MarkerTravelImage'
+import MarkerTravelImage from 'components/BusRoutes/MarkerTravelImage'
 import React, { useState } from 'react'
 import { Marker, Popup } from 'react-map-gl'
 

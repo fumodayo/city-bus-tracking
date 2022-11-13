@@ -7,13 +7,13 @@ import Map, {
 import 'mapbox-gl/dist/mapbox-gl.css'
 import PolylineBusRoutes from '../components/PolylineBusRoutes/PolylineBusRoutes'
 import MarkerBusRoutes from 'components/MarkerBusRoutes/MarkerBusRoutes'
-import { API_KEY_MAPBOX } from 'config/constant'
 import HomeSidebar from 'components/HomeSidebar/HomeSidebar'
-import MarkerTravelLocation from 'components/MarkerTravelLocation/MarkerTravelLocation'
+import MarkerTravelLocation from 'components/BusRoutes/MarkerTravelLocation'
 import { busStopData } from 'actions/initialData/busStopData'
 import { useSelector } from 'react-redux'
 import { locationTravelData } from 'actions/initialData/locationTravelData'
 import MapboxLanguage from '@mapbox/mapbox-gl-language'
+import { MAPBOX_KEY } from 'mapbox/_consts'
 
 export default function Home() {
   const [viewport, setViewport] = useState({
@@ -64,16 +64,16 @@ export default function Home() {
 
   // Get location in input search and flyTo in the location on map
   const getLocationByInput = useSelector(state => state.routes.direction)
-  useEffect(() => {
-    if (
-      getLocationByInput.location[0] !== undefined &&
-      getLocationByInput.location[1] !== undefined
-    ) {
-      mapRef.current.flyTo({
-        center: [getLocationByInput.location[0], getLocationByInput.location[1]]
-      })
-    }
-  }, [getLocationByInput])
+  // useEffect(() => {
+  //   if (
+  //     getLocationByInput.location[0] !== undefined &&
+  //     getLocationByInput.location[1] !== undefined
+  //   ) {
+  //     mapRef.current.flyTo({
+  //       center: [getLocationByInput.location[0], getLocationByInput.location[1]]
+  //     })
+  //   }
+  // }, [getLocationByInput])
 
   const mapRef = useRef(null)
   const mapRefCallback = useCallback(ref => {
@@ -94,7 +94,7 @@ export default function Home() {
       style={{ width: '100vw', height: '100vh' }}
       mapStyle="mapbox://styles/mapbox/streets-v11"
       onMove={_onViewportChange}
-      mapboxAccessToken={API_KEY_MAPBOX}
+      mapboxAccessToken={MAPBOX_KEY}
       ref={mapRefCallback}
     >
       <HomeSidebar />
