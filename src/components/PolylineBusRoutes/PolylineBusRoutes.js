@@ -32,7 +32,7 @@ const PolylineBusRoutes = () => {
       features: [...getRoutesLine, getRoutesLine].pop()
     }
     setAllDataLineRoutes(geojson)
-  }, [searchRoutes])
+  }, [searchRoutes, road])
 
   return (
     <>

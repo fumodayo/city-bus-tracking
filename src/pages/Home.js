@@ -11,7 +11,7 @@ import HomeSidebar from 'components/HomeSidebar/HomeSidebar'
 import MarkerTravelLocation from 'components/BusRoutes/MarkerTravelLocation'
 import { useSelector } from 'react-redux'
 import MapboxLanguage from '@mapbox/mapbox-gl-language'
-import { MAPBOX_KEY } from 'mapbox/_consts'
+import { REACT_APP_MAPBOX_KEY } from 'mapbox/_consts'
 import { useBusStop } from 'hooks/useBusStop'
 import { useTravel } from 'hooks/useTravel'
 
@@ -94,7 +94,7 @@ export default function Home() {
       style={{ width: '100vw', height: '100vh' }}
       mapStyle="mapbox://styles/mapbox/streets-v11"
       onMove={_onViewportChange}
-      mapboxAccessToken={MAPBOX_KEY}
+      mapboxAccessToken={REACT_APP_MAPBOX_KEY}
       ref={mapRefCallback}
     >
       <HomeSidebar />
