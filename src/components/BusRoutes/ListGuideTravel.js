@@ -4,27 +4,15 @@ import {
   ImageList,
   ImageListItem,
   ImageListItemBar,
-  Paper,
-  Drawer,
-  Typography,
-  Box,
-  IconButton,
-  styled
+  Paper
 } from '@mui/material'
 import HTMLReactParser from 'html-react-parser'
-import { Close } from '@mui/icons-material'
 import { useDispatch } from 'react-redux'
 import { setIDTravel } from 'redux/slices/routes'
 import { useTravel } from 'hooks/useTravel'
 import './ListGuideTravel.scss'
-
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: theme.spacing(0, 1),
-  ...theme.mixins.toolbar
-}))
+import SidebarTravel from './SidebarTravel'
+import { setShowSidebarTravel } from 'redux/slices/form'
 
 const ListGuideTravel = () => {
   const travels = useTravel()
@@ -57,47 +45,15 @@ const ListGuideTravel = () => {
   const [idItem, setItem] = useState('')
   const handleGetIdListItemImage = e => {
     const idLocation = e.currentTarget.id
-    dispatch(setIDTravel(idLocation))
     setItem(idLocation)
-    setIsOpen(!isOpen)
   }
 
-  const [locationTravel, setLocationTravel] = useState({})
   useEffect(() => {
-    const dataLocation = travels.filter(i => i.id === idItem)[0]
-    setLocationTravel(dataLocation)
-  }, [idItem, travels])
-
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleOpenSidebar = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const [nameTypeTravel, setNameTypeTravel] = useState('')
-  useEffect(() => {
-    let typeLocationTravel = ''
-    switch (locationTravel?.typeLocation) {
-      case 'discover':
-        typeLocationTravel = 'Địa điểm <strong>khám phá</strong>'
-        break
-      case 'cultural':
-        typeLocationTravel = 'Địa điểm <strong>văn hóa</strong>'
-        break
-      case 'checking':
-        typeLocationTravel = 'Địa điểm <strong>chụp ảnh đẹp</strong>'
-        break
-      case 'center':
-        typeLocationTravel = 'Trung tâm <strong>vui chơi - giải trí</strong>'
-        break
-      case 'night':
-        typeLocationTravel = 'Địa điểm <strong>vui chơi vào ban đêm</strong>'
-        break
-      default:
-        typeLocationTravel = 'Địa điểm <strong>vui chơi - giải trí</strong>'
-    }
-    setNameTypeTravel(typeLocationTravel)
-  }, [locationTravel])
+    dispatch(setIDTravel(idItem))
+    dispatch(
+      setShowSidebarTravel({ isShowSidebar: true, idTravelLocation: idItem })
+    )
+  }, [idItem])
 
   return (
     <div className="all-information-travel">
@@ -160,70 +116,8 @@ const ListGuideTravel = () => {
             />
           </ImageListItem>
         ))}
-        {isOpen && (
-          <Drawer
-            variant="persistent"
-            anchor="right"
-            hideBackdrop={true}
-            open={isOpen}
-          >
-            <DrawerHeader
-              sx={{ position: 'relative', backgroundColor: '#3597E4' }}
-            >
-              <Typography
-                style={{ fontWeight: '600', color: '#fff', marginLeft: '10px' }}
-              >
-                {locationTravel?.title}
-              </Typography>
-              <IconButton onClick={toggleOpenSidebar}>
-                <Close fontSize="medium" sx={{ color: '#fff' }} />
-              </IconButton>
-            </DrawerHeader>
-            <Box
-              sx={{
-                width: 400,
-                height: '100%',
-                pt: 1,
-                overflow: 'hidden'
-              }}
-            >
-              <img
-                style={{
-                  width: 400,
-                  height: 320,
-                  objectFit: 'cover',
-                  backgroundPosition: 'center'
-                }}
-                src={locationTravel?.image}
-                alt={locationTravel?.imageDesc}
-              />
-              <div className="info-travel">
-                <h1 className="header-info">Thông tin địa điểm:</h1>
-                <div className="info">
-                  <label>Loại hình du lịch: </label>
-                  <span>{HTMLReactParser(nameTypeTravel)}</span>
-                </div>
-                <hr style={{ margin: '5px', border: '1px solid #000' }} />
-                <div className="info">
-                  <label>Giới thiệu chung:</label>
-                  <span>
-                    {locationTravel &&
-                      HTMLReactParser(locationTravel?.description)}
-                  </span>
-                </div>
-                <div className="info">
-                  <label>Địa chỉ: </label>
-                  <span>{locationTravel?.locationName}</span>
-                </div>
-                <div className="info">
-                  <label>Tọa độ trên GoogleMap: </label>
-                  <a href={locationTravel?.locationLink}>Tại đây</a>
-                </div>
-              </div>
-            </Box>
-          </Drawer>
-        )}
       </ImageList>
+      {idItem && <SidebarTravel />}
     </div>
   )
 }

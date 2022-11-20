@@ -3,8 +3,7 @@ import ReactSlider from 'react-slider'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Tab } from '@mui/material'
 import InfoBusRoute from 'components/BusRoutes/InfoBusRoute'
-import { useDispatch } from 'react-redux'
-import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
+import { useDispatch, useSelector } from 'react-redux'
 import PolylineListBusStop from 'components/BusRoutes/PolylineListBusStop'
 import { setIDBusStop } from 'redux/slices/routes'
 import './listbusstop.scss'
@@ -25,12 +24,17 @@ const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
   const dispatch = useDispatch()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [idBusStop, setIdBusStop] = useState('')
+
   const handleStepIndexChange = (e, key) => {
     const idbusstop = e.currentTarget.id
     setIdBusStop(idbusstop)
-    dispatch(setIDBusStop(idBusStop))
     setCurrentIndex(key)
   }
+
+  useEffect(() => {
+    dispatch(setIDBusStop(idBusStop))
+  }, [idBusStop])
+
   const _handleSliderIndex = key => {
     setCurrentIndex(key)
   }
@@ -40,19 +44,9 @@ const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
     setTabValue(newTabValue)
   }
 
-  // get nameBusStop & locationBusStop by Id
-  const [nameBusStop, setNameBusStop] = useState('')
-  const [locationBusStop, setLocationBusStop] = useState({})
-  useEffect(() => {
-    const nameBusStopInList = busStop.filter(i => i.id === idBusStop)[0]
-      ?.nameBusStop
-    setNameBusStop(nameBusStopInList)
-
-    const locationBusStopInList = busStop.filter(i => i.id === idBusStop)[0]
-      ?.location
-    setLocationBusStop(locationBusStopInList)
-  }, [idBusStop, busStop])
-
+  const isShowPolylineBusStopInLine = useSelector(
+    state => state.form.sidebarBusStopInLine.isShowSidebar
+  )
   return (
     <div className="list-bus-station">
       <TabContext value={tabValue}>
@@ -135,16 +129,12 @@ const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
           <InfoBusRoute nameCodeRoute={nameCodeRoute} turnRoute={turnRoute} />
         </TabPanel>
       </TabContext>
-      {nameBusStop && locationBusStop && (
-        <MarkerBusStop
-          nameBusStop={nameBusStop}
-          locationBusStop={locationBusStop}
+      {isShowPolylineBusStopInLine && (
+        <PolylineListBusStop
+          nameCodeRoute={nameCodeRoute}
+          turnRoute={turnRoute}
         />
       )}
-      <PolylineListBusStop
-        nameCodeRoute={nameCodeRoute}
-        turnRoute={turnRoute}
-      />
     </div>
   )
 }

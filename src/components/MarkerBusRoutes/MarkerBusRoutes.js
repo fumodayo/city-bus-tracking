@@ -53,6 +53,7 @@ const MarkerBusRoutes = () => {
           <MarkerBusStop
             nameBusStop={marker.nameBusStop}
             locationBusStop={marker.location}
+            idBusStop={marker.id}
           />
         </div>
       ))}

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Drawer, IconButton, Box, Tab, styled, Typography } from '@mui/material'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Close } from '@mui/icons-material'
+import { useDispatch } from 'react-redux'
+import { setShowSidebarBusStopInLine } from 'redux/slices/form'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -18,6 +20,12 @@ const CustomSidebar = props => {
 
   const handleChangeTab = (e, newTabValue) => {
     setTabValue(newTabValue)
+  }
+
+  const dispatch = useDispatch()
+  const handleCloseSidebar = () => {
+    setIsOpen(false)
+    dispatch(setShowSidebarBusStopInLine({ isShowSidebar: false }))
   }
 
   return (
@@ -39,7 +47,7 @@ const CustomSidebar = props => {
         >
           {name}
         </Typography>
-        <IconButton onClick={() => setIsOpen(false)}>
+        <IconButton onClick={handleCloseSidebar}>
           <Close fontSize="medium" sx={{ color: '#fff' }} />
         </IconButton>
       </DrawerHeader>

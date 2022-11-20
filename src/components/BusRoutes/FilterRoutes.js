@@ -10,6 +10,7 @@ import { useBusRoutes } from 'hooks/useBusRoutes'
 import { Modal, Box } from '@mui/material'
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
 import { Button } from 'react-bootstrap'
+import { setShowSidebarBusStopInLine } from 'redux/slices/form'
 
 const FilterRoutes = () => {
   const routes = useBusRoutes()
@@ -55,6 +56,7 @@ const FilterRoutes = () => {
   const handleGetIDRoute = e => {
     setBusRouteId(e.currentTarget.id)
     setShowSidebar(!showSidebar)
+    dispatch(setShowSidebarBusStopInLine({ isShowSidebar: true }))
   }
 
   const [nameBusRoute, setNameBusRoute] = useState('')
@@ -71,7 +73,6 @@ const FilterRoutes = () => {
   // Get checked in list bus route
   const handleChangeCheckboxRoute = e => {
     const lengthChecked = searchRoute.filter(route => route.isChecked).length
-    console.log(lengthChecked)
     let busroutesdatachangebycheckbox = {}
     if (lengthChecked < 1) {
       const { value: routeName, checked } = e.target

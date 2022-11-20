@@ -1,8 +1,13 @@
 import MarkerTravelImage from 'components/BusRoutes/MarkerTravelImage'
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { Marker, Popup } from 'react-map-gl'
+import { useDispatch } from 'react-redux'
+import { setShowSidebarTravel } from 'redux/slices/form'
+import SidebarTravel from './SidebarTravel'
 
 const MarkerTypeTravel = ({
+  id,
   location,
   name,
   image,
@@ -20,6 +25,18 @@ const MarkerTypeTravel = ({
     e.preventDefault()
     setShowPopup(false)
   }
+
+  const [idItem, setIdItem] = useState('')
+  const onClick = e => {
+    setIdItem(e.target.id)
+  }
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(
+      setShowSidebarTravel({ isShowSidebar: true, idTravelLocation: idItem })
+    )
+  }, [idItem])
+  console.log(idItem)
   return (
     <div>
       <Marker
@@ -28,9 +45,11 @@ const MarkerTypeTravel = ({
         anchor="bottom"
       >
         <MarkerTravelImage
+          id={id}
           mouseEnter={mouseEnter}
           mouseLeave={mouseLeave}
           typeLocation={typeLocation}
+          onClick={onClick}
         />
         {showPopup && (
           <Popup
@@ -66,6 +85,7 @@ const MarkerTypeTravel = ({
           </Popup>
         )}
       </Marker>
+      {idItem && <SidebarTravel />}
     </div>
   )
 }

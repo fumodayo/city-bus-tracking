@@ -14,6 +14,7 @@ const MarkerTravelLocation = () => {
         travels.map((travel, index) => (
           <div className="marker-travel" key={index}>
             <MarkerTypeTravel
+              id={travel.id}
               name={travel.title}
               typeLocation={travel.typeLocation}
               image={travel.image}

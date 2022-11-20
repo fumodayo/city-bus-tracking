@@ -1,5 +1,5 @@
-import mapbox from 'mapbox'
 import { useState } from 'react'
+import mapbox from 'mapbox'
 
 export const useAutoSuggestions = () => {
   const [value, setValue] = useState('')

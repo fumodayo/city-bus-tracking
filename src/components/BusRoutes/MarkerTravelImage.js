@@ -5,7 +5,13 @@ import CulturalImage from 'images/icon_cultural.png'
 import DiscoverImage from 'images/icon_discover.png'
 import NightImage from 'images/icon_night.png'
 
-const MarkerTravelImage = ({ typeLocation, mouseEnter, mouseLeave }) => {
+const MarkerTravelImage = ({
+  id,
+  typeLocation,
+  mouseEnter,
+  mouseLeave,
+  onClick
+}) => {
   let image = null
   switch (typeLocation) {
     case 'center':
@@ -34,6 +40,8 @@ const MarkerTravelImage = ({ typeLocation, mouseEnter, mouseLeave }) => {
       alt="marker"
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
+      onClick={onClick}
+      id={id}
     />
   )
 }
