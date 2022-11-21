@@ -29,6 +29,7 @@ const RouteThrough = ({ idBusStop }) => {
   const handleOpenSidebarBusList = () => {
     setOpenSidebar(openSidebar => !openSidebar)
   }
+  
   return (
     <>
       <div className="route-through">

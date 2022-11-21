@@ -8,10 +8,11 @@ import { useDispatch } from 'react-redux'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
 import { setIDBusStop } from 'redux/slices/routes'
 import { useBusStop } from 'hooks/useBusStop'
+import { setShowSidebarBusStopInLine } from 'redux/slices/form'
 
 const ListAllBusStop = () => {
   const busStop = useBusStop()
-  
+
   // Get word input to search
   const [search, setSearch] = useState('')
   const handleChangeWordSearch = e => {
@@ -47,6 +48,7 @@ const ListAllBusStop = () => {
   useEffect(() => {
     dispatch(setIDBusStop(idBusStop))
   }, [idBusStop])
+  dispatch(setShowSidebarBusStopInLine({ isShowSidebar: true }))
 
   // get nameBusStop & locationBusStop by Id
   const [nameBusStop, setNameBusStop] = useState('')
