@@ -2,6 +2,7 @@
   "name": "city-bus-tracking",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thairyo.github.io/city-bus-tracking",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -17,6 +18,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.2.0",
     "dotenv": "^16.0.3",
+    "gh-pages": "^4.0.0",
     "html-react-parser": "^3.0.4",
     "lodash": "^4.17.21",
     "mapbox-gl": "^2.10.0",
@@ -34,13 +36,16 @@
     "reselect": "^4.1.6",
     "sass": "^1.54.8",
     "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,18 +53,10 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    "defaults",
+    "not ie 11"
+  ],
   "devDependencies": {
     "keyv": "^4.5.2"
   }
