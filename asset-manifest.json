@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/city-bus-tracking/static/css/main.6681000a.css",
-    "main.js": "/city-bus-tracking/static/js/main.dc5d9d69.js",
-    "static/js/mapbox-gl-csp-worker.29face49.worker.js": "/city-bus-tracking/static/js/mapbox-gl-csp-worker.29face49.worker.js",
+    "main.js": "/city-bus-tracking/static/js/main.6f0ea49c.js",
+    "static/js/483.ca1086cb.chunk.js": "/city-bus-tracking/static/js/483.ca1086cb.chunk.js",
     "static/media/icon_discover.png": "/city-bus-tracking/static/media/icon_discover.0f755ea81d71a10c8d16.png",
     "static/media/icon_checking.png": "/city-bus-tracking/static/media/icon_checking.3db9cf15aec07ceac06d.png",
     "static/media/icon_night.png": "/city-bus-tracking/static/media/icon_night.e49ab34eaf40f8c3247d.png",
@@ -10,10 +10,11 @@
     "static/media/icon_cultural.png": "/city-bus-tracking/static/media/icon_cultural.2718389171f449bafeed.png",
     "index.html": "/city-bus-tracking/index.html",
     "main.6681000a.css.map": "/city-bus-tracking/static/css/main.6681000a.css.map",
-    "main.dc5d9d69.js.map": "/city-bus-tracking/static/js/main.dc5d9d69.js.map"
+    "main.6f0ea49c.js.map": "/city-bus-tracking/static/js/main.6f0ea49c.js.map",
+    "483.ca1086cb.chunk.js.map": "/city-bus-tracking/static/js/483.ca1086cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6681000a.css",
-    "static/js/main.dc5d9d69.js"
+    "static/js/main.6f0ea49c.js"
   ]
 }
