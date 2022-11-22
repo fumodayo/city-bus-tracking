@@ -8,6 +8,10 @@ const initialState = {
   direction: {
     id: '',
     location: []
+  },
+  location: {
+    lng: 0,
+    lat: 0
   }
 }
 
@@ -29,6 +33,9 @@ const routesSlice = createSlice({
     },
     setSearchLocation: (state, action) => {
       state.direction = action.payload
+    },
+    setUpdateLocation: (state, action) => {
+      state.location = action.payload
     }
   }
 })
@@ -38,7 +45,8 @@ export const {
   setCheckboxTravel,
   setIDBusStop,
   setIDTravel,
-  setSearchLocation
+  setSearchLocation,
+  setUpdateLocation
 } = routesSlice.actions
 
 export default routesSlice.reducer

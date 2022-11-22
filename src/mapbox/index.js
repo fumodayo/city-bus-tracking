@@ -15,6 +15,13 @@ class MapBoxAPI {
     )
     return res.data
   }
+
+  async getAddress(lng, lat) {
+    const res = await axios.get(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?types=poi&access_token=${REACT_APP_MAPBOX_KEY}&language=vi`
+    )
+    return res.data
+  }
 }
 
 export default new MapBoxAPI()

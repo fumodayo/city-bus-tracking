@@ -48,12 +48,10 @@ const ListGuideTravel = () => {
     setItem(idLocation)
   }
 
-  useEffect(() => {
-    dispatch(setIDTravel(idItem))
-    dispatch(
-      setShowSidebarTravel({ isShowSidebar: true, idTravelLocation: idItem })
-    )
-  }, [idItem])
+  dispatch(setIDTravel(idItem))
+  dispatch(
+    setShowSidebarTravel({ isShowSidebar: true, idTravelLocation: idItem })
+  )
 
   return (
     <div className="all-information-travel">

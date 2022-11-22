@@ -58,76 +58,81 @@ const SidebarTravel = () => {
 
   return (
     <div className="sidebar-travel">
-      <Drawer
-        variant="persistent"
-        anchor="right"
-        hideBackdrop={true}
-        open={isShow}
-      >
-        <DrawerHeader sx={{ position: 'relative', backgroundColor: '#3597E4' }}>
-          <Typography
-            style={{ fontWeight: '600', color: '#fff', marginLeft: '10px' }}
-          >
-            {locationTravel?.title}
-          </Typography>
-          <IconButton>
-            <Close
-              fontSize="medium"
-              sx={{ color: '#fff' }}
-              onClick={() =>
-                dispatch(
-                  setShowSidebarTravel({
-                    isShowSidebar: false,
-                    idTravelLocation: ''
-                  })
-                )
-              }
-            />
-          </IconButton>
-        </DrawerHeader>
-        <Box
-          sx={{
-            width: 400,
-            height: '100%',
-            pt: 1,
-            overflow: 'hidden'
-          }}
+      {locationTravel && (
+        <Drawer
+          variant="persistent"
+          anchor="right"
+          hideBackdrop={true}
+          open={isShow}
+          style={{ transition: 'all 0.5s ease' }}
         >
-          <img
-            style={{
+          <DrawerHeader
+            sx={{ position: 'relative', backgroundColor: '#3597E4' }}
+          >
+            <Typography
+              style={{ fontWeight: '600', color: '#fff', marginLeft: '10px' }}
+            >
+              {locationTravel?.title}
+            </Typography>
+            <IconButton>
+              <Close
+                fontSize="medium"
+                sx={{ color: '#fff' }}
+                onClick={() =>
+                  dispatch(
+                    setShowSidebarTravel({
+                      isShowSidebar: false,
+                      idTravelLocation: ''
+                    })
+                  )
+                }
+              />
+            </IconButton>
+          </DrawerHeader>
+          <Box
+            sx={{
               width: 400,
-              height: 320,
-              objectFit: 'cover',
-              backgroundPosition: 'center'
+              height: '100%',
+              pt: 1,
+              overflow: 'hidden'
             }}
-            src={locationTravel?.image}
-            alt={locationTravel?.imageDesc}
-          />
-          <div className="info-travel">
-            <h1 className="header-info">Thông tin địa điểm:</h1>
-            <div className="info">
-              <label>Loại hình du lịch: </label>
-              <span>{nameTypeTravel && HTMLReactParser(nameTypeTravel)}</span>
+          >
+            <img
+              style={{
+                width: 400,
+                height: 320,
+                objectFit: 'cover',
+                backgroundPosition: 'center'
+              }}
+              src={locationTravel?.image}
+              alt={locationTravel?.imageDesc}
+            />
+            <div className="info-travel">
+              <h1 className="header-info">Thông tin địa điểm:</h1>
+              <div className="info">
+                <label>Loại hình du lịch: </label>
+                <span>{nameTypeTravel && HTMLReactParser(nameTypeTravel)}</span>
+              </div>
+              <hr style={{ margin: '5px', border: '1px solid #000' }} />
+              <div className="info">
+                <label>Giới thiệu chung:</label>
+                <span>
+                  {locationTravel?.description &&
+                    HTMLReactParser(locationTravel?.description)}
+                </span>
+              </div>
+              <div className="info">
+                <label>Địa chỉ: </label>
+                <span>{locationTravel?.locationName}</span>
+              </div>
+              <div className="info">
+                <label>Tọa độ trên GoogleMap: </label>
+                <a href={locationTravel?.locationLink}>Tại đây</a>
+              </div>
             </div>
-            <hr style={{ margin: '5px', border: '1px solid #000' }} />
-            <div className="info">
-              <label>Giới thiệu chung:</label>
-              <span>
-                {locationTravel?.description &&
-                  HTMLReactParser(locationTravel?.description)}
-              </span>
-            </div>
-            <div className="info">
-              <label>Địa chỉ: </label>
-              <span>{locationTravel?.locationName}</span>
-            </div>
-            <div className="info">
-              <label>Tọa độ trên GoogleMap: </label>
-              <a href={locationTravel?.locationLink}>Tại đây</a>
-            </div>
-          </div>
-        </Box>
-      </Drawer>
+          </Box>
+        </Drawer>
+      )}
     </div>
   )
 }

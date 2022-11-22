@@ -2,18 +2,20 @@ import React, { useCallback, useEffect, useState, useRef } from 'react'
 import Map, {
   NavigationControl,
   FullscreenControl,
-  GeolocateControl
+  GeolocateControl,
+  Marker
 } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import PolylineBusRoutes from '../components/PolylineBusRoutes/PolylineBusRoutes'
 import MarkerBusRoutes from 'components/MarkerBusRoutes/MarkerBusRoutes'
 import HomeSidebar from 'components/HomeSidebar/HomeSidebar'
 import MarkerTravelLocation from 'components/BusRoutes/MarkerTravelLocation'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import MapboxLanguage from '@mapbox/mapbox-gl-language'
 import { REACT_APP_MAPBOX_KEY } from 'mapbox/_consts'
 import { useBusStop } from 'hooks/useBusStop'
 import { useTravel } from 'hooks/useTravel'
+import { setUpdateLocation } from 'redux/slices/routes'
 
 export default function Home() {
   const [viewport, setViewport] = useState({
@@ -88,6 +90,8 @@ export default function Home() {
     }
   }, [])
 
+  const dispatch = useDispatch()
+  // console.log(useSelector(state => state.routes.location))
   return (
     <Map
       {...viewport}
@@ -104,9 +108,22 @@ export default function Home() {
       <MarkerTravelLocation />
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
+      {/* <Marker
+        latitude={16}
+        longitude={108}
+        draggable
+        onDrag={e => console.log(e.lngLat)}
+      /> */}
       <GeolocateControl
         data={data}
-        onGeolocate={e => console.log(e.target._map._markers[0]._lngLat)}
+        onGeolocate={e =>
+          dispatch(
+            setUpdateLocation({
+              lng: e.coords.longitude,
+              lat: e.coords.latitude
+            })
+          )
+        }
         position="bottom-right"
       />
     </Map>

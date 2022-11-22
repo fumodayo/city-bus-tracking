@@ -7,9 +7,14 @@ import { Layer, Marker, Source } from 'react-map-gl'
 import ArrowDirection from 'components/FindRoutes/ArrowDirection'
 import { useDirections } from 'hooks/useDirections'
 import './FindRoutes.scss'
+import { setSearchLocation } from 'redux/slices/routes'
+import { useDispatch } from 'react-redux'
+import { useAddress } from 'hooks/useAddress'
 
 const FindRoutes = () => {
   const directions = useDirections()
+  const dispatch = useDispatch()
+  const address = useAddress()
 
   return (
     <>
@@ -55,10 +60,15 @@ const FindRoutes = () => {
           }}
         >
           <Box>
-            {directions?.beginCords && (
+            {address?.id && (
               <Typography style={{ color: '#000' }}>
-                Từ {directions?.beginCords[0]}, {directions?.beginCords[1]} đến{' '}
-                {directions?.endCords[0]},{directions?.endCords[1]}
+                Từ{' '}
+                {address.id === 'begin'
+                  ? address.name
+                  : directions?.beginCords[0]}
+                , {directions?.beginCords[1]} đến{' '}
+                {address.id === 'end' ? address.name : directions?.endCords[0]},
+                {directions?.endCords[1]}
               </Typography>
             )}
             {Object.keys(directions).length !== 0 && (
@@ -129,6 +139,15 @@ const FindRoutes = () => {
           <Marker
             latitude={directions?.beginCords[1]}
             longitude={directions?.beginCords[0]}
+            draggable
+            onDrag={e =>
+              dispatch(
+                setSearchLocation({
+                  id: 'begin',
+                  location: [e.lngLat.lng, e.lngLat.lat]
+                })
+              )
+            }
             anchor="bottom"
           >
             <img
@@ -140,6 +159,15 @@ const FindRoutes = () => {
           <Marker
             latitude={directions?.endCords[1]}
             longitude={directions?.endCords[0]}
+            draggable
+            onDrag={e =>
+              dispatch(
+                setSearchLocation({
+                  id: 'end',
+                  location: [e.lngLat.lng, e.lngLat.lat]
+                })
+              )
+            }
             anchor="bottom"
           >
             <img
