@@ -3,7 +3,8 @@ import Map, {
   NavigationControl,
   FullscreenControl,
   GeolocateControl,
-  Marker
+  Marker,
+  Popup
 } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import PolylineBusRoutes from '../components/PolylineBusRoutes/PolylineBusRoutes'
@@ -16,6 +17,8 @@ import { REACT_APP_MAPBOX_KEY } from 'mapbox/_consts'
 import { useBusStop } from 'hooks/useBusStop'
 import { useTravel } from 'hooks/useTravel'
 import { setUpdateLocation } from 'redux/slices/routes'
+import mapbox from 'mapbox'
+import yourHereImage from 'images/yourhere.png'
 
 export default function Home() {
   const [viewport, setViewport] = useState({
@@ -91,7 +94,29 @@ export default function Home() {
   }, [])
 
   const dispatch = useDispatch()
-  // console.log(useSelector(state => state.routes.location))
+  const { lng, lat } = useSelector(state => state.routes.location)
+  const [nameAddressYourHere, setNameAddressYourHere] = useState('')
+  useEffect(() => {
+    const fetchAddressName = async () => {
+      const res = await mapbox.getAddress(lng, lat)
+      setNameAddressYourHere(res.features[0].place_name_vi)
+    }
+    if (lng && lat) {
+      fetchAddressName()
+    }
+  }, [lng, lat])
+
+  const [showPopup, setShowPopup] = useState(false)
+  const mouseEnter = e => {
+    console.log(e)
+    setShowPopup(true)
+  }
+
+  const mouseLeave = e => {
+    e.preventDefault()
+    setShowPopup(false)
+  }
+
   return (
     <Map
       {...viewport}
@@ -108,12 +133,33 @@ export default function Home() {
       <MarkerTravelLocation />
       <NavigationControl position="bottom-right" />
       <FullscreenControl position="bottom-right" />
-      {/* <Marker
-        latitude={16}
-        longitude={108}
-        draggable
-        onDrag={e => console.log(e.lngLat)}
-      /> */}
+      {lng && lat && (
+        <Marker latitude={lat} longitude={lng}>
+          <img
+            style={{
+              height: 35,
+              width: 25,
+              cursor: 'pointer'
+            }}
+            src={yourHereImage}
+            alt="marker"
+            onMouseEnter={mouseEnter}
+            onMouseLeave={mouseLeave}
+          />
+          {showPopup && (
+            <Popup
+              className="popup-location"
+              latitude={lat + 0.0009}
+              longitude={lng}
+              anchor="bottom"
+              closeOnClick={false}
+              closeButton={false}
+            >
+              {`Bạn đang ở: ${nameAddressYourHere}`}
+            </Popup>
+          )}
+        </Marker>
+      )}
       <GeolocateControl
         data={data}
         onGeolocate={e =>

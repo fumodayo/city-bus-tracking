@@ -60,15 +60,22 @@ const FindRoutes = () => {
           }}
         >
           <Box>
-            {address?.id && (
+            {address?.id && directions?.beginCords && (
               <Typography style={{ color: '#000' }}>
                 Từ{' '}
                 {address.id === 'begin'
                   ? address.name
-                  : directions?.beginCords[0]}
-                , {directions?.beginCords[1]} đến{' '}
-                {address.id === 'end' ? address.name : directions?.endCords[0]},
-                {directions?.endCords[1]}
+                  : 'tọa độ ' +
+                    directions?.beginCords[0] +
+                    ',' +
+                    directions?.beginCords[1]}{' '}
+                đến{' '}
+                {address.id === 'end'
+                  ? address.name
+                  : 'tọa độ ' +
+                    directions?.endCords[0] +
+                    ',' +
+                    directions?.endCords[1]}
               </Typography>
             )}
             {Object.keys(directions).length !== 0 && (
