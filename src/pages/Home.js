@@ -28,14 +28,6 @@ export default function Home() {
     customAttribution: 'buisonthai'
   })
   const _onViewportChange = e => setViewport(e.viewport)
-  const data = {
-    positionOptions: {
-      enableHighAccuracy: true
-    },
-    // When active the map will receive updates to the device's location as it changes.
-    trackUserLocation: true
-    // Draw an arrow next to the location dot to indicate which direction the device is heading.
-  }
 
   const busStop = useBusStop()
   const travel = useTravel()
@@ -86,7 +78,6 @@ export default function Home() {
       //Set the actual ref we use elsewhere
       mapRef.current = ref
       const map = ref
-
       //Add language control that updates map text i18n based on browser preferences
       const language = new MapboxLanguage()
       map.addControl(language)
@@ -108,7 +99,7 @@ export default function Home() {
 
   const [showPopup, setShowPopup] = useState(false)
   const mouseEnter = e => {
-    console.log(e)
+    e.preventDefault()
     setShowPopup(true)
   }
 
@@ -116,7 +107,7 @@ export default function Home() {
     e.preventDefault()
     setShowPopup(false)
   }
-
+  
   return (
     <Map
       {...viewport}
@@ -161,7 +152,6 @@ export default function Home() {
         </Marker>
       )}
       <GeolocateControl
-        data={data}
         onGeolocate={e =>
           dispatch(
             setUpdateLocation({

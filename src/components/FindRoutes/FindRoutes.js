@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Paper, Typography } from '@mui/material'
+import { Box, Button, Paper, Typography } from '@mui/material'
 import InputField from 'components/FindRoutes/InputField'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
@@ -10,22 +10,42 @@ import './FindRoutes.scss'
 import { setSearchLocation } from 'redux/slices/routes'
 import { useDispatch } from 'react-redux'
 import { useAddress } from 'hooks/useAddress'
+import { MyLocation } from '@mui/icons-material'
 
 const FindRoutes = () => {
   const directions = useDirections()
   const dispatch = useDispatch()
   const address = useAddress()
 
+  const handleGetCurrentUserLocation = () => {
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    }
+
+    function success(pos) {
+      dispatch(
+        setSearchLocation({
+          id: 'begin',
+          location: [pos.coords.longitude, pos.coords.latitude]
+        })
+      )
+    }
+
+    function error(err) {
+      console.warn(`ERROR(${err.code}): ${err.message}`)
+    }
+    navigator.geolocation.getCurrentPosition(success, error, options)
+  }
   return (
     <>
       <div className="sidebar-findrouter">
         <Paper
           component="form"
           sx={{
-            p: '2px 4px',
-            alignItems: 'center',
+            display: 'inline-block',
             width: '90%',
-            border: 'none',
             borderRadius: '15px',
             boxShadow: '0px 0px 7px 2px rgb(0 0 0 / 15%)',
             backgroundColor: '#ffffff',
@@ -40,6 +60,10 @@ const FindRoutes = () => {
             <InputField
               idInput={'begin'}
               placeholder={'Nhập địa điểm bắt đầu'}
+            />
+            <Button
+              onClick={handleGetCurrentUserLocation}
+              startIcon={<MyLocation style={{ fontSize: '20px' }} />}
             />
           </div>
           <div className="line"></div>
