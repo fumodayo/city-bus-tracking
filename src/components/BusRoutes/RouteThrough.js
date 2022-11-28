@@ -29,7 +29,7 @@ const RouteThrough = ({ idBusStop }) => {
   const handleOpenSidebarBusList = () => {
     setOpenSidebar(openSidebar => !openSidebar)
   }
-  
+
   return (
     <>
       <div className="route-through">
@@ -42,7 +42,7 @@ const RouteThrough = ({ idBusStop }) => {
             <div className="small-3">
               <div
                 className="route-no text-center"
-                style={{ background: `${routeThrough.colorRoute}` }}
+                style={{ background: `${routeThrough?.colorRoute}` }}
               >
                 <span>{routeThrough?.codeBusRoute}</span>
               </div>

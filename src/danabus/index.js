@@ -1,8 +1,9 @@
 import axios from 'axios'
+import { DANA_BUS_LOCAL_HOST } from './_consts'
 
 class DanaBusAPI {
   async getFullBusRoutes() {
-    const res = await axios.get(``)
+    const res = await axios.get(`http://localhost:8017/v1/busroutes`)
     return res.data
   }
 

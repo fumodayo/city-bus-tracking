@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
 import { routesData } from 'actions/initialData/routesData'
+import danabus from 'danabus'
 
 export const useBusRoutes = () => {
   const [routes, setRoutes] = useState([])
   useEffect(() => {
     const fetchBusStop = async () => {
-      const res = await routesData
+      const res = await danabus.getFullBusRoutes()
+      console.log('data', res)
       let rts = []
       rts = res.map(route => ({
-        id: route.id,
+        id: route._id,
         codeBusRoute: route.codeBusRoute,
         nameRoute: route.nameRoute,
         directionRoute: route.directionRoute,
