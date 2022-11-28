@@ -7,7 +7,6 @@ export const useBusRoutes = () => {
   useEffect(() => {
     const fetchBusStop = async () => {
       const res = await danabus.getFullBusRoutes()
-      console.log('data', res)
       let rts = []
       rts = res.map(route => ({
         id: route._id,

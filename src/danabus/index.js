@@ -1,34 +1,34 @@
 import axios from 'axios'
-import { DANA_BUS_LOCAL_HOST } from './_consts'
+import { API_ROOT } from './_consts'
 
 class DanaBusAPI {
   async getFullBusRoutes() {
-    const res = await axios.get(`http://localhost:8017/v1/busroutes`)
+    const res = await axios.get(`${API_ROOT}/v1/busroutes`)
     return res.data
   }
 
   async getFullBusStop() {
-    const res = await axios.get(``)
+    const res = await axios.get(`${API_ROOT}/v1/busstops`)
     return res.data
   }
 
   async getFullTravel() {
-    const res = await axios.get(``)
+    const res = await axios.get(`${API_ROOT}/v1/travels`)
     return res.data
   }
 
   async getTimeBusStart() {
-    const res = await axios.get(``)
+    const res = await axios.get(`${API_ROOT}/v1/timebusstart`)
     return res.data
   }
 
   async getInformationBusRoute() {
-    const res = await axios.get(``)
+    const res = await axios.get(`${API_ROOT}/v1/infobusroutes`)
     return res.data
   }
 
   async getRoadMap() {
-    const res = await axios.get(``)
+    const res = await axios.get(`${API_ROOT}/v1/roadroutes`)
     return res.data
   }
 }

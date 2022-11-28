@@ -1,4 +1,3 @@
-const DANA_BUS_LOCAL_HOST = process.env.DANA_BUS_LOCAL_HOST
-const DANA_BUS_API_HOST = process.env.DANA_BUS_API_HOST
+const API_ROOT = 'http://localhost:8017'
 
-export { DANA_BUS_API_HOST, DANA_BUS_LOCAL_HOST }
+export { API_ROOT }

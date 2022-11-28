@@ -42,8 +42,8 @@ const InfoBusRoute = ({ nameCodeRoute, turnRoute }) => {
         <div className="info">
           <label>Tuyến: </label>
           <span>
-            {busRouteData.drivingJourney &&
-              HTMLReactParser(busRouteData.drivingJourney)}
+            {busRouteData?.drivingJourney &&
+              HTMLReactParser(busRouteData?.drivingJourney)}
           </span>
         </div>
         <div className="info">
