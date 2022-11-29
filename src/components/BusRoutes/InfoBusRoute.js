@@ -59,22 +59,22 @@ const InfoBusRoute = ({ nameCodeRoute, turnRoute }) => {
       </h1>
       <div className="info">
         <label>Nhãn hiệu: </label>
-        <span>{ticketBusData?.busName}</span>
+        <span>{ticketBusData.busName}</span>
       </div>
       <div className="info">
         <label>Sức chứa: </label>
-        <span>{ticketBusData?.busCapacity}</span>
+        <span>{ticketBusData.busCapacity}</span>
       </div>
       <div className="info">
         <label>Đơn vị vận hành: </label>
-        <span>{ticketBusData?.busOperation}</span>
+        <span>{ticketBusData.busOperation}</span>
       </div>
       <hr />
       <h1 className="header-info">
         <PaidIcon />
         Thông tin vé:
       </h1>
-      {ticketBusData?.ticketPrice && (
+      {ticketBusData.ticketPrice && (
         <div>
           <div className="info">
             <label>Vé lượt: </label>
@@ -93,7 +93,7 @@ const InfoBusRoute = ({ nameCodeRoute, turnRoute }) => {
       )}
       <div className="info">
         <label>Đăng kí vé tháng tại: </label>
-        <a href={ticketBusData?.linkOnline}>Đây.</a>
+        <a href={ticketBusData.linkOnline}>Đây.</a>
       </div>
     </div>
   )
