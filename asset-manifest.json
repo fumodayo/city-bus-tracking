@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/city-bus-tracking/static/css/main.db69cd90.css",
-    "main.js": "/city-bus-tracking/static/js/main.52be5177.js",
-    "static/js/483.ca1086cb.chunk.js": "/city-bus-tracking/static/js/483.ca1086cb.chunk.js",
+    "main.css": "/city-bus-tracking/static/css/main.8bf0ac1e.css",
+    "main.js": "/city-bus-tracking/static/js/main.5e345d1a.js",
+    "static/js/483.c1610e5f.chunk.js": "/city-bus-tracking/static/js/483.c1610e5f.chunk.js",
     "static/media/icon_discover.png": "/city-bus-tracking/static/media/icon_discover.0f755ea81d71a10c8d16.png",
     "static/media/icon_checking.png": "/city-bus-tracking/static/media/icon_checking.3db9cf15aec07ceac06d.png",
     "static/media/icon_night.png": "/city-bus-tracking/static/media/icon_night.e49ab34eaf40f8c3247d.png",
     "static/media/icon_center.png": "/city-bus-tracking/static/media/icon_center.4a25810714d4c49050ba.png",
     "static/media/icon_cultural.png": "/city-bus-tracking/static/media/icon_cultural.2718389171f449bafeed.png",
     "index.html": "/city-bus-tracking/index.html",
-    "main.db69cd90.css.map": "/city-bus-tracking/static/css/main.db69cd90.css.map",
-    "main.52be5177.js.map": "/city-bus-tracking/static/js/main.52be5177.js.map",
-    "483.ca1086cb.chunk.js.map": "/city-bus-tracking/static/js/483.ca1086cb.chunk.js.map"
+    "main.8bf0ac1e.css.map": "/city-bus-tracking/static/css/main.8bf0ac1e.css.map",
+    "main.5e345d1a.js.map": "/city-bus-tracking/static/js/main.5e345d1a.js.map",
+    "483.c1610e5f.chunk.js.map": "/city-bus-tracking/static/js/483.c1610e5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db69cd90.css",
-    "static/js/main.52be5177.js"
+    "static/css/main.8bf0ac1e.css",
+    "static/js/main.5e345d1a.js"
   ]
 }
