@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './NotFound.scss'
@@ -133,7 +133,12 @@ const NotFound = () => {
           </g>
         </svg>
       </div>
-      <Button style={{ maxWidth: '100px' }} variant="outlined">
+      <Typography
+        style={{ paddingBottom: '20px', fontSize: '24px', fontWeight: 'bold' }}
+      >
+        Không tìm thấy trang bạn cần.
+      </Typography>
+      <Button style={{ maxWidth: '200px' }} variant="outlined">
         <Link
           style={{
             textDecoration: 'none',
@@ -142,7 +147,7 @@ const NotFound = () => {
           }}
           to="/"
         >
-          Return
+          Trở về trang chủ
         </Link>
       </Button>
     </div>

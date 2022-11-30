@@ -60,7 +60,7 @@ export default function Login() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Đăng Nhập
             </Typography>
             <Box
               component="form"
@@ -73,7 +73,7 @@ export default function Login() {
                 required
                 fullWidth
                 id="username"
-                label="username"
+                label="Tên người dùng"
                 name="username"
                 autoComplete="username"
                 autoFocus
@@ -83,14 +83,14 @@ export default function Login() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Mật khẩu"
                 type="password"
                 id="password"
                 autoComplete="current-password"
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+                label="Nhớ mật khẩu của tôi"
               />
               <Button
                 type="submit"
@@ -98,12 +98,12 @@ export default function Login() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Đăng nhập
               </Button>
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
-                    Forgot password?
+                    Bạn quên mật khẩu?
                   </Link>
                 </Grid>
               </Grid>
