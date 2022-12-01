@@ -1,21 +1,19 @@
 import React from 'react'
 import { List, Datagrid, TextField } from 'react-admin'
 
-const BusRoutes = () => {
+const BusStops = () => {
   return (
     <List>
       <Datagrid>
         <TextField source="id" />
         <TextField source="codeBusRoute" />
-        <TextField source="nameRoute" />
+        <TextField source="nameBusStop" />
         <TextField source="directionRoute" />
-        <TextField source="drivingJourney" />
-        <TextField source="lineDistance" />
-        <TextField source="operatingTime" />
-        <TextField source="colorRoute" />
+        <TextField source="travelTime" />
+        <TextField source="location" />
       </Datagrid>
     </List>
   )
 }
 
-export default BusRoutes
+export default BusStops
