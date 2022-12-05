@@ -69,7 +69,6 @@ const FilterRoutes = () => {
     setNameCodeRoute(coderoute)
   }, [busRouteId, routes])
 
-  const [openModal, setOpenModal] = useState(false)
   // Get checked in list bus route
   const handleChangeCheckboxRoute = e => {
     const lengthChecked = searchRoute.filter(route => route.isChecked).length
@@ -79,16 +78,15 @@ const FilterRoutes = () => {
       busroutesdatachangebycheckbox = searchRoute.map(route =>
         route.codeBusRoute === routeName
           ? { ...route, isChecked: checked }
-          : route
+          : { ...route, isDisabled: true }
       )
     } else {
-      const { value: routeName, checked } = e.target
+      const { value: routeName } = e.target
       busroutesdatachangebycheckbox = searchRoute.map(route =>
         route.codeBusRoute === routeName
           ? { ...route, isChecked: false }
-          : route
+          : { ...route, isDisabled: false }
       )
-      setOpenModal(true)
     }
     setSearchRoute(busroutesdatachangebycheckbox)
   }
@@ -150,6 +148,7 @@ const FilterRoutes = () => {
                       value={route.codeBusRoute}
                       onChange={handleChangeCheckboxRoute}
                       checked={route?.isChecked || false}
+                      disabled={route?.isDisabled || false}
                       sx={{
                         '& .MuiSvgIcon-root': {
                           fontSize: 30
@@ -184,55 +183,6 @@ const FilterRoutes = () => {
           )}
         </div>
       </div>
-      <Modal
-        open={openModal}
-        onClose={() => setOpenModal(false)}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 400,
-            backgroundColor: '#fff',
-            borderRadius: '5px',
-            boxShadow: 24,
-            padding: '25px',
-            marginBottom: '10px',
-            textAlign: 'center'
-          }}
-        >
-          <ErrorOutlineIcon
-            style={{ color: 'orange', fontSize: '80px', marginBottom: '20px' }}
-          />
-          <Typography
-            id="modal-modal-title"
-            variant="h6"
-            style={{
-              marginBottom: '10px',
-              fontSize: '24px',
-              fontWeight: '600'
-            }}
-          >
-            Thông báo
-          </Typography>
-          <Typography
-            id="modal-modal-description"
-            style={{ marginBottom: '10px' }}
-          >
-            Chỉ chọn tối đa được 1 tuyến
-          </Typography>
-          <Button
-            onClick={() => setOpenModal(false)}
-            style={{ margin: '20px 0px 0px 260px' }}
-          >
-            Đóng
-          </Button>
-        </Box>
-      </Modal>
     </>
   )
 }

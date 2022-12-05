@@ -6,10 +6,10 @@ export const useBusStop = () => {
   const [busStop, setBusStop] = useState([])
   useEffect(() => {
     const fetchBusStop = async () => {
-      const res = await danabus.getFullBusStop()
+      const res = await busStopData
       let bs = []
       bs = res.map(bus => ({
-        id: bus._id,
+        id: bus.id,
         nameBusStop: bus.nameBusStop,
         codeBusRoute: bus.codeBusRoute,
         directionRoute: bus.directionRoute,

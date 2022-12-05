@@ -6,7 +6,7 @@ export const useFormatInfo = () => {
   const [info, setInfo] = useState([])
   useEffect(() => {
     const fetchBusStop = async () => {
-      const res = await danabus.getInformationBusRoute()
+      const res = await informationBusRouteData
       let inf = {}
       inf.ticketPrice = res[0].ticketPrice
       inf.linkMonthlyTicket = res[0].linkMonthlyTicket
