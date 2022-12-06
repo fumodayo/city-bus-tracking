@@ -33,11 +33,11 @@ const InfoBusRoute = ({ nameCodeRoute, turnRoute }) => {
         </h1>
         <div className="info">
           <label>Mã số tuyến:</label>
-          <span>{busRouteData?.nameBusRouter}</span>
+          <span>{busRouteData?.codeBusRoute}</span>
         </div>
         <div className="info">
           <label>Tên tuyến: </label>
-          <span>{busRouteData?.name}</span>
+          <span>{busRouteData?.nameRoute}</span>
         </div>
         <div className="info">
           <label>Tuyến: </label>

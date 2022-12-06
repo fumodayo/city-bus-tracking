@@ -19,6 +19,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.2.0",
     "dotenv": "^16.0.3",
+    "formik": "^2.2.9",
     "gh-pages": "^4.0.0",
     "html-react-parser": "^3.0.4",
     "lodash": "^4.17.21",
@@ -40,7 +41,8 @@
     "sass": "^1.54.8",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4",
-    "worker-loader": "^3.0.8"
+    "worker-loader": "^3.0.8",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",

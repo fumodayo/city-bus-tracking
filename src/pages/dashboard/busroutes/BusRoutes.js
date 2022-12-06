@@ -1,16 +1,18 @@
 import { Button } from '@mui/material'
 import React, { useEffect } from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const BusRoutes = ({ setSelectedLink, link }) => {
   useEffect(() => {
     setSelectedLink(link)
   }, [])
 
+  const navigate = useNavigate()
+
   return (
     <div>
       BusRoutes
-      <Button component={Link} to="/busroutes/createBusRoutes">
+      <Button onClick={() => navigate('/dashboard/createBusRoutes')}>
         Create BusRoutes
       </Button>
     </div>

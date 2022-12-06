@@ -20,6 +20,7 @@ import Travels from './travels/Travels'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Main from './main/Main'
+import MultiStepForm from './busroutes/MultiStepForm'
 
 const drawerWidth = 240
 
@@ -102,6 +103,13 @@ const SideList = ({ open, setOpen }) => {
         icon: <Tour />,
         link: 'travels',
         component: <Travels {...{ setSelectedLink, link: 'travels' }} />
+      },
+      {
+        title: 'create',
+        link: 'createBusRoutes',
+        component: (
+          <MultiStepForm {...{ setSelectedLink, link: 'createBusRoutes' }} />
+        )
       }
     ],
     []
@@ -149,9 +157,7 @@ const SideList = ({ open, setOpen }) => {
         <DrawerHeader />
         <Routes>
           {list.map(item => (
-            <Route key={item.title} path={item.link} element={item.component}>
-              <Route path={item.linkChild} element={item.componentChild} />
-            </Route>
+            <Route key={item.title} path={item.link} element={item.component} />
           ))}
         </Routes>
       </Box>
