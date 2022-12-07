@@ -72,12 +72,20 @@ const HomeSidebar = () => {
               <Box>
                 <TabList onChange={handleChangeTab} aria-label="lab">
                   <Tab
-                    style={{ width: '50%', textTransform: 'none' }}
+                    style={{
+                      width: '50%',
+                      fontSize: '16px',
+                      fontWeight: 600
+                    }}
                     label="Tra cứu"
                     value="1"
                   />
                   <Tab
-                    style={{ width: '50%', textTransform: 'none' }}
+                    style={{
+                      width: '50%',
+                      fontSize: '16px',
+                      fontWeight: 600
+                    }}
                     label="Tìm tuyến"
                     value="2"
                   />

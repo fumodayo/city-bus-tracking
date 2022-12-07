@@ -15,14 +15,27 @@ const BusRouter = () => {
     <div className="sidebar-busroute">
       <TabContext value={tabValue}>
         <Box>
-          <TabList onChange={handleChangeTab} aria-label="lab">
+          <TabList
+            onChange={handleChangeTab}
+            aria-label="lab"
+            textColor="secondary"
+            indicatorColor="secondary"
+          >
             <Tab
-              style={{ width: '50%', textTransform: 'none' }}
+              style={{
+                width: '50%',
+                fontSize: '16px',
+                fontWeight: 600
+              }}
               label="Tuyến"
               value="1"
             />
             <Tab
-              style={{ width: '50%', textTransform: 'none' }}
+              style={{
+                width: '50%',
+                fontSize: '16px',
+                fontWeight: 600
+              }}
               label="Trạm dừng"
               value="2"
             />

@@ -29,17 +29,6 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
     return skipped.has(step)
   }
 
-  const handleNext = () => {
-    let newSkipped = skipped
-    if (isStepSkipped(activeStep)) {
-      newSkipped = new Set(newSkipped.values())
-      newSkipped.delete(activeStep)
-    }
-    console.log(activeStep)
-    setActiveStep(prevActiveStep => prevActiveStep + 1)
-    setSkipped(newSkipped)
-  }
-
   const handleBack = () => {
     setActiveStep(prevActiveStep => prevActiveStep - 1)
   }
@@ -55,7 +44,7 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
     drivingJourney: '',
     lineDistance: '',
     operatingTime: '',
-    colorRoute: '#000'
+    colorRoute: '#000000'
   }
 
   const [dataBusRoutes, setDataBusRoutes] = useState(initialDataBusRoutes)
@@ -64,6 +53,8 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
       return { ...newData, ...fields }
     })
   }
+
+  const [dataBusStops, setDataBusStops] = useState([])
 
   const renderComponentChild = () => {
     switch (activeStep) {
@@ -75,12 +66,36 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
           />
         )
       case 1:
-        return <CreateBusStops />
+        return <CreateBusStops setDataBusStops={setDataBusStops} />
       case 2:
         return <CreateTimeBusStart />
       default:
         return null
     }
+  }
+
+  const handleNext = () => {
+    let newSkipped = skipped
+    if (isStepSkipped(activeStep)) {
+      newSkipped = new Set(newSkipped.values())
+      newSkipped.delete(activeStep)
+    }
+    setActiveStep(prevActiveStep => prevActiveStep + 1)
+    setSkipped(newSkipped)
+
+    const onSubmit = () => {
+      switch (activeStep) {
+        case 0:
+          return dataBusRoutes
+        case 1:
+          return dataBusStops
+        case 2:
+          return 2
+        default:
+          return <div>Loi</div>
+      }
+    }
+    console.log(onSubmit())
   }
 
   return (

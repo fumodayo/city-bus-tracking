@@ -25,7 +25,7 @@ const CreateBusRoutes = ({
 }) => {
   return (
     <Box>
-      <Typography>Create Bus Routes</Typography>
+      <Typography>Tạo Tuyến Xe Buýt</Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
