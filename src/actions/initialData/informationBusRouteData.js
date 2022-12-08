@@ -1,5 +1,6 @@
 export const informationBusRouteData = [
   {
+    id: 'info-1',
     ticketPrice: ['6.000 đồng/lượt', '65.000 đồng/tháng', '130.000 đồng/tháng'],
     busName: 'Xe buýt TRACOMECO (B40)',
     busCapacity: '18 chỗ ngồi + 01 chỗ xe lăn và 21 chỗ đứng',

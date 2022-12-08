@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Box,
   Input,
@@ -8,7 +8,7 @@ import {
   Button
 } from '@mui/material'
 
-const CreateTimeBusStart = () => {
+const CreateTimeBusStart = ({ setDataTimeBusStart }) => {
   const [serviceList, setServiceList] = useState([{ service: '' }])
 
   const handleServiceChange = (e, index) => {
@@ -28,6 +28,10 @@ const CreateTimeBusStart = () => {
     setServiceList([...serviceList, { service: '' }])
   }
 
+  useEffect(() => {
+    setDataTimeBusStart(serviceList)
+  }, [serviceList])
+  
   return (
     <Box>
       <Typography>Tạo thời gian xe xuất bến</Typography>

@@ -21,6 +21,9 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Main from './main/Main'
 import MultiStepForm from './busroutes/MultiStepForm'
+import CreateInfoBusRoute from './infobusroute/CreateInfoBusRoute'
+import CreateTravels from './travels/CreateTravels'
+import Test from './main/Test'
 
 const drawerWidth = 240
 
@@ -105,10 +108,33 @@ const SideList = ({ open, setOpen }) => {
         component: <Travels {...{ setSelectedLink, link: 'travels' }} />
       },
       {
-        title: 'create',
+        title: 'Create Bus Routes',
         link: 'createBusRoutes',
         component: (
           <MultiStepForm {...{ setSelectedLink, link: 'createBusRoutes' }} />
+        )
+      },
+      {
+        title: 'Create Info Bus Route',
+        link: 'createInfoBusRoute',
+        component: (
+          <CreateInfoBusRoute
+            {...{ setSelectedLink, link: 'createInfoBusRoute' }}
+          />
+        )
+      },
+      {
+        title: 'Create Travels',
+        link: 'createTravels',
+        component: (
+          <CreateTravels {...{ setSelectedLink, link: 'createTravels' }} />
+        )
+      },
+      {
+        title: 'test',
+        link: 'test',
+        component: (
+          <Test {...{ setSelectedLink, link: 'test' }} />
         )
       }
     ],

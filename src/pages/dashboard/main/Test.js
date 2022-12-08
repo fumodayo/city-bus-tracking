@@ -15,9 +15,6 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { useBusStop } from 'hooks/useBusStop'
 import { useBusRoutes } from 'hooks/useBusRoutes'
 import { useState } from 'react'
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Button } from '@mui/material'
 
 function Row(props) {
   const { row } = props
@@ -92,13 +89,7 @@ function Row(props) {
   )
 }
 
-const BusRoutes = ({ setSelectedLink, link }) => {
-  useEffect(() => {
-    setSelectedLink(link)
-  }, [])
-
-  const navigate = useNavigate()
-
+const Test = () => {
   const busstops = useBusStop()
   const busroutes = useBusRoutes()
   const rows = busroutes.map(route => ({
@@ -107,33 +98,28 @@ const BusRoutes = ({ setSelectedLink, link }) => {
   }))
 
   return (
-    <>
-      <TableContainer component={Paper}>
-        <Table aria-label="collapsible table">
-          <TableHead>
-            <TableRow>
-              <TableCell />
-              <TableCell>Mã số tuyến</TableCell>
-              <TableCell>Tên tuyến</TableCell>
-              <TableCell>Chiều của tuyến</TableCell>
-              <TableCell>Mô tả hành trình</TableCell>
-              <TableCell>Độ dài của tuyến</TableCell>
-              <TableCell>Thời gian tuyến hoạt động</TableCell>
-              <TableCell>Màu của tuyến</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map(row => (
-              <Row key={row.id} row={row} />
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <Button onClick={() => navigate('/dashboard/createBusRoutes')}>
-        Create BusRoutes
-      </Button>
-    </>
+    <TableContainer component={Paper}>
+      <Table aria-label="collapsible table">
+        <TableHead>
+          <TableRow>
+            <TableCell />
+            <TableCell>Mã số tuyến</TableCell>
+            <TableCell>Tên tuyến</TableCell>
+            <TableCell>Chiều của tuyến</TableCell>
+            <TableCell>Mô tả hành trình</TableCell>
+            <TableCell>Độ dài của tuyến</TableCell>
+            <TableCell>Thời gian tuyến hoạt động</TableCell>
+            <TableCell>Màu của tuyến</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map(row => (
+            <Row key={row.id} row={row} />
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   )
 }
 
-export default BusRoutes
+export default Test

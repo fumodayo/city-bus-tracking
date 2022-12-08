@@ -7,9 +7,6 @@ import { useDispatch } from 'react-redux'
 import FilterTravelMap from 'components/BusRoutes/FilterTravelMap'
 import { setFilterRoutes } from 'redux/slices/routes'
 import { useBusRoutes } from 'hooks/useBusRoutes'
-import { Modal, Box } from '@mui/material'
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline'
-import { Button } from 'react-bootstrap'
 import { setShowSidebarBusStopInLine } from 'redux/slices/form'
 
 const FilterRoutes = () => {

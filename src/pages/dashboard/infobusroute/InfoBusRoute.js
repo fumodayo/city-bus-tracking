@@ -1,78 +1,63 @@
-import { Box, Button, Grid, TextField, Typography } from '@mui/material'
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Box, Button } from '@mui/material'
+import { useFormatInfo } from 'hooks/useFormatInfo'
+import { DataGrid } from '@mui/x-data-grid'
+import { informationBusRouteData } from 'actions/initialData/informationBusRouteData'
+
+const columns = [
+  {
+    field: 'ticketPrice',
+    headerName: 'Mã số tuyến',
+    width: 150,
+    editable: true
+  },
+  {
+    field: 'busName',
+    headerName: 'Tên tuyến',
+    width: 300,
+    editable: true
+  },
+  {
+    field: 'busCapacity',
+    headerName: 'Chiều của tuyến',
+    width: 150,
+    editable: true
+  },
+  {
+    field: 'busOperation',
+    headerName: 'Mô tả hành trình',
+    width: 300,
+    editable: true
+  }
+]
 
 const InfoBusRoute = ({ setSelectedLink, link }) => {
   useEffect(() => {
     setSelectedLink(link)
   }, [])
 
-  const initialInfoBusRoute = {
-    ticketPrice: '',
-    busName: '',
-    busCapacity: '',
-    busOperation: ''
-  }
+  const navigate = useNavigate()
 
-  const [info, setInfo] = useState(initialInfoBusRoute)
-  const updateFormInfoBusRoute = fields => {
-    setInfo(newData => {
-      return { ...newData, ...fields }
-    })
-  }
-
-  const handleSubmit = () => {
-    console.log(info)
-  }
-
+  const rows = informationBusRouteData
+  
   return (
-    <Box>
-      <Typography>Tạo thông tin cơ bản về tuyến: </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            autoFocus
-            value={info.ticketPrice}
-            type="text"
-            label="Mã số tuyến"
-            onChange={e =>
-              updateFormInfoBusRoute({ ticketPrice: e.target.value })
-            }
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            autoFocus
-            value={info.busName}
-            type="text"
-            label="Tên hãng xe"
-            onChange={e => updateFormInfoBusRoute({ busName: e.target.value })}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            autoFocus
-            value={info.busCapacity}
-            type="text"
-            label="Sức chứa của xe"
-            onChange={e =>
-              updateFormInfoBusRoute({ busCapacity: e.target.value })
-            }
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            autoFocus
-            value={info.busOperation}
-            type="text"
-            label="Đơn vị vận hàng"
-            onChange={e =>
-              updateFormInfoBusRoute({ busOperation: e.target.value })
-            }
-          />
-        </Grid>
-      </Grid>
-      <Button onClick={handleSubmit}>Xác nhận</Button>
-    </Box>
+    <div>
+      <Box sx={{ height: 800, width: '100%' }}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          pageSize={20}
+          rowsPerPageOptions={[20]}
+          checkboxSelection
+          disableSelectionOnClick
+          experimentalFeatures={{ newEditingApi: true }}
+        />
+      </Box>
+      <Button onClick={() => navigate('/dashboard/createInfoBusRoute')}>
+        Create InfoBusRoute
+      </Button>
+    </div>
   )
 }
 

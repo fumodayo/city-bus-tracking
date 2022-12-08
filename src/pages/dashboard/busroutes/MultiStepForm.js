@@ -10,11 +10,13 @@ import React, { useEffect, useState } from 'react'
 import CreateBusRoutes from './CreateBusRoutes'
 import CreateBusStops from './CreateBusStops'
 import CreateTimeBusStart from './CreateTimeBusStart'
+import ConfirmCreate from './ConfirmCreate'
 
 const steps = [
   'Tạo tuyến xe buýt',
   'Tạo bến xe buýt',
-  'Tạo thời gian xe xuất bến'
+  'Tạo thời gian xe xuất bến',
+  'Xác nhận tạo mới'
 ]
 
 const MultiStepForm = ({ setSelectedLink, link }) => {
@@ -55,6 +57,7 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
   }
 
   const [dataBusStops, setDataBusStops] = useState([])
+  const [dataTimeBusStart, setDataTimeBusStart] = useState([])
 
   const renderComponentChild = () => {
     switch (activeStep) {
@@ -68,7 +71,9 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
       case 1:
         return <CreateBusStops setDataBusStops={setDataBusStops} />
       case 2:
-        return <CreateTimeBusStart />
+        return <CreateTimeBusStart setDataTimeBusStart={setDataTimeBusStart} />
+      case 3:
+        return <ConfirmCreate />
       default:
         return null
     }
@@ -90,11 +95,13 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
         case 1:
           return dataBusStops
         case 2:
-          return 2
+          return dataTimeBusStart
         default:
-          return <div>Loi</div>
+          throw new Error('Unknown step')
       }
     }
+
+    // console.log(dataBusRoutes.codeBusRoute)
     console.log(onSubmit())
   }
 

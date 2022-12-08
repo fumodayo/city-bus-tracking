@@ -61,12 +61,13 @@ const CreateBusRoutes = ({
           </FormControl>
         </Grid>
         <Grid item xs={12} sm={6}>
+          <InputLabel>Mô tả hành trình</InputLabel>
           <TextareaAutosize
-            minRows={4}
-            style={{ width: 600 }}
+            maxRows={4}
+            style={{ width: 400, maxHeight: 200, resize: 'none' }}
             value={drivingJourney}
             type="text"
-            label="Mô tả hành trình"
+            placeholder="Mô tả hành trình"
             onChange={e =>
               updateFormBusRoutes({ drivingJourney: e.target.value })
             }
