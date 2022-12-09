@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Box, Button } from '@mui/material'
-import { DataGrid } from '@mui/x-data-grid'
+import { Box, Button, IconButton } from '@mui/material'
+import { DataGrid, GridFooter, GridFooterContainer } from '@mui/x-data-grid'
 import { useTravel } from 'hooks/useTravel'
+import { Delete } from '@mui/icons-material'
 
 const Travels = ({ setSelectedLink, link }) => {
   useEffect(() => {
@@ -10,8 +11,6 @@ const Travels = ({ setSelectedLink, link }) => {
   }, [])
 
   const navigate = useNavigate()
-
-  const rows = useTravel()
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 90 },
@@ -69,6 +68,33 @@ const Travels = ({ setSelectedLink, link }) => {
     }
   ]
 
+  const CustomFooter = () => {
+    return (
+      <GridFooterContainer>
+        <GridFooter
+          sx={{
+            border: 'none'
+          }}
+        />
+        <IconButton sx={{ p: 2 }} onClick={handleDeleteRows}>
+          <Delete />
+        </IconButton>
+      </GridFooterContainer>
+    )
+  }
+
+  const rows = useTravel()
+
+  const [selectedRows, setSelectedRows] = useState([])
+  const [travelsData, setTravelsData] = useState(rows)
+
+  const handleDeleteRows = () => {
+    const updatedData = rows.filter(row => !selectedRows.includes(row.id))
+    setTravelsData(updatedData)
+  }
+
+  // console.log(travelsData)
+
   return (
     <div>
       <Box sx={{ height: 800, width: '100%' }}>
@@ -76,10 +102,13 @@ const Travels = ({ setSelectedLink, link }) => {
           rows={rows}
           columns={columns}
           pageSize={15}
-          rowsPerPageOptions={[20]}
+          rowsPerPageOptions={[15]}
           checkboxSelection
           disableSelectionOnClick
           experimentalFeatures={{ newEditingApi: true }}
+          onSelectionModelChange={row => setSelectedRows(row)}
+          components={{ Footer: CustomFooter }}
+          editMode
         />
       </Box>
       <Button onClick={() => navigate('/dashboard/createTravels')}>

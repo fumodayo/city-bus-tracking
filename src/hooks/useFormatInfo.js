@@ -10,7 +10,6 @@ export const useFormatInfo = () => {
       let inf = {}
       inf.ticketPrice = res[0].ticketPrice
       inf.linkMonthlyTicket = res[0].linkMonthlyTicket
-      inf.linkOnline = res[0].linkOnline
       inf.busName = res[0].busName
       inf.busCapacity = res[0].busCapacity
       inf.busOperation = res[0].busOperation

@@ -91,10 +91,6 @@ const InfoBusRoute = ({ nameCodeRoute, turnRoute }) => {
           </div>
         </div>
       )}
-      <div className="info">
-        <label>Đăng kí vé tháng tại: </label>
-        <a href={ticketBusData.linkOnline}>Đây.</a>
-      </div>
     </div>
   )
 }
