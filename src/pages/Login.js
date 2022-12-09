@@ -100,13 +100,13 @@ export default function Login() {
               >
                 Đăng nhập
               </Button>
-              <Grid container>
+              {/* <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
                     Bạn quên mật khẩu?
                   </Link>
                 </Grid>
-              </Grid>
+              </Grid> */}
             </Box>
           </Box>
         </Grid>

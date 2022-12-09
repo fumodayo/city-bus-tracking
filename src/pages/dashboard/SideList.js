@@ -24,6 +24,9 @@ import MultiStepForm from './busroutes/MultiStepForm'
 import CreateInfoBusRoute from './infobusroute/CreateInfoBusRoute'
 import CreateTravels from './travels/CreateTravels'
 import Test from './main/Test'
+import BusAlertIcon from '@mui/icons-material/BusAlert'
+import AddchartIcon from '@mui/icons-material/Addchart'
+import ModeOfTravelIcon from '@mui/icons-material/ModeOfTravel'
 
 const drawerWidth = 240
 
@@ -109,6 +112,7 @@ const SideList = ({ open, setOpen }) => {
       },
       {
         title: 'Create Bus Routes',
+        icon: <BusAlertIcon />,
         link: 'createBusRoutes',
         component: (
           <MultiStepForm {...{ setSelectedLink, link: 'createBusRoutes' }} />
@@ -116,6 +120,7 @@ const SideList = ({ open, setOpen }) => {
       },
       {
         title: 'Create Info Bus Route',
+        icon: <AddchartIcon />,
         link: 'createInfoBusRoute',
         component: (
           <CreateInfoBusRoute
@@ -125,6 +130,7 @@ const SideList = ({ open, setOpen }) => {
       },
       {
         title: 'Create Travels',
+        icon: <ModeOfTravelIcon />,
         link: 'createTravels',
         component: (
           <CreateTravels {...{ setSelectedLink, link: 'createTravels' }} />
@@ -133,9 +139,7 @@ const SideList = ({ open, setOpen }) => {
       {
         title: 'test',
         link: 'test',
-        component: (
-          <Test {...{ setSelectedLink, link: 'test' }} />
-        )
+        component: <Test {...{ setSelectedLink, link: 'test' }} />
       }
     ],
     []

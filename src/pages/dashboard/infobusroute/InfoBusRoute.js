@@ -1,36 +1,18 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Box, Button } from '@mui/material'
+import {
+  Box,
+  Button,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography
+} from '@mui/material'
 import { useFormatInfo } from 'hooks/useFormatInfo'
-import { DataGrid } from '@mui/x-data-grid'
-import { informationBusRouteData } from 'actions/initialData/informationBusRouteData'
-
-const columns = [
-  {
-    field: 'ticketPrice',
-    headerName: 'Mã số tuyến',
-    width: 150,
-    editable: true
-  },
-  {
-    field: 'busName',
-    headerName: 'Tên tuyến',
-    width: 300,
-    editable: true
-  },
-  {
-    field: 'busCapacity',
-    headerName: 'Chiều của tuyến',
-    width: 150,
-    editable: true
-  },
-  {
-    field: 'busOperation',
-    headerName: 'Mô tả hành trình',
-    width: 300,
-    editable: true
-  }
-]
 
 const InfoBusRoute = ({ setSelectedLink, link }) => {
   useEffect(() => {
@@ -39,25 +21,40 @@ const InfoBusRoute = ({ setSelectedLink, link }) => {
 
   const navigate = useNavigate()
 
-  const rows = informationBusRouteData
-  
+  const rows = useFormatInfo()
+
   return (
-    <div>
-      <Box sx={{ height: 800, width: '100%' }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={20}
-          rowsPerPageOptions={[20]}
-          checkboxSelection
-          disableSelectionOnClick
-          experimentalFeatures={{ newEditingApi: true }}
-        />
-      </Box>
+    <>
+      <TableContainer component={Paper}>
+        <Table aria-label="collapsible table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Giá vé theo luợt</TableCell>
+              <TableCell>Giá vé theo tháng (ưu tiên)</TableCell>
+              <TableCell>Giá vé theo tháng (thường)</TableCell>
+              <TableCell>Đơn vị vận hàng</TableCell>
+              <TableCell>Tên hãng xe</TableCell>
+              <TableCell>Sức chứa của xe</TableCell>
+            </TableRow>
+          </TableHead>
+          {rows.ticketPrice && (
+            <TableBody>
+              <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+                <TableCell>{rows?.ticketPrice[0]}</TableCell>
+                <TableCell>{rows?.ticketPrice[1]}</TableCell>
+                <TableCell>{rows?.ticketPrice[2]}</TableCell>
+                <TableCell>{rows.busOperation}</TableCell>
+                <TableCell>{rows.busName}</TableCell>
+                <TableCell>{rows.busCapacity}</TableCell>
+              </TableRow>
+            </TableBody>
+          )}
+        </Table>
+      </TableContainer>
       <Button onClick={() => navigate('/dashboard/createInfoBusRoute')}>
         Create InfoBusRoute
       </Button>
-    </div>
+    </>
   )
 }
 

@@ -38,7 +38,7 @@ const Travels = ({ setSelectedLink, link }) => {
     },
     {
       field: 'description',
-      headerName: 'Mô tả hành trình',
+      headerName: 'Mô tả địa điểm',
       width: 300,
       editable: true
     },
@@ -56,11 +56,16 @@ const Travels = ({ setSelectedLink, link }) => {
     },
     {
       field: 'location',
-      headerName: 'Kinh độ',
+      headerName: 'Tọa độ',
       type: 'string',
       width: 200,
       editable: true,
-      renderCell: params => params.formattedValue.lng
+      renderCell: params => (
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div>Kinh độ: {params.formattedValue.lng}</div>
+          <div>Vĩ độ: {params.formattedValue.lat}</div>
+        </div>
+      )
     }
   ]
 

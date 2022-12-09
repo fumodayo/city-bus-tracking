@@ -4,12 +4,14 @@ import { useBusStop } from 'hooks/useBusStop'
 import { useTravel } from 'hooks/useTravel'
 import React from 'react'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Main = ({ setSelectedLink, link }) => {
   useEffect(() => {
     setSelectedLink(link)
   }, [])
 
+  const navigate = useNavigate()
   const busroutes = useBusRoutes()
   const busstops = useBusStop()
   const travels = useTravel()
@@ -31,6 +33,7 @@ const Main = ({ setSelectedLink, link }) => {
             opacity: [0.9, 0.8, 0.7]
           }
         }}
+        onClick={() => navigate('/dashboard/busroutes')}
       >
         <Grid container direction="column" alignItems="center" p={2}>
           <Grid item xs={12} sm={6}>
@@ -66,6 +69,7 @@ const Main = ({ setSelectedLink, link }) => {
             opacity: [0.9, 0.8, 0.7]
           }
         }}
+        onClick={() => navigate('/dashboard/busroutes')}
       >
         <Grid container direction="column" alignItems="center" p={2}>
           <Grid item xs={12} sm={6}>
@@ -96,6 +100,7 @@ const Main = ({ setSelectedLink, link }) => {
             opacity: [0.9, 0.8, 0.7]
           }
         }}
+        onClick={() => navigate('/dashboard/travels')}
       >
         <Grid container direction="column" alignItems="center" p={2}>
           <Grid item xs={12} sm={6}>
