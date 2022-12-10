@@ -1,13 +1,18 @@
+import { Typography } from '@mui/material'
 import { useBusStop } from 'hooks/useBusStop'
 import { useTimeBusStart } from 'hooks/useTimeBusStart'
+import { useTravel } from 'hooks/useTravel'
+import HTMLReactParser from 'html-react-parser'
 import React, { useEffect, useState } from 'react'
 import Countdown from 'react-countdown'
 
 const BusLocation = ({ idBusStop }) => {
   const [getrealtime, setRealtime] = useState('')
   const [timeBusStop, setTimeBusStop] = useState(1000)
+  const [travelLocation, setTravelLocation] = useState({})
   const allBusStop = useBusStop()
   const timeBusStart = useTimeBusStart()
+  const travels = useTravel()
 
   const addZeroBeforeTime = time => {
     return time < 10 ? '0' + time : time
@@ -33,8 +38,13 @@ const BusLocation = ({ idBusStop }) => {
       const busStopFindById = allBusStop.filter(
         busstop => busstop.id === idBusStop
       )[0]
+
       const codeBusStop = busStopFindById.codeBusRoute
       const directionBusStop = busStopFindById.directionRoute
+      const nameTravel = busStopFindById.travelNear
+
+      const travelLocation = travels.filter(i => i.title === nameTravel)
+      setTravelLocation(travelLocation)
 
       // get array time bus starts
       const allTimeBusStarts = timeBusStart.filter(
@@ -56,7 +66,7 @@ const BusLocation = ({ idBusStop }) => {
         setTimeBusStop(0)
       }
     }
-  }, [getrealtime, idBusStop, allBusStop, timeBusStart])
+  }, [getrealtime, idBusStop, allBusStop, timeBusStart, travels])
 
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -86,6 +96,28 @@ const BusLocation = ({ idBusStop }) => {
         intervalDelay={0}
         precision={3}
       />
+      {travelLocation.length > 0 &&
+        travelLocation?.map(travel => (
+          <div key={travel.id}>
+            <Typography>Những địa điểm du lịch gần trạm xe: </Typography>
+            <Typography>{travel.title}</Typography>
+            <img
+              style={{
+                width: 350,
+                height: 300,
+                objectFit: 'cover',
+                backgroundPosition: 'center'
+              }}
+              src={travel?.image}
+              alt={travel?.imageDesc}
+            />
+            <Typography>Địa điểm cách trạm xe tầm: </Typography>
+            <Typography>Giới thiệu</Typography>
+            <Typography>
+              {travel?.description && HTMLReactParser(travel?.description)}
+            </Typography>
+          </div>
+        ))}
     </div>
   )
 }

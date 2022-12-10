@@ -1,77 +1,75 @@
-import { Check, Edit, TramSharp } from '@mui/icons-material'
-import { Table, TableBody, TableCell, TableHead, TableRow, TextField } from '@mui/material'
-import React from 'react'
+import React, { Component } from 'react'
+import Form from './Form'
+import Table from './Table'
 
-const row = (
-  x,
-  i,
-  header,
-  handleRemove,
-  startEditing,
-  editIdx,
-  handleChange,
-  stopEditing
-) => {
-  const currentlyEditing = editIdx === i
-  return (
-    <TableRow key={`tr-${i}`} selectable={false}>
-      {header.map((y, k) => (
-        <TableCell key={`trc-${k}`}>
-          {currentlyEditing ? (
-            <TextField
-              name={y.prop}
-              onChange={e => handleChange(e, y.prop, i)}
-              value={x[y.prop]}
-            />
-          ) : (
-            x[y.prop]
-          )}
-        </TableCell>
-      ))}
-      <TableRow>
-        {currentlyEditing ? (
-          <Check onClick={() => stopEditing()} />
-        ) : (
-          <Edit onClick={() => startEditing(i)} />
-        )}
-      </TableRow>
-      <TableRow>
-        <TramSharp onClick={() => handleRemove(i)} />
-      </TableRow>
-    </TableRow>
-  )
+class Test extends Component {
+  state = {
+    data: [],
+    editIdx: -1
+  }
+
+  handleRemove = i => {
+    this.setState(state => ({
+      data: state.data.filter((row, j) => j !== i)
+    }))
+  }
+
+  startEditing = i => {
+    this.setState({ editIdx: i })
+  }
+
+  stopEditing = () => {
+    this.setState({ editIdx: -1 })
+  }
+
+  handleChange = (e, name, i) => {
+    const { value } = e.target
+    this.setState(state => ({
+      data: state.data.map((row, j) =>
+        j === i ? { ...row, [name]: value } : row
+      )
+    }))
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Form
+          onSubmit={submission =>
+            this.setState({
+              data: [...this.state.data, submission]
+            })
+          }
+        />
+        <Table
+          handleRemove={this.handleRemove}
+          startEditing={this.startEditing}
+          editIdx={this.state.editIdx}
+          stopEditing={this.stopEditing}
+          handleChange={this.handleChange}
+          data={this.state.data}
+          header={[
+            {
+              name: 'First name',
+              prop: 'firstName'
+            },
+            {
+              name: 'Last name',
+              prop: 'lastName'
+            },
+            {
+              name: 'Username',
+              prop: 'username'
+            },
+            {
+              name: 'Email',
+              prop: 'email'
+            }
+          ]}
+        />
+      </div>
+    )
+  }
 }
 
-export default ({
-  data,
-  header,
-  handleRemove,
-  startEditing,
-  editIdx,
-  handleChange,
-  stopEditing
-}) => (
-  <Table>
-    <TableHead>
-      <TableRow>
-        {header.map((x, i) => (
-          <TableHead key={`thc-${i}`}>{x.name}</TableHead>
-        ))}
-      </TableRow>
-    </TableHead>
-    <TableBody>
-      {data.map((x, i) =>
-        row(
-          x,
-          i,
-          header,
-          handleRemove,
-          startEditing,
-          editIdx,
-          handleChange,
-          stopEditing
-        )
-      )}
-    </TableBody>
-  </Table>
-)
+export default Test

@@ -14,6 +14,7 @@ export const useBusStop = () => {
         codeBusRoute: bus.codeBusRoute,
         directionRoute: bus.directionRoute,
         travelTime: bus.travelTime,
+        travelNear: bus.travelNear,
         location: {
           lng: bus.location.lng,
           lat: bus.location.lat

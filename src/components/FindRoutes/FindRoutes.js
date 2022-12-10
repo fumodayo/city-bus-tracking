@@ -172,12 +172,14 @@ const FindRoutes = () => {
             longitude={directions?.beginCords[0]}
             draggable
             onDrag={e =>
-              dispatch(
-                setSearchLocation({
-                  id: 'begin',
-                  location: [e.lngLat.lng, e.lngLat.lat]
-                })
-              )
+              setTimeout(() => {
+                dispatch(
+                  setSearchLocation({
+                    id: 'begin',
+                    location: [e.lngLat.lng, e.lngLat.lat]
+                  })
+                )
+              }, 500)
             }
             anchor="bottom"
           >
@@ -192,12 +194,14 @@ const FindRoutes = () => {
             longitude={directions?.endCords[0]}
             draggable
             onDrag={e =>
-              dispatch(
-                setSearchLocation({
-                  id: 'end',
-                  location: [e.lngLat.lng, e.lngLat.lat]
-                })
-              )
+              setTimeout(() => {
+                dispatch(
+                  setSearchLocation({
+                    id: 'end',
+                    location: [e.lngLat.lng, e.lngLat.lat]
+                  })
+                )
+              }, 500)
             }
             anchor="bottom"
           >

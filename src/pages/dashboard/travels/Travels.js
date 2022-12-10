@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Box, Button, IconButton } from '@mui/material'
-import { DataGrid, GridFooter, GridFooterContainer } from '@mui/x-data-grid'
+import {
+  DataGrid,
+  GridFooter,
+  GridFooterContainer,
+  gridClasses
+} from '@mui/x-data-grid'
 import { useTravel } from 'hooks/useTravel'
 import { Delete } from '@mui/icons-material'
+import { grey } from '@mui/material/colors'
+import TravelsActions from './TravelsActions'
+import { useMemo } from 'react'
 
 const Travels = ({ setSelectedLink, link }) => {
   useEffect(() => {
@@ -12,61 +20,75 @@ const Travels = ({ setSelectedLink, link }) => {
 
   const navigate = useNavigate()
 
-  const columns = [
-    { field: 'id', headerName: 'ID', width: 90 },
-    {
-      field: 'title',
-      headerName: 'Tên địa điểm',
-      width: 200,
-      editable: true
-    },
-    {
-      field: 'typeLocation',
-      headerName: 'Loại Hình Du lịch',
-      width: 150,
-      editable: true
-    },
-    {
-      field: 'image',
-      headerName: 'Hình ảnh',
-      width: 150,
-      editable: true,
-      renderCell: params => (
-        <img style={{ maxWidth: '100%' }} src={params.value} alt={params} />
-      )
-    },
-    {
-      field: 'description',
-      headerName: 'Mô tả địa điểm',
-      width: 300,
-      editable: true
-    },
-    {
-      field: 'locationLink',
-      headerName: 'Địa chỉ trên google map',
-      width: 250,
-      editable: true
-    },
-    {
-      field: 'locationName',
-      headerName: 'Địa chỉ',
-      width: 350,
-      editable: true
-    },
-    {
-      field: 'location',
-      headerName: 'Tọa độ',
-      type: 'string',
-      width: 200,
-      editable: true,
-      renderCell: params => (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div>Kinh độ: {params.formattedValue.lng}</div>
-          <div>Vĩ độ: {params.formattedValue.lat}</div>
-        </div>
-      )
-    }
-  ]
+  const [rowId, setRowId] = useState('')
+  const columns = useMemo(
+    () => [
+      { field: 'id', headerName: 'ID', width: 90 },
+      {
+        field: 'title',
+        headerName: 'Tên địa điểm',
+        width: 150,
+        editable: true
+      },
+      {
+        field: 'typeLocation',
+        headerName: 'Loại Hình Du lịch',
+        width: 150,
+        type: 'singleSelect',
+        valueOptions: ['discover', 'cultural', 'checking', 'center', 'night'],
+        editable: true
+      },
+      {
+        field: 'image',
+        headerName: 'Hình ảnh',
+        width: 150,
+        editable: true,
+        renderCell: params => (
+          <img style={{ maxWidth: '100%' }} src={params.value} alt={params} />
+        )
+      },
+      {
+        field: 'description',
+        headerName: 'Mô tả địa điểm',
+        width: 300,
+        editable: true
+      },
+      {
+        field: 'locationLink',
+        headerName: 'Địa chỉ trên google map',
+        width: 250,
+        editable: true
+      },
+      {
+        field: 'locationName',
+        headerName: 'Địa chỉ',
+        width: 350,
+        editable: true
+      },
+      {
+        field: 'location',
+        headerName: 'Tọa độ',
+        type: 'string',
+        width: 200,
+        editable: true,
+        renderCell: params => (
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div>Kinh độ: {params.formattedValue.lng}</div>
+            <div>Vĩ độ: {params.formattedValue.lat}</div>
+          </div>
+        )
+      },
+      {
+        field: 'actions',
+        headerName: 'Actions',
+        type: 'actions',
+        renderCell: params => (
+          <TravelsActions {...{ params, rowId, setRowId }} />
+        )
+      }
+    ],
+    [rowId]
+  )
 
   const CustomFooter = () => {
     return (
@@ -93,22 +115,31 @@ const Travels = ({ setSelectedLink, link }) => {
     setTravelsData(updatedData)
   }
 
-  // console.log(travelsData)
+  const [pageSize, setPageSize] = useState(5)
+  // console.log(selectedRows)
 
   return (
     <div>
       <Box sx={{ height: 800, width: '100%' }}>
         <DataGrid
-          rows={rows}
           columns={columns}
-          pageSize={15}
-          rowsPerPageOptions={[15]}
+          rows={rows}
+          rowsPerPageOptions={[5, 10, 20]}
+          pageSize={pageSize}
+          onPageSizeChange={newPageSize => setPageSize(newPageSize)}
+          getRowSpacing={params => ({
+            top: params.isFirstVisible ? 0 : 5,
+            bottom: params.isLastVisible ? 0 : 5
+          })}
           checkboxSelection
-          disableSelectionOnClick
-          experimentalFeatures={{ newEditingApi: true }}
-          onSelectionModelChange={row => setSelectedRows(row)}
           components={{ Footer: CustomFooter }}
-          editMode
+          sx={{
+            [`& .${gridClasses.row}`]: {
+              bgcolor: theme =>
+                theme.palette.mode === 'light' ? grey[200] : grey[900]
+            }
+          }}
+          onCellEditCommit={params => setRowId(params.id)}
         />
       </Box>
       <Button onClick={() => navigate('/dashboard/createTravels')}>

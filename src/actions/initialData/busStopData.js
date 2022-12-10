@@ -17,6 +17,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 1,
+    travelNear: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     location: {
       lng: '108.11943246536552',
       lat: '16.1330679589498'
@@ -28,6 +29,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     location: {
       lng: '108.11930183932864',
       lat: '16.129617645548674'
@@ -39,6 +41,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     location: {
       lng: '108.12076170018832',
       lat: '16.12411291753288'
@@ -50,6 +53,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 5,
+    travelNear: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     location: {
       lng: '108.12813319223163',
       lat: '16.113172832903878'
@@ -61,6 +65,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 5,
+    travelNear: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     location: {
       lng: '108.13286592134278',
       lat: '16.10496845723984'
@@ -72,6 +77,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 4,
+    travelNear: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     location: {
       lng: '108.13502538849755',
       lat: '16.100559049857242'
@@ -83,6 +89,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 5,
+    travelNear: 'Công viên nước Mikazuki',
     location: {
       lng: '108.14283634199731',
       lat: '16.090049322991707'
@@ -94,6 +101,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Công viên nước Mikazuki',
     location: {
       lng: '108.14430889603847',
       lat: '16.08652784640827'
@@ -105,6 +113,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Công viên nước Mikazuki',
     location: {
       lng: '108.14576615827266',
       lat: '16.083010841022624'
@@ -116,6 +125,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Công viên nước Mikazuki',
     location: {
       lng: '108.14718256545261',
       lat: '16.079550289432646'
@@ -127,6 +137,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.14856333524123',
       lat: '16.076183245107273'
@@ -138,6 +149,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.14997593480217',
       lat: '16.07265158955931'
@@ -149,6 +161,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 1,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.15044654790096',
       lat: '16.071460640131072'
@@ -160,6 +173,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.15160502991218',
       lat: '16.06879111285614'
@@ -171,6 +185,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.15368239852161',
       lat: '16.066210917274432'
@@ -182,6 +197,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.1557597458739',
       lat: '16.06480733201605'
@@ -193,6 +209,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 5,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.15918458017227',
       lat: '16.062517217613777'
@@ -204,6 +221,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 5,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.16293456797649',
       lat: '16.060029568036004'
@@ -215,6 +233,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 6,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.16663084854403',
       lat: '16.05721701505328'
@@ -226,6 +245,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 1,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.16785224436086',
       lat: '16.056399740975724'
@@ -237,6 +257,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.17156815178656',
       lat: '16.056752479019856'
@@ -248,6 +269,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.17353822118451',
       lat: '16.05815482711118'
@@ -259,6 +281,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 7,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.18443206071548',
       lat: '16.06531725496157'
@@ -270,6 +293,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.18889948560606',
       lat: '16.06571373878797'
@@ -281,6 +305,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Chợ đêm Hòa Khánh',
     location: {
       lng: '108.19261595462079',
       lat: '16.06571987858083'
@@ -291,6 +316,7 @@ export const busStopData = [
     nameBusStop: '135 Điện Biên Phủ',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ cồn Đà Nẵng',
     travelTime: 4,
     location: {
       lng: '108.198956789357',
@@ -303,6 +329,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 4,
+    travelNear: 'Chợ cồn Đà Nẵng',
     location: {
       lng: '108.20554552103773',
       lat: '16.065948404370776'
@@ -314,6 +341,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Chợ cồn Đà Nẵng',
     location: {
       lng: '108.20818666467244',
       lat: '16.06617381074443'
@@ -325,6 +353,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 2,
+    travelNear: 'Chợ cồn Đà Nẵng',
     location: {
       lng: '108.21061748697342',
       lat: '16.06655732264574'
@@ -336,6 +365,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 4,
+    travelNear: 'Chợ cồn Đà Nẵng',
     location: {
       lng: '108.2143623108899',
       lat: '16.067216379289228'
@@ -347,6 +377,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Nhà thờ Chính Tòa',
     location: {
       lng: '108.21802419064903',
       lat: '16.06806363675924'
@@ -358,6 +389,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Nhà thờ Chính Tòa',
     location: {
       lng: '108.22185444676832',
       lat: '16.06853163858333'
@@ -369,6 +401,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 3,
+    travelNear: 'Nhà thờ Chính Tòa',
     location: {
       lng: '108.22366291157324',
       lat: '16.067069408678766'
@@ -379,6 +412,7 @@ export const busStopData = [
     nameBusStop: 'UBND quận Hải Châu',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Phố đi bộ Bạch Đằng',
     travelTime: 3,
     location: {
       lng: '108.22316873828835',
@@ -391,6 +425,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 6,
+    travelNear: 'Chợ đêm Sơn Trà',
     location: {
       lng: '108.23362603960751',
       lat: '16.0612211977039'
@@ -401,6 +436,7 @@ export const busStopData = [
     nameBusStop: 'BV Quận Sơn Trà',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2352356061066',
@@ -412,6 +448,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 1187 Ngô Quyền',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.23640435593668',
@@ -423,6 +460,7 @@ export const busStopData = [
     nameBusStop: 'Số 34 Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23698155498312',
@@ -434,6 +472,7 @@ export const busStopData = [
     nameBusStop: '180 Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 6,
     location: {
       lng: '108.23843515512749',
@@ -445,6 +484,7 @@ export const busStopData = [
     nameBusStop: 'Số 240 Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23929240084374',
@@ -456,6 +496,7 @@ export const busStopData = [
     nameBusStop: '310A Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24056921979812',
@@ -467,6 +508,7 @@ export const busStopData = [
     nameBusStop: '370 Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24178308931015',
@@ -478,6 +520,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 40 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24360637369601',
@@ -489,6 +532,7 @@ export const busStopData = [
     nameBusStop: '160 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24575742606396',
@@ -500,6 +544,7 @@ export const busStopData = [
     nameBusStop: '256 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24728405078287',
@@ -511,6 +556,7 @@ export const busStopData = [
     nameBusStop: '376 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.24936655066908',
@@ -522,6 +568,7 @@ export const busStopData = [
     nameBusStop: '402 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25141745647258',
@@ -533,6 +580,7 @@ export const busStopData = [
     nameBusStop: '470A Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25320435969822',
@@ -544,6 +592,7 @@ export const busStopData = [
     nameBusStop: '542 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25544269233824',
@@ -555,6 +604,7 @@ export const busStopData = [
     nameBusStop: '618 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.25858691929429',
@@ -566,6 +616,7 @@ export const busStopData = [
     nameBusStop: '758 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.25931412296185',
@@ -577,6 +628,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện Sân Tập Lái Xe Ô Tô',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.2571568409417',
@@ -588,6 +640,7 @@ export const busStopData = [
     nameBusStop: 'E152 Trần Đại Nghĩa',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2557789360975',
@@ -599,6 +652,7 @@ export const busStopData = [
     nameBusStop: 'Kế VLXD Tấn Danh Trần Đại Nghĩa',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25504300799523',
@@ -610,6 +664,7 @@ export const busStopData = [
     nameBusStop: 'Trường Cao Đẳng Việt Hàn',
     codeBusRoute: 'R16',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2523825106433',
@@ -621,6 +676,7 @@ export const busStopData = [
     nameBusStop: 'Trường Cao Đẳng Việt Hàn',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.2523825106433',
@@ -632,6 +688,7 @@ export const busStopData = [
     nameBusStop: 'Kế Cửa Hàng Thành Tín Hợp',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 2,
     location: {
       lng: '108.25528311453743',
@@ -643,6 +700,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Cửa Hàng Thiên Đại Phúc Trần Đại Nghĩa',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25601582421558',
@@ -654,6 +712,7 @@ export const busStopData = [
     nameBusStop: 'Vườn ươm cây xanh',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25750440762585',
@@ -665,6 +724,7 @@ export const busStopData = [
     nameBusStop: 'Sân tập lái ô tô Trần Đại Nghĩa',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 1,
     location: {
       lng: '108.25755685860983',
@@ -676,6 +736,7 @@ export const busStopData = [
     nameBusStop: '527 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 7,
     location: {
       lng: '108.2598358826321',
@@ -687,6 +748,7 @@ export const busStopData = [
     nameBusStop: '415 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.25929677344821',
@@ -698,6 +760,7 @@ export const busStopData = [
     nameBusStop: '307 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25730216701777',
@@ -709,6 +772,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện TTHC Quận Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.25427254912104',
@@ -720,6 +784,7 @@ export const busStopData = [
     nameBusStop: '127 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.25104161718339',
@@ -731,6 +796,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện 384 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2499148626708',
@@ -742,6 +808,7 @@ export const busStopData = [
     nameBusStop: 'Kế 81B Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.2479137141275',
@@ -753,6 +820,7 @@ export const busStopData = [
     nameBusStop: 'Doanh trại quân đội đường Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.24558233887281',
@@ -764,6 +832,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện 48 Lê Văn Hiến',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24417161092119',
@@ -775,6 +844,7 @@ export const busStopData = [
     nameBusStop: '175 Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.24269273776413',
@@ -786,6 +856,7 @@ export const busStopData = [
     nameBusStop: '133 Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.24081970838753',
@@ -797,6 +868,7 @@ export const busStopData = [
     nameBusStop: 'Trường trung cấp nghề số 5',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.23914371375542',
@@ -808,6 +880,7 @@ export const busStopData = [
     nameBusStop: 'Đại học Kinh Tế',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 2,
     location: {
       lng: '108.23864826341214',
@@ -819,6 +892,7 @@ export const busStopData = [
     nameBusStop: '29 Ngũ Hành Sơn',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2374687610848',
@@ -830,6 +904,7 @@ export const busStopData = [
     nameBusStop: '1093 Ngô Quyền',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23596967118698',
@@ -841,6 +916,7 @@ export const busStopData = [
     nameBusStop: '1041 Ngô Quyền',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23521413301363',
@@ -852,6 +928,7 @@ export const busStopData = [
     nameBusStop: 'Cầu Rồng (số lẽ đường Võ Văn Kiệt)',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23337367661787',
@@ -863,6 +940,7 @@ export const busStopData = [
     nameBusStop: 'Đài DRT',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 7,
     location: {
       lng: '108.22418154571895',
@@ -874,6 +952,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Chợ Hàn',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22505282365555',
@@ -886,6 +965,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 59 Hùng Vương',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.21974747888261',
@@ -897,6 +977,7 @@ export const busStopData = [
     nameBusStop: '192 Hùng Vương',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21741182319265',
@@ -908,6 +989,7 @@ export const busStopData = [
     nameBusStop: 'Chợ Cồn',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21463722946298',
@@ -919,6 +1001,7 @@ export const busStopData = [
     nameBusStop: '10 Lý Thái Tổ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20997834512136',
@@ -930,6 +1013,7 @@ export const busStopData = [
     nameBusStop: 'Số 14-16 Lý Thái Tổ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20997698081376',
@@ -941,6 +1025,7 @@ export const busStopData = [
     nameBusStop: '130 Lý Thái Tổ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20739171149656',
@@ -952,6 +1037,7 @@ export const busStopData = [
     nameBusStop: '130 Điện Biên Phủ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 6,
     location: {
       lng: '108.19934642887499',
@@ -963,6 +1049,7 @@ export const busStopData = [
     nameBusStop: '336 Dien Bien Phu',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.19298386072211',
@@ -974,6 +1061,7 @@ export const busStopData = [
     nameBusStop: 'Số 412 Điện Biên Phủ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18938647677336',
@@ -985,6 +1073,7 @@ export const busStopData = [
     nameBusStop: '570 Điện Biên Phủ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.18418540896684',
@@ -996,6 +1085,7 @@ export const busStopData = [
     nameBusStop: '128 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 11,
     location: {
       lng: '108.17443186308077',
@@ -1007,6 +1097,7 @@ export const busStopData = [
     nameBusStop: '210 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17140503578477',
@@ -1018,6 +1109,7 @@ export const busStopData = [
     nameBusStop: '294 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.16828799015995',
@@ -1029,6 +1121,7 @@ export const busStopData = [
     nameBusStop: '422 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.16259227747018',
@@ -1040,6 +1133,7 @@ export const busStopData = [
     nameBusStop: '552 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1588978340965',
@@ -1051,6 +1145,7 @@ export const busStopData = [
     nameBusStop: '640 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.15641694044808',
@@ -1062,6 +1157,7 @@ export const busStopData = [
     nameBusStop: '758 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.15311494705684',
@@ -1073,6 +1169,7 @@ export const busStopData = [
     nameBusStop: '806 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.15191053145458',
@@ -1084,6 +1181,7 @@ export const busStopData = [
     nameBusStop: '900 Tôn Đức Thắng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.15080992942696',
@@ -1095,6 +1193,7 @@ export const busStopData = [
     nameBusStop: '50 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 2,
     location: {
       lng: '108.1502324692913',
@@ -1106,6 +1205,7 @@ export const busStopData = [
     nameBusStop: '138 Nguyễn Lương',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.14853636339204',
@@ -1117,6 +1217,7 @@ export const busStopData = [
     nameBusStop: '234 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.14693498683692',
@@ -1128,6 +1229,7 @@ export const busStopData = [
     nameBusStop: '290 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.14601475919088',
@@ -1139,6 +1241,7 @@ export const busStopData = [
     nameBusStop: '396 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.14414723834219',
@@ -1150,6 +1253,7 @@ export const busStopData = [
     nameBusStop: '438 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.14296086642372',
@@ -1161,6 +1265,7 @@ export const busStopData = [
     nameBusStop: '546 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 7,
     location: {
       lng: '108.1353780100409',
@@ -1172,6 +1277,7 @@ export const busStopData = [
     nameBusStop: '636 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.13289700411802',
@@ -1183,6 +1289,7 @@ export const busStopData = [
     nameBusStop: '788 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 5,
     location: {
       lng: '108.12971616629946',
@@ -1194,6 +1301,7 @@ export const busStopData = [
     nameBusStop: '922 Nguyễn Lương Bằng',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 4,
     location: {
       lng: '108.12690586319908',
@@ -1205,6 +1313,7 @@ export const busStopData = [
     nameBusStop: '52 Nguyễn Văn Cừ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 8,
     location: {
       lng: '108.11990593830097',
@@ -1216,6 +1325,7 @@ export const busStopData = [
     nameBusStop: 'Số 126 Nguyễn Văn Cừ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1195137338104',
@@ -1227,6 +1337,7 @@ export const busStopData = [
     nameBusStop: 'Số 230 Nguyễn Văn Cừ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1196697291987',
@@ -1238,6 +1349,7 @@ export const busStopData = [
     nameBusStop: '274 Nguyễn Văn Cừ',
     codeBusRoute: 'R16',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 2,
     location: {
       lng: '108.11980751312127',
@@ -1250,6 +1362,7 @@ export const busStopData = [
     nameBusStop: 'Cảng Sông Hàn',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.22373539714997',
@@ -1261,6 +1374,7 @@ export const busStopData = [
     nameBusStop: '20 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22080749112735',
@@ -1272,6 +1386,7 @@ export const busStopData = [
     nameBusStop: '104-106 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21866622578328',
@@ -1283,6 +1398,7 @@ export const busStopData = [
     nameBusStop: '240 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21634214523567',
@@ -1294,6 +1410,7 @@ export const busStopData = [
     nameBusStop: '322 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21486006875192',
@@ -1305,6 +1422,7 @@ export const busStopData = [
     nameBusStop: 'Chợ Tam Giác',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21350920202813',
@@ -1316,6 +1434,7 @@ export const busStopData = [
     nameBusStop: 'Siêu thị BigC',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21414968927846',
@@ -1327,6 +1446,7 @@ export const busStopData = [
     nameBusStop: '522-524 Ông Ích Khiêm',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21524217769469',
@@ -1338,6 +1458,7 @@ export const busStopData = [
     nameBusStop: '618 Ông Ích Khiêm',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21659304984732',
@@ -1349,6 +1470,7 @@ export const busStopData = [
     nameBusStop: '11-15 Nguyễn Văn Linh',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21606974429214',
@@ -1360,6 +1482,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Chùa Phước Ninh',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21770742471998',
@@ -1371,6 +1494,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Apec',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22297389483775',
@@ -1382,6 +1506,7 @@ export const busStopData = [
     nameBusStop: '152A-154 Đường 2/9',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2220825286856',
@@ -1393,6 +1518,7 @@ export const busStopData = [
     nameBusStop: '214-216 Đường 2/9',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22244333000998',
@@ -1404,6 +1530,7 @@ export const busStopData = [
     nameBusStop: '264-266 Nui Thanh 48',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22145177653864',
@@ -1415,6 +1542,7 @@ export const busStopData = [
     nameBusStop: 'Nút giao Lê Thanh Nghị - đường 30/4',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21842312380464',
@@ -1426,6 +1554,7 @@ export const busStopData = [
     nameBusStop: 'Trước Công Ty Kiểm Toán & Kế toán AAC',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21473525105212',
@@ -1437,6 +1566,7 @@ export const busStopData = [
     nameBusStop: '300-302 Nguyễn Hữu Thọ',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20973178755769',
@@ -1448,6 +1578,7 @@ export const busStopData = [
     nameBusStop: '432-434 Nguyễn Hữu Thọ',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2088633935457',
@@ -1459,6 +1590,7 @@ export const busStopData = [
     nameBusStop: 'Viettronimex-Nguyễn Hữu Thọ',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20847814481236',
@@ -1470,6 +1602,7 @@ export const busStopData = [
     nameBusStop: '40-42 Lê Đại Hành',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20750088310731',
@@ -1481,6 +1614,7 @@ export const busStopData = [
     nameBusStop: 'Ban nghĩa trang TP',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20432685227635',
@@ -1492,6 +1626,7 @@ export const busStopData = [
     nameBusStop: 'Dệt may Hòa Thọ',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20320561865236',
@@ -1503,6 +1638,7 @@ export const busStopData = [
     nameBusStop: '307-309 đường CMT8',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20425967895206',
@@ -1514,6 +1650,7 @@ export const busStopData = [
     nameBusStop: '492 đường CMT8',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1972225081628',
@@ -1525,6 +1662,7 @@ export const busStopData = [
     nameBusStop: 'Trước Trung Tâm GDTX Số 3',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19116550241041',
@@ -1536,6 +1674,7 @@ export const busStopData = [
     nameBusStop: 'Ngã ba DT605 giao Quốc lộ 1A',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1919671582678',
@@ -1547,6 +1686,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Trụ Điện 238',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19088323683629',
@@ -1558,6 +1698,7 @@ export const busStopData = [
     nameBusStop: 'Trường tiểu học Số 2 Hòa Tiến',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18147451549397',
@@ -1569,6 +1710,7 @@ export const busStopData = [
     nameBusStop: 'Gần kiệt 12 thôn Lệ Sơn Bắc',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17954650785964',
@@ -1580,6 +1722,7 @@ export const busStopData = [
     nameBusStop: 'Gần nhà thuốc số 1 thôn Lệ Sơn Bắc',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17981410434453',
@@ -1591,6 +1734,7 @@ export const busStopData = [
     nameBusStop: 'Hòa Tiến (Nghĩa trang xã Hòa Tiến)',
     codeBusRoute: 'R4A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17859432663842',
@@ -1602,6 +1746,7 @@ export const busStopData = [
     nameBusStop: 'Hòa Tiến (Nghĩa trang xã Hòa Tiến)',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.1785849944503',
@@ -1613,6 +1758,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện nhà thuốc số 1 thôn Lệ Sơn Bac',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17981572954609',
@@ -1624,6 +1770,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện khu vực gần kiệt 12 thôn Lệ Sơn Bắc',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17937971106028',
@@ -1635,6 +1782,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Trường Trung Học Số 2 Hòa Tiến',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18159780648445',
@@ -1646,6 +1794,7 @@ export const busStopData = [
     nameBusStop: 'Hòa Tiến (Trụ điện CS 44 238)',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18649664631646',
@@ -1657,6 +1806,7 @@ export const busStopData = [
     nameBusStop: 'Café Relax',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19226468002928',
@@ -1668,6 +1818,7 @@ export const busStopData = [
     nameBusStop: 'Trung tâm GDTX Số 3-Trường Chỉnh',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19115160965633',
@@ -1679,6 +1830,7 @@ export const busStopData = [
     nameBusStop: 'Trụ điện 25-2 Trường Chinh',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19281791224451',
@@ -1690,6 +1842,7 @@ export const busStopData = [
     nameBusStop: '417 đường CMT 8',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19794941445075',
@@ -1701,6 +1854,7 @@ export const busStopData = [
     nameBusStop: 'Công an Q.Cẩm Lệ/294-296 đường CMT8',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20370568053289',
@@ -1712,6 +1866,7 @@ export const busStopData = [
     nameBusStop: 'THPT Hòa Vang-Ông Ích Đường',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20344151529726',
@@ -1723,6 +1878,7 @@ export const busStopData = [
     nameBusStop: '117 Lê Đại Hành',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20414181640025',
@@ -1734,6 +1890,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 60 Lê Đại Hành',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20705440180673',
@@ -1745,6 +1902,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện Viettronimex-Nguyễn Hữu Thọ',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20881673369276',
@@ -1756,6 +1914,7 @@ export const busStopData = [
     nameBusStop: '513-515 Nguyễn Hữu Thọ',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20918073473719',
@@ -1767,6 +1926,7 @@ export const busStopData = [
     nameBusStop: 'Bệnh viện Vinmex/325-327 Nguyễn Hữu Thọ',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21033251457489',
@@ -1778,6 +1938,7 @@ export const busStopData = [
     nameBusStop: 'Trụ CS20 Đường 30/4',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21468337710034',
@@ -1789,6 +1950,7 @@ export const busStopData = [
     nameBusStop: 'Nút giao Lê Thanh Nghị - đường 30/4',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21830219164812',
@@ -1800,6 +1962,7 @@ export const busStopData = [
     nameBusStop: '255-257 Núi Thành',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22146472827737',
@@ -1811,6 +1974,7 @@ export const busStopData = [
     nameBusStop: 'Nha hang Phi LO-đối diện 200-202 Đường 2/9',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22263263175323',
@@ -1822,6 +1986,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 154 Đường 2/9',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22265081850765',
@@ -1833,6 +1998,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Apec-Đối diện 22 Đường 2/9',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22306927843742',
@@ -1844,6 +2010,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Nguyễn Văn Linh-Đối diện 31 NVL',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22117175660793',
@@ -1855,6 +2022,7 @@ export const busStopData = [
     nameBusStop: 'Chùa Phước Ninh',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21783788102859',
@@ -1866,6 +2034,7 @@ export const busStopData = [
     nameBusStop: '415-417 Ông Ích Khiêm',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21583759948186',
@@ -1877,6 +2046,7 @@ export const busStopData = [
     nameBusStop: 'Xí nghiệp cấp nước-295-297 Ông Ích Khiêm',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.214410263921',
@@ -1888,6 +2058,7 @@ export const busStopData = [
     nameBusStop: 'Chợ Cồn',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21396493740754',
@@ -1899,6 +2070,7 @@ export const busStopData = [
     nameBusStop: '301 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21350074037333',
@@ -1910,6 +2082,7 @@ export const busStopData = [
     nameBusStop: '251-253 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21497894044268',
@@ -1921,6 +2094,7 @@ export const busStopData = [
     nameBusStop: '163-165 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21664201807722',
@@ -1932,6 +2106,7 @@ export const busStopData = [
     nameBusStop: '75 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21839618274556',
@@ -1943,6 +2118,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 22 Đống Đa',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22067333992871',
@@ -1954,6 +2130,7 @@ export const busStopData = [
     nameBusStop: 'Cảng Sông Hàn',
     codeBusRoute: 'R4A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22371496489367',
@@ -1965,6 +2142,7 @@ export const busStopData = [
     nameBusStop: 'Cảng Sông Hàn',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.22370549433006',
@@ -1976,6 +2154,7 @@ export const busStopData = [
     nameBusStop: '06 Trần Phú',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22271153886453',
@@ -1987,6 +2166,7 @@ export const busStopData = [
     nameBusStop: 'Trường Tiếu học Lý Tự Trọng',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22111824390869',
@@ -1998,6 +2178,7 @@ export const busStopData = [
     nameBusStop: '08-10 Nguyễn Thị Minh Khai',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21765676769978',
@@ -2009,6 +2190,7 @@ export const busStopData = [
     nameBusStop: '100-102 Nguyễn Thị Minh Khai',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21832462537047',
@@ -2020,6 +2202,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Hùng Vương',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22182417199608',
@@ -2031,6 +2214,7 @@ export const busStopData = [
     nameBusStop: 'Nhà thờ Con Gà',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22365484024257',
@@ -2042,6 +2226,7 @@ export const busStopData = [
     nameBusStop: 'TTHC Quận Hải Châu',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22311443091253',
@@ -2053,6 +2238,7 @@ export const busStopData = [
     nameBusStop: 'Cổ Viện Chàm',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22354659653496',
@@ -2064,6 +2250,7 @@ export const busStopData = [
     nameBusStop: '60 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22029129285603',
@@ -2075,6 +2262,7 @@ export const busStopData = [
     nameBusStop: '256-258 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22145836954671',
@@ -2086,6 +2274,7 @@ export const busStopData = [
     nameBusStop: '382 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22188772844409',
@@ -2097,6 +2286,7 @@ export const busStopData = [
     nameBusStop: '484 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2223002676993',
@@ -2108,6 +2298,7 @@ export const busStopData = [
     nameBusStop: '582 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22279948858281',
@@ -2119,6 +2310,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện Metro',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22006370786733',
@@ -2130,6 +2322,7 @@ export const busStopData = [
     nameBusStop: '8V Tâm Trí-54 đường CMT8',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21459783673527',
@@ -2141,6 +2334,7 @@ export const busStopData = [
     nameBusStop: '178 CMT 8',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2098120388637',
@@ -2152,6 +2346,7 @@ export const busStopData = [
     nameBusStop: '307-309 CMT 8',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20426743727874',
@@ -2163,6 +2358,7 @@ export const busStopData = [
     nameBusStop: '492 CMT 8',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19722599306887',
@@ -2174,6 +2370,7 @@ export const busStopData = [
     nameBusStop: '172 Trường Sơn',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17454093275921',
@@ -2185,6 +2382,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện trường Quân sự QK5-Trường Sơn',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.16776686480158',
@@ -2196,6 +2394,7 @@ export const busStopData = [
     nameBusStop: 'Bệnh viện Hòa Vang-Trường Sơn',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.15177714912119',
@@ -2207,6 +2406,7 @@ export const busStopData = [
     nameBusStop: 'Trường TH Lâm Quang Thự-Quảng Xương',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.13748431593731',
@@ -2218,6 +2418,7 @@ export const busStopData = [
     nameBusStop: 'TTHC huyện Hòa Vang-Trường Sơn',
     codeBusRoute: 'R17A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.13998505467812',
@@ -2229,6 +2430,7 @@ export const busStopData = [
     nameBusStop: 'TTHC Huyện hòa Vang',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.13998505467812',
@@ -2240,6 +2442,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện Trường TH Lâm Quang Thự- Quảng Xương',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.13749496249625',
@@ -2251,6 +2454,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện Bệnh viện Hòa Vang-Trường Sơn',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.15185197819635',
@@ -2262,6 +2466,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 399 Trường Sơn',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.16340611665899',
@@ -2273,6 +2478,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 172 Trường Sơn',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.17423525617426',
@@ -2284,6 +2490,7 @@ export const busStopData = [
     nameBusStop: '417 đường CMT 8',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.19803741136677',
@@ -2295,6 +2502,7 @@ export const busStopData = [
     nameBusStop: 'Công an Q.Cẩm Lệ-294-296 đường CMT-8',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.20369439047685',
@@ -2306,6 +2514,7 @@ export const busStopData = [
     nameBusStop: '151 CMT 8',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.20983446954644',
@@ -2317,6 +2526,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện BV Tâm Trí-25 CMT8',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.21474470520941',
@@ -2328,6 +2538,7 @@ export const busStopData = [
     nameBusStop: 'Metro',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.21994316254656',
@@ -2339,6 +2550,7 @@ export const busStopData = [
     nameBusStop: '569 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22280137840015',
@@ -2350,6 +2562,7 @@ export const busStopData = [
     nameBusStop: 'Trạm Y Tế Hòa Cường Nam-499 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22272051347235',
@@ -2361,6 +2574,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 378 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22197578518251',
@@ -2372,6 +2586,7 @@ export const busStopData = [
     nameBusStop: '257-259 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22157063886398',
@@ -2383,6 +2598,7 @@ export const busStopData = [
     nameBusStop: 'THPT Tây Sơn-Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22098028682488',
@@ -2394,6 +2610,7 @@ export const busStopData = [
     nameBusStop: '21 Núi Thành',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22053546397083',
@@ -2405,6 +2622,7 @@ export const busStopData = [
     nameBusStop: 'Đài DRT-Đối diện 256 Bạch Đằng',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22417100027464',
@@ -2416,6 +2634,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện chợ Hàn',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22503843311276',
@@ -2427,6 +2646,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 57-59 Hùng Vương',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.21975415318367',
@@ -2438,6 +2658,7 @@ export const busStopData = [
     nameBusStop: 'Trường Trần Phú-49-51 Nguyễn Thị Minh Khai',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.21835869259584',
@@ -2449,6 +2670,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 04 Nguyễn Thị Minh Khai',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.2177408262392',
@@ -2460,6 +2682,7 @@ export const busStopData = [
     nameBusStop: '07 Lý Tự Trọng',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Cầu đi bộ Nguyễn Văn Trỗi',
     travelTime: 3,
     location: {
       lng: '108.22146544492753',
@@ -2471,6 +2694,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 12 Bạch Đằng',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2238613010832',
@@ -2482,6 +2706,7 @@ export const busStopData = [
     nameBusStop: 'Cảng Sông Hàn',
     codeBusRoute: 'R17A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22372981864719',
@@ -2493,6 +2718,7 @@ export const busStopData = [
     nameBusStop: 'Bến Xe Trung Tâm Đà Nẵng',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.17255076349097',
@@ -2504,6 +2730,7 @@ export const busStopData = [
     nameBusStop: '44-46 Định Liệt',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17407051888388',
@@ -2515,6 +2742,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện 36-38 Nguyễn Đình Tứ',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17897394070707',
@@ -2526,6 +2754,7 @@ export const busStopData = [
     nameBusStop: '396 Tôn Đản',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18223062074273',
@@ -2537,6 +2766,7 @@ export const busStopData = [
     nameBusStop: 'Trước THCS Nguyễn Công Tứ',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1834760638913',
@@ -2548,6 +2778,7 @@ export const busStopData = [
     nameBusStop: '618 Tôn Đản',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18403992852737',
@@ -2559,6 +2790,7 @@ export const busStopData = [
     nameBusStop: '43-45 Lê Trọng Tấn',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18640952853627',
@@ -2570,6 +2802,7 @@ export const busStopData = [
     nameBusStop: '862 Trường Chỉnh',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18783127249087',
@@ -2581,6 +2814,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện 591-593 Trường Chỉnh',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19328083351927',
@@ -2592,6 +2826,7 @@ export const busStopData = [
     nameBusStop: '303-305 Lê Ð',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19593058350954',
@@ -2603,6 +2838,7 @@ export const busStopData = [
     nameBusStop: '203-205 Lê Ð',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20127284104092',
@@ -2614,6 +2850,7 @@ export const busStopData = [
     nameBusStop: '117 Lê Đại Hành',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20413987820609',
@@ -2625,6 +2862,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện 60 Lê Đại Hành',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20704728545141',
@@ -2636,6 +2874,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Vietronimex',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20881901638086',
@@ -2647,6 +2886,7 @@ export const busStopData = [
     nameBusStop: '513-515 Nguyễn Hữu Thọ',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2091708322403',
@@ -2658,6 +2898,7 @@ export const busStopData = [
     nameBusStop: 'Bệnh Viện Vinmec',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21032037170467',
@@ -2669,6 +2910,7 @@ export const busStopData = [
     nameBusStop: '382 Núi Thành',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22193149454841',
@@ -2680,6 +2922,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Helio Center',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22381925114794',
@@ -2691,6 +2934,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Siêu Thị Lotte',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2281800661835',
@@ -2702,6 +2946,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Chùa Bà Đa',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24187511914056',
@@ -2713,6 +2958,7 @@ export const busStopData = [
     nameBusStop: '177 Ngũ Hành Sơn',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24223794038508',
@@ -2724,6 +2970,7 @@ export const busStopData = [
     nameBusStop: '310-312 Ngũ Hành Sơn',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24082996852063',
@@ -2735,6 +2982,7 @@ export const busStopData = [
     nameBusStop: 'Tường Rào Cộng Đoàn TI',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24143278027668',
@@ -2746,6 +2994,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện 31-93 Phan Tứ',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24241287655195',
@@ -2757,6 +3006,7 @@ export const busStopData = [
     nameBusStop: 'Pullman Resort',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2494749499536',
@@ -2768,6 +3018,7 @@ export const busStopData = [
     nameBusStop: '0lalani Resort',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25429102858155',
@@ -2779,6 +3030,7 @@ export const busStopData = [
     nameBusStop: 'Đối Diện Crowne Plaza',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25521496414669',
@@ -2790,6 +3042,7 @@ export const busStopData = [
     nameBusStop: 'Bãi Tắm Sơn Thủy',
     codeBusRoute: 'R6A',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2612770720921',
@@ -2801,6 +3054,7 @@ export const busStopData = [
     nameBusStop: 'Bãi tắm Sơn Thủy',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.2612770720921',
@@ -2812,6 +3066,7 @@ export const busStopData = [
     nameBusStop: 'Crowne plaza',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2552588601655',
@@ -2823,6 +3078,7 @@ export const busStopData = [
     nameBusStop: 'Fusion maia resort',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25388840037341',
@@ -2834,6 +3090,7 @@ export const busStopData = [
     nameBusStop: 'Pullman Resort',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24956688759082',
@@ -2845,6 +3102,7 @@ export const busStopData = [
     nameBusStop: '121 Phan Tứ',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24758021291514',
@@ -2856,6 +3114,7 @@ export const busStopData = [
     nameBusStop: 'Tường rào trường Trung cấp nghề số 5',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23916766481852',
@@ -2867,6 +3126,7 @@ export const busStopData = [
     nameBusStop: '135-137 Ngũ Hành Sơn',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23929111170031',
@@ -2878,6 +3138,7 @@ export const busStopData = [
     nameBusStop: '370 Ngũ Hành Sơn',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24178983829844',
@@ -2889,6 +3150,7 @@ export const busStopData = [
     nameBusStop: 'Chùa Bà Đa',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2415984203066',
@@ -2900,6 +3162,7 @@ export const busStopData = [
     nameBusStop: 'Siêu thị Lotte',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22880491832095',
@@ -2911,6 +3174,7 @@ export const busStopData = [
     nameBusStop: 'Helio center',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2240278698016',
@@ -2922,6 +3186,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Châu Á',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22542943055957',
@@ -2933,6 +3198,7 @@ export const busStopData = [
     nameBusStop: 'Quảng trường 2 Tháng 9',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2226891886166',
@@ -2944,6 +3210,7 @@ export const busStopData = [
     nameBusStop: 'Trước Công ty TNHH Kiểm toán và Kế toán AAC',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21473709951198',
@@ -2955,6 +3222,7 @@ export const busStopData = [
     nameBusStop: '300-302 Nguyễn Hữu Thọ',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20978387780943',
@@ -2966,6 +3234,7 @@ export const busStopData = [
     nameBusStop: '430-432 Nguyễn Hữu Thọ',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20883097273669',
@@ -2977,6 +3246,7 @@ export const busStopData = [
     nameBusStop: 'Viettronimex',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20844317297122',
@@ -2988,6 +3258,7 @@ export const busStopData = [
     nameBusStop: '40-42 Lê Đại Hành',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20751315821',
@@ -2999,6 +3270,7 @@ export const busStopData = [
     nameBusStop: '86 Lê Đại Hành',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20434284715418',
@@ -3010,6 +3282,7 @@ export const busStopData = [
     nameBusStop: '172-174 Lê Đại Hành',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20106373315022',
@@ -3021,6 +3294,7 @@ export const busStopData = [
     nameBusStop: '328-330 Lê Đại Hành',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19582307393559',
@@ -3032,6 +3306,7 @@ export const busStopData = [
     nameBusStop: '591-593 Trường Chinh',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19342197043777',
@@ -3043,6 +3318,7 @@ export const busStopData = [
     nameBusStop: '517-519 Trường Chỉnh',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18827656308136',
@@ -3054,6 +3330,7 @@ export const busStopData = [
     nameBusStop: '64-66 Lê Trọng Tấn',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18597315353632',
@@ -3065,6 +3342,7 @@ export const busStopData = [
     nameBusStop: '489 Tôn Đẳn',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18359900045432',
@@ -3076,6 +3354,7 @@ export const busStopData = [
     nameBusStop: '413-415 Tôn Đản',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18255655273518',
@@ -3087,6 +3366,7 @@ export const busStopData = [
     nameBusStop: '14-16 Nguyễn Đình Tứ',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17948135756792',
@@ -3098,6 +3378,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 44-46 Đỉnh Liệt',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17421863820776',
@@ -3109,6 +3390,7 @@ export const busStopData = [
     nameBusStop: 'Bến xe Trung tâm Đà Nẵng',
     codeBusRoute: 'R6A',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17254904465618',
@@ -3120,6 +3402,7 @@ export const busStopData = [
     nameBusStop: 'Bến xe Trung Tâm Đà Nẵng',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.17281361795985',
@@ -3131,6 +3414,7 @@ export const busStopData = [
     nameBusStop: '139-141 Tôn Đức Thắng',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17438461534329',
@@ -3142,6 +3426,7 @@ export const busStopData = [
     nameBusStop: '32-34 Huỳnh Ngọc Huệ',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18388689503526',
@@ -3153,6 +3438,7 @@ export const busStopData = [
     nameBusStop: '142-144 Huỳnh Ngọc Huệ',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18594323515403',
@@ -3164,6 +3450,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 224 Hà Huy Tập',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19122769282565',
@@ -3175,6 +3462,7 @@ export const busStopData = [
     nameBusStop: '133-135 Hà Huy Tập',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19204372590026',
@@ -3186,6 +3474,7 @@ export const busStopData = [
     nameBusStop: '257-259 Thái Thị Bôi',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19286232994187',
@@ -3197,6 +3486,7 @@ export const busStopData = [
     nameBusStop: '65-67 Thái Thị Bôi',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19949837007948',
@@ -3208,6 +3498,7 @@ export const busStopData = [
     nameBusStop: '09 Võ Văn Tân',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20261067563168',
@@ -3219,6 +3510,7 @@ export const busStopData = [
     nameBusStop: '461 Hải Phòng',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20504210175947',
@@ -3230,6 +3522,7 @@ export const busStopData = [
     nameBusStop: 'Ga Đà Nẵng',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2087848126892',
@@ -3241,6 +3534,7 @@ export const busStopData = [
     nameBusStop: '231 Hải Phòng',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21131725676015',
@@ -3252,6 +3546,7 @@ export const busStopData = [
     nameBusStop: '248 - 250 Ông Ích Khiêm',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21390619891525',
@@ -3263,6 +3558,7 @@ export const busStopData = [
     nameBusStop: 'Siêu thị Big C',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21409925604962',
@@ -3274,6 +3570,7 @@ export const busStopData = [
     nameBusStop: '162-164 Nguyễn Hoàng',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21373869930876',
@@ -3285,6 +3582,7 @@ export const busStopData = [
     nameBusStop: '155-157 Nguyễn Văn Linh',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21519324494503',
@@ -3296,6 +3594,7 @@ export const busStopData = [
     nameBusStop: '11-15 Nguyễn Văn Linh',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21658125234805',
@@ -3307,6 +3606,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện chùa Phước Ninh',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21766429231151',
@@ -3318,6 +3618,7 @@ export const busStopData = [
     nameBusStop: 'Đầu cầu Rồng đường Võ Văn Kiệt',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2336147579985',
@@ -3329,6 +3630,7 @@ export const busStopData = [
     nameBusStop: 'Trụ điện CS 08T3 VVK',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23927143988699',
@@ -3340,6 +3642,7 @@ export const busStopData = [
     nameBusStop: 'Gần ngã tư Hồ Nghinh ~ Dương Đình Nghệ',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24319626651571',
@@ -3351,6 +3654,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện quán HaiYan đường Hồ Nghinh',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24305812283299',
@@ -3362,6 +3666,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện trường Chính trị',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24297373679327',
@@ -3373,6 +3678,7 @@ export const busStopData = [
     nameBusStop: 'Motel Hương Việt đường Hà Kỳ Ngộ',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2445471700796',
@@ -3384,6 +3690,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 78 Nguyễn Sáng',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24652164569733',
@@ -3395,6 +3702,7 @@ export const busStopData = [
     nameBusStop: 'Bãi tắm Mân Thái',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24944247871629',
@@ -3406,6 +3714,7 @@ export const busStopData = [
     nameBusStop: 'Thọ Quang',
     codeBusRoute: 'R15',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.25580184257181',
@@ -3417,6 +3726,7 @@ export const busStopData = [
     nameBusStop: 'Thọ Quang',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.25580184257181',
@@ -3428,6 +3738,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện bãi tắm Mân Thái',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24958272481612',
@@ -3439,6 +3750,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 75 Nguyễn Sáng',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24643337007961',
@@ -3450,6 +3762,7 @@ export const busStopData = [
     nameBusStop: 'Trường Chính trị',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24303110175947',
@@ -3461,6 +3774,7 @@ export const busStopData = [
     nameBusStop: '148-150 Hồ Nghinh',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24306801425864',
@@ -3472,6 +3786,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện Golden Light Hotel',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24304008172129',
@@ -3483,6 +3798,7 @@ export const busStopData = [
     nameBusStop: 'Trụ điện CS49T1 đường Võ Văn Kiệt',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23914341937743',
@@ -3494,6 +3810,7 @@ export const busStopData = [
     nameBusStop: 'Đầu cầu Rồng đường Võ Văn Kiệt',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23341988550607',
@@ -3505,6 +3822,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Nguyễn Văn Linh + Lê Đình Dương',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22121699990872',
@@ -3516,6 +3834,7 @@ export const busStopData = [
     nameBusStop: 'Chùa Phước Ninh',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21828815334159',
@@ -3527,6 +3846,7 @@ export const busStopData = [
     nameBusStop: '102-104 Nguyễn Văn Linh',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21400763359591',
@@ -3538,6 +3858,7 @@ export const busStopData = [
     nameBusStop: '153-155 Nguyễn Hoàng',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21373613139498',
@@ -3549,6 +3870,7 @@ export const busStopData = [
     nameBusStop: '293 Ông Ích Khiêm',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21366870804562',
@@ -3560,6 +3882,7 @@ export const busStopData = [
     nameBusStop: '239-241 Ông Ích Khiêm',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21356915527501',
@@ -3571,6 +3894,7 @@ export const busStopData = [
     nameBusStop: '196 Hải Phòng',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21131514715765',
@@ -3582,6 +3906,7 @@ export const busStopData = [
     nameBusStop: 'Ga Đà Nẵng',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20878226569181',
@@ -3593,6 +3918,7 @@ export const busStopData = [
     nameBusStop: '354 Hải Phòng',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20495421676767',
@@ -3604,6 +3930,7 @@ export const busStopData = [
     nameBusStop: '78-80 Võ Văn Tân',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20297718261132',
@@ -3615,6 +3942,7 @@ export const busStopData = [
     nameBusStop: '96-98 Thái Thị Bôi',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19902274604908',
@@ -3626,6 +3954,7 @@ export const busStopData = [
     nameBusStop: '304 -306 Thái Thi Bôi',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1929241927722',
@@ -3637,6 +3966,7 @@ export const busStopData = [
     nameBusStop: 'Trường Tiểu học Huỳnh Ngọc Huệ',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.19193264028002',
@@ -3648,6 +3978,7 @@ export const busStopData = [
     nameBusStop: '238-240 Hà Huy Tập',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1906497272138',
@@ -3659,6 +3990,7 @@ export const busStopData = [
     nameBusStop: '145-145b Huỳnh Ngọc Huệ',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.18511695269814',
@@ -3670,6 +4002,7 @@ export const busStopData = [
     nameBusStop: '37-39 Huỳnh Ngọc Huệ',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.1838792823056',
@@ -3681,6 +4014,7 @@ export const busStopData = [
     nameBusStop: '128 Tôn Đức Thắng',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.176540736519',
@@ -3692,6 +4026,7 @@ export const busStopData = [
     nameBusStop: 'Bến xe Trung Tâm Đà Nẵng',
     codeBusRoute: 'R15',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.17281361795985',
@@ -3703,6 +4038,7 @@ export const busStopData = [
     nameBusStop: 'Bãi đỗ xe P&R Bùi Dương Lịch',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.23233528172148',
@@ -3714,6 +4050,7 @@ export const busStopData = [
     nameBusStop: 'Lô 113 Dương Vân Nga',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23170445604995',
@@ -3725,6 +4062,7 @@ export const busStopData = [
     nameBusStop: '210 Khúc Hạo',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23283006584099',
@@ -3736,6 +4074,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện chung cư 4A Chu Huy Mân',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2319829985396',
@@ -3747,6 +4086,7 @@ export const busStopData = [
     nameBusStop: 'Chân cầu Thuận Phước (đường Lê Đức Thọ)',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23087227107288',
@@ -3758,6 +4098,7 @@ export const busStopData = [
     nameBusStop: 'Số 159 đường 3/2',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21636823906881',
@@ -3769,6 +4110,7 @@ export const busStopData = [
     nameBusStop: 'Trạm xe buýt Xuân Diệu',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22011896375302',
@@ -3780,6 +4122,7 @@ export const busStopData = [
     nameBusStop: 'Số 49 đường 3/2',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22060873231248',
@@ -3791,6 +4134,7 @@ export const busStopData = [
     nameBusStop: 'Số 6A Trần Phú',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2227316137544',
@@ -3802,6 +4146,7 @@ export const busStopData = [
     nameBusStop: 'Số 12 Lý Tự Trọng',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22111102851912',
@@ -3813,6 +4158,7 @@ export const busStopData = [
     nameBusStop: 'Số 08 Nguyễn Thị Minh Khai',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21763531055706',
@@ -3824,6 +4170,7 @@ export const busStopData = [
     nameBusStop: 'Bệnh viện C Đà Nẵng',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21830362724623',
@@ -3835,6 +4182,7 @@ export const busStopData = [
     nameBusStop: 'Số 29 Ngô Gia Tự',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2175443486467',
@@ -3846,6 +4194,7 @@ export const busStopData = [
     nameBusStop: 'Chợ Cồn',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21468171497818',
@@ -3857,6 +4206,7 @@ export const busStopData = [
     nameBusStop: 'Số 331 Hùng Vương',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2107167259004',
@@ -3868,6 +4218,7 @@ export const busStopData = [
     nameBusStop: 'Số 85 Lý Thái Tổ',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20859256584069',
@@ -3879,6 +4230,7 @@ export const busStopData = [
     nameBusStop: 'Công viên 29/3',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20533927107289',
@@ -3890,6 +4242,7 @@ export const busStopData = [
     nameBusStop: 'UBND phường Chính Gián',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20275850502051',
@@ -3901,6 +4254,7 @@ export const busStopData = [
     nameBusStop: 'Số 88 Nguyễn Tri Phương',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20408398172111',
@@ -3912,6 +4266,7 @@ export const busStopData = [
     nameBusStop: 'Số 387-389 Nguyễn Văn Linh',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2080105235123',
@@ -3923,6 +4278,7 @@ export const busStopData = [
     nameBusStop: 'Bệnh viện Hoàn Mỹ',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21025813115794',
@@ -3934,6 +4290,7 @@ export const busStopData = [
     nameBusStop: 'Số 153-155 Nguyễn Văn Linh',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21516454124362',
@@ -3945,6 +4302,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện chủa Phước Ninh',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2177193868208',
@@ -3956,6 +4314,7 @@ export const busStopData = [
     nameBusStop: 'Số 11 Nguyễn Văn Linh (trước Ẩm thực Trần)',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22246362351218',
@@ -3967,6 +4326,7 @@ export const busStopData = [
     nameBusStop: 'Cầu Rồng (đầu cầu Rồng đường Võ Văn Kiệt)',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23364302697073',
@@ -3978,6 +4338,7 @@ export const busStopData = [
     nameBusStop: 'Trụ điện CS 08T3 VWK (Gần White Sand Hotel)',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24229179706441',
@@ -3989,6 +4350,7 @@ export const busStopData = [
     nameBusStop: 'Nhà hàng Mỹ Hạnh',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2455055536616',
@@ -4000,6 +4362,7 @@ export const busStopData = [
     nameBusStop: 'Gần Công viên Biển Đông',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24539691463528',
@@ -4011,6 +4374,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Biển Đông (bãi tắm số 3)',
     codeBusRoute: 'TMF',
     directionRoute: 'turn',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24570336992453',
@@ -4022,6 +4386,7 @@ export const busStopData = [
     nameBusStop: 'Công viên Biển Đông',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 0,
     location: {
       lng: '108.24534581841353',
@@ -4033,6 +4398,7 @@ export const busStopData = [
     nameBusStop: 'Ð/d Công viên Biển Đông',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.24504445758036',
@@ -4044,6 +4410,7 @@ export const busStopData = [
     nameBusStop: 'Quán A.Hạnh (đổi diện nhà hàng Mỹ Hạnh)',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2451660715857',
@@ -4055,6 +4422,7 @@ export const busStopData = [
     nameBusStop: 'Cầu Rồng (đầu cầu Rồng đường Võ Văn Kiệt)',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2333865167005',
@@ -4066,6 +4434,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 31 Nguyễn Văn Linh',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22120061781818',
@@ -4077,6 +4446,7 @@ export const busStopData = [
     nameBusStop: 'Chùa Phước Ninh',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21785569130134',
@@ -4088,6 +4458,7 @@ export const busStopData = [
     nameBusStop: 'Số 102 Nguyễn Văn Linh',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21486843083582',
@@ -4099,6 +4470,7 @@ export const busStopData = [
     nameBusStop: 'Số 248 Nguyễn Văn Linh',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20825848043214',
@@ -4110,6 +4482,7 @@ export const busStopData = [
     nameBusStop: 'Số 336-338 Nguyễn Văn Linh',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2081398793331',
@@ -4121,6 +4494,7 @@ export const busStopData = [
     nameBusStop: 'Công viên 29/3',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2053558901375',
@@ -4132,6 +4506,7 @@ export const busStopData = [
     nameBusStop: 'Số 130 Lý Thái Tổ',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.20740176017873',
@@ -4143,6 +4518,7 @@ export const busStopData = [
     nameBusStop: 'Số 10 Lý Thái Tổ',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2071322303662',
@@ -4154,6 +4530,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện chợ Cồn',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21437180363968',
@@ -4165,6 +4542,7 @@ export const busStopData = [
     nameBusStop: 'Số 38 Ngô Gia Tự',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21755453330331',
@@ -4176,6 +4554,7 @@ export const busStopData = [
     nameBusStop: 'Số 39-41 Hải Phòng',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.21786867184434',
@@ -4187,6 +4566,7 @@ export const busStopData = [
     nameBusStop: 'Tường rào THPT Trần Phú',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2183568498475',
@@ -4198,6 +4578,7 @@ export const busStopData = [
     nameBusStop: 'Ð/d 04 Nguyễn Thị Minh Khai',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2177408262392',
@@ -4209,6 +4590,7 @@ export const busStopData = [
     nameBusStop: 'Số 07 Lý Tự Trọng',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22146544492753',
@@ -4220,6 +4602,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện 12 Bạch Đằng',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22386807543666',
@@ -4231,6 +4614,7 @@ export const busStopData = [
     nameBusStop: 'Số 24 đường 3/2',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.22146916035234',
@@ -4242,6 +4626,7 @@ export const busStopData = [
     nameBusStop: 'Bãi đỗ xe Xuân Diệu',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2200964927403',
@@ -4253,6 +4638,7 @@ export const busStopData = [
     nameBusStop: 'Số 192 đường 3/2',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2164932269446',
@@ -4264,6 +4650,7 @@ export const busStopData = [
     nameBusStop: 'Chân cầu Thuận Phước',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.2309313868278',
@@ -4275,6 +4662,7 @@ export const busStopData = [
     nameBusStop: 'Chung cư Chu Huy Mân',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23174034797788',
@@ -4286,6 +4674,7 @@ export const busStopData = [
     nameBusStop: 'Số 281 Khúc Hạo',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23256463286097',
@@ -4297,6 +4686,7 @@ export const busStopData = [
     nameBusStop: 'Đối diện lô 113 Dương Vân Nga',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23094614874866',
@@ -4308,6 +4698,7 @@ export const busStopData = [
     nameBusStop: 'Bãi đỗ xe P&R Bùi Dương Lịch',
     codeBusRoute: 'TMF',
     directionRoute: 'return',
+    travelNear: 'Chợ đêm Sơn Trà',
     travelTime: 3,
     location: {
       lng: '108.23233528172148',

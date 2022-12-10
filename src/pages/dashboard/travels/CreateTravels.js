@@ -19,7 +19,6 @@ const CreateTravels = ({ setSelectedLink, link }) => {
   }, [])
 
   const initialTravels = {
-    id: Math.random(),
     title: '',
     typeLocation: 'discover',
     image: '',
@@ -88,67 +87,67 @@ const CreateTravels = ({ setSelectedLink, link }) => {
     travels['location'] = location
     travels['image'] = image
     travels['imageDesc'] = travels.title
+    // setRows([...rows, travels])
     console.log(travels)
-    setRows([...travels])
   }
 
-  console.log(rows)
+  // console.log(travels)
 
-  const columns = [
-    {
-      field: 'title',
-      headerName: 'Tên địa điểm',
-      width: 200,
-      editable: true
-    },
-    {
-      field: 'typeLocation',
-      headerName: 'Loại Hình Du lịch',
-      width: 150,
-      editable: true
-    },
-    {
-      field: 'image',
-      headerName: 'Hình ảnh',
-      width: 150,
-      editable: true,
-      renderCell: params => (
-        <img style={{ maxWidth: '100%' }} src={params.value} alt={params} />
-      )
-    },
-    {
-      field: 'description',
-      headerName: 'Mô tả địa điểm',
-      width: 300,
-      editable: true
-    },
-    {
-      field: 'locationLink',
-      headerName: 'Địa chỉ trên google map',
-      width: 250,
-      editable: true
-    },
-    {
-      field: 'locationName',
-      headerName: 'Địa chỉ',
-      width: 350,
-      editable: true
-    },
-    {
-      field: 'location',
-      headerName: 'Tọa độ',
-      type: 'string',
-      width: 200,
-      editable: true,
-      renderCell: params => (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div>Kinh độ: {params.formattedValue?.lng}</div>
-          <div>Vĩ độ: {params.formattedValue?.lat}</div>
-        </div>
-      )
-    }
-  ]
-  // console.log(rows)
+  // const columns = [
+  //   {
+  //     field: 'title',
+  //     headerName: 'Tên địa điểm',
+  //     width: 200,
+  //     editable: true
+  //   },
+  //   {
+  //     field: 'typeLocation',
+  //     headerName: 'Loại Hình Du lịch',
+  //     width: 150,
+  //     editable: true
+  //   },
+  //   {
+  //     field: 'image',
+  //     headerName: 'Hình ảnh',
+  //     width: 150,
+  //     editable: true,
+  //     renderCell: params => (
+  //       <img style={{ maxWidth: '100%' }} src={params.value} alt={params} />
+  //     )
+  //   },
+  //   {
+  //     field: 'description',
+  //     headerName: 'Mô tả địa điểm',
+  //     width: 300,
+  //     editable: true
+  //   },
+  //   {
+  //     field: 'locationLink',
+  //     headerName: 'Địa chỉ trên google map',
+  //     width: 250,
+  //     editable: true
+  //   },
+  //   {
+  //     field: 'locationName',
+  //     headerName: 'Địa chỉ',
+  //     width: 350,
+  //     editable: true
+  //   },
+  //   {
+  //     field: 'location',
+  //     headerName: 'Tọa độ',
+  //     type: 'string',
+  //     width: 200,
+  //     editable: true,
+  //     renderCell: params => (
+  //       <div style={{ display: 'flex', flexDirection: 'column' }}>
+  //         <div>Kinh độ: {params.formattedValue?.lng}</div>
+  //         <div>Vĩ độ: {params.formattedValue?.lat}</div>
+  //       </div>
+  //     )
+  //   }
+  // ]
+
   return (
     <Box>
       <Typography>Tạo địa điểm du lịch: </Typography>
@@ -238,7 +237,7 @@ const CreateTravels = ({ setSelectedLink, link }) => {
         </Grid>
       </Grid>
       <Button onClick={handleSubmit}>Tạo mới</Button>
-      {rows.length > 0 && (
+      {/* {rows.length > 0 && (
         <Box sx={{ height: 800, width: '100%' }}>
           <DataGrid
             columns={columns}
@@ -250,7 +249,7 @@ const CreateTravels = ({ setSelectedLink, link }) => {
             experimentalFeatures={{ newEditingApi: true }}
           />
         </Box>
-      )}
+      )} */}
     </Box>
   )
 }
