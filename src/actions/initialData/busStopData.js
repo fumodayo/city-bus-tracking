@@ -5,6 +5,7 @@ export const busStopData = [
     codeBusRoute: 'R16',
     directionRoute: 'turn',
     travelTime: 0,
+    travelNear: 'Bãi biển Nam Ô hay Rạn Nam Ô',
     location: {
       lng: '108.11956612202619',
       lat: '16.13548288580201'
