@@ -13,6 +13,9 @@ import {
   Typography
 } from '@mui/material'
 import { useFormatInfo } from 'hooks/useFormatInfo'
+import moment from 'moment'
+import InfoBusRouteActions from './InfoBusRouteActions'
+import { useState } from 'react'
 
 const InfoBusRoute = ({ setSelectedLink, link }) => {
   useEffect(() => {
@@ -35,6 +38,8 @@ const InfoBusRoute = ({ setSelectedLink, link }) => {
               <TableCell>Đơn vị vận hàng</TableCell>
               <TableCell>Tên hãng xe</TableCell>
               <TableCell>Sức chứa của xe</TableCell>
+              <TableCell>Thời gian tạo</TableCell>
+              <TableCell>Hành động</TableCell>
             </TableRow>
           </TableHead>
           {rows.ticketPrice && (
@@ -46,6 +51,10 @@ const InfoBusRoute = ({ setSelectedLink, link }) => {
                 <TableCell>{rows.busOperation}</TableCell>
                 <TableCell>{rows.busName}</TableCell>
                 <TableCell>{rows.busCapacity}</TableCell>
+                <TableCell>
+                  {moment(rows.createdAt).format('YYYY-MM-DD HH:MM:SS')}
+                </TableCell>
+                <TableCell>{<InfoBusRouteActions rows={rows} />}</TableCell>
               </TableRow>
             </TableBody>
           )}

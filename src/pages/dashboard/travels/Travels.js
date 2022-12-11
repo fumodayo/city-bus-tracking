@@ -12,6 +12,7 @@ import { Delete } from '@mui/icons-material'
 import { grey } from '@mui/material/colors'
 import TravelsActions from './TravelsActions'
 import { useMemo } from 'react'
+import moment from 'moment/moment'
 
 const Travels = ({ setSelectedLink, link }) => {
   useEffect(() => {
@@ -50,19 +51,19 @@ const Travels = ({ setSelectedLink, link }) => {
       {
         field: 'description',
         headerName: 'Mô tả địa điểm',
-        width: 300,
+        width: 200,
         editable: true
       },
       {
         field: 'locationLink',
         headerName: 'Địa chỉ trên google map',
-        width: 250,
+        width: 200,
         editable: true
       },
       {
         field: 'locationName',
         headerName: 'Địa chỉ',
-        width: 350,
+        width: 250,
         editable: true
       },
       {
@@ -77,6 +78,13 @@ const Travels = ({ setSelectedLink, link }) => {
             <div>Vĩ độ: {params.formattedValue.lat}</div>
           </div>
         )
+      },
+      {
+        field: 'createdAt',
+        headerName: 'Tạo vào lúc',
+        width: 200,
+        renderCell: params =>
+          moment(params.row.createdAt).format('YYYY-MM-DD HH:MM:SS')
       },
       {
         field: 'actions',

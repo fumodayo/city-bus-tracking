@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Box, CircularProgress, Fab } from '@mui/material'
-import { Check, Save } from '@mui/icons-material'
+import { Box, CircularProgress, Fab, IconButton, Tooltip } from '@mui/material'
+import { Check, Delete, Preview, Save } from '@mui/icons-material'
 import { green } from '@mui/material/colors'
 import { useTravel } from 'hooks/useTravel'
 import { useEffect } from 'react'
@@ -27,49 +27,58 @@ const TravelsActions = ({ params, rowId, setRowId }) => {
   }, [rowId])
 
   return (
-    <Box
-      sx={{
-        m: 1,
-        position: 'relative'
-      }}
-    >
-      {success ? (
-        <Fab
-          color="primary"
+    <Box style={{ display: 'flex' }}>
+      <Tooltip title="Cap nhat">
+        <Box
           sx={{
-            width: 40,
-            height: 40,
-            bgcolor: green[500],
-            '&:hover': { bgcolor: green[700] }
+            m: 1,
+            position: 'relative'
           }}
         >
-          <Check />
-        </Fab>
-      ) : (
-        <Fab
-          color="primary"
-          sx={{
-            width: 40,
-            height: 40
-          }}
-          disabled={params.id !== rowId || loading}
-          onClick={handleSubmit}
-        >
-          <Save />
-        </Fab>
-      )}
-      {loading && (
-        <CircularProgress
-          size={52}
-          sx={{
-            color: green[500],
-            position: 'absolute',
-            top: -6,
-            left: -6,
-            zIndex: 1
-          }}
-        />
-      )}
+          {success ? (
+            <Fab
+              color="primary"
+              sx={{
+                width: 40,
+                height: 40,
+                bgcolor: green[500],
+                '&:hover': { bgcolor: green[700] }
+              }}
+            >
+              <Check />
+            </Fab>
+          ) : (
+            <Fab
+              color="primary"
+              sx={{
+                width: 40,
+                height: 40
+              }}
+              disabled={params.id !== rowId || loading}
+              onClick={handleSubmit}
+            >
+              <Save />
+            </Fab>
+          )}
+          {loading && (
+            <CircularProgress
+              size={52}
+              sx={{
+                color: green[500],
+                position: 'absolute',
+                top: -6,
+                left: -6,
+                zIndex: 1
+              }}
+            />
+          )}
+        </Box>
+      </Tooltip>
+      <Tooltip title="Xoa">
+        <IconButton>
+          <Delete />
+        </IconButton>
+      </Tooltip>
     </Box>
   )
 }

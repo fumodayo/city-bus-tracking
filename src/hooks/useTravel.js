@@ -20,7 +20,8 @@ export const useTravel = () => {
         location: {
           lng: travel.location.lng,
           lat: travel.location.lat
-        }
+        },
+        createAt: travel.createAt
       }))
       setTravels(tvs)
     }
