@@ -101,7 +101,6 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
       }
     }
 
-    // console.log(dataBusRoutes.codeBusRoute)
     console.log(onSubmit())
   }
 

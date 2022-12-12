@@ -222,7 +222,14 @@ const CreateTravels = ({ setSelectedLink, link }) => {
               <img style={{ width: '400px' }} src={image} alt={'test'} />
             )}
           </Box>
-          <TextField type="file" onChange={convert2base64} />
+          <div>
+            <input type="file" onChange={convert2base64} />
+            <label htmlFor="contained-button-file">
+              <Button variant="contained" component="span">
+                Upload
+              </Button>
+            </label>
+          </div>
         </Grid>
         <Grid item xs={12} sm={6}>
           <InputLabel>Mô tả về địa điểm: </InputLabel>

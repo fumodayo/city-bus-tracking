@@ -12,7 +12,8 @@ export const useTimeBusStart = () => {
         id: bus.id,
         codeBusRoute: bus.codeBusRoute,
         directionRoute: bus.directionRoute,
-        startingTime: bus.startingTime
+        startingTime: bus.startingTime,
+        createdAt: bus.createdAt
       }))
       setTime(bt)
     }

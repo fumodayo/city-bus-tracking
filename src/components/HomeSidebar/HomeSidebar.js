@@ -11,6 +11,9 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: theme.spacing(0, 1),
+  position: 'relative',
+  backgroundColor: '#3597E4',
+  paddingLeft: '1rem',
   ...theme.mixins.toolbar
 }))
 
@@ -34,7 +37,6 @@ const HomeSidebar = () => {
           width: '3rem',
           height: '3.5rem',
           position: 'absolute',
-          boxShadow: '0.19rem 0 0.375rem 0 rgb(0 0 0 / 16%)',
           borderTopRightRadius: '0.3rem',
           borderBottomRightRadius: '0.3rem'
         }}
@@ -44,7 +46,7 @@ const HomeSidebar = () => {
         </IconButton>
       </Box>
       <Drawer variant="persistent" hideBackdrop={true} open={isOpen}>
-        <DrawerHeader sx={{ position: 'relative', backgroundColor: '#3597E4' }}>
+        <DrawerHeader>
           <Typography style={{ fontWeight: '600', color: '#fff' }}>
             Hệ thống xe buýt Đà Nẵng
           </Typography>

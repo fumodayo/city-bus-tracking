@@ -9,8 +9,9 @@ export const useFormatInfo = () => {
       const res = await informationBusRouteData
       let inf = {}
       inf.id = res[0].id
-      inf.ticketPrice = res[0].ticketPrice
-      inf.linkMonthlyTicket = res[0].linkMonthlyTicket
+      inf.busTicketOneWay = res[0].busTicketOneWay
+      inf.busTicketPrioritized = res[0].busTicketPrioritized
+      inf.busTicketOrdinary = res[0].busTicketOrdinary
       inf.busName = res[0].busName
       inf.busCapacity = res[0].busCapacity
       inf.busOperation = res[0].busOperation

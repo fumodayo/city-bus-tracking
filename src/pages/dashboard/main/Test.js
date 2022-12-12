@@ -1,4 +1,4 @@
-import { Done, Edit, RemoveRoadTwoTone } from '@mui/icons-material'
+import { Delete, DeleteForever, Done, Edit, RemoveRoadTwoTone } from '@mui/icons-material'
 import {
   IconButton,
   Input,
@@ -9,9 +9,10 @@ import {
   TableHead,
   TableRow
 } from '@mui/material'
-import { informationBusRouteData } from 'actions/initialData/informationBusRouteData'
 import { useFormatInfo } from 'hooks/useFormatInfo'
+import moment from 'moment'
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 
 const CustomTableCell = ({ row, name, onChange }) => {
   const { isEditMode } = row
@@ -27,11 +28,14 @@ const CustomTableCell = ({ row, name, onChange }) => {
 }
 
 export default function Test() {
-  const infos = informationBusRouteData
-  const [rows, setRows] = useState(infos)
+  const infos = useFormatInfo()
+  const [rows, setRows] = useState([])
+  useEffect(() => {
+    setRows([infos])
+  }, [infos])
+
   const [previous, setPrevious] = useState({})
 
-  console.log(rows)
   const onToggleEditMode = id => {
     setRows(state => {
       return rows.map(row => {
@@ -67,6 +71,7 @@ export default function Test() {
       return row
     })
     setRows(newRows)
+    console.log(newRows)
     setPrevious(state => {
       delete state[id]
       return state
@@ -91,8 +96,8 @@ export default function Test() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.id}>
+          {rows.map((row, index) => (
+            <TableRow key={index}>
               <TableCell>
                 {row.isEditMode ? (
                   <>
@@ -106,7 +111,7 @@ export default function Test() {
                       aria-label="revert"
                       onClick={() => onRevert(row.id)}
                     >
-                      <RemoveRoadTwoTone />
+                      <DeleteForever/>
                     </IconButton>
                   </>
                 ) : (
@@ -118,11 +123,21 @@ export default function Test() {
                   </IconButton>
                 )}
               </TableCell>
-              <CustomTableCell {...{ row, name: 'name', onChange }} />
+              <CustomTableCell
+                {...{ row, name: 'busTicketOneWay', onChange }}
+              />
+              <CustomTableCell
+                {...{ row, name: 'busTicketPrioritized', onChange }}
+              />
+              <CustomTableCell
+                {...{ row, name: 'busTicketOrdinary', onChange }}
+              />
+              <CustomTableCell {...{ row, name: 'busOperation', onChange }} />
               <CustomTableCell {...{ row, name: 'busName', onChange }} />
               <CustomTableCell {...{ row, name: 'busCapacity', onChange }} />
-              <CustomTableCell {...{ row, name: 'carbs', onChange }} />
-              <CustomTableCell {...{ row, name: 'protein', onChange }} />
+              <TableCell>
+                {moment(row.createdAt).format('YYYY-MM-DD HH:MM:SS')}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

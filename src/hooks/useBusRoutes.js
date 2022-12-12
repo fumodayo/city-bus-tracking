@@ -16,7 +16,8 @@ export const useBusRoutes = () => {
         drivingJourney: route.drivingJourney,
         lineDistance: route.lineDistance,
         operatingTime: route.operatingTime,
-        colorRoute: route.colorRoute
+        colorRoute: route.colorRoute,
+        createdAt: route.createdAt
       }))
       setRoutes(rts)
     }

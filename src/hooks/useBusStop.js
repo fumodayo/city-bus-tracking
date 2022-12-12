@@ -18,7 +18,8 @@ export const useBusStop = () => {
         location: {
           lng: bus.location.lng,
           lat: bus.location.lat
-        }
+        },
+        createdAt: bus.createdAt
       }))
       setBusStop(bs)
     }

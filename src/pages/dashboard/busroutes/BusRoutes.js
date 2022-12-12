@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
 import { useTimeBusStart } from 'hooks/useTimeBusStart'
 import HTMLReactParser from 'html-react-parser'
+import moment from 'moment'
 
 function Row(props) {
   const { row } = props
@@ -31,13 +32,6 @@ function Row(props) {
     setDirection(row.directionRoute)
   }
 
-  console.log(
-    row.timeBusStart.filter(
-      route =>
-        route.codeBusRoute === codeRoute && route.directionRoute === direction
-    )[0]?.startingTime
-  )
-
   return (
     <React.Fragment>
       <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
@@ -50,16 +44,25 @@ function Row(props) {
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell>{row.codeBusRoute}</TableCell>
-        <TableCell>{row.nameRoute}</TableCell>
-        <TableCell>{row.directionRoute}</TableCell>
-        <TableCell>{HTMLReactParser(row.drivingJourney)}</TableCell>
-        <TableCell>{row.lineDistance}</TableCell>
-        <TableCell>{row.operatingTime}</TableCell>
-        <TableCell>{row.colorRoute}</TableCell>
+        <TableCell align="left">{row.codeBusRoute}</TableCell>
+        <TableCell align="left">{row.nameRoute}</TableCell>
+        <TableCell align="left">{row.directionRoute}</TableCell>
+        <TableCell align="left">
+          {HTMLReactParser(row.drivingJourney)}
+        </TableCell>
+        <TableCell align="left">{row.lineDistance}</TableCell>
+        <TableCell align="left">{row.operatingTime}</TableCell>
+        <TableCell align="left">{row.colorRoute}</TableCell>
+        <TableCell align="left">
+          {moment(row.createdAt).format('YYYY-MM-DD HH:MM:SS')}
+        </TableCell>
       </TableRow>
       <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell
+          align="left"
+          style={{ paddingBottom: 0, paddingTop: 0 }}
+          colSpan={6}
+        >
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
@@ -80,10 +83,14 @@ function Row(props) {
                 <Table size="small" aria-label="purchases">
                   <TableHead>
                     <TableRow>
-                      <TableCell>Tên bến xe buýt</TableCell>
-                      <TableCell>Kinh độ</TableCell>
-                      <TableCell>Vỹ độ</TableCell>
-                      <TableCell>Thời gian di chuyển giữa 2 bến</TableCell>
+                      <TableCell align="left">Tên bến xe buýt</TableCell>
+                      <TableCell align="left">Kinh độ</TableCell>
+                      <TableCell align="left">Vỹ độ</TableCell>
+                      <TableCell align="left">
+                        Thời gian di chuyển giữa 2 bến
+                      </TableCell>
+                      <TableCell>Địa điểm du lịch ở gần trạm</TableCell>
+                      <TableCell align="left">Thời gian tạo</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -95,12 +102,26 @@ function Row(props) {
                       )
                       .map(busStops => (
                         <TableRow key={busStops.id}>
-                          <TableCell component="th" scope="row">
+                          <TableCell align="left">
                             {busStops.nameBusStop}
                           </TableCell>
-                          <TableCell>{busStops.location.lng}</TableCell>
-                          <TableCell>{busStops.location.lat}</TableCell>
-                          <TableCell>{busStops.travelTime} phút</TableCell>
+                          <TableCell align="left">
+                            {busStops.location.lng}
+                          </TableCell>
+                          <TableCell align="left">
+                            {busStops.location.lat}
+                          </TableCell>
+                          <TableCell align="left">
+                            {busStops.travelTime} phút
+                          </TableCell>
+                          <TableCell align="left">
+                            {busStops.travelNear}
+                          </TableCell>
+                          <TableCell align="left">
+                            {moment(busStops.createdAt).format(
+                              'YYYY-MM-DD HH:MM:SS'
+                            )}
+                          </TableCell>
                         </TableRow>
                       ))}
                   </TableBody>
@@ -133,9 +154,9 @@ function Row(props) {
                           route.codeBusRoute === codeRoute &&
                           route.directionRoute === direction
                       )[0]
-                      ?.startingTime.map(busStops => (
-                        <TableRow key={busStops.id}>
-                          <TableCell align="center">{busStops}</TableCell>
+                      ?.startingTime.map((time, index) => (
+                        <TableRow key={index}>
+                          <TableCell align="left">{time}</TableCell>
                         </TableRow>
                       ))}
                   </TableBody>
@@ -171,14 +192,15 @@ const BusRoutes = ({ setSelectedLink, link }) => {
         <Table aria-label="collapsible table">
           <TableHead>
             <TableRow>
-              <TableCell />
-              <TableCell>Mã số tuyến</TableCell>
-              <TableCell>Tên tuyến</TableCell>
-              <TableCell>Chiều của tuyến</TableCell>
-              <TableCell>Mô tả hành trình</TableCell>
-              <TableCell>Độ dài của tuyến</TableCell>
-              <TableCell>Thời gian tuyến hoạt động</TableCell>
-              <TableCell>Màu của tuyến</TableCell>
+              <TableCell align="left" />
+              <TableCell align="left">Mã số tuyến</TableCell>
+              <TableCell align="left">Tên tuyến</TableCell>
+              <TableCell align="left">Chiều của tuyến</TableCell>
+              <TableCell align="left">Mô tả hành trình</TableCell>
+              <TableCell align="left">Độ dài của tuyến</TableCell>
+              <TableCell align="left">Thời gian tuyến hoạt động</TableCell>
+              <TableCell align="left">Màu của tuyến</TableCell>
+              <TableCell align="left">Thời gian tạo</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

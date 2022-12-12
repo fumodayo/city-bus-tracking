@@ -16,12 +16,14 @@ const MarkerTypeTravel = ({
   const [showPopup, setShowPopup] = useState(false)
 
   const mouseEnter = e => {
-    e.preventDefault()
+    console.log(e.target)
+    console.log('enter to')
     setShowPopup(true)
   }
 
   const mouseLeave = e => {
-    e.preventDefault()
+    console.log('leave to')
+    console.log(e)
     setShowPopup(false)
   }
 
@@ -33,6 +35,11 @@ const MarkerTypeTravel = ({
       setShowSidebarTravel({ isShowSidebar: true, idTravelLocation: idItem })
     )
   }
+
+  const enter2 = () => {
+    console.log('enter nho')
+  }
+
 
   return (
     <div>
@@ -51,6 +58,7 @@ const MarkerTypeTravel = ({
         {showPopup && (
           <Popup
             className="popup-form"
+            mouseEnter={mouseEnter}
             latitude={location?.lat}
             longitude={location?.lng}
             anchor="top"

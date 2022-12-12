@@ -74,23 +74,21 @@ const InfoBusRoute = ({ nameCodeRoute, turnRoute }) => {
         <PaidIcon />
         Thông tin vé:
       </h1>
-      {ticketBusData.ticketPrice && (
-        <div>
-          <div className="info">
-            <label>Vé lượt: </label>
-            <span>{ticketBusData?.ticketPrice[0]}</span>
-          </div>
-
-          <div className="info">
-            <label>Vé tháng ưu tiên: </label>
-            <span>{ticketBusData?.ticketPrice[1]}</span>
-          </div>
-          <div className="info">
-            <label>Vé tháng không ưu tiên:</label>
-            <span>{ticketBusData?.ticketPrice[2]}</span>
-          </div>
+      <div>
+        <div className="info">
+          <label>Vé lượt: </label>
+          <span>{ticketBusData?.busTicketOneWay}</span>
         </div>
-      )}
+
+        <div className="info">
+          <label>Vé tháng ưu tiên: </label>
+          <span>{ticketBusData?.busTicketPrioritized}</span>
+        </div>
+        <div className="info">
+          <label>Vé tháng không ưu tiên:</label>
+          <span>{ticketBusData?.busTicketOrdinary}</span>
+        </div>
+      </div>
     </div>
   )
 }
