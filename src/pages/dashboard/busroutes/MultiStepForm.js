@@ -11,6 +11,7 @@ import CreateBusRoutes from './CreateBusRoutes'
 import CreateBusStops from './CreateBusStops'
 import CreateTimeBusStart from './CreateTimeBusStart'
 import ConfirmCreate from './ConfirmCreate'
+import { SkipNext, SkipPrevious } from '@mui/icons-material'
 
 const steps = [
   'Tạo tuyến xe buýt',
@@ -136,15 +137,21 @@ const MultiStepForm = ({ setSelectedLink, link }) => {
           {renderComponentChild()}
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
-              color="inherit"
+              variant="contained"
+              sx={{ fontWeight: 'bold', mr: 1 }}
               disabled={activeStep === 0}
               onClick={handleBack}
-              sx={{ mr: 1 }}
+              startIcon={<SkipPrevious />}
             >
               Trở lại bước trước
             </Button>
             <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleNext}>
+            <Button
+              onClick={handleNext}
+              variant="contained"
+              sx={{ fontWeight: 'bold', mr: 1 }}
+              endIcon={<SkipNext />}
+            >
               {activeStep === steps.length - 1
                 ? 'Hoàn thành'
                 : 'Bước tiếp theo'}

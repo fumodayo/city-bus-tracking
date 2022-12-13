@@ -1,5 +1,6 @@
-import { DeleteForever, Done, Edit } from '@mui/icons-material'
+import { DeleteForever, Done, Edit, Send } from '@mui/icons-material'
 import {
+  Box,
   IconButton,
   Input,
   Paper,
@@ -7,7 +8,9 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableRow
+  TableRow,
+  Button,
+  Typography
 } from '@mui/material'
 import { useFormatInfo } from 'hooks/useFormatInfo'
 import moment from 'moment'
@@ -34,6 +37,7 @@ export default function CreateInfoBusRoute({ setSelectedLink, link }) {
 
   const infos = useFormatInfo()
   const [rows, setRows] = useState([])
+
   useEffect(() => {
     setRows([infos])
   }, [infos])
@@ -75,7 +79,6 @@ export default function CreateInfoBusRoute({ setSelectedLink, link }) {
       return row
     })
     setRows(newRows)
-    console.log(newRows)
     setPrevious(state => {
       delete state[id]
       return state
@@ -83,69 +86,84 @@ export default function CreateInfoBusRoute({ setSelectedLink, link }) {
     onToggleEditMode(id)
   }
 
+  const onSubmit = () => {
+    console.log(rows)
+  }
+
   return (
-    <Paper>
-      <Table aria-label="caption table">
-        <caption>Thông tin chung của các tuyến xe buýt</caption>
-        <TableHead>
-          <TableRow>
-            <TableCell align="left" />
-            <TableCell align="left">Giá vé theo luợt</TableCell>
-            <TableCell align="left">Giá vé theo tháng (ưu tiên)</TableCell>
-            <TableCell align="left">Giá vé theo tháng (thường)</TableCell>
-            <TableCell align="left">Đơn vị vận hàng</TableCell>
-            <TableCell align="left">Tên hãng xe</TableCell>
-            <TableCell align="left">Sức chứa của xe</TableCell>
-            <TableCell align="left">Thời gian tạo</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row, index) => (
-            <TableRow key={index}>
-              <TableCell>
-                {row.isEditMode ? (
-                  <>
+    <Box>
+      <Typography
+        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+      >
+        Thông tin chung của tuyến xe buýt
+      </Typography>
+      <Paper>
+        <Table aria-label="caption table">
+          <TableHead>
+            <TableRow>
+              <TableCell align="left" />
+              <TableCell align="left">Giá vé theo luợt</TableCell>
+              <TableCell align="left">Giá vé theo tháng (ưu tiên)</TableCell>
+              <TableCell align="left">Giá vé theo tháng (thường)</TableCell>
+              <TableCell align="left">Đơn vị vận hàng</TableCell>
+              <TableCell align="left">Tên hãng xe</TableCell>
+              <TableCell align="left">Sức chứa của xe</TableCell>
+              <TableCell align="left">Thời gian tạo</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row, index) => (
+              <TableRow key={index}>
+                <TableCell>
+                  {row.isEditMode ? (
+                    <>
+                      <IconButton
+                        aria-label="done"
+                        onClick={() => onToggleEditMode(row.id)}
+                      >
+                        <Done />
+                      </IconButton>
+                      <IconButton
+                        aria-label="revert"
+                        onClick={() => onRevert(row.id)}
+                      >
+                        <DeleteForever />
+                      </IconButton>
+                    </>
+                  ) : (
                     <IconButton
-                      aria-label="done"
+                      aria-label="delete"
                       onClick={() => onToggleEditMode(row.id)}
                     >
-                      <Done />
+                      <Edit />
                     </IconButton>
-                    <IconButton
-                      aria-label="revert"
-                      onClick={() => onRevert(row.id)}
-                    >
-                      <DeleteForever />
-                    </IconButton>
-                  </>
-                ) : (
-                  <IconButton
-                    aria-label="delete"
-                    onClick={() => onToggleEditMode(row.id)}
-                  >
-                    <Edit />
-                  </IconButton>
-                )}
-              </TableCell>
-              <CustomTableCell
-                {...{ row, name: 'busTicketOneWay', onChange }}
-              />
-              <CustomTableCell
-                {...{ row, name: 'busTicketPrioritized', onChange }}
-              />
-              <CustomTableCell
-                {...{ row, name: 'busTicketOrdinary', onChange }}
-              />
-              <CustomTableCell {...{ row, name: 'busOperation', onChange }} />
-              <CustomTableCell {...{ row, name: 'busName', onChange }} />
-              <CustomTableCell {...{ row, name: 'busCapacity', onChange }} />
-              <TableCell>
-                {moment(row.createdAt).format('YYYY-MM-DD HH:MM:SS')}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Paper>
+                  )}
+                </TableCell>
+                <CustomTableCell
+                  {...{ row, name: 'busTicketOneWay', onChange }}
+                />
+                <CustomTableCell
+                  {...{ row, name: 'busTicketPrioritized', onChange }}
+                />
+                <CustomTableCell
+                  {...{ row, name: 'busTicketOrdinary', onChange }}
+                />
+                <CustomTableCell {...{ row, name: 'busOperation', onChange }} />
+                <CustomTableCell {...{ row, name: 'busName', onChange }} />
+                <CustomTableCell {...{ row, name: 'busCapacity', onChange }} />
+                <TableCell>
+                  {moment(row.createdAt).format('YYYY-MM-DD HH:MM:SS')}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Paper>
+      <Box sx={{ paddingTop: '20px' }}>
+        <Button variant="contained" onClick={onSubmit} endIcon={<Send />}>
+          xác nhận
+        </Button>
+      </Box>
+    </Box>
   )
 }

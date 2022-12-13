@@ -12,6 +12,7 @@ import {
 } from '@mui/material'
 import Resizer from 'react-image-file-resizer'
 import { DataGrid } from '@mui/x-data-grid'
+import { Send } from '@mui/icons-material'
 
 const CreateTravels = ({ setSelectedLink, link }) => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const CreateTravels = ({ setSelectedLink, link }) => {
   }, [])
 
   const initialTravels = {
+    id: Math.random(),
     title: '',
     typeLocation: 'discover',
     image: '',
@@ -84,12 +86,16 @@ const CreateTravels = ({ setSelectedLink, link }) => {
   const [rows, setRows] = useState([])
 
   const handleSubmit = () => {
-    travels['location'] = location
-    travels['image'] = image
-    travels['imageDesc'] = travels.title
-    // setRows([...rows, travels])
-    console.log(travels)
+    const data = {
+      ...travels,
+      location: location,
+      image: image,
+      imageDesc: travels.title
+    }
+    setRows([...rows, data])
   }
+
+  console.log(rows)
 
   // console.log(travels)
 
@@ -216,22 +222,6 @@ const CreateTravels = ({ setSelectedLink, link }) => {
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Box>
-            <InputLabel>Thêm hình ảnh cho địa điểm:</InputLabel>
-            {image && (
-              <img style={{ width: '400px' }} src={image} alt={'test'} />
-            )}
-          </Box>
-          <div>
-            <input type="file" onChange={convert2base64} />
-            <label htmlFor="contained-button-file">
-              <Button variant="contained" component="span">
-                Upload
-              </Button>
-            </label>
-          </div>
-        </Grid>
-        <Grid item xs={12} sm={6}>
           <InputLabel>Mô tả về địa điểm: </InputLabel>
           <TextareaAutosize
             minRows={6}
@@ -243,7 +233,63 @@ const CreateTravels = ({ setSelectedLink, link }) => {
           />
         </Grid>
       </Grid>
-      <Button onClick={handleSubmit}>Tạo mới</Button>
+      <Grid item xs={12} sm={6}>
+        <Typography
+          style={{
+            fontSize: '18px',
+            fontWeight: 'bold',
+            padding: '5px 0 5px 0'
+          }}
+        >
+          Hình ảnh địa điểm
+        </Typography>
+        <Box>
+          {image && (
+            <img
+              style={{
+                width: '300px',
+                height: '300px',
+                border: '3px solid #333333',
+                borderRadius: '2% 6% 5% 4% / 1% 1% 2% 4%',
+                '&::before': {
+                  content: '',
+                  border: '2px solid #353535',
+                  display: 'block',
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform:
+                    'translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg)',
+                  borderRadius: ' 1% 1% 2% 4% / 2% 6% 5% 4%'
+                }
+              }}
+              src={image}
+              alt={'test'}
+            />
+          )}
+        </Box>
+        <Box sx={{ padding: '20px 0 20px 0' }}>
+          <Button
+            variant="contained"
+            component="label"
+            sx={{ fontWeight: 'bold' }}
+          >
+            Tải hình ảnh lên
+            <input
+              hidden
+              accept="image/*"
+              multiple
+              type="file"
+              onChange={convert2base64}
+            />
+          </Button>
+        </Box>
+      </Grid>
+      <Button variant="contained" endIcon={<Send />} onClick={handleSubmit}>
+        Tạo mới
+      </Button>
       {/* {rows.length > 0 && (
         <Box sx={{ height: 800, width: '100%' }}>
           <DataGrid

@@ -16,14 +16,10 @@ const MarkerTypeTravel = ({
   const [showPopup, setShowPopup] = useState(false)
 
   const mouseEnter = e => {
-    console.log(e.target)
-    console.log('enter to')
     setShowPopup(true)
   }
 
   const mouseLeave = e => {
-    console.log('leave to')
-    console.log(e)
     setShowPopup(false)
   }
 
@@ -34,10 +30,6 @@ const MarkerTypeTravel = ({
     dispatch(
       setShowSidebarTravel({ isShowSidebar: true, idTravelLocation: idItem })
     )
-  }
-
-  const enter2 = () => {
-    console.log('enter nho')
   }
 
 

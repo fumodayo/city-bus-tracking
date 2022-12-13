@@ -119,16 +119,6 @@ const SideList = ({ open, setOpen }) => {
         )
       },
       {
-        title: 'Create Info Bus Route',
-        icon: <AddchartIcon />,
-        link: 'createInfoBusRoute',
-        component: (
-          <CreateInfoBusRoute
-            {...{ setSelectedLink, link: 'createInfoBusRoute' }}
-          />
-        )
-      },
-      {
         title: 'Create Travels',
         icon: <ModeOfTravelIcon />,
         link: 'createTravels',
