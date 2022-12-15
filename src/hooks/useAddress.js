@@ -1,4 +1,4 @@
-import mapbox from 'mapbox'
+import mapboxAPI from 'mapbox'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -11,7 +11,7 @@ export const useAddress = () => {
     const fetchAddressBegin = async () => {
       let adr = {}
       if (points.id === 'begin') {
-        const res = await mapbox.getAddress(
+        const res = await mapboxAPI.getAddress(
           points.location[0],
           points.location[1]
         )
@@ -19,7 +19,7 @@ export const useAddress = () => {
         adr.name = res.features[0].place_name_vi || res.features[0].place_name
       }
       if (points.id === 'end') {
-        const res = await mapbox.getAddress(
+        const res = await mapboxAPI.getAddress(
           points.location[0],
           points.location[1]
         )

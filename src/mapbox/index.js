@@ -22,6 +22,13 @@ class MapBoxAPI {
     )
     return res.data
   }
+
+  async getIsochroneMap(lng, lat) {
+    const res = await axios.get(
+      `https://api.mapbox.com/isochrone/v1/mapbox/walking/${lng}%2C${lat}?contours_meters=1000&polygons=true&denoise=1&access_token=${REACT_APP_MAPBOX_KEY}`
+    )
+    return res.data
+  }
 }
 
 export default new MapBoxAPI()

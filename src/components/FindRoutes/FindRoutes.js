@@ -11,11 +11,30 @@ import { setSearchLocation } from 'redux/slices/routes'
 import { useDispatch } from 'react-redux'
 import { useAddress } from 'hooks/useAddress'
 import { MyLocation } from '@mui/icons-material'
+import { useLocationNear } from 'hooks/useLocationNear'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { useBusStop } from 'hooks/useBusStop'
+import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
+import CustomSidebar from 'components/Common/CustomSidebar'
+import BusLocation from 'components/BusRoutes/BusLocation'
+import RouteThrough from 'components/BusRoutes/RouteThrough'
 
 const FindRoutes = () => {
   const directions = useDirections()
   const dispatch = useDispatch()
   const address = useAddress()
+  const busstops = useBusStop()
+
+  const pointNear = useLocationNear()
+  const [location, setLocation] = useState([])
+
+  const [showSidebar, setShowSidebar] = useState(false)
+
+  useEffect(() => {
+    const point = busstops.filter(i => i.id === pointNear)
+    setLocation(point)
+  }, [pointNear, busstops])
 
   const handleGetCurrentUserLocation = () => {
     const options = {
@@ -213,6 +232,27 @@ const FindRoutes = () => {
           </Marker>
         </>
       )}
+      {location.map(i => (
+        <>
+          {showSidebar && (
+            <CustomSidebar
+              show={showSidebar}
+              name={i.nameBusStop}
+              tabLeft={'Xe sắp tới trạm'}
+              tabRight={'Tuyến đi qua'}
+              compLeft={<BusLocation idBusStop={i.id} />}
+              compRight={<RouteThrough idBusStop={i.id} />}
+            />
+          )}
+          {location && (
+            <MarkerBusStop
+              nameBusStop={i.nameBusStop}
+              locationBusStop={i.location}
+              idBusStop={i.id}
+            />
+          )}
+        </>
+      ))}
     </>
   )
 }

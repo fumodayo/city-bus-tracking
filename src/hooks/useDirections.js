@@ -1,4 +1,4 @@
-import mapbox from 'mapbox'
+import mapboxAPI from 'mapbox'
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -21,8 +21,8 @@ export const useDirections = () => {
 
   const [direction, setDirection] = useState({})
   useEffect(() => {
-    const fecthDirections = async () => {
-      const res = await mapbox.getDirection(beginPoint, endPoint)
+    const fetchDirections = async () => {
+      const res = await mapboxAPI.getDirection(beginPoint, endPoint)
       const dict = {}
       dict.beginCords = beginPoint
       dict.endCords = endPoint
@@ -46,7 +46,7 @@ export const useDirections = () => {
     }
     if (beginPoint.length !== 0 && endPoint.length !== 0) {
       setTimeout(() => {
-        fecthDirections()
+        fetchDirections()
       }, 700)
     }
   }, [beginPoint, endPoint])

@@ -17,8 +17,9 @@ import { REACT_APP_MAPBOX_KEY } from 'mapbox/_consts'
 import { useBusStop } from 'hooks/useBusStop'
 import { useTravel } from 'hooks/useTravel'
 import { setUpdateLocation } from 'redux/slices/routes'
-import mapbox from 'mapbox'
 import yourHereImage from 'images/yourhere.png'
+import mapboxAPI from 'mapbox'
+import { useLocationNear } from 'hooks/useLocationNear'
 
 export default function Home() {
   const [viewport, setViewport] = useState({
@@ -89,7 +90,7 @@ export default function Home() {
   const [nameAddressYourHere, setNameAddressYourHere] = useState('')
   useEffect(() => {
     const fetchAddressName = async () => {
-      const res = await mapbox.getAddress(lng, lat)
+      const res = await mapboxAPI.getAddress(lng, lat)
       setNameAddressYourHere(res.features[0].place_name_vi)
     }
     if (lng && lat) {
@@ -107,7 +108,7 @@ export default function Home() {
     e.preventDefault()
     setShowPopup(false)
   }
-  
+
   return (
     <Map
       {...viewport}

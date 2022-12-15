@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import mapbox from 'mapbox'
+import mapboxAPI from 'mapbox'
 
 export const useAutoSuggestions = () => {
   const [value, setValue] = useState('')
@@ -7,7 +7,7 @@ export const useAutoSuggestions = () => {
 
   const handleChange = async event => {
     setValue(event.target.value)
-    const res = await mapbox.searchLocation(event.target.value)
+    const res = await mapboxAPI.searchLocation(event.target.value)
     let plc = res.features.map(pl => {
       return {
         name: pl.place_name,
