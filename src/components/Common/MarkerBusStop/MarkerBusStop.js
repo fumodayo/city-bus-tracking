@@ -37,7 +37,7 @@ const MarkerBusStop = ({ nameBusStop, locationBusStop, idBusStop }) => {
           style={{ height: 45, width: 30, cursor: 'pointer' }}
           src={busStop}
           id={idBusStop}
-          onClick={e => handleHaveIdShowSidebar(e)}
+          onClick={handleHaveIdShowSidebar}
           alt="marker"
           onMouseEnter={mouseEnter}
           onMouseLeave={mouseLeave}

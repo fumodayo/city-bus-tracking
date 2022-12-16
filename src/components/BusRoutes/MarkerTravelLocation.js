@@ -20,6 +20,7 @@ const MarkerTravelLocation = () => {
               image={travel.image}
               imageDesc={travel.imageDesc}
               location={travel.location}
+              description={travel.description}
             />
           </div>
         ))}

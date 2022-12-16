@@ -89,14 +89,18 @@ const ListGuideTravel = () => {
             key={imageTravel.id}
             id={imageTravel.id}
             onClick={handleGetIdListItemImage}
+            style={{
+              minWidth: 330,
+              maxHeight: 260
+            }}
           >
             <img
               style={{
-                minWidth: 330,
-                maxHeight: 260,
                 paddingTop: '10px',
-                borderRadius: '30px'
+                borderRadius: '30px',
+                transition: '0.5s all ease-in-out'
               }}
+              className="image-travels"
               src={imageTravel.image}
               srcSet={imageTravel.image}
               alt={imageTravel.imageDesc}

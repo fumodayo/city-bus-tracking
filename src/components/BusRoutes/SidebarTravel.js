@@ -102,7 +102,7 @@ const SidebarTravel = () => {
                 width: 400,
                 height: 320,
                 objectFit: 'cover',
-                backgroundPosition: 'center'
+                backgroundPosition: 'center',
               }}
               src={locationTravel?.image}
               alt={locationTravel?.imageDesc}

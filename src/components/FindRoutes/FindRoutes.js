@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Paper, Typography } from '@mui/material'
+import { Box, Button, Paper, Tooltip, Typography } from '@mui/material'
 import InputField from 'components/FindRoutes/InputField'
 import MarkerBlue from '../../images/markerblue.png'
 import MarkerRed from '../../images/markerred.png'
@@ -8,7 +8,7 @@ import ArrowDirection from 'components/FindRoutes/ArrowDirection'
 import { useDirections } from 'hooks/useDirections'
 import './FindRoutes.scss'
 import { setSearchLocation } from 'redux/slices/routes'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useAddress } from 'hooks/useAddress'
 import { MyLocation } from '@mui/icons-material'
 import { useLocationNear } from 'hooks/useLocationNear'
@@ -16,9 +16,6 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { useBusStop } from 'hooks/useBusStop'
 import MarkerBusStop from 'components/Common/MarkerBusStop/MarkerBusStop'
-import CustomSidebar from 'components/Common/CustomSidebar'
-import BusLocation from 'components/BusRoutes/BusLocation'
-import RouteThrough from 'components/BusRoutes/RouteThrough'
 
 const FindRoutes = () => {
   const directions = useDirections()
@@ -26,15 +23,43 @@ const FindRoutes = () => {
   const address = useAddress()
   const busstops = useBusStop()
 
+  const points = useSelector(state => state.routes.direction)
+  const [beginPoint, setBeginPoint] = useState([])
+  const [endPoint, setEndPoint] = useState([])
+
+  useEffect(() => {
+    let start,
+      end = []
+    if (points.id === 'begin') {
+      start = points.location
+      setBeginPoint(start)
+    }
+    if (points.id === 'end') {
+      end = points.location
+      setEndPoint(end)
+    }
+  }, [points])
+
   const pointNear = useLocationNear()
   const [location, setLocation] = useState([])
-
-  const [showSidebar, setShowSidebar] = useState(false)
 
   useEffect(() => {
     const point = busstops.filter(i => i.id === pointNear)
     setLocation(point)
   }, [pointNear, busstops])
+
+  useEffect(() => {
+    location.map(i =>
+      setTimeout(() => {
+        dispatch(
+          setSearchLocation({
+            id: 'end',
+            location: [i.location.lng, i.location.lat]
+          })
+        )
+      }, 500)
+    )
+  }, [location, dispatch])
 
   const handleGetCurrentUserLocation = () => {
     const options = {
@@ -57,6 +82,7 @@ const FindRoutes = () => {
     }
     navigator.geolocation.getCurrentPosition(success, error, options)
   }
+
   return (
     <>
       <div className="sidebar-findrouter">
@@ -75,19 +101,25 @@ const FindRoutes = () => {
           }}
         >
           <div className="input-box pos-relative">
-            <img src={MarkerRed} alt="marker-red" />
+            <Tooltip title="Địa điểm bắt đầu">
+              <img src={MarkerBlue} alt="marker-blue" />
+            </Tooltip>
             <InputField
               idInput={'begin'}
               placeholder={'Nhập địa điểm bắt đầu'}
             />
-            <Button
-              onClick={handleGetCurrentUserLocation}
-              startIcon={<MyLocation style={{ fontSize: '20px' }} />}
-            />
+            <Tooltip title="Tọa độ hiện tại của bạn">
+              <Button
+                onClick={handleGetCurrentUserLocation}
+                startIcon={<MyLocation style={{ fontSize: '20px' }} />}
+              />
+            </Tooltip>
           </div>
           <div className="line"></div>
           <div className="input-box pos-relative">
-            <img src={MarkerBlue} alt="marker-blue" />
+            <Tooltip title="Địa điểm kết thúc">
+              <img src={MarkerRed} alt="marker-red" />
+            </Tooltip>
             <InputField
               idInput={'end'}
               placeholder={'Nhập địa điểm kết thúc'}
@@ -184,11 +216,11 @@ const FindRoutes = () => {
           />
         </Source>
       )}
-      {directions?.beginCords && directions?.endCords && (
+      {beginPoint.length > 0 && (
         <>
           <Marker
-            latitude={directions?.beginCords[1]}
-            longitude={directions?.beginCords[0]}
+            longitude={beginPoint[0]}
+            latitude={beginPoint[1]}
             draggable
             onDrag={e =>
               setTimeout(() => {
@@ -204,13 +236,17 @@ const FindRoutes = () => {
           >
             <img
               style={{ height: 30, width: 30, cursor: 'pointer' }}
-              src={MarkerRed}
-              alt="marker"
+              src={MarkerBlue}
+              alt="marker-blue"
             />
           </Marker>
+        </>
+      )}
+      {endPoint.length > 0 && (
+        <>
           <Marker
-            latitude={directions?.endCords[1]}
-            longitude={directions?.endCords[0]}
+            longitude={endPoint[0]}
+            latitude={endPoint[1]}
             draggable
             onDrag={e =>
               setTimeout(() => {
@@ -226,24 +262,14 @@ const FindRoutes = () => {
           >
             <img
               style={{ height: 30, width: 30, cursor: 'pointer' }}
-              src={MarkerBlue}
-              alt="marker"
+              src={MarkerRed}
+              alt="marker-red"
             />
           </Marker>
         </>
       )}
       {location.map(i => (
         <>
-          {showSidebar && (
-            <CustomSidebar
-              show={showSidebar}
-              name={i.nameBusStop}
-              tabLeft={'Xe sắp tới trạm'}
-              tabRight={'Tuyến đi qua'}
-              compLeft={<BusLocation idBusStop={i.id} />}
-              compRight={<RouteThrough idBusStop={i.id} />}
-            />
-          )}
           {location && (
             <MarkerBusStop
               nameBusStop={i.nameBusStop}

@@ -35,7 +35,14 @@ const MarkerTravelImage = ({
 
   return (
     <img
-      style={{ height: 30, width: 30, cursor: 'pointer' }}
+      style={{
+        height: 34,
+        width: 34,
+        cursor: 'pointer',
+        border: '2px solid #fff',
+        borderRadius: '50%',
+        boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
+      }}
       src={image}
       alt="marker"
       onMouseEnter={mouseEnter}

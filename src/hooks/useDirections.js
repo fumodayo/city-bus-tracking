@@ -45,9 +45,7 @@ export const useDirections = () => {
       setDirection(dict)
     }
     if (beginPoint.length !== 0 && endPoint.length !== 0) {
-      setTimeout(() => {
-        fetchDirections()
-      }, 700)
+      fetchDirections()
     }
   }, [beginPoint, endPoint])
   return direction

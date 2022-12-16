@@ -19,7 +19,6 @@ import { useTravel } from 'hooks/useTravel'
 import { setUpdateLocation } from 'redux/slices/routes'
 import yourHereImage from 'images/yourhere.png'
 import mapboxAPI from 'mapbox'
-import { useLocationNear } from 'hooks/useLocationNear'
 
 export default function Home() {
   const [viewport, setViewport] = useState({

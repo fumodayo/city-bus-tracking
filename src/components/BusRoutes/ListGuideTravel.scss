@@ -23,3 +23,9 @@
     }
   }
 }
+
+.image-travels {
+  &:hover {
+    filter: blur(2px);
+  }
+}
