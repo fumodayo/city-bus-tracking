@@ -3,6 +3,7 @@ import { useBusStop } from 'hooks/useBusStop'
 import { useTimeBusStart } from 'hooks/useTimeBusStart'
 import { useTravel } from 'hooks/useTravel'
 import HTMLReactParser from 'html-react-parser'
+import mapboxAPI from 'mapbox'
 import React, { useEffect, useState } from 'react'
 import Countdown from 'react-countdown'
 
@@ -10,6 +11,7 @@ const BusLocation = ({ idBusStop }) => {
   const [getrealtime, setRealtime] = useState('')
   const [timeBusStop, setTimeBusStop] = useState(1000)
   const [travelLocation, setTravelLocation] = useState({})
+  const [busStopFindById, setBusStopFindById] = useState({})
   const allBusStop = useBusStop()
   const timeBusStart = useTimeBusStart()
   const travels = useTravel()
@@ -38,13 +40,13 @@ const BusLocation = ({ idBusStop }) => {
       const busStopFindById = allBusStop.filter(
         busstop => busstop.id === idBusStop
       )[0]
-
+      setBusStopFindById(busStopFindById)
       const codeBusStop = busStopFindById.codeBusRoute
       const directionBusStop = busStopFindById.directionRoute
       const nameTravel = busStopFindById.travelNear
 
-      const travelLocation = travels.filter(i => i.title === nameTravel)
-      setTravelLocation(travelLocation)
+      const travellocation = travels.filter(i => i.title === nameTravel)
+      setTravelLocation(travellocation)
 
       // get array time bus starts
       const allTimeBusStarts = timeBusStart.filter(
@@ -68,6 +70,23 @@ const BusLocation = ({ idBusStop }) => {
     }
   }, [getrealtime, idBusStop, allBusStop, timeBusStart, travels])
 
+  const [distanceNear, setDistanceNear] = useState({})
+
+  useEffect(() => {
+    const fetchDistance = async () => {
+      const res = await mapboxAPI.getDirection(
+        [busStopFindById.location.lng, busStopFindById.location.lat],
+        [travelLocation[0].location.lng, travelLocation[0].location.lat]
+      )
+      const dis = {
+        distance: res.routes[0].distance,
+        duration: res.routes[0].duration
+      }
+      setDistanceNear(dis)
+    }
+    fetchDistance()
+  }, [busStopFindById, travelLocation])
+
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
       return (
@@ -88,8 +107,56 @@ const BusLocation = ({ idBusStop }) => {
     )
   }
 
+  const typeTravel = typeLocation => {
+    let name = ''
+    switch (typeLocation) {
+      case 'center':
+        name = 'Trung tâm vui chơi'
+        break
+      case 'checkin':
+        name = 'Địa điểm chụp ảnh'
+        break
+      case 'cultural':
+        name = 'Địa điểm văn hóa'
+        break
+      case 'discover':
+        name = 'Địa điểm khám phá'
+        break
+      case 'night':
+        name = 'Địa điểm vui chơi về đêm'
+        break
+      default:
+        name = 'Chưa cập nhật'
+    }
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          padding: '5px',
+          bottom: '4%',
+          left: '4%',
+          borderRadius: '5px',
+          backgroundColor: '#1b1f24'
+        }}
+      >
+        <span style={{ color: '#fff', fontSize: '12px', fontWeight: 'bold' }}>
+          {name}
+        </span>
+      </div>
+    )
+  }
+
   return (
-    <div className="bus-location-time-countdown">
+    <div
+      className="bus-location-time-countdown"
+      style={{
+        color: '#000',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '10px',
+        paddingTop: '5px'
+      }}
+    >
       <Countdown
         date={Date.now() + timeBusStop}
         renderer={renderer}
@@ -98,23 +165,44 @@ const BusLocation = ({ idBusStop }) => {
       />
       {travelLocation.length > 0 &&
         travelLocation?.map(travel => (
-          <div key={travel.id}>
-            <Typography>Những địa điểm du lịch gần trạm xe: </Typography>
-            <Typography>{travel.title}</Typography>
-            <img
+          <div
+            key={travel.id}
+            style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}
+          >
+            <Typography
               style={{
-                width: 350,
-                height: 300,
-                objectFit: 'cover',
-                backgroundPosition: 'center'
+                fontSize: '18px',
+                fontWeight: 'bold'
               }}
-              src={travel?.image}
-              alt={travel?.imageDesc}
-            />
-            <Typography>Địa điểm cách trạm xe tầm: </Typography>
-            <Typography>Giới thiệu</Typography>
+            >
+              Những địa điểm du lịch gần trạm xe:
+            </Typography>
+            <div style={{ position: 'relative' }}>
+              <img
+                style={{
+                  width: 350,
+                  height: 400,
+                  objectFit: 'cover',
+                  backgroundPosition: 'center',
+                  borderRadius: '10px'
+                }}
+                src={travel?.image}
+                alt={travel?.imageDesc}
+              />
+              {typeTravel(travel.typeLocation)}
+            </div>
+            <Typography style={{ fontWeight: 'bold' }}>
+              {travel.title}
+            </Typography>
             <Typography>
               {travel?.description && HTMLReactParser(travel?.description)}
+            </Typography>
+            <Typography style={{ fontWeight: 'bold' }}>
+              Địa điểm cách trạm xe tầm:{' '}
+              {`${Math.round(distanceNear.duration)} m`}
+            </Typography>
+            <Typography style={{ fontWeight: 'bold' }}>
+              Đi bộ trong: {`${Math.round(distanceNear.duration / 60)} phút`}
             </Typography>
           </div>
         ))}

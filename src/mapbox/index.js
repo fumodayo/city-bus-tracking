@@ -16,6 +16,13 @@ class MapBoxAPI {
     return res.data
   }
 
+  async getRoadMap(beginCords, endCords) {
+    const res = await axios.get(
+      `https://api.mapbox.com/directions/v5/mapbox/driving/${beginCords[0]},${beginCords[1]};${endCords[0]},${endCords[1]}?steps=true&geometries=geojson&access_token=${REACT_APP_MAPBOX_KEY}&language=vi`
+    )
+    return res.data
+  }
+
   async getAddress(lng, lat) {
     const res = await axios.get(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?types=poi&access_token=${REACT_APP_MAPBOX_KEY}&language=vi`
