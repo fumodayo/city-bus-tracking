@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Box, Button, IconButton } from '@mui/material'
 import {
   DataGrid,
@@ -10,8 +10,6 @@ import {
 import { useTravel } from 'hooks/useTravel'
 import { Delete } from '@mui/icons-material'
 import { grey } from '@mui/material/colors'
-import TravelsActions from './TravelsActions'
-import { useMemo } from 'react'
 import moment from 'moment/moment'
 
 const Travels = ({ setSelectedLink, link }) => {
@@ -21,82 +19,75 @@ const Travels = ({ setSelectedLink, link }) => {
 
   const navigate = useNavigate()
 
-  const [rowId, setRowId] = useState('')
-  const columns = useMemo(
-    () => [
-      { field: 'id', headerName: 'ID', width: 90 },
-      {
-        field: 'title',
-        headerName: 'Tên địa điểm',
-        width: 150,
-        editable: true
-      },
-      {
-        field: 'typeLocation',
-        headerName: 'Loại Hình Du lịch',
-        width: 150,
-        type: 'singleSelect',
-        valueOptions: ['discover', 'cultural', 'checking', 'center', 'night'],
-        editable: true
-      },
-      {
-        field: 'image',
-        headerName: 'Hình ảnh',
-        width: 150,
-        editable: true,
-        renderCell: params => (
-          <img style={{ maxWidth: '100%' }} src={params.value} alt={params} />
-        )
-      },
-      {
-        field: 'description',
-        headerName: 'Mô tả địa điểm',
-        width: 200,
-        editable: true
-      },
-      {
-        field: 'locationLink',
-        headerName: 'Địa chỉ trên google map',
-        width: 200,
-        editable: true
-      },
-      {
-        field: 'locationName',
-        headerName: 'Địa chỉ',
-        width: 250,
-        editable: true
-      },
-      {
-        field: 'location',
-        headerName: 'Tọa độ',
-        type: 'string',
-        width: 200,
-        editable: true,
-        renderCell: params => (
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div>Kinh độ: {params.formattedValue.lng}</div>
-            <div>Vĩ độ: {params.formattedValue.lat}</div>
-          </div>
-        )
-      },
-      {
-        field: 'createdAt',
-        headerName: 'Tạo vào lúc',
-        width: 200,
-        renderCell: params =>
-          moment(params.row.createdAt).format('YYYY-MM-DD HH:MM:SS')
-      },
-      {
-        field: 'actions',
-        headerName: 'Actions',
-        type: 'actions',
-        renderCell: params => (
-          <TravelsActions {...{ params, rowId, setRowId }} />
-        )
-      }
-    ],
-    [rowId]
-  )
+  const columns = [
+    { field: 'id', headerName: 'ID', width: 90 },
+    {
+      field: 'title',
+      headerName: 'Tên địa điểm',
+      width: 150
+    },
+    {
+      field: 'typeLocation',
+      headerName: 'Loại Hình Du lịch',
+      width: 150,
+      type: 'singleSelect',
+      valueOptions: ['discover', 'cultural', 'checking', 'center', 'night']
+    },
+    {
+      field: 'image',
+      headerName: 'Hình ảnh',
+      width: 150,
+      renderCell: params => (
+        <img style={{ maxWidth: '100%' }} src={params.value} alt={params} />
+      )
+    },
+    {
+      field: 'description',
+      headerName: 'Mô tả địa điểm',
+      width: 200
+    },
+    {
+      field: 'locationLink',
+      headerName: 'Địa chỉ trên google map',
+      width: 200
+    },
+    {
+      field: 'locationName',
+      headerName: 'Địa chỉ',
+      width: 250
+    },
+    {
+      field: 'location',
+      headerName: 'Tọa độ',
+      type: 'string',
+      width: 200,
+      renderCell: params => (
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div>Kinh độ: {params.formattedValue.lng}</div>
+          <div>Vĩ độ: {params.formattedValue.lat}</div>
+        </div>
+      )
+    },
+    {
+      field: 'createdAt',
+      headerName: 'Tạo vào lúc',
+      width: 200,
+      renderCell: params =>
+        moment(params.row.createdAt).format('YYYY-MM-DD HH:MM:SS')
+    },
+    {
+      field: 'actions',
+      headerName: 'Actions',
+      type: 'actions',
+      renderCell: params => (
+        <>
+          <Link to={'/travel/' + params.row.id}>
+            <Button>Chỉnh sửa</Button>
+          </Link>
+        </>
+      )
+    }
+  ]
 
   const CustomFooter = () => {
     return (
@@ -147,7 +138,6 @@ const Travels = ({ setSelectedLink, link }) => {
                 theme.palette.mode === 'light' ? grey[200] : grey[900]
             }
           }}
-          onCellEditCommit={params => setRowId(params.id)}
         />
       </Box>
       <Button onClick={() => navigate('/dashboard/createTravels')}>

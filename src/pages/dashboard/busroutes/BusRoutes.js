@@ -14,7 +14,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { useBusStop } from 'hooks/useBusStop'
 import { useBusRoutes } from 'hooks/useBusRoutes'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
 import { useTimeBusStart } from 'hooks/useTimeBusStart'
 import HTMLReactParser from 'html-react-parser'
@@ -31,6 +31,7 @@ function Row(props) {
     setCodeRoute(row.codeBusRoute)
     setDirection(row.directionRoute)
   }
+
 
   return (
     <React.Fragment>
@@ -55,6 +56,11 @@ function Row(props) {
         <TableCell align="left">{row.colorRoute}</TableCell>
         <TableCell align="left">
           {moment(row.createdAt).format('YYYY-MM-DD HH:MM:SS')}
+        </TableCell>
+        <TableCell align="left">
+          <Link to={'/busroute/' + row.id}>
+            <Button>Chỉnh sửa</Button>
+          </Link>
         </TableCell>
       </TableRow>
       <TableRow>
@@ -211,7 +217,7 @@ const BusRoutes = ({ setSelectedLink, link }) => {
         </Table>
       </TableContainer>
       <Button onClick={() => navigate('/dashboard/createBusRoutes')}>
-        Create BusRoutes
+        Tạo tuyến xe buýt
       </Button>
     </>
   )
