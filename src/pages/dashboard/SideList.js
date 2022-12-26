@@ -24,9 +24,7 @@ import MultiStepForm from './busroutes/MultiStepForm'
 import CreateTravels from './travels/CreateTravels'
 import Test from './main/Test'
 import BusAlertIcon from '@mui/icons-material/BusAlert'
-import AddchartIcon from '@mui/icons-material/Addchart'
 import ModeOfTravelIcon from '@mui/icons-material/ModeOfTravel'
-import CreateInfoBusRoute from './infobusroute/CreateInfoBusRoute'
 
 const drawerWidth = 240
 
