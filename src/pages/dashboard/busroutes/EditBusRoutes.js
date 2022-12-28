@@ -1,8 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const EditBusRoutes = () => {
+  let { busrouteId } = useParams()
   return (
-    <div>EditBusRoutes</div>
+    <div>{busrouteId}</div>
   )
 }
 

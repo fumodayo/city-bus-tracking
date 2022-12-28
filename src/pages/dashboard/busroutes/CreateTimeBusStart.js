@@ -34,7 +34,11 @@ const CreateTimeBusStart = ({ setDataTimeBusStart }) => {
   
   return (
     <Box>
-      <Typography>Tạo thời gian xe xuất bến</Typography>
+      <Typography
+        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+      >
+        Bước 3: Tạo thời gian xe buýt xuất bến
+      </Typography>
       <Box sx={{ textAlign: 'left' }}>
         {serviceList.map((singleService, index) => (
           <Box key={index}>

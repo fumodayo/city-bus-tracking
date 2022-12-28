@@ -8,10 +8,11 @@ import {
   InputLabel,
   MenuItem,
   Select,
-  TextareaAutosize,
   TextField,
   Typography
 } from '@mui/material'
+import RichTextEditor from '@mantine/rte'
+import { useState } from 'react'
 
 const CreateBusRoutes = ({
   codeBusRoute,
@@ -23,9 +24,15 @@ const CreateBusRoutes = ({
   colorRoute,
   updateFormBusRoutes
 }) => {
+  const [value, onChange] = useState('Mô tả hành trình của tuyến xe buýt')
+  
   return (
     <Box>
-      <Typography>Tạo Tuyến Xe Buýt</Typography>
+      <Typography
+        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+      >
+        Bước 1: Tạo tuyến xe buýt
+      </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -62,15 +69,16 @@ const CreateBusRoutes = ({
         </Grid>
         <Grid item xs={12} sm={6}>
           <InputLabel>Mô tả hành trình</InputLabel>
-          <TextareaAutosize
-            maxRows={4}
-            style={{ width: 400, maxHeight: 200, resize: 'none' }}
-            value={drivingJourney}
-            type="text"
-            placeholder="Mô tả hành trình"
-            onChange={e =>
-              updateFormBusRoutes({ drivingJourney: e.target.value })
-            }
+          <RichTextEditor
+            style={{
+              height: '300px',
+              overflow: 'auto'
+            }}
+            id="rte"
+            value={value}
+            onChange={onChange}
+            formats={['bold', 'italic', 'underline']}
+            controls={[['bold', 'italic', 'underline']]}
           />
         </Grid>
         <Grid item xs={12} sm={6} style={{ display: 'flex' }}>

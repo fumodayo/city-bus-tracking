@@ -36,7 +36,11 @@ const CreateBusStops = ({ setDataBusStops }) => {
 
   return (
     <Box>
-      <Typography>Tạo Bến Xe Buýt</Typography>
+      <Typography
+        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+      >
+        Bước 2: Tạo bến xe buýt
+      </Typography>
       <Box sx={{ textAlign: 'left' }}>
         {serviceList.map((singleService, index) => (
           <Box key={index}>

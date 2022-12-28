@@ -12,16 +12,8 @@ import { useTravel } from 'hooks/useTravel'
 import { useParams } from 'react-router-dom'
 import Resizer from 'react-image-file-resizer'
 import { Send } from '@mui/icons-material'
-import {
-  RichTextEditorComponent,
-  Toolbar,
-  Link,
-  Table,
-  QuickToolbar,
-  Image,
-  HtmlEditor,
-  Inject
-} from '@syncfusion/ej2-react-richtexteditor'
+import RichTextEditor from '@mantine/rte'
+import DashBoard from '../DashBoard'
 
 const EditTravels = () => {
   let { travelId } = useParams()
@@ -102,7 +94,7 @@ const EditTravels = () => {
   }
 
   return (
-    <Box>
+    <DashBoard>
       <Typography style={{ fontSize: '20px', fontWeight: 'bold' }}>
         Chỉnh sửa địa điểm du lịch
       </Typography>
@@ -243,12 +235,13 @@ const EditTravels = () => {
                     {travels.description}
                   </Typography>
                 ) : (
-                  <RichTextEditorComponent>
-                    <p>{travels.description}</p>
-                    <Inject
-                      services={[Toolbar, Link, Image, HtmlEditor, Table]}
-                    ></Inject>
-                  </RichTextEditorComponent>
+                  <RichTextEditor
+                    id="rte"
+                    value={travels.description}
+                    onChange={e => updatedFormTravels({ description: e })}
+                    formats={['bold', 'italic', 'underline']}
+                    controls={[['bold', 'italic', 'underline']]}
+                  />
                 )}
               </Box>
               <Box>
@@ -315,7 +308,7 @@ const EditTravels = () => {
       <Button variant="contained" endIcon={<Send />} onClick={handleSubmit}>
         Chỉnh sửa
       </Button>
-    </Box>
+    </DashBoard>
   )
 }
 

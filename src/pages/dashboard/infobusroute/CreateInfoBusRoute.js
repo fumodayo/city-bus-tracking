@@ -10,12 +10,14 @@ import {
   TableHead,
   TableRow,
   Button,
-  Typography
+  Typography,
+  Tooltip
 } from '@mui/material'
 import { useFormatInfo } from 'hooks/useFormatInfo'
 import moment from 'moment'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import DashBoard from '../DashBoard'
 
 const CustomTableCell = ({ row, name, onChange }) => {
   const { isEditMode } = row
@@ -30,11 +32,7 @@ const CustomTableCell = ({ row, name, onChange }) => {
   )
 }
 
-export default function CreateInfoBusRoute({ setSelectedLink, link }) {
-  useEffect(() => {
-    setSelectedLink(link)
-  }, [])
-
+export default function CreateInfoBusRoute() {
   const infos = useFormatInfo()
   const [rows, setRows] = useState([])
 
@@ -91,7 +89,7 @@ export default function CreateInfoBusRoute({ setSelectedLink, link }) {
   }
 
   return (
-    <Box>
+    <DashBoard>
       <Typography
         style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
       >
@@ -101,7 +99,7 @@ export default function CreateInfoBusRoute({ setSelectedLink, link }) {
         <Table aria-label="caption table">
           <TableHead>
             <TableRow>
-              <TableCell align="left" />
+              <TableCell align="left">Hành động</TableCell>
               <TableCell align="left">Giá vé theo luợt</TableCell>
               <TableCell align="left">Giá vé theo tháng (ưu tiên)</TableCell>
               <TableCell align="left">Giá vé theo tháng (thường)</TableCell>
@@ -117,26 +115,32 @@ export default function CreateInfoBusRoute({ setSelectedLink, link }) {
                 <TableCell>
                   {row.isEditMode ? (
                     <>
-                      <IconButton
-                        aria-label="done"
-                        onClick={() => onToggleEditMode(row.id)}
-                      >
-                        <Done />
-                      </IconButton>
-                      <IconButton
-                        aria-label="revert"
-                        onClick={() => onRevert(row.id)}
-                      >
-                        <DeleteForever />
-                      </IconButton>
+                      <Tooltip title="Xác nhận">
+                        <IconButton
+                          aria-label="done"
+                          onClick={() => onToggleEditMode(row.id)}
+                        >
+                          <Done />
+                        </IconButton>
+                      </Tooltip>
+                      <Tooltip title="Hủy bỏ">
+                        <IconButton
+                          aria-label="revert"
+                          onClick={() => onRevert(row.id)}
+                        >
+                          <DeleteForever />
+                        </IconButton>
+                      </Tooltip>
                     </>
                   ) : (
-                    <IconButton
-                      aria-label="delete"
-                      onClick={() => onToggleEditMode(row.id)}
-                    >
-                      <Edit />
-                    </IconButton>
+                    <Tooltip title="Chỉnh sửa">
+                      <IconButton
+                        aria-label="delete"
+                        onClick={() => onToggleEditMode(row.id)}
+                      >
+                        <Edit />
+                      </IconButton>
+                    </Tooltip>
                   )}
                 </TableCell>
                 <CustomTableCell
@@ -164,6 +168,6 @@ export default function CreateInfoBusRoute({ setSelectedLink, link }) {
           xác nhận
         </Button>
       </Box>
-    </Box>
+    </DashBoard>
   )
 }

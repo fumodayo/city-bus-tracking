@@ -19,6 +19,7 @@ import { Button } from '@mui/material'
 import { useTimeBusStart } from 'hooks/useTimeBusStart'
 import HTMLReactParser from 'html-react-parser'
 import moment from 'moment'
+import DashBoard from '../DashBoard'
 
 function Row(props) {
   const { row } = props
@@ -31,7 +32,6 @@ function Row(props) {
     setCodeRoute(row.codeBusRoute)
     setDirection(row.directionRoute)
   }
-
 
   return (
     <React.Fragment>
@@ -58,7 +58,7 @@ function Row(props) {
           {moment(row.createdAt).format('YYYY-MM-DD HH:MM:SS')}
         </TableCell>
         <TableCell align="left">
-          <Link to={'/busroute/' + row.id}>
+          <Link to={'/dashboard/busroute/' + row.id}>
             <Button>Chỉnh sửa</Button>
           </Link>
         </TableCell>
@@ -176,11 +176,7 @@ function Row(props) {
   )
 }
 
-const BusRoutes = ({ setSelectedLink, link }) => {
-  useEffect(() => {
-    setSelectedLink(link)
-  }, [])
-
+const BusRoutes = () => {
   const navigate = useNavigate()
 
   const busstops = useBusStop()
@@ -193,7 +189,12 @@ const BusRoutes = ({ setSelectedLink, link }) => {
   }))
 
   return (
-    <>
+    <DashBoard>
+      <Typography
+        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+      >
+        Thông tin về các tuyến xe buýt
+      </Typography>
       <TableContainer component={Paper}>
         <Table aria-label="collapsible table">
           <TableHead>
@@ -216,10 +217,10 @@ const BusRoutes = ({ setSelectedLink, link }) => {
           </TableBody>
         </Table>
       </TableContainer>
-      <Button onClick={() => navigate('/dashboard/createBusRoutes')}>
+      <Button onClick={() => navigate('/dashboard/busroute/create')}>
         Tạo tuyến xe buýt
       </Button>
-    </>
+    </DashBoard>
   )
 }
 

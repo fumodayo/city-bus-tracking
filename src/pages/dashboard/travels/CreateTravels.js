@@ -6,19 +6,15 @@ import {
   InputLabel,
   MenuItem,
   Select,
-  TextareaAutosize,
   TextField,
   Typography
 } from '@mui/material'
 import Resizer from 'react-image-file-resizer'
-import { DataGrid } from '@mui/x-data-grid'
 import { Send } from '@mui/icons-material'
+import DashBoard from '../DashBoard'
+import RichTextEditor from '@mantine/rte'
 
-const CreateTravels = ({ setSelectedLink, link }) => {
-  useEffect(() => {
-    setSelectedLink(link)
-  }, [])
-
+const CreateTravels = () => {
   const initialTravels = {
     id: Math.random(),
     title: '',
@@ -154,9 +150,15 @@ const CreateTravels = ({ setSelectedLink, link }) => {
   //   }
   // ]
 
+  const [value, onChange] = useState('Giới thiệu về địa điểm')
+
   return (
-    <Box>
-      <Typography>Tạo địa điểm du lịch: </Typography>
+    <DashBoard>
+      <Typography
+        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+      >
+        Tạo địa điểm du lịch
+      </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -186,7 +188,6 @@ const CreateTravels = ({ setSelectedLink, link }) => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            autoFocus
             value={travels.locationName}
             type="text"
             label="Địa chỉ"
@@ -195,7 +196,6 @@ const CreateTravels = ({ setSelectedLink, link }) => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            autoFocus
             value={travels.locationLink}
             type="text"
             label="Địa chỉ trên google map"
@@ -223,13 +223,16 @@ const CreateTravels = ({ setSelectedLink, link }) => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <InputLabel>Mô tả về địa điểm: </InputLabel>
-          <TextareaAutosize
-            minRows={6}
-            style={{ width: 400 }}
-            value={travels.description}
-            type="text"
-            label="Giới thiệu về địa điểm"
-            onChange={e => updatedFormTravels({ description: e.target.value })}
+          <RichTextEditor
+            style={{
+              height: '300px',
+              overflow: 'auto'
+            }}
+            id="rte"
+            value={value}
+            onChange={onChange}
+            formats={['bold', 'italic', 'underline']}
+            controls={[['bold', 'italic', 'underline']]}
           />
         </Grid>
       </Grid>
@@ -303,7 +306,7 @@ const CreateTravels = ({ setSelectedLink, link }) => {
           />
         </Box>
       )} */}
-    </Box>
+    </DashBoard>
   )
 }
 

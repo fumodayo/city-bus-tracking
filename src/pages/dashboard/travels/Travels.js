@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Box, Button, IconButton } from '@mui/material'
+import { Box, Button, IconButton, Typography } from '@mui/material'
 import {
   DataGrid,
   GridFooter,
@@ -11,12 +11,9 @@ import { useTravel } from 'hooks/useTravel'
 import { Delete } from '@mui/icons-material'
 import { grey } from '@mui/material/colors'
 import moment from 'moment/moment'
+import DashBoard from '../DashBoard'
 
-const Travels = ({ setSelectedLink, link }) => {
-  useEffect(() => {
-    setSelectedLink(link)
-  }, [])
-
+const Travels = () => {
   const navigate = useNavigate()
 
   const columns = [
@@ -81,7 +78,7 @@ const Travels = ({ setSelectedLink, link }) => {
       type: 'actions',
       renderCell: params => (
         <>
-          <Link to={'/travel/' + params.row.id}>
+          <Link to={'/dashboard/travel/' + params.row.id}>
             <Button>Chỉnh sửa</Button>
           </Link>
         </>
@@ -118,7 +115,12 @@ const Travels = ({ setSelectedLink, link }) => {
   // console.log(selectedRows)
 
   return (
-    <div>
+    <DashBoard>
+      <Typography
+        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+      >
+        Thông tin về các địa điểm du lịch
+      </Typography>
       <Box sx={{ height: 800, width: '100%' }}>
         <DataGrid
           columns={columns}
@@ -140,10 +142,10 @@ const Travels = ({ setSelectedLink, link }) => {
           }}
         />
       </Box>
-      <Button onClick={() => navigate('/dashboard/createTravels')}>
+      <Button onClick={() => navigate('/dashboard/travel/create')}>
         Create Travels
       </Button>
-    </div>
+    </DashBoard>
   )
 }
 
