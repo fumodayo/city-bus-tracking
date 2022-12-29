@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Box,
   FormControl,
@@ -12,20 +12,44 @@ import {
   Typography
 } from '@mui/material'
 import RichTextEditor from '@mantine/rte'
-import { useState } from 'react'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
+import { Button } from 'react-bootstrap'
 
-const CreateBusRoutes = ({
-  codeBusRoute,
-  nameRoute,
-  directionRoute,
-  drivingJourney,
-  lineDistance,
-  operatingTime,
-  colorRoute,
-  updateFormBusRoutes
-}) => {
-  const [value, onChange] = useState('Mô tả hành trình của tuyến xe buýt')
-  
+const CreateBusRoutes = () => {
+  const [textEdit, onChangeTextEdit] = useState(
+    'Mô tả hành trình của tuyến xe buýt'
+  )
+
+  const codeBus = '23, 3423, 312321'
+
+  const formik = useFormik({
+    initialValues: {
+      codeBusRoute: '',
+      nameRoute: '',
+      directionRoute: '',
+      drivingJourney: '',
+      lineDistance: '',
+      operatingTime: '',
+      colorRoute: '#000000'
+    },
+    validationSchema: Yup.object({
+      codeBusRoute: Yup.string()
+        .min(3, 'Mã số tuyến xe buýt tối thiểu trên 3 kí tự!')
+        .max(7, 'Mã số tuyến xe buýt không được dài quá 7 kí tự!')
+        .required('Phải điền mã số tuyến!'),
+      nameRoute: Yup.string()
+        .min(7, 'Tên tuyến xe buýt tối thiểu trên 7 kí tự!')
+        .max(50, 'Tên tuyến xe buýt không được dài quá 50 kí tự!')
+        .required('Phải điền tên tuyến xe buýt!'),
+      directionRoute: Yup.string().required('Phải chọn chiều của tuyến xe!'),
+      colorRoute: Yup.string().required('Phải chọn màu của tuyến xe!')
+    }),
+    onSubmit: values => {
+      console.log(values)
+    }
+  })
+
   return (
     <Box>
       <Typography
@@ -33,90 +57,123 @@ const CreateBusRoutes = ({
       >
         Bước 1: Tạo tuyến xe buýt
       </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            autoFocus
-            value={codeBusRoute}
-            type="text"
-            label="Mã số tuyến"
-            onChange={e =>
-              updateFormBusRoutes({ codeBusRoute: e.target.value })
-            }
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            value={nameRoute}
-            type="text"
-            label="Tên tuyến"
-            onChange={e => updateFormBusRoutes({ nameRoute: e.target.value })}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <FormControl required sx={{ m: 1, minWidth: 200 }}>
-            <InputLabel>Chiều của tuyến</InputLabel>
-            <Select
-              value={directionRoute}
-              onChange={e =>
-                updateFormBusRoutes({ directionRoute: e.target.value })
-              }
-            >
-              <MenuItem value={'turn'}>Chiều đi</MenuItem>
-              <MenuItem value={'return'}>Chiều về</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <InputLabel>Mô tả hành trình</InputLabel>
-          <RichTextEditor
-            style={{
-              height: '300px',
-              overflow: 'auto'
-            }}
-            id="rte"
-            value={value}
-            onChange={onChange}
-            formats={['bold', 'italic', 'underline']}
-            controls={[['bold', 'italic', 'underline']]}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} style={{ display: 'flex' }}>
-          <FormControl variant="standard">
-            <InputLabel>Độ dài của tuyến</InputLabel>
-            <Input
-              value={lineDistance}
-              onChange={e =>
-                updateFormBusRoutes({ lineDistance: e.target.value })
-              }
-              type="number"
-              endAdornment={<InputAdornment position="end">km</InputAdornment>}
-            />
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            value={operatingTime}
-            type="text"
-            label="Thời gian tuyến hoạt động"
-            onChange={e =>
-              updateFormBusRoutes({ operatingTime: e.target.value })
-            }
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <FormControl required sx={{ m: 1, minWidth: 200 }}>
+      <form onSubmit={formik.handleSubmit}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
             <TextField
-              value={colorRoute}
-              type="color"
-              label="Màu của tuyến"
-              onChange={e =>
-                updateFormBusRoutes({ colorRoute: e.target.value })
+              autoFocus
+              id="codeBusRoute"
+              name="codeBusRoute"
+              type="text"
+              label="Mã số tuyến"
+              value={formik.values.codeBusRoute}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.codeBusRoute ||
+                Boolean(formik.errors.codeBusRoute)
+              }
+              helperText={formik.errors.codeBusRoute}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="nameRoute"
+              name="nameRoute"
+              type="text"
+              label="Mã số tuyến"
+              value={formik.values.nameRoute}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.nameRoute || Boolean(formik.errors.nameRoute)
+              }
+              helperText={formik.errors.nameRoute}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl required sx={{ m: 1, minWidth: 200 }}>
+              <InputLabel>Chiều của tuyến</InputLabel>
+              <Select
+                id="directionRoute"
+                name="directionRoute"
+                value={formik.values.directionRoute}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.directionRoute &&
+                  Boolean(formik.errors.directionRoute)
+                }
+              >
+                <MenuItem value={'turn'}>Chiều đi</MenuItem>
+                <MenuItem value={'return'}>Chiều về</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <InputLabel>Mô tả hành trình</InputLabel>
+            <RichTextEditor
+              style={{
+                height: '300px',
+                overflow: 'auto'
+              }}
+              id="rte"
+              value={textEdit}
+              onChange={onChangeTextEdit}
+              formats={['bold', 'italic', 'underline']}
+              controls={[['bold', 'italic', 'underline']]}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} style={{ display: 'flex' }}>
+            <FormControl variant="standard">
+              <InputLabel>Độ dài của tuyến</InputLabel>
+              <Input
+                id="lineDistance"
+                name="lineDistance"
+                type="number"
+                endAdornment={
+                  <InputAdornment position="end">km</InputAdornment>
+                }
+                value={formik.values.lineDistance}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.lineDistance &&
+                  Boolean(formik.errors.lineDistance)
+                }
+              />
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="operatingTime"
+              type="text"
+              label="Thời gian tuyến hoạt động"
+              name="operatingTime"
+              value={formik.values.operatingTime}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.operatingTime &&
+                Boolean(formik.errors.operatingTime)
               }
             />
-          </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl required sx={{ m: 1, minWidth: 200 }}>
+              <TextField
+                id="colorRoute"
+                name="colorRoute"
+                value={formik.values.colorRoute}
+                onChange={formik.handleChange}
+                type="color"
+                label="Màu của tuyến"
+                error={
+                  formik.touched.colorRoute && Boolean(formik.errors.colorRoute)
+                }
+              />
+            </FormControl>
+          </Grid>
         </Grid>
-      </Grid>
+        <Button color="primary" variant="contained" type="submit">
+          Submit
+        </Button>
+      </form>
     </Box>
   )
 }

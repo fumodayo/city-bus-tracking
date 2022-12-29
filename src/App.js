@@ -14,6 +14,7 @@ import CreateTravels from 'pages/dashboard/travels/CreateTravels'
 import Dashboard from 'pages/dashboard/DashBoard'
 import CreateInfoBusRoute from 'pages/dashboard/infobusroute/CreateInfoBusRoute'
 import Main from 'pages/dashboard/main/Main'
+import Test from 'pages/dashboard/main/Test'
 
 const theme = createTheme({
   palette: {
@@ -54,6 +55,8 @@ function App() {
         />
 
         <Route path="/*" element={<NotFound />} />
+
+        <Route path="/test" element={<Test />} />
       </Routes>
     </ThemeProvider>
   )

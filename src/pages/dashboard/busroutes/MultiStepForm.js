@@ -37,17 +37,7 @@ const MultiStepForm = () => {
     setActiveStep(0)
   }
 
-  const initialDataBusRoutes = {
-    codeBusRoute: '',
-    nameRoute: '',
-    directionRoute: '',
-    drivingJourney: '',
-    lineDistance: '',
-    operatingTime: '',
-    colorRoute: '#000000'
-  }
-
-  const [dataBusRoutes, setDataBusRoutes] = useState(initialDataBusRoutes)
+  const [dataBusRoutes, setDataBusRoutes] = useState({})
   const updateFormBusRoutes = fields => {
     setDataBusRoutes(newData => {
       return { ...newData, ...fields }
