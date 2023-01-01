@@ -10,7 +10,7 @@ import './FindRoutes.scss'
 import { setSearchLocation } from 'redux/slices/routes'
 import { useDispatch, useSelector } from 'react-redux'
 import { useAddress } from 'hooks/useAddress'
-import { MyLocation } from '@mui/icons-material'
+import { MyLocation, Send } from '@mui/icons-material'
 import { useLocationNear } from 'hooks/useLocationNear'
 import { useEffect } from 'react'
 import { useState } from 'react'
@@ -43,10 +43,10 @@ const FindRoutes = () => {
   const pointNear = useLocationNear()
   const [location, setLocation] = useState([])
 
-  useEffect(() => {
+  const handleFindNearBusStop = () => {
     const point = busstops.filter(i => i.id === pointNear)
     setLocation(point)
-  }, [pointNear, busstops])
+  }
 
   useEffect(() => {
     location.map(i =>
@@ -126,7 +126,12 @@ const FindRoutes = () => {
             />
           </div>
         </Paper>
-        <Typography style={{ fontSize: '20px' }}>Dẫn đường:</Typography>
+        <Button variant="contained" onClick={handleFindNearBusStop}>
+          Tìm trạm xe buýt
+        </Button>
+        <Typography style={{ marginTop: 10, fontSize: '20px' }}>
+          Dẫn đường:
+        </Typography>
         <Box
           style={{
             paddingLeft: '0',

@@ -10,15 +10,13 @@ import React, { useState } from 'react'
 import CreateBusRoutes from './CreateBusRoutes'
 import CreateBusStops from './CreateBusStops'
 import CreateTimeBusStart from './CreateTimeBusStart'
-import ConfirmCreate from './ConfirmCreate'
 import { SkipNext, SkipPrevious } from '@mui/icons-material'
 import DashBoard from '../DashBoard'
 
 const steps = [
   'Tạo tuyến xe buýt',
-  'Tạo bến xe buýt',
-  'Tạo thời gian xe xuất bến',
-  'Xác nhận tạo mới'
+  'Tạo trạm xe buýt',
+  'Tạo thời gian xe xuất bến'
 ]
 
 const MultiStepForm = () => {
@@ -38,30 +36,15 @@ const MultiStepForm = () => {
   }
 
   const [dataBusRoutes, setDataBusRoutes] = useState({})
-  const updateFormBusRoutes = fields => {
-    setDataBusRoutes(newData => {
-      return { ...newData, ...fields }
-    })
-  }
-
-  const [dataBusStops, setDataBusStops] = useState([])
-  const [dataTimeBusStart, setDataTimeBusStart] = useState([])
 
   const renderComponentChild = () => {
     switch (activeStep) {
       case 0:
-        return (
-          <CreateBusRoutes
-            {...dataBusRoutes}
-            updateFormBusRoutes={updateFormBusRoutes}
-          />
-        )
+        return <CreateBusRoutes setDataBusRoutes={setDataBusRoutes} />
       case 1:
-        return <CreateBusStops setDataBusStops={setDataBusStops} />
+        return <CreateBusStops dataBusRoutes={dataBusRoutes} />
       case 2:
-        return <CreateTimeBusStart setDataTimeBusStart={setDataTimeBusStart} />
-      case 3:
-        return <ConfirmCreate />
+        return <CreateTimeBusStart dataBusRoutes={dataBusRoutes} />
       default:
         return null
     }
@@ -75,21 +58,6 @@ const MultiStepForm = () => {
     }
     setActiveStep(prevActiveStep => prevActiveStep + 1)
     setSkipped(newSkipped)
-
-    const onSubmit = () => {
-      switch (activeStep) {
-        case 0:
-          return dataBusRoutes
-        case 1:
-          return dataBusStops
-        case 2:
-          return dataTimeBusStart
-        default:
-          throw new Error('Unknown step')
-      }
-    }
-
-    console.log(onSubmit())
   }
 
   return (

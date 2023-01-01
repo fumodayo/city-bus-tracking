@@ -8,7 +8,7 @@ export const routesData = [
     drivingJourney: `<strong>Kim Liên</strong> - Nguyễn Văn Cừ - Cầu Nam Ô - Nguyễn Lương Bằng - Tôn Đức Thắng -
     Cầu vượt ngã 3 Huế (tầng 3) - Điện Biên Phủ - Lý Thái Tổ - Hùng Vương - Trần Phú - 
     Cầu Rồng - Ngô Quyền - Ngũ Hành Sơn - Lê Văn Hiến - Trần Đại Nghĩa - <strong>Đại học Việt Hàn (Nam Kỳ Khởi Nghĩa).</strong>`,
-    lineDistance: '31,63km',
+    lineDistance: '31,63',
     operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
     colorRoute: '#ff1956'
   },
@@ -21,7 +21,7 @@ export const routesData = [
     Ngũ Hành Sơn - Ngô Quyền - Cầu Rồng - Bạch Đằng - Hùng Vương - Lý Thái Tổ - Điện Biên Phủ - 
     Cầu vượt ngã 3 Huế (tầng 3) - Tôn Đức Thắng - Nguyễn Lương Bằng - Cầu Nam Ô - Nguyễn Văn Cừ - 
     <strong>Kim Liên</strong>`,
-    lineDistance: '31,53km',
+    lineDistance: '31,53',
     operatingTime: 'Từ 06h00 đến 21h00 (15 phút/chuyến)',
     colorRoute: '#ff1956'
   },
@@ -34,7 +34,7 @@ export const routesData = [
     Đống Đa - Ông Ích Khiêm - Nguyễn Văn Linh - Đường 2/9 - Tiểu La - Núi Thành - Đường 30/4 -
     Nguyễn Hữu Thọ - Lê Đại Hành - Ông Ích Đường - CMT8 - Trường Chinh - Cầu Đỏ - QL1A - ĐT605 - 
     Chợ Lệ Trạch -<strong>Hòa Tiến (Khu đất đối diện Nghĩa trang xã Hòa Tiến)</strong>`,
-    lineDistance: '20,00 km',
+    lineDistance: '20,00 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30p/chuyến)',
     colorRoute: '#089669'
   },
@@ -48,7 +48,7 @@ export const routesData = [
     Nguyễn Hữu Thọ - Đường 30/4 - Núi  Thành - Tiểu  La - 
     Đường 2/9 - Nguyễn Văn Linh - Ông Ích Khiêm - Đống Đa - 
     <strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt.</strong>`,
-    lineDistance: '20,00 km',
+    lineDistance: '20,00 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30p/chuyến)',
     colorRoute: '#089669'
   },
@@ -60,7 +60,7 @@ export const routesData = [
     drivingJourney: `<strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt) </strong>- Trần Phú - Lý Tự Trọng -
     Nguyễn Thị Minh Khai - Hùng Vương - Trần Phú - Trưng Nữ Vương - Núi Thành - Cách Mạng Tháng 8 - 
     Cầu Vượt Hòa Cầm - Trường Sơn - Quốc lộ 14B - Quảng Xương - <strong> TTHC Huyện Hòa Vang.</strong>`,
-    lineDistance: '20,00 km',
+    lineDistance: '20,00 ',
     operatingTime: 'Từ 06h00 đến 19h00 (15 phút/chuyến)',
     colorRoute: '#360ec0'
   },
@@ -72,7 +72,7 @@ export const routesData = [
     drivingJourney: `<strong>TTHC Huyện Hòa Vang</strong> - Quảng Xương - Quốc lộ 14B - Trường Sơn - 
     Cầu Vượt Hòa Cầm - CMT8 - Núi Thành - Phan Thành Tài- Đường 2/9 - Bạch Đằng - Hùng Vương - 
     Nguyễn Thị Minh Khai - Lý Tự Trọng - Bạch Đằng - <strong>Cảng Sông Hàn (bãi đỗ xe đầu đường Như Nguyệt).</strong>`,
-    lineDistance: '20,20 km',
+    lineDistance: '20,20 ',
     operatingTime: 'Từ 06h00 đến 19h00 (15 phút/chuyến)',
     colorRoute: '#360ec0'
   },
@@ -85,7 +85,7 @@ export const routesData = [
     Nguyễn Đình Tứ - Tôn Đản - Lê Trọng Tấn - Trường Chinh - Lê Đại Hành - Nguyễn Hữu Thọ - 
     Đường 30 Tháng 4 - Núi Thành - Phan Đăng Lưu - Đường 2 Tháng 9 - Cầu Tiên Sơn - Ngũ Hành Sơn - 
     Phan Tứ - Võ Nguyên Giáp - Trường Sa - Non Nước - <strong>KDL Non Nước.</strong>`,
-    lineDistance: '21,80 km',
+    lineDistance: '21,80 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     colorRoute: '#76a103'
   },
@@ -98,7 +98,7 @@ export const routesData = [
     Ngũ Hành Sơn - Cầu Tiên Sơn - Đường 2 Tháng 9 - Phan Đăng Lưu - Núi Thành - Đường 30 Tháng 4 - 
     Nguyễn Hữu Thọ - Lê Đại Hành - Trường Chinh - Lê Trọng Tấn - Tôn Đản - Nguyễn Đình Tứ - Đinh Liệt - 
     Tú Mỡ - Nguyễn Văn Tạo - Cao Sơn Pháo - <strong>Bến Xe Trung Tâm Đà Nẵng.</strong>`,
-    lineDistance: '21,40 km',
+    lineDistance: '21,40 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     colorRoute: '#76a103'
   },
@@ -111,7 +111,7 @@ export const routesData = [
     Điện Biên Phủ - Huỳnh Ngọc Huệ - Hà Huy Tập - Thái Thị Bôi - Lê Độ - Võ Văn Tần - Hải Phòng - 
     Ông Ích Khiêm - Nguyễn Hoàng - Nguyễn Văn Linh -  Cầu Rồng - Võ Văn Kiệt - Hồ Nghinh - Hà Kỳ Ngộ -
      Nguyễn Sáng - Nguyễn Huy Chương - Hoàng Sa - <strong>Thọ Quang</strong>`,
-    lineDistance: '16,16 km',
+    lineDistance: '16,16 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     colorRoute: '#9340a3'
   },
@@ -124,7 +124,7 @@ export const routesData = [
     Hồ Nghinh - Võ Văn Kiệt - Cầu Rồng - Nguyễn Văn Linh - Nguyễn Hoàng - Ông Ích Khiêm - 
     Hải Phòng - Võ Văn Tần - Lê Độ - Thái Thị Bôi - Hà Huy Tập - Huỳnh Ngọc Huệ - Điện Biên Phủ - 
     Cầu vượt ngã Ba Huế (tầng 3) - Tôn Đức Thắng - <strong>Bến xe Trung tâm Đà Nẵng</strong>`,
-    lineDistance: '16,16 km',
+    lineDistance: '16,16 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     colorRoute: '#9340a3'
   },
@@ -138,7 +138,7 @@ export const routesData = [
     Đường 3/2 - Trần Phú - Lý Tự Trọng - Nguyễn Thị Minh Khai - Hải Phòng - Ngô Gia Tự - Hùng Vương - 
     Lý Thái Tổ - Điện Biên Phủ - Nguyễn Tri Phương - Nguyễn Văn Linh - Cầu Rồng - Võ Văn Kiệt - 
     Võ Nguyên Giáp - <strong>CV Biển Đông</strong>`,
-    lineDistance: '16,1 km',
+    lineDistance: '16,1 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     colorRoute: '#f4529d'
   },
@@ -152,7 +152,7 @@ export const routesData = [
      Nguyễn Thị Minh Khai - Lý Tự Trọng - Bạch Đằng - Đường 3/2  - Xuân Diệu - Trạm xe buýt Xuân Diệu - 
      Xuân Diệu - Đường 3/2 -  Cầu Thuận Phước - Chu Huy Mân - Hồ Hán Thương - Khúc Hạo - Dương Vân Nga 
      - Bùi Dương Lịch - <strong>BX Bùi Dương Lịch</strong>`,
-    lineDistance: '16,5 km',
+    lineDistance: '16,5 ',
     operatingTime: 'Từ 06h00 đến 19h00 (30 phút/chuyến)',
     colorRoute: '#f4529d'
   }

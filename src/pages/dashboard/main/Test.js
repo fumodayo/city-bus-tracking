@@ -1,51 +1,507 @@
-import React, { useState } from 'react'
-import {
-  Box,
-  TextField,
-  Typography
-} from '@mui/material'
+import { Button, Table, Modal, Input, Typography } from 'antd'
+import { useEffect, useRef, useState } from 'react'
+import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
+import DashBoard from '../DashBoard'
+import dragula from 'dragula'
+import 'dragula/dist/dragula.css'
+import { useBusStop } from 'hooks/useBusStop'
 import { useFormik } from 'formik'
+import { Box, TextField } from '@mui/material'
 import * as Yup from 'yup'
-import { Button } from 'react-bootstrap'
+import mapboxgl from '!mapbox-gl' // eslint-disable-line import/no-webpack-loader-syntax
 
-const Test = () => {
+mapboxgl.accessToken =
+  'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDc4OTMzNzkwN2ZzM3ZueXE0NWdyNHB0In0.G_TZ_zbzQ8T7512A44nK9g'
+
+function Test() {
+  const [isEditing, setIsEditing] = useState(false)
+  const [isAdd, setIsAdd] = useState(false)
+  const [editingStudent, setEditingStudent] = useState(null)
+  const busStops = useBusStop()
+  const [dataSource, setDataSource] = useState([])
+  const [directionMap, setDirectionMap] = useState([])
+  const [popupMap, setPopupMap] = useState([])
+
+  const mapContainer = useRef(null)
+  const map = useRef(null)
+  const [lng, setLng] = useState(108.2097851153426)
+  const [lat, setLat] = useState(16.06045710530602)
+  const [zoom, setZoom] = useState(14)
+
+  useEffect(() => {
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [lng, lat],
+      zoom: zoom
+    })
+
+    map.current.on('load', () => {
+      map.current.addSource('route', {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          properties: {},
+          geometry: {
+            type: 'LineString',
+            coordinates: directionMap
+          }
+        }
+      })
+      map.current.addLayer({
+        id: 'route',
+        type: 'line',
+        source: 'route',
+        layout: {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        paint: {
+          'line-color': '#8fbc8f',
+          'line-width': 5
+        }
+      })
+
+      // Points
+      map.current.addSource('places', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: popupMap
+        }
+      })
+
+      // Add a layer showing the places.
+      map.current.addLayer({
+        id: 'places',
+        type: 'circle',
+        source: 'places',
+        paint: {
+          'circle-color': '#4264fb',
+          'circle-radius': 6,
+          'circle-stroke-width': 2,
+          'circle-stroke-color': '#ffffff'
+        }
+      })
+
+      // Create a popup, but don't add it to the map yet.
+      const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+      })
+
+      map.current.on('mouseenter', 'places', e => {
+        // Change the cursor style as a UI indicator.
+        map.current.getCanvas().style.cursor = 'pointer'
+
+        // Copy coordinates array.
+        const coordinates = e.features[0].geometry.coordinates.slice()
+        const description = e.features[0].properties.description
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
+        }
+
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup.setLngLat(coordinates).setHTML(description).addTo(map.current)
+      })
+
+      map.current.on('mouseleave', 'places', () => {
+        map.current.getCanvas().style.cursor = ''
+        popup.remove()
+      })
+    })
+  }, [directionMap, popupMap])
+
   const formik = useFormik({
     initialValues: {
-      codeBusRoute: ''
+      nameBusStop: '',
+      location: {
+        lng: '',
+        lat: ''
+      },
+      travelNear: '',
+      travelTime: ''
     },
     validationSchema: Yup.object({
-      codeBusRoute: Yup.string()
-        .min(3, 'Mã số tuyến xe buýt tối thiểu trên 3 kí tự!')
-        .max(7, 'Mã số tuyến xe buýt không được dài quá 7 kí tự!')
+      nameBusStop: Yup.string()
+        .min(3, 'Tên trạm xe buýt tối thiểu trên 3 kí tự!')
+        .max(50, 'Tên trạm xe buýt không được dài quá 50 kí tự!')
+        .required('Phải điền tên trạm xe buýt!'),
+      location: Yup.object({
+        lat: Yup.string()
+          .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
+          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
+          .required('Phải điền kinh độ địa điểm!'),
+        lng: Yup.string()
+          .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
+          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
+          .required('Phải điền vĩ độ địa điểm!')
+      }),
+      travelNear: Yup.string().required(
+        'Phải điền địa điểm du lịch ở gần trạm!'
+      ),
+      travelTime: Yup.string().required(
+        'Phải điền thời gian di chuyển giữa 2 trạm!'
+      )
     }),
     onSubmit: values => {
       console.log(values)
     }
   })
 
+  useEffect(() => {
+    const dataFilter = busStops.filter(
+      route => route.codeBusRoute === 'R16' && route.directionRoute === 'turn'
+    )
+    setDataSource(dataFilter)
+  }, [busStops])
+
+  const columns = [
+    {
+      key: '1',
+      title: 'ID',
+      dataIndex: 'id'
+    },
+    {
+      key: '2',
+      title: 'Tên trạm xe buýt',
+      dataIndex: 'nameBusStop'
+    },
+    {
+      key: '3',
+      title: 'Địa điểm du lịch ở gần trạm',
+      dataIndex: 'travelNear'
+    },
+    {
+      key: '4',
+      title: 'Kinh độ',
+      render: params => <Typography>{params.location.lng}</Typography>
+    },
+    {
+      key: '5',
+      title: 'Vỹ độ',
+      render: params => <Typography>{params.location.lat}</Typography>
+    },
+    {
+      key: '6',
+      title: 'Thời gian di chuyển giữa 2 trạm',
+      render: params => <Typography>{params.travelTime} phút</Typography>
+    },
+    {
+      key: '7',
+      title: 'Actions',
+      render: record => {
+        return (
+          <>
+            <EditOutlined
+              onClick={() => {
+                onEditStudent(record)
+              }}
+            />
+            <DeleteOutlined
+              onClick={() => {
+                onDeleteStudent(record)
+              }}
+              style={{ color: 'red', marginLeft: 12 }}
+            />
+          </>
+        )
+      }
+    }
+  ]
+
+  const onAddStudent = () => {
+    setIsAdd(true)
+    const randomNumber = parseInt(Math.random() * 1000)
+    const newStudent = {
+      id: randomNumber,
+      name: 'Name ' + randomNumber,
+      email: randomNumber + '@gmail.com',
+      address: 'Address ' + randomNumber
+    }
+    setDataSource(pre => {
+      return [...pre, newStudent]
+    })
+  }
+  const onDeleteStudent = record => {
+    Modal.confirm({
+      title: 'Bạn có muốn xóa trạm xe bạn đã chọn?',
+      okText: 'Có',
+      okType: 'danger',
+      onOk: () => {
+        setDataSource(pre => {
+          return pre.filter(student => student.id !== record.id)
+        })
+      }
+    })
+  }
+  const onEditStudent = record => {
+    setIsEditing(true)
+    setEditingStudent({ ...record })
+  }
+  const resetEditing = () => {
+    setIsEditing(false)
+    setIsAdd(false)
+    setEditingStudent(null)
+  }
+
+  const getIndexInParent = el => Array.from(el.parentNode.children).indexOf(el)
+
+  const handleReorder = (dragIndex, draggedIndex) => {
+    setDataSource(oldState => {
+      const newState = [...oldState]
+      const item = newState.splice(dragIndex, 1)[0]
+      newState.splice(draggedIndex, 0, item)
+      return newState
+    })
+  }
+
+  useEffect(() => {
+    let start
+    let end
+    const container = document.querySelector('.ant-table-tbody')
+    const drake = dragula([container], {
+      moves: el => {
+        start = getIndexInParent(el)
+        return true
+      }
+    })
+
+    drake.on('drop', el => {
+      end = getIndexInParent(el)
+      handleReorder(start, end)
+    })
+  }, [])
+
+  const editformik = useFormik({
+    initialValues: {
+      nameBusStop: editingStudent?.nameBusStop,
+      location: {
+        lng: editingStudent?.location.lng,
+        lat: editingStudent?.location.lat
+      },
+      travelNear: editingStudent?.travelNear,
+      travelTime: editingStudent?.travelTime
+    },
+    enableReinitialize: true,
+    validationSchema: Yup.object({
+      nameBusStop: Yup.string()
+        .min(3, 'Tên trạm xe buýt tối thiểu trên 3 kí tự!')
+        .max(50, 'Tên trạm xe buýt không được dài quá 50 kí tự!')
+        .required('Phải điền tên trạm xe buýt!'),
+      location: Yup.object({
+        lat: Yup.string()
+          .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
+          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
+          .required('Phải điền kinh độ địa điểm!'),
+        lng: Yup.string()
+          .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
+          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
+          .required('Phải điền vĩ độ địa điểm!')
+      }),
+      travelNear: Yup.string().required(
+        'Phải điền địa điểm du lịch ở gần trạm!'
+      ),
+      travelTime: Yup.string().required(
+        'Phải điền thời gian di chuyển giữa 2 trạm!'
+      )
+    }),
+    onSubmit: values => {
+      console.log(values)
+    }
+  })
+
+  const handleArtLine = () => {
+    const dir = dataSource.map(i => Object.values(i.location))
+    setDirectionMap(dir)
+
+    let popup = []
+    popup = dataSource.map(i => ({
+      type: 'Feature',
+      properties: {
+        description: i.nameBusStop
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: Object.values(i.location)
+      }
+    }))
+    setPopupMap(popup)
+  }
+
+  const handleSubmit = () => {
+    console.log(dataSource)
+  }
+
   return (
-    <Box>
-      <Typography
-        style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
+    <DashBoard>
+      <div>
+        <div ref={mapContainer} className="map-container" />
+      </div>
+      <Button onClick={onAddStudent}>Thêm trạm xe buýt mới</Button>
+      <Button onClick={handleArtLine}>Vẽ tuyến mới</Button>
+      <Button onClick={handleSubmit}>Xác nhận tạo mới tuyến</Button>
+      <Table columns={columns} dataSource={dataSource} />
+      <Modal
+        title="Thêm trạm xe buýt mới"
+        open={isAdd}
+        okText="Thêm mới"
+        cancelText="Hủy"
+        onCancel={() => {
+          resetEditing()
+        }}
       >
-        Bước 1: Tạo tuyến xe buýt
-      </Typography>
-      <form onSubmit={formik.handleSubmit}>
-        <TextField
-          fullWidth
-          id="codeBusRoute"
-          name="codeBusRoute"
-          label="codeBusRoute"
-          value={formik.values.codeBusRoute}
-          onChange={formik.handleChange}
-          error={formik.touched.codeBusRoute && Boolean(formik.errors.codeBusRoute)}
-          helperText={formik.touched.codeBusRoute && formik.errors.codeBusRoute}
-        />
-        <Button color="primary" variant="contained" fullWidth type="submit">
-          Submit
-        </Button>
-      </form>
-    </Box>
+        <Box style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <TextField
+            id="nameBusStop"
+            name="nameBusStop"
+            label="Tên trạm xe buýt"
+            value={formik.values.nameBusStop}
+            onChange={formik.handleChange}
+            error={
+              formik.touched.nameBusStop || Boolean(formik.errors.nameBusStop)
+            }
+            helperText={formik.errors.nameBusStop}
+          />
+          <TextField
+            id="location.lng"
+            name="location.lng"
+            label="Kinh độ"
+            value={formik.values.location.lng}
+            onChange={formik.handleChange}
+            error={
+              formik.touched.location?.lng ||
+              Boolean(formik.errors.location?.lng)
+            }
+            helperText={formik.errors.location?.lng}
+          />
+          <TextField
+            id="location.lat"
+            name="location.lat"
+            label="Vỹ độ"
+            value={formik.values.location.lat}
+            onChange={formik.handleChange}
+            error={
+              formik.touched.location?.lat ||
+              Boolean(formik.errors.location?.lat)
+            }
+            helperText={formik.errors.location?.lat}
+          />
+          <TextField
+            id="travelNear"
+            name="travelNear"
+            label="Địa điểm du lịch gần trạm xe"
+            value={formik.values.travelNear}
+            onChange={formik.handleChange}
+            error={
+              formik.touched.travelNear || Boolean(formik.errors.travelNear)
+            }
+            helperText={formik.errors.travelNear}
+          />
+          <TextField
+            id="travelTime"
+            name="travelTime"
+            label="Thời gian di chuyển giữa 2 trạm"
+            value={formik.values.travelTime}
+            onChange={formik.handleChange}
+            error={
+              formik.touched.travelTime || Boolean(formik.errors.travelTime)
+            }
+            helperText={formik.errors.travelTime}
+          />
+        </Box>
+      </Modal>
+
+      <Modal
+        title="Sửa thông tin trạm xe buýt"
+        open={isEditing}
+        okText="Lưu lại"
+        cancelText="Hủy"
+        onCancel={() => {
+          resetEditing()
+        }}
+        onOk={() => {
+          setDataSource(pre => {
+            return pre.map(student => {
+              if (student.id === editingStudent.id) {
+                return editingStudent
+              } else {
+                return student
+              }
+            })
+          })
+          resetEditing()
+        }}
+      >
+        <Box style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <TextField
+            id="nameBusStop"
+            name="nameBusStop"
+            label="Tên trạm xe buýt"
+            value={editformik.values.nameBusStop}
+            onChange={editformik.handleChange}
+            error={
+              editformik.touched.nameBusStop ||
+              Boolean(editformik.errors.nameBusStop)
+            }
+            helperText={editformik.errors.nameBusStop}
+          />
+          <TextField
+            id="location.lng"
+            name="location.lng"
+            label="Kinh độ"
+            value={editformik.values.location.lng}
+            onChange={editformik.handleChange}
+            error={
+              editformik.touched.location?.lng ||
+              Boolean(editformik.errors.location?.lng)
+            }
+            helperText={editformik.errors.location?.lng}
+          />
+          <TextField
+            id="location.lat"
+            name="location.lat"
+            label="Vỹ độ"
+            value={editformik.values.location.lat}
+            onChange={editformik.handleChange}
+            error={
+              editformik.touched.location?.lat ||
+              Boolean(editformik.errors.location?.lat)
+            }
+            helperText={editformik.errors.location?.lat}
+          />
+          <TextField
+            id="travelNear"
+            name="travelNear"
+            label="Địa điểm du lịch gần trạm xe"
+            value={editformik.values.travelNear}
+            onChange={editformik.handleChange}
+            error={
+              editformik.touched.travelNear ||
+              Boolean(editformik.errors.travelNear)
+            }
+            helperText={editformik.errors.travelNear}
+          />
+          <TextField
+            id="travelTime"
+            name="travelTime"
+            label="Thời gian di chuyển giữa 2 trạm"
+            value={editformik.values.travelTime}
+            onChange={editformik.handleChange}
+            error={
+              editformik.touched.travelTime ||
+              Boolean(editformik.errors.travelTime)
+            }
+            helperText={editformik.errors.travelTime}
+          />
+        </Box>
+      </Modal>
+    </DashBoard>
   )
 }
 

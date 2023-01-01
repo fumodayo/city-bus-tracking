@@ -20,6 +20,7 @@ import { useTimeBusStart } from 'hooks/useTimeBusStart'
 import HTMLReactParser from 'html-react-parser'
 import moment from 'moment'
 import DashBoard from '../DashBoard'
+import { useTravel } from 'hooks/useTravel'
 
 function Row(props) {
   const { row } = props
@@ -86,14 +87,14 @@ function Row(props) {
                 </IconButton>
               </Typography>
               {openBusRoute && (
-                <Table size="small" aria-label="purchases">
+                <Table size="medium" aria-label="purchases">
                   <TableHead>
                     <TableRow>
-                      <TableCell align="left">Tên bến xe buýt</TableCell>
+                      <TableCell align="left">Tên trạm xe buýt</TableCell>
                       <TableCell align="left">Kinh độ</TableCell>
                       <TableCell align="left">Vỹ độ</TableCell>
                       <TableCell align="left">
-                        Thời gian di chuyển giữa 2 bến
+                        Thời gian di chuyển giữa 2 trạm
                       </TableCell>
                       <TableCell>Địa điểm du lịch ở gần trạm</TableCell>
                       <TableCell align="left">Thời gian tạo</TableCell>
@@ -121,7 +122,18 @@ function Row(props) {
                             {busStops.travelTime} phút
                           </TableCell>
                           <TableCell align="left">
-                            {busStops.travelNear}
+                            {
+                              <Link
+                                to={
+                                  '/dashboard/travel/' +
+                                  row.travels.filter(
+                                    i => i.title === busStops.travelNear
+                                  )[0].id
+                                }
+                              >
+                                {busStops.travelNear}
+                              </Link>
+                            }
                           </TableCell>
                           <TableCell align="left">
                             {moment(busStops.createdAt).format(
@@ -152,19 +164,36 @@ function Row(props) {
                 </IconButton>
               </Typography>
               {openTime && (
-                <Table size="small" aria-label="purchases">
+                <Table size="medium" aria-label="simple table">
                   <TableBody>
-                    {row.timeBusStart
-                      .filter(
-                        route =>
-                          route.codeBusRoute === codeRoute &&
-                          route.directionRoute === direction
-                      )[0]
-                      ?.startingTime.map((time, index) => (
-                        <TableRow key={index}>
-                          <TableCell align="left">{time}</TableCell>
-                        </TableRow>
-                      ))}
+                    <TableRow>
+                      {row.timeBusStart
+                        .filter(
+                          route =>
+                            route.codeBusRoute === codeRoute &&
+                            route.directionRoute === direction
+                        )[0]
+                        ?.startingTime.filter(
+                          (t, index, arr) => index < arr.length / 2
+                        )
+                        .map(time => (
+                          <TableCell>{time}</TableCell>
+                        ))}
+                    </TableRow>
+                    <TableRow>
+                      {row.timeBusStart
+                        .filter(
+                          route =>
+                            route.codeBusRoute === codeRoute &&
+                            route.directionRoute === direction
+                        )[0]
+                        ?.startingTime.filter(
+                          (t, index, arr) => index >= arr.length / 2
+                        )
+                        .map(time => (
+                          <TableCell>{time}</TableCell>
+                        ))}
+                    </TableRow>
                   </TableBody>
                 </Table>
               )}
@@ -182,10 +211,12 @@ const BusRoutes = () => {
   const busstops = useBusStop()
   const busroutes = useBusRoutes()
   const timeBusStart = useTimeBusStart()
+  const travels = useTravel()
   const rows = busroutes.map(route => ({
     ...route,
     busstops: busstops,
-    timeBusStart: timeBusStart
+    timeBusStart: timeBusStart,
+    travels: travels
   }))
 
   return (

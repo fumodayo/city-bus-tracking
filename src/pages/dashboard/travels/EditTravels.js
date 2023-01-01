@@ -5,6 +5,7 @@ import {
   Grid,
   MenuItem,
   Select,
+  TextareaAutosize,
   TextField,
   Typography
 } from '@mui/material'
@@ -12,8 +13,9 @@ import { useTravel } from 'hooks/useTravel'
 import { useParams } from 'react-router-dom'
 import Resizer from 'react-image-file-resizer'
 import { Send } from '@mui/icons-material'
-import RichTextEditor from '@mantine/rte'
 import DashBoard from '../DashBoard'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
 
 const EditTravels = () => {
   let { travelId } = useParams()
@@ -25,6 +27,49 @@ const EditTravels = () => {
   const handleChangeInput = () => {
     setToggleChangeInput(false)
   }
+
+  const formik = useFormik({
+    initialValues: {
+      title: travels.title,
+      locationName: travels.locationName,
+      typeLocation: travels.typeLocation,
+      locationLink: travels.locationLink,
+      location: {
+        lat: travels.location?.lat,
+        lng: travels.location?.lng
+      },
+      description: travels.description
+    },
+    enableReinitialize: true,
+    validationSchema: Yup.object({
+      title: Yup.string()
+        .min(5, 'Tên địa điểm tối thiểu trên 5 kí tự!')
+        .max(50, 'Tên địa điểm không được dài quá 50 kí tự!')
+        .required('Phải điền tên địa điểm!'),
+      typeLocation: Yup.string().required(),
+      image: Yup.string().required(),
+      imageDesc: Yup.string().max(100),
+      description: Yup.string().max(1000, 'Mô tả không được dài quá!'),
+      locationLink: Yup.string().max(
+        255,
+        'Địa chỉ không được dài quá 255 kí tự!'
+      ),
+      locationName: Yup.string().max(
+        255,
+        'Địa chỉ trên google map không được dài quá 255 kí tự!'
+      ),
+      location: Yup.object({
+        lat: Yup.string()
+          .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
+          .max(12, 'Kinh độ không được dài quá 12 kí tự!')
+          .required('Phải điền kinh độ địa điểm!'),
+        lng: Yup.string()
+          .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
+          .max(12, 'Vĩ độ không được dài quá 12 kí tự!')
+          .required('Phải điền vĩ độ địa điểm!')
+      })
+    })
+  })
 
   useEffect(() => {
     const findDataWithID = dataTravels.find(i => i.id === travelId)
@@ -48,7 +93,7 @@ const EditTravels = () => {
       )
     })
 
-  const [image, setImage] = useState('')
+  const [newImage, setImage] = useState('')
   const convert2base64 = async e => {
     const file = e.target.files[0]
     const reader = await resizeFile(file)
@@ -56,17 +101,18 @@ const EditTravels = () => {
   }
 
   useEffect(() => {
-    console.log({ image: image })
-    setTravels({ image: image })
-  }, [image])
+    const data = {
+      ...travels,
+      image: newImage
+    }
+    setTravels(data)
+  }, [newImage])
 
+  // submit APIs
   const handleSubmit = () => {
-    console.log(travels)
-  }
-
-  const updatedFormTravels = fields => {
-    setTravels(newData => {
-      return { ...newData, ...fields }
+    console.log({
+      ...formik.values,
+      image: newImage
     })
   }
 
@@ -145,12 +191,14 @@ const EditTravels = () => {
                   </Typography>
                 ) : (
                   <TextField
-                    style={{ width: 300 }}
-                    value={travels.title}
+                    id="title"
+                    name="title"
                     type="text"
-                    onChange={e =>
-                      updatedFormTravels({ title: e.target.value })
-                    }
+                    style={{ width: 300 }}
+                    value={formik.values.title}
+                    onChange={formik.handleChange}
+                    error={formik.touched.title || Boolean(formik.errors.title)}
+                    helperText={formik.errors.title}
                   />
                 )}
               </Box>
@@ -162,12 +210,17 @@ const EditTravels = () => {
                   </Typography>
                 ) : (
                   <TextField
-                    style={{ width: 300 }}
-                    value={travels.locationName}
+                    id="locationName"
+                    name="locationName"
                     type="text"
-                    onChange={e =>
-                      updatedFormTravels({ locationName: e.target.value })
+                    style={{ width: 300 }}
+                    value={formik.values.locationName}
+                    onChange={formik.handleChange}
+                    error={
+                      formik.touched.locationName ||
+                      Boolean(formik.errors.locationName)
                     }
+                    helperText={formik.errors.locationName}
                   />
                 )}
               </Box>
@@ -182,10 +235,10 @@ const EditTravels = () => {
                   </Typography>
                 ) : (
                   <Select
-                    value={travels.typeLocation}
-                    onChange={e =>
-                      updatedFormTravels({ typeLocation: e.target.value })
-                    }
+                    id="typeLocation"
+                    name="typeLocation"
+                    value={formik.values.typeLocation}
+                    onChange={formik.handleChange}
                   >
                     <MenuItem value={'discover'}>Khám phá</MenuItem>
                     <MenuItem value={'cultural'}>Văn hóa</MenuItem>
@@ -212,12 +265,16 @@ const EditTravels = () => {
                   </Typography>
                 ) : (
                   <TextField
-                    value={travels.locationLink}
-                    style={{ width: 300 }}
+                    id="locationLink"
+                    name="locationLink"
                     type="text"
-                    onChange={e =>
-                      updatedFormTravels({ locationLink: e.target.value })
+                    value={formik.values.locationLink}
+                    onChange={formik.handleChange}
+                    error={
+                      formik.touched.locationLink ||
+                      Boolean(formik.errors.locationLink)
                     }
+                    helperText={formik.errors.locationLink}
                   />
                 )}
               </Box>
@@ -235,12 +292,18 @@ const EditTravels = () => {
                     {travels.description}
                   </Typography>
                 ) : (
-                  <RichTextEditor
-                    id="rte"
-                    value={travels.description}
-                    onChange={e => updatedFormTravels({ description: e })}
-                    formats={['bold', 'italic', 'underline']}
-                    controls={[['bold', 'italic', 'underline']]}
+                  <TextareaAutosize
+                    id="description"
+                    name="description"
+                    type="text"
+                    style={{ width: 500, height: 200 }}
+                    value={formik.values.description}
+                    onChange={formik.handleChange}
+                    error={
+                      formik.touched.description ||
+                      Boolean(formik.errors.description)
+                    }
+                    helperText={formik.errors.description}
                   />
                 )}
               </Box>
@@ -265,14 +328,16 @@ const EditTravels = () => {
                     </Typography>
                   ) : (
                     <TextField
-                      value={travels.location?.lat}
-                      style={{ width: 300 }}
-                      type="text"
-                      onChange={e =>
-                        updatedFormTravels({
-                          location: { lat: e.target.value }
-                        })
+                      id="location.lng"
+                      name="location.lng"
+                      type="number"
+                      value={formik.values.location.lng}
+                      onChange={formik.handleChange}
+                      error={
+                        formik.touched.location?.lng ||
+                        Boolean(formik.errors.location?.lng)
                       }
+                      helperText={formik.errors.location?.lng}
                     />
                   )}
                   <Typography style={{ fontWeight: 'bold' }}>Vĩ độ:</Typography>
@@ -289,14 +354,16 @@ const EditTravels = () => {
                     </Typography>
                   ) : (
                     <TextField
-                      value={travels.location?.lng}
-                      style={{ width: 300 }}
-                      type="text"
-                      onChange={e =>
-                        updatedFormTravels({
-                          location: { lng: e.target.value }
-                        })
+                      id="location.lat"
+                      name="location.lat"
+                      type="number"
+                      value={formik.values.location.lat}
+                      onChange={formik.handleChange}
+                      error={
+                        formik.touched.location?.lat ||
+                        Boolean(formik.errors.location?.lat)
                       }
+                      helperText={formik.errors.location?.lat}
                     />
                   )}
                 </Box>

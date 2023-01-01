@@ -90,7 +90,7 @@ const BusLocation = ({ idBusStop }) => {
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
       return (
-        <span style={{ fontSize: '20px', color: '#000' }}>Xe đã đến bến</span>
+        <span style={{ fontSize: '20px', color: '#000' }}>Xe đã đến trạm</span>
       )
     }
 
@@ -101,8 +101,8 @@ const BusLocation = ({ idBusStop }) => {
     return (
       <span style={{ fontSize: '20px', color: '#000' }}>
         {showTime === '00:00:00'
-          ? 'Xe chưa xuất bến'
-          : `Xe còn ${showTime} sẽ tới bến`}
+          ? 'Xe chưa xuất trạm'
+          : `Xe còn ${showTime} sẽ tới trạm`}
       </span>
     )
   }
