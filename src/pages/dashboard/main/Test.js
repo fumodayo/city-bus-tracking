@@ -1,199 +1,322 @@
-import { Button, Table, Modal, Input, Typography } from 'antd'
-import { useEffect, useRef, useState } from 'react'
-import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
+import { Table, Modal, Input, Space } from 'antd'
+import { useEffect, useState } from 'react'
+import { EditOutlined, DeleteOutlined, SearchOutlined } from '@ant-design/icons'
 import DashBoard from '../DashBoard'
-import dragula from 'dragula'
-import 'dragula/dist/dragula.css'
-import { useBusStop } from 'hooks/useBusStop'
 import { useFormik } from 'formik'
-import { Box, TextField } from '@mui/material'
+import {
+  Box,
+  Grid,
+  InputLabel,
+  MenuItem,
+  TextareaAutosize,
+  TextField,
+  Typography,
+  Select,
+  Button
+} from '@mui/material'
 import * as Yup from 'yup'
-import mapboxgl from '!mapbox-gl' // eslint-disable-line import/no-webpack-loader-syntax
-
-mapboxgl.accessToken =
-  'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDc4OTMzNzkwN2ZzM3ZueXE0NWdyNHB0In0.G_TZ_zbzQ8T7512A44nK9g'
+import { useTravel } from 'hooks/useTravel'
+import HTMLReactParser from 'html-react-parser'
+import Resizer from 'react-image-file-resizer'
+import { useRef } from 'react'
+import Highlighter from 'react-highlight-words'
 
 function Test() {
   const [isEditing, setIsEditing] = useState(false)
   const [isAdd, setIsAdd] = useState(false)
   const [editingStudent, setEditingStudent] = useState(null)
-  const busStops = useBusStop()
   const [dataSource, setDataSource] = useState([])
-  const [directionMap, setDirectionMap] = useState([])
-  const [popupMap, setPopupMap] = useState([])
 
-  const mapContainer = useRef(null)
-  const map = useRef(null)
-  const [lng, setLng] = useState(108.2097851153426)
-  const [lat, setLat] = useState(16.06045710530602)
-  const [zoom, setZoom] = useState(14)
+  // Search in Column
+  const [searchText, setSearchText] = useState('')
+  const [searchedColumn, setSearchedColumn] = useState('')
+  const searchInput = useRef(null)
 
-  useEffect(() => {
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [lng, lat],
-      zoom: zoom
-    })
+  const handleSearch = (selectedKeys, confirm, dataIndex) => {
+    confirm()
+    setSearchText(selectedKeys[0])
+    setSearchedColumn(dataIndex)
+  }
 
-    map.current.on('load', () => {
-      map.current.addSource('route', {
-        type: 'geojson',
-        data: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'LineString',
-            coordinates: directionMap
+  const handleReset = clearFilters => {
+    clearFilters()
+    setSearchText('')
+  }
+
+  const getColumnSearchProps = dataIndex => ({
+    filterDropdown: ({
+      setSelectedKeys,
+      selectedKeys,
+      confirm,
+      clearFilters,
+      close
+    }) => (
+      <div style={{ padding: 8 }} onKeyDown={e => e.stopPropagation()}>
+        <Input
+          ref={searchInput}
+          placeholder={`Search ${dataIndex}`}
+          value={selectedKeys[0]}
+          onChange={e =>
+            setSelectedKeys(e.target.value ? [e.target.value] : [])
           }
-        }
-      })
-      map.current.addLayer({
-        id: 'route',
-        type: 'line',
-        source: 'route',
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': '#8fbc8f',
-          'line-width': 5
-        }
-      })
+          onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
+          style={{ marginBottom: 8, display: 'block' }}
+        />
+        <Space>
+          <Button
+            type="primary"
+            onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
+            icon={<SearchOutlined />}
+            size="small"
+            style={{ width: 90 }}
+          >
+            Search
+          </Button>
+          <Button
+            onClick={() => clearFilters && handleReset(clearFilters)}
+            size="small"
+            style={{ width: 90 }}
+          >
+            Reset
+          </Button>
+          <Button
+            type="link"
+            size="small"
+            onClick={() => {
+              confirm({ closeDropdown: false })
+              setSearchText(selectedKeys[0])
+              setSearchedColumn(dataIndex)
+            }}
+          >
+            Filter
+          </Button>
+          <Button
+            type="link"
+            size="small"
+            onClick={() => {
+              close()
+            }}
+          >
+            close
+          </Button>
+        </Space>
+      </div>
+    ),
+    filterIcon: filtered => (
+      <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />
+    ),
+    onFilter: (value, record) =>
+      record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
+    onFilterDropdownOpenChange: visible => {
+      if (visible) {
+        setTimeout(() => searchInput.current?.select(), 100)
+      }
+    },
+    render: text =>
+      searchedColumn === dataIndex ? (
+        <Highlighter
+          highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
+          searchWords={[searchText]}
+          autoEscape
+          textToHighlight={text ? text.toString() : ''}
+        />
+      ) : (
+        text
+      )
+  })
 
-      // Points
-      map.current.addSource('places', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: popupMap
-        }
-      })
-
-      // Add a layer showing the places.
-      map.current.addLayer({
-        id: 'places',
-        type: 'circle',
-        source: 'places',
-        paint: {
-          'circle-color': '#4264fb',
-          'circle-radius': 6,
-          'circle-stroke-width': 2,
-          'circle-stroke-color': '#ffffff'
-        }
-      })
-
-      // Create a popup, but don't add it to the map yet.
-      const popup = new mapboxgl.Popup({
-        closeButton: false,
-        closeOnClick: false
-      })
-
-      map.current.on('mouseenter', 'places', e => {
-        // Change the cursor style as a UI indicator.
-        map.current.getCanvas().style.cursor = 'pointer'
-
-        // Copy coordinates array.
-        const coordinates = e.features[0].geometry.coordinates.slice()
-        const description = e.features[0].properties.description
-
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
-        }
-
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-        popup.setLngLat(coordinates).setHTML(description).addTo(map.current)
-      })
-
-      map.current.on('mouseleave', 'places', () => {
-        map.current.getCanvas().style.cursor = ''
-        popup.remove()
-      })
-    })
-  }, [directionMap, popupMap])
+  const travels = useTravel()
+  useEffect(() => {
+    setDataSource(travels)
+  }, [travels])
 
   const formik = useFormik({
     initialValues: {
-      nameBusStop: '',
+      title: '',
+      typeLocation: 'discover',
+      image: '',
+      imageDesc: '',
+      description: '',
+      locationLink: '',
+      locationName: '',
       location: {
-        lng: '',
-        lat: ''
-      },
-      travelNear: '',
-      travelTime: ''
+        lat: '',
+        lng: ''
+      }
     },
     validationSchema: Yup.object({
-      nameBusStop: Yup.string()
-        .min(3, 'Tên trạm xe buýt tối thiểu trên 3 kí tự!')
-        .max(50, 'Tên trạm xe buýt không được dài quá 50 kí tự!')
-        .required('Phải điền tên trạm xe buýt!'),
+      title: Yup.string()
+        .min(5, 'Tên địa điểm tối thiểu trên 5 kí tự!')
+        .max(50, 'Tên địa điểm không được dài quá 50 kí tự!')
+        .required('Phải điền tên địa điểm!'),
+      typeLocation: Yup.string().required(),
+      image: Yup.string().required(),
+      imageDesc: Yup.string().max(100),
+      description: Yup.string().max(1000, 'Mô tả không được dài quá!'),
+      locationLink: Yup.string().max(
+        255,
+        'Địa chỉ không được dài quá 255 kí tự!'
+      ),
+      locationName: Yup.string().max(
+        255,
+        'Địa chỉ trên google map không được dài quá 255 kí tự!'
+      ),
       location: Yup.object({
         lat: Yup.string()
           .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
-          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
+          .max(12, 'Kinh độ không được dài quá 12 kí tự!')
           .required('Phải điền kinh độ địa điểm!'),
         lng: Yup.string()
           .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
-          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
+          .max(12, 'Vĩ độ không được dài quá 12 kí tự!')
           .required('Phải điền vĩ độ địa điểm!')
-      }),
-      travelNear: Yup.string().required(
-        'Phải điền địa điểm du lịch ở gần trạm!'
-      ),
-      travelTime: Yup.string().required(
-        'Phải điền thời gian di chuyển giữa 2 trạm!'
-      )
-    }),
-    onSubmit: values => {
-      console.log(values)
-    }
+      })
+    })
   })
 
-  useEffect(() => {
-    const dataFilter = busStops.filter(
-      route => route.codeBusRoute === 'R16' && route.directionRoute === 'turn'
-    )
-    setDataSource(dataFilter)
-  }, [busStops])
+  const editformik = useFormik({
+    initialValues: {
+      title: editingStudent?.title,
+      locationName: editingStudent?.locationName,
+      typeLocation: editingStudent?.typeLocation || 'discover',
+      locationLink: editingStudent?.locationLink,
+      location: {
+        lat: editingStudent?.location?.lat,
+        lng: editingStudent?.location?.lng
+      },
+      description: editingStudent?.description,
+      image: editingStudent?.image
+    },
+    enableReinitialize: true,
+    validationSchema: Yup.object({
+      title: Yup.string()
+        .min(5, 'Tên địa điểm tối thiểu trên 5 kí tự!')
+        .max(50, 'Tên địa điểm không được dài quá 50 kí tự!')
+        .required('Phải điền tên địa điểm!'),
+      typeLocation: Yup.string().required(),
+      image: Yup.string().required(),
+      imageDesc: Yup.string().max(100),
+      description: Yup.string().max(1000, 'Mô tả không được dài quá!'),
+      locationLink: Yup.string().max(
+        255,
+        'Địa chỉ không được dài quá 255 kí tự!'
+      ),
+      locationName: Yup.string().max(
+        255,
+        'Địa chỉ trên google map không được dài quá 255 kí tự!'
+      ),
+      location: Yup.object({
+        lat: Yup.string()
+          .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
+          .max(12, 'Kinh độ không được dài quá 12 kí tự!')
+          .required('Phải điền kinh độ địa điểm!'),
+        lng: Yup.string()
+          .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
+          .max(12, 'Vĩ độ không được dài quá 12 kí tự!')
+          .required('Phải điền vĩ độ địa điểm!')
+      })
+    })
+  })
+
+  // resize image base64 to (250x250)
+  const resizeFile = file =>
+    new Promise(resolve => {
+      Resizer.imageFileResizer(
+        file,
+        250,
+        250,
+        'JPEG',
+        100,
+        0,
+        uri => {
+          resolve(uri)
+        },
+        'base64'
+      )
+    })
+
+  const [newImage, setImage] = useState('')
+  const convert2base64 = async e => {
+    const file = e.target.files[0]
+    const reader = await resizeFile(file)
+    setImage(reader)
+  }
 
   const columns = [
     {
       key: '1',
       title: 'ID',
-      dataIndex: 'id'
+      dataIndex: 'id',
+      width: 100
     },
     {
       key: '2',
-      title: 'Tên trạm xe buýt',
-      dataIndex: 'nameBusStop'
+      title: 'Tên địa điểm',
+      dataIndex: 'title',
+      width: 150,
+      ...getColumnSearchProps('title')
     },
     {
       key: '3',
-      title: 'Địa điểm du lịch ở gần trạm',
-      dataIndex: 'travelNear'
+      title: 'Địa chỉ',
+      dataIndex: 'locationName',
+      width: 150,
+      ...getColumnSearchProps('locationName')
     },
     {
       key: '4',
+      title: 'Hình ảnh',
+      render: params => (
+        <img
+          style={{ maxWidth: '100%' }}
+          src={params.image}
+          alt={params.image}
+        />
+      ),
+      width: 150
+    },
+    {
+      key: '5',
+      title: 'Loại Hình Du lịch',
+      dataIndex: 'typeLocation',
+      width: 150,
+      filters: [
+        { text: 'Địa điểm khám phá', value: 'discover' },
+        { text: 'Địa điểm văn hóa', value: 'cultural' },
+        { text: 'Địa điểm chụp ảnh', value: 'checking' },
+        { text: 'Trung tâm vui chơi', value: 'center' },
+        { text: 'Vui chơi về đêm', value: 'night' }
+      ],
+      filterMode: 'tree',
+      filterSearch: true,
+      onFilter: (value, record) => record.typeLocation.startsWith(value)
+    },
+    {
+      key: '6',
+      title: 'Địa chỉ trên google map',
+      dataIndex: 'locationLink',
+      width: 300
+    },
+    {
+      key: '7',
+      title: 'Mô tả địa điểm',
+      render: params => (
+        <Typography>{HTMLReactParser(params.description)}</Typography>
+      ),
+      width: 400
+    },
+    {
+      key: '8',
       title: 'Kinh độ',
       render: params => <Typography>{params.location.lng}</Typography>
     },
     {
-      key: '5',
+      key: '9',
       title: 'Vỹ độ',
       render: params => <Typography>{params.location.lat}</Typography>
     },
     {
-      key: '6',
-      title: 'Thời gian di chuyển giữa 2 trạm',
-      render: params => <Typography>{params.travelTime} phút</Typography>
-    },
-    {
-      key: '7',
+      key: '10',
       title: 'Actions',
       render: record => {
         return (
@@ -216,18 +339,17 @@ function Test() {
   ]
 
   const onAddStudent = () => {
-    setIsAdd(true)
     const randomNumber = parseInt(Math.random() * 1000)
     const newStudent = {
       id: randomNumber,
-      name: 'Name ' + randomNumber,
-      email: randomNumber + '@gmail.com',
-      address: 'Address ' + randomNumber
+      ...formik.values
     }
     setDataSource(pre => {
-      return [...pre, newStudent]
+      return [newStudent, ...pre]
     })
+    setIsAdd(false)
   }
+
   const onDeleteStudent = record => {
     Modal.confirm({
       title: 'Bạn có muốn xóa trạm xe bạn đã chọn?',
@@ -250,103 +372,27 @@ function Test() {
     setEditingStudent(null)
   }
 
-  const getIndexInParent = el => Array.from(el.parentNode.children).indexOf(el)
-
-  const handleReorder = (dragIndex, draggedIndex) => {
-    setDataSource(oldState => {
-      const newState = [...oldState]
-      const item = newState.splice(dragIndex, 1)[0]
-      newState.splice(draggedIndex, 0, item)
-      return newState
-    })
-  }
-
-  useEffect(() => {
-    let start
-    let end
-    const container = document.querySelector('.ant-table-tbody')
-    const drake = dragula([container], {
-      moves: el => {
-        start = getIndexInParent(el)
-        return true
-      }
-    })
-
-    drake.on('drop', el => {
-      end = getIndexInParent(el)
-      handleReorder(start, end)
-    })
-  }, [])
-
-  const editformik = useFormik({
-    initialValues: {
-      nameBusStop: editingStudent?.nameBusStop,
-      location: {
-        lng: editingStudent?.location.lng,
-        lat: editingStudent?.location.lat
-      },
-      travelNear: editingStudent?.travelNear,
-      travelTime: editingStudent?.travelTime
-    },
-    enableReinitialize: true,
-    validationSchema: Yup.object({
-      nameBusStop: Yup.string()
-        .min(3, 'Tên trạm xe buýt tối thiểu trên 3 kí tự!')
-        .max(50, 'Tên trạm xe buýt không được dài quá 50 kí tự!')
-        .required('Phải điền tên trạm xe buýt!'),
-      location: Yup.object({
-        lat: Yup.string()
-          .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
-          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
-          .required('Phải điền kinh độ địa điểm!'),
-        lng: Yup.string()
-          .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
-          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
-          .required('Phải điền vĩ độ địa điểm!')
-      }),
-      travelNear: Yup.string().required(
-        'Phải điền địa điểm du lịch ở gần trạm!'
-      ),
-      travelTime: Yup.string().required(
-        'Phải điền thời gian di chuyển giữa 2 trạm!'
-      )
-    }),
-    onSubmit: values => {
-      console.log(values)
-    }
-  })
-
-  const handleArtLine = () => {
-    const dir = dataSource.map(i => Object.values(i.location))
-    setDirectionMap(dir)
-
-    let popup = []
-    popup = dataSource.map(i => ({
-      type: 'Feature',
-      properties: {
-        description: i.nameBusStop
-      },
-      geometry: {
-        type: 'Point',
-        coordinates: Object.values(i.location)
-      }
-    }))
-    setPopupMap(popup)
-  }
-
   const handleSubmit = () => {
     console.log(dataSource)
   }
 
+  useEffect(() => {
+    const data = {
+      ...travels,
+      image: newImage
+    }
+    setEditingStudent(data)
+  }, [newImage])
+
   return (
     <DashBoard>
-      <div>
-        <div ref={mapContainer} className="map-container" />
-      </div>
-      <Button onClick={onAddStudent}>Thêm trạm xe buýt mới</Button>
-      <Button onClick={handleArtLine}>Vẽ tuyến mới</Button>
+      <Button onClick={() => setIsAdd(true)}>Thêm trạm xe buýt mới</Button>
       <Button onClick={handleSubmit}>Xác nhận tạo mới tuyến</Button>
-      <Table columns={columns} dataSource={dataSource} />
+      <Table
+        columns={columns}
+        dataSource={dataSource}
+        scroll={{ x: 1500, y: 600 }}
+      />
       <Modal
         title="Thêm trạm xe buýt mới"
         open={isAdd}
@@ -355,66 +401,157 @@ function Test() {
         onCancel={() => {
           resetEditing()
         }}
+        onOk={() => onAddStudent()}
+        width="1200px"
       >
-        <Box style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <TextField
-            id="nameBusStop"
-            name="nameBusStop"
-            label="Tên trạm xe buýt"
-            value={formik.values.nameBusStop}
-            onChange={formik.handleChange}
-            error={
-              formik.touched.nameBusStop || Boolean(formik.errors.nameBusStop)
-            }
-            helperText={formik.errors.nameBusStop}
-          />
-          <TextField
-            id="location.lng"
-            name="location.lng"
-            label="Kinh độ"
-            value={formik.values.location.lng}
-            onChange={formik.handleChange}
-            error={
-              formik.touched.location?.lng ||
-              Boolean(formik.errors.location?.lng)
-            }
-            helperText={formik.errors.location?.lng}
-          />
-          <TextField
-            id="location.lat"
-            name="location.lat"
-            label="Vỹ độ"
-            value={formik.values.location.lat}
-            onChange={formik.handleChange}
-            error={
-              formik.touched.location?.lat ||
-              Boolean(formik.errors.location?.lat)
-            }
-            helperText={formik.errors.location?.lat}
-          />
-          <TextField
-            id="travelNear"
-            name="travelNear"
-            label="Địa điểm du lịch gần trạm xe"
-            value={formik.values.travelNear}
-            onChange={formik.handleChange}
-            error={
-              formik.touched.travelNear || Boolean(formik.errors.travelNear)
-            }
-            helperText={formik.errors.travelNear}
-          />
-          <TextField
-            id="travelTime"
-            name="travelTime"
-            label="Thời gian di chuyển giữa 2 trạm"
-            value={formik.values.travelTime}
-            onChange={formik.handleChange}
-            error={
-              formik.touched.travelTime || Boolean(formik.errors.travelTime)
-            }
-            helperText={formik.errors.travelTime}
-          />
-        </Box>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              autoFocus
+              id="title"
+              name="title"
+              type="text"
+              label="Tên địa điểm"
+              value={formik.values.title}
+              onChange={formik.handleChange}
+              error={formik.touched.title || Boolean(formik.errors.title)}
+              helperText={formik.errors.title}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Box sx={{ minWidth: 200 }}>
+              <InputLabel>Loại Hình Du lịch</InputLabel>
+              <Select
+                id="typeLocation"
+                name="typeLocation"
+                value={formik.values.typeLocation}
+                onChange={formik.handleChange}
+              >
+                <MenuItem value={'discover'}>Khám phá</MenuItem>
+                <MenuItem value={'cultural'}>Văn hóa</MenuItem>
+                <MenuItem value={'checking'}>Chụp ảnh</MenuItem>
+                <MenuItem value={'center'}>Trung tâm vui chơi</MenuItem>
+                <MenuItem value={'night'}>Vui chơi về đêm</MenuItem>
+              </Select>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="locationName"
+              name="locationName"
+              type="text"
+              label="Địa chỉ"
+              value={formik.values.locationName}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.locationName ||
+                Boolean(formik.errors.locationName)
+              }
+              helperText={formik.errors.locationName}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="locationLink"
+              name="locationLink"
+              type="text"
+              label="Địa chỉ trên google map"
+              value={formik.values.locationLink}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.locationLink ||
+                Boolean(formik.errors.locationLink)
+              }
+              helperText={formik.errors.locationLink}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <InputLabel>Toạ độ của địa điểm:</InputLabel>
+            <TextField
+              id="location.lng"
+              name="location.lng"
+              label="Kinh độ"
+              type="number"
+              value={formik.values.location.lng}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.location?.lng ||
+                Boolean(formik.errors.location?.lng)
+              }
+              helperText={formik.errors.location?.lng}
+            />
+            <TextField
+              id="location.lat"
+              name="location.lat"
+              label="Vĩ độ"
+              type="number"
+              value={formik.values.location.lat}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.location?.lat ||
+                Boolean(formik.errors.location?.lat)
+              }
+              helperText={formik.errors.location?.lat}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <InputLabel>Mô tả về địa điểm: </InputLabel>
+            <TextareaAutosize
+              style={{ width: 500, height: 200 }}
+              id="description"
+              name="description"
+              type="number"
+              value={formik.description}
+              onChange={formik.handleChange}
+              error={
+                formik.touched.description || Boolean(formik.errors.description)
+              }
+              helperText={formik.errors.description}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography
+              style={{
+                fontSize: '18px',
+                fontWeight: 'bold',
+                padding: '5px 0 5px 0'
+              }}
+            >
+              Hình ảnh địa điểm
+            </Typography>
+            <Box>
+              {newImage && (
+                <img
+                  style={{
+                    width: '300px',
+                    height: '300px',
+                    border: '3px solid #333333',
+                    boxShadow:
+                      '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+                  }}
+                  src={newImage}
+                  alt={'test'}
+                />
+              )}
+            </Box>
+            <Box sx={{ padding: '20px 0 20px 0' }}>
+              <Button
+                variant="contained"
+                component="label"
+                sx={{ fontWeight: 'bold' }}
+              >
+                Tải hình ảnh lên
+                <input
+                  hidden
+                  accept="image/*"
+                  multiple
+                  type="file"
+                  onChange={convert2base64}
+                />
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
       </Modal>
 
       <Modal
@@ -422,6 +559,7 @@ function Test() {
         open={isEditing}
         okText="Lưu lại"
         cancelText="Hủy"
+        width="1200px"
         onCancel={() => {
           resetEditing()
         }}
@@ -429,7 +567,7 @@ function Test() {
           setDataSource(pre => {
             return pre.map(student => {
               if (student.id === editingStudent.id) {
-                return editingStudent
+                return editformik.values
               } else {
                 return student
               }
@@ -438,68 +576,162 @@ function Test() {
           resetEditing()
         }}
       >
-        <Box style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <TextField
-            id="nameBusStop"
-            name="nameBusStop"
-            label="Tên trạm xe buýt"
-            value={editformik.values.nameBusStop}
-            onChange={editformik.handleChange}
-            error={
-              editformik.touched.nameBusStop ||
-              Boolean(editformik.errors.nameBusStop)
-            }
-            helperText={editformik.errors.nameBusStop}
-          />
-          <TextField
-            id="location.lng"
-            name="location.lng"
-            label="Kinh độ"
-            value={editformik.values.location.lng}
-            onChange={editformik.handleChange}
-            error={
-              editformik.touched.location?.lng ||
-              Boolean(editformik.errors.location?.lng)
-            }
-            helperText={editformik.errors.location?.lng}
-          />
-          <TextField
-            id="location.lat"
-            name="location.lat"
-            label="Vỹ độ"
-            value={editformik.values.location.lat}
-            onChange={editformik.handleChange}
-            error={
-              editformik.touched.location?.lat ||
-              Boolean(editformik.errors.location?.lat)
-            }
-            helperText={editformik.errors.location?.lat}
-          />
-          <TextField
-            id="travelNear"
-            name="travelNear"
-            label="Địa điểm du lịch gần trạm xe"
-            value={editformik.values.travelNear}
-            onChange={editformik.handleChange}
-            error={
-              editformik.touched.travelNear ||
-              Boolean(editformik.errors.travelNear)
-            }
-            helperText={editformik.errors.travelNear}
-          />
-          <TextField
-            id="travelTime"
-            name="travelTime"
-            label="Thời gian di chuyển giữa 2 trạm"
-            value={editformik.values.travelTime}
-            onChange={editformik.handleChange}
-            error={
-              editformik.touched.travelTime ||
-              Boolean(editformik.errors.travelTime)
-            }
-            helperText={editformik.errors.travelTime}
-          />
-        </Box>
+        <Grid container spacing={2} columns={16}>
+          <Grid
+            item
+            xs={8}
+            style={{ display: 'flex', flexDirection: 'column' }}
+          >
+            {editformik.values.image && (
+              <img
+                style={{
+                  width: '300px',
+                  height: '300px',
+                  border: '3px solid #333333',
+                  boxShadow:
+                    '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+                }}
+                src={editformik.values.image}
+                alt={editformik.values.image}
+              />
+            )}
+            <Button
+              variant="contained"
+              component="label"
+              sx={{ fontWeight: 'bold', width: 200 }}
+            >
+              Tải hình ảnh lên
+              <input
+                hidden
+                accept="image/*"
+                multiple
+                type="file"
+                onChange={convert2base64}
+              />
+            </Button>
+          </Grid>
+          <Grid item xs={8}>
+            <Box>
+              <Typography style={{ fontWeight: 'bold' }}>
+                Tên địa điểm:
+              </Typography>
+              <TextField
+                id="title"
+                name="title"
+                type="text"
+                style={{ width: 300 }}
+                value={editformik.values?.title}
+                onChange={editformik.handleChange}
+                error={
+                  editformik.touched?.title || Boolean(editformik.errors?.title)
+                }
+                helperText={editformik.errors?.title}
+              />
+            </Box>
+            <Box>
+              <Typography style={{ fontWeight: 'bold' }}>Địa chỉ:</Typography>
+              <TextField
+                id="locationName"
+                name="locationName"
+                type="text"
+                style={{ width: 300 }}
+                value={editformik.values.locationName}
+                onChange={editformik.handleChange}
+                error={
+                  editformik.touched.locationName ||
+                  Boolean(editformik.errors.locationName)
+                }
+                helperText={editformik.errors.locationName}
+              />
+            </Box>
+            <Box>
+              <Typography style={{ fontWeight: 'bold' }}>
+                Loại Hình Du lịch
+              </Typography>
+              <Select
+                id="typeLocation"
+                name="typeLocation"
+                value={editformik.values.typeLocation}
+                onChange={editformik.handleChange}
+              >
+                <MenuItem value={'discover'}>Khám phá</MenuItem>
+                <MenuItem value={'cultural'}>Văn hóa</MenuItem>
+                <MenuItem value={'checking'}>Chụp ảnh</MenuItem>
+                <MenuItem value={'center'}>Trung tâm vui chơi</MenuItem>
+                <MenuItem value={'night'}>Vui chơi về đêm</MenuItem>
+              </Select>
+            </Box>
+            <Box>
+              <Typography style={{ fontWeight: 'bold' }}>
+                Địa chỉ trên google map
+              </Typography>
+
+              <TextField
+                id="locationLink"
+                name="locationLink"
+                type="text"
+                value={editformik.values.locationLink}
+                onChange={editformik.handleChange}
+                error={
+                  editformik.touched.locationLink ||
+                  Boolean(editformik.errors.locationLink)
+                }
+                helperText={editformik.errors.locationLink}
+              />
+            </Box>
+            <Box>
+              <Typography style={{ fontWeight: 'bold' }}>
+                Mô tả về địa điểm:
+              </Typography>
+              <TextareaAutosize
+                id="description"
+                name="description"
+                type="text"
+                style={{ width: 500, height: 200 }}
+                value={editformik.values.description}
+                onChange={editformik.handleChange}
+                error={
+                  editformik.touched.description ||
+                  Boolean(editformik.errors.description)
+                }
+                helperText={editformik.errors.description}
+              />
+            </Box>
+            <Box>
+              <Typography style={{ fontWeight: 'bold' }}>
+                Toạ độ địa điểm:
+              </Typography>
+              <Box>
+                <Typography style={{ fontWeight: 'bold' }}>Kinh độ:</Typography>
+                <TextField
+                  id="location.lng"
+                  name="location.lng"
+                  type="number"
+                  value={editformik.values.location.lng}
+                  onChange={editformik.handleChange}
+                  error={
+                    editformik.touched.location?.lng ||
+                    Boolean(editformik.errors.location?.lng)
+                  }
+                  helperText={editformik.errors.location?.lng}
+                />
+                <Typography style={{ fontWeight: 'bold' }}>Vĩ độ:</Typography>
+                <TextField
+                  id="location.lat"
+                  name="location.lat"
+                  type="number"
+                  value={editformik.values.location.lat}
+                  onChange={editformik.handleChange}
+                  error={
+                    editformik.touched.location?.lat ||
+                    Boolean(editformik.errors.location?.lat)
+                  }
+                  helperText={editformik.errors.location?.lat}
+                />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
       </Modal>
     </DashBoard>
   )

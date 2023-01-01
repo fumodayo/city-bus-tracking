@@ -21,16 +21,7 @@ import { useNavigate } from 'react-router-dom'
 import MuiDrawer from '@mui/material/Drawer'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { Dashboard, DirectionsBus, Feed, Tour } from '@mui/icons-material'
-import BusRoutes from './busroutes/BusRoutes'
-import InfoBusRoute from './infobusroute/CreateInfoBusRoute'
-import Travels from './travels/Travels'
-import { Route, Routes } from 'react-router-dom'
-import Main from './main/Main'
-import MultiStepForm from './busroutes/MultiStepForm'
-import CreateTravels from './travels/CreateTravels'
 import BusAlertIcon from '@mui/icons-material/BusAlert'
-import ModeOfTravelIcon from '@mui/icons-material/ModeOfTravel'
-import { useEffect } from 'react'
 
 const drawerWidth = 270
 
@@ -145,11 +136,6 @@ const DashBoard = ({ children }) => {
         title: 'Tạo tuyến xe buýt',
         icon: <BusAlertIcon />,
         link: '/dashboard/busroute/create'
-      },
-      {
-        title: 'Tạo địa điểm du lịch',
-        icon: <ModeOfTravelIcon />,
-        link: '/dashboard/travel/create'
       }
     ],
     []
@@ -214,15 +200,17 @@ const DashBoard = ({ children }) => {
                   id={item.link}
                   onClick={() => navigate(item.link)}
                 >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : 'auto',
-                      justifyContent: 'center'
-                    }}
-                  >
-                    {item.icon}
-                  </ListItemIcon>
+                  <Tooltip title={item.title}>
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : 'auto',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      {item.icon}
+                    </ListItemIcon>
+                  </Tooltip>
                   <ListItemText
                     primary={item.title}
                     sx={{ opacity: open ? 1 : 0 }}
