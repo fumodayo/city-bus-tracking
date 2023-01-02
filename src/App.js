@@ -12,6 +12,7 @@ import MultiStepForm from 'pages/dashboard/busroutes/MultiStepForm'
 import CreateInfoBusRoute from 'pages/dashboard/infobusroute/CreateInfoBusRoute'
 import Main from 'pages/dashboard/main/Main'
 import Test from 'pages/dashboard/main/Test'
+import { useSelector } from 'react-redux'
 
 const theme = createTheme({
   palette: {
@@ -25,29 +26,39 @@ const theme = createTheme({
 })
 
 function App() {
+  const user = useSelector(state => state.auth.login?.currentUser)
+
   return (
     <ThemeProvider theme={theme}>
       <Routes>
+        {user ? (
+          <>
+            <Route path="/dashboard" element={<Main />} />
+            {/* Travel */}
+            <Route path="/dashboard/travels" element={<Travels />} />
+
+            {/* Bus Routes, Bus Stop, Time Bus Start, Line Routes */}
+            <Route path="/dashboard/busroutes" element={<BusRoutes />} />
+            <Route
+              path="/dashboard/busroute/create"
+              element={<MultiStepForm />}
+            />
+            <Route
+              path="/dashboard/busroute/:busrouteId"
+              element={<EditBusRoutes />}
+            />
+
+            {/* Info Bus Route */}
+            <Route
+              path="/dashboard/infobusroute"
+              element={<CreateInfoBusRoute />}
+            />
+          </>
+        ) : (
+          <Route path="/" element={<Home />} />
+        )}
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Login />} />
-
-        <Route path="/dashboard" element={<Main />} />
-        {/* Travel */}
-        <Route path="/dashboard/travels" element={<Travels />} />
-
-        {/* Bus Routes, Bus Stop, Time Bus Start, Line Routes */}
-        <Route path="/dashboard/busroutes" element={<BusRoutes />} />
-        <Route path="/dashboard/busroute/create" element={<MultiStepForm />} />
-        <Route
-          path="/dashboard/busroute/:busrouteId"
-          element={<EditBusRoutes />}
-        />
-
-        {/* Info Bus Route */}
-        <Route
-          path="/dashboard/infobusroute"
-          element={<CreateInfoBusRoute />}
-        />
+        <Route path="/login" element={<Login />} />
 
         <Route path="/*" element={<NotFound />} />
 

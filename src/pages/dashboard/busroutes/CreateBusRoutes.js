@@ -15,6 +15,8 @@ import {
 } from '@mui/material'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import danabus from 'danabus'
+import { Modal } from 'antd'
 
 const CreateBusRoutes = ({ setDataBusRoutes }) => {
   const formik = useFormik({
@@ -27,6 +29,7 @@ const CreateBusRoutes = ({ setDataBusRoutes }) => {
       operatingTime: '',
       colorRoute: '#000000'
     },
+    enableReinitialize: true,
     validationSchema: Yup.object({
       codeBusRoute: Yup.string()
         .min(3, 'Mã số tuyến xe buýt tối thiểu trên 3 kí tự!')
@@ -50,12 +53,26 @@ const CreateBusRoutes = ({ setDataBusRoutes }) => {
     })
   })
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setDataBusRoutes(formik.values)
+    setShowModal(true)
   }
+
+  const [showModal, setShowModal] = useState(false)
 
   return (
     <Box>
+      <Modal
+        title="Bạn có chắc với hành động này?"
+        open={showModal}
+        okText="Thêm mới"
+        cancelText="Hủy"
+        onCancel={() => setShowModal(false)}
+        onOk={async () => {
+          await danabus.createBusRoute(formik.values)
+          setShowModal(false)
+        }}
+      />
       <Typography
         style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
       >
@@ -82,7 +99,7 @@ const CreateBusRoutes = ({ setDataBusRoutes }) => {
             id="nameRoute"
             name="nameRoute"
             type="text"
-            label="Mã số tuyến"
+            label="Tên tuyến xe buýt"
             value={formik.values.nameRoute}
             onChange={formik.handleChange}
             error={formik.touched.nameRoute || Boolean(formik.errors.nameRoute)}
@@ -169,14 +186,21 @@ const CreateBusRoutes = ({ setDataBusRoutes }) => {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        onClick={handleSubmit}
-        color="primary"
-        variant="contained"
-        type="submit"
-      >
-        Tạo mới
-      </Button>
+      <Box style={{ margin: '20px 0 20px 0' }}>
+        <Typography
+          style={{ fontWeight: 'bold', color: 'red', marginBottom: '10px' }}
+        >
+          Bắt buộc "Tạo mới" trước khi đến các bước tiếp theo!
+        </Typography>
+        <Button
+          onClick={handleSubmit}
+          variant="contained"
+          type="submit"
+          color="warning"
+        >
+          Tạo mới
+        </Button>
+      </Box>
     </Box>
   )
 }

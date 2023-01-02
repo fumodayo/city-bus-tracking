@@ -122,18 +122,7 @@ function Row(props) {
                             {busStops.travelTime} phút
                           </TableCell>
                           <TableCell align="left">
-                            {
-                              <Link
-                                to={
-                                  '/dashboard/travel/' +
-                                  row.travels.filter(
-                                    i => i.title === busStops.travelNear
-                                  )[0].id
-                                }
-                              >
-                                {busStops.travelNear}
-                              </Link>
-                            }
+                            {busStops.travelNear}
                           </TableCell>
                           <TableCell align="left">
                             {moment(busStops.createdAt).format(

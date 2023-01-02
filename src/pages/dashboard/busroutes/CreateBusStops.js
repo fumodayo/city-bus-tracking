@@ -4,11 +4,11 @@ import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import DashBoard from '../DashBoard'
 import dragula from 'dragula'
 import 'dragula/dist/dragula.css'
-import { useBusStop } from 'hooks/useBusStop'
 import { useFormik } from 'formik'
 import { Box, TextField } from '@mui/material'
 import * as Yup from 'yup'
 import mapboxgl from '!mapbox-gl' // eslint-disable-line import/no-webpack-loader-syntax
+import danabus from 'danabus'
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDc4OTMzNzkwN2ZzM3ZueXE0NWdyNHB0In0.G_TZ_zbzQ8T7512A44nK9g'
@@ -223,11 +223,6 @@ function CreateBusStops({ dataBusRoutes }) {
     setIsAdd(false)
   }
 
-  // Tạo mới trạm xe buýt APIs
-  useEffect(() => {
-    console.log(dataSource)
-  }, [dataSource])
-
   const onDeleteStudent = record => {
     Modal.confirm({
       title: 'Bạn có muốn xóa trạm xe bạn đã chọn?',
@@ -334,12 +329,24 @@ function CreateBusStops({ dataBusRoutes }) {
     setPopupMap(popup)
   }
 
+  const [showModal, setShowModal] = useState(false)
   const handleSubmit = () => {
-    console.log(dataSource)
+    setShowModal(true)
   }
 
   return (
     <DashBoard>
+      <Modal
+        title="Bạn có chắc với hành động này?"
+        open={showModal}
+        okText="Thêm mới"
+        cancelText="Hủy"
+        onCancel={() => setShowModal(false)}
+        onOk={async () => {
+          await danabus.createManyBusStops(formik.values)
+          setShowModal(false)
+        }}
+      />
       <Typography
         style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
       >

@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
-import { informationBusRouteData } from 'actions/initialData/informationBusRouteData'
 import danabus from 'danabus'
 
 export const useFormatInfo = () => {
   const [info, setInfo] = useState([])
   useEffect(() => {
     const fetchBusStop = async () => {
-      const res = await informationBusRouteData
+      const res = await danabus.getInformationBusRoute()
       let inf = {}
-      inf.id = res[0].id
+      inf.id = res[0]._id
       inf.busTicketOneWay = res[0].busTicketOneWay
       inf.busTicketPrioritized = res[0].busTicketPrioritized
       inf.busTicketOrdinary = res[0].busTicketOrdinary

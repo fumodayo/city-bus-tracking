@@ -5,6 +5,8 @@ import * as Yup from 'yup'
 import { useFormatInfo } from 'hooks/useFormatInfo'
 import DashBoard from '../DashBoard'
 import { Send } from '@mui/icons-material'
+import { Modal } from 'antd'
+import danabus from 'danabus'
 
 export default function CreateInfoBusRoute() {
   const infos = useFormatInfo()
@@ -52,13 +54,25 @@ export default function CreateInfoBusRoute() {
     })
   })
 
-  // submit APIs
+  const [showModal, setShowModal] = useState(false)
+
   const handleSubmit = () => {
-    console.log(formik.values)
+    setShowModal(true)
   }
 
   return (
     <DashBoard>
+      <Modal
+        title="Bạn có chắc với hành động này?"
+        open={showModal}
+        okText="Thêm mới"
+        cancelText="Hủy"
+        onCancel={() => setShowModal(false)}
+        onOk={async () => {
+          await danabus.updatedInformationBusRoute(infos.id, formik.values)
+          setShowModal(false)
+        }}
+      />
       <Typography
         style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
       >

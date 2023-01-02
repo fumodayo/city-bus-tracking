@@ -12,16 +12,26 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  ListItemIcon
+  ListItemIcon,
+  Button
 } from '@mui/material'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
 import MenuIcon from '@mui/icons-material/Menu'
-import { Brightness4, Brightness7, Home } from '@mui/icons-material'
+import {
+  Brightness4,
+  Brightness7,
+  Home,
+  LogoutOutlined
+} from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import MuiDrawer from '@mui/material/Drawer'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { Dashboard, DirectionsBus, Feed, Tour } from '@mui/icons-material'
 import BusAlertIcon from '@mui/icons-material/BusAlert'
+import { useDispatch, useSelector } from 'react-redux'
+import danabus from 'danabus'
+import { createAxios } from 'utilities/createInstance'
+import { logoutSuccess } from 'redux/slices/auth'
 
 const drawerWidth = 270
 
@@ -94,6 +104,8 @@ const DashBoard = ({ children }) => {
   const [open, setOpen] = useState(false)
   const [dark, setDark] = useState(false)
 
+  const user = useSelector(state => state.auth.login?.currentUser)
+
   const darkTheme = useMemo(
     () =>
       createTheme({
@@ -140,6 +152,15 @@ const DashBoard = ({ children }) => {
     ],
     []
   )
+  const accessToken = user?.accessToken
+  const id = user?.id
+  const dispatch = useDispatch()
+
+  let axiosJWT = createAxios(user, dispatch, logoutSuccess)
+
+  const handleLogout = () => {
+    danabus.logOut(dispatch, id, navigate, accessToken, axiosJWT)
+  }
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -172,6 +193,20 @@ const DashBoard = ({ children }) => {
             >
               Trang điều hành
             </Typography>
+            {user && (
+              <Typography style={{ textTransform: 'uppercase' }}>
+                {user.username}
+              </Typography>
+            )}
+            <Button
+              onClick={handleLogout}
+              variant="outlined"
+              sx={{ fontWeight: 'bold', color: '#fff' }}
+              endIcon={<LogoutOutlined />}
+            >
+              Đăng xuất
+            </Button>
+
             <IconButton onClick={() => setDark(!dark)}>
               {dark ? <Brightness7 /> : <Brightness4 />}
             </IconButton>

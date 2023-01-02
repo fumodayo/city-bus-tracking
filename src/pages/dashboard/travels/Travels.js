@@ -20,6 +20,7 @@ import HTMLReactParser from 'html-react-parser'
 import Resizer from 'react-image-file-resizer'
 import { useRef } from 'react'
 import Highlighter from 'react-highlight-words'
+import danabus from 'danabus'
 
 function Travels() {
   const [isEditing, setIsEditing] = useState(false)
@@ -395,10 +396,6 @@ function Travels() {
     setEditingStudent(null)
   }
 
-  const handleSubmit = () => {
-    console.log(dataSource)
-  }
-
   useEffect(() => {
     const data = {
       ...travels,
@@ -407,14 +404,33 @@ function Travels() {
     setEditingStudent(data)
   }, [newImage])
 
+  const handleSubmit = async () => {
+    setShowModal(true)
+    console.log(dataSource)
+  }
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <DashBoard>
-      <Button variant="contained" onClick={() => setIsAdd(true)}>
-        Thêm trạm địa điểm du lịch mới
-      </Button>
-      <Button variant="contained" onClick={handleSubmit}>
-        Xác nhận tạo địa điểm du lịch{' '}
-      </Button>
+      <Modal
+        title="Bạn có chắc với hành động này?"
+        open={showModal}
+        okText="Thay đổi"
+        cancelText="Hủy"
+        onCancel={() => setShowModal(false)}
+        onOk={async () => {
+          await danabus.createManyTravels(dataSource)
+          setShowModal(false)
+        }}
+      />
+      <Box style={{ display: 'flex', gap: '20px', paddingBottom: '10px' }}>
+        <Button variant="contained" onClick={() => setIsAdd(true)}>
+          Thêm trạm địa điểm du lịch mới
+        </Button>
+        <Button variant="contained" onClick={handleSubmit}>
+          Xác nhận tạo địa điểm du lịch{' '}
+        </Button>
+      </Box>
       <Table
         columns={columns}
         dataSource={dataSource}

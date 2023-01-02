@@ -66,7 +66,7 @@ export default function Home() {
   const getLocationByInput = useSelector(state => state.routes.direction)
   useEffect(() => {
     if (getLocationByInput?.location[0]) {
-      mapRef.current.flyTo({
+      mapRef.current?.flyTo({
         center: [getLocationByInput.location[0], getLocationByInput.location[1]]
       })
     }

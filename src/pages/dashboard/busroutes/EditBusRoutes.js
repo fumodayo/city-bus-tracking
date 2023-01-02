@@ -12,8 +12,6 @@ import {
   Grid,
   FormControl,
   InputAdornment,
-  MenuItem,
-  Select,
   TextField,
   Input,
   TextareaAutosize
@@ -21,12 +19,17 @@ import {
 import * as Yup from 'yup'
 import mapboxgl from '!mapbox-gl' // eslint-disable-line import/no-webpack-loader-syntax
 import { useBusRoutes } from 'hooks/useBusRoutes'
+import danabus from 'danabus'
+import { useRoad } from 'hooks/useRoad'
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDc4OTMzNzkwN2ZzM3ZueXE0NWdyNHB0In0.G_TZ_zbzQ8T7512A44nK9g'
 
 const EditBusRoutes = () => {
   let { busrouteId } = useParams()
+  const roadMap = useRoad()
+  const [roadBusRoute, setRoadBusRoute] = useState([])
+
   const [isEditing, setIsEditing] = useState(false)
   const [isAdd, setIsAdd] = useState(false)
   const [editingStudent, setEditingStudent] = useState(null)
@@ -196,12 +199,12 @@ const EditBusRoutes = () => {
     {
       key: '4',
       title: 'Kinh độ',
-      render: params => <Typography>{params.location.lng}</Typography>
+      render: params => <Typography>{params.location?.lng}</Typography>
     },
     {
       key: '5',
       title: 'Vỹ độ',
-      render: params => <Typography>{params.location.lat}</Typography>
+      render: params => <Typography>{params.location?.lat}</Typography>
     },
     {
       key: '6',
@@ -231,21 +234,14 @@ const EditBusRoutes = () => {
     }
   ]
 
-  // Add APIs
-  const onAddStudent = () => {
-    const randomNumber = parseInt(Math.random() * 1000)
-    const newStudent = {
-      id: randomNumber,
-      ...formik.values
-    }
-    setDataSource(pre => {
-      return [...pre, newStudent]
-    })
-
+  const onAddStudent = async () => {
+    console.log(formik.values)
+    await danabus.createOneBusStop(formik.values)
     setIsAdd(false)
   }
 
-  const onDeleteStudent = record => {
+  const onDeleteStudent = async record => {
+    await danabus.removeBusStop(record.id)
     Modal.confirm({
       title: 'Bạn có muốn xóa trạm xe bạn đã chọn?',
       okText: 'Có',
@@ -257,8 +253,10 @@ const EditBusRoutes = () => {
       }
     })
   }
-  const onEditStudent = record => {
+
+  const onEditStudent = async record => {
     setIsEditing(true)
+    await danabus.updatedBusStop(record.id)
     setEditingStudent({ ...record })
   }
   const resetEditing = () => {
@@ -299,8 +297,8 @@ const EditBusRoutes = () => {
     initialValues: {
       nameBusStop: editingStudent?.nameBusStop,
       location: {
-        lng: editingStudent?.location.lng,
-        lat: editingStudent?.location.lat
+        lng: editingStudent?.location?.lng,
+        lat: editingStudent?.location?.lat
       },
       travelNear: editingStudent?.travelNear,
       travelTime: editingStudent?.travelTime
@@ -351,10 +349,6 @@ const EditBusRoutes = () => {
     setPopupMap(popup)
   }
 
-  const handleSubmit = () => {
-    console.log(dataSource)
-  }
-
   const formikRoute = useFormik({
     initialValues: {
       codeBusRoute: busrouteParams[0]?.codeBusRoute,
@@ -389,8 +383,37 @@ const EditBusRoutes = () => {
     })
   })
 
+  const [showModal, setShowModal] = useState(false)
+
+  const handleSubmit = () => {
+    setShowModal(true)
+  }
+
+  const onUpdated = async () => {
+    await danabus.updatedBusRoute(busrouteId, busrouteParams)
+    await danabus.updatedRoadMap(roadBusRoute[0].id, directionMap)
+    setShowModal(false)
+  }
+
+  useEffect(() => {
+    const filterRoad = roadMap.filter(
+      r =>
+        r.codeBusRoute === busrouteParams[0].codeBusRoute &&
+        r.directionRoute === busrouteParams[0].directionRoute
+    )
+    setRoadBusRoute(filterRoad)
+  }, [busrouteParams, roadMap])
+
   return (
     <DashBoard>
+      <Modal
+        title="Bạn có chắc với hành động này?"
+        open={showModal}
+        okText="Thêm mới"
+        cancelText="Hủy"
+        onCancel={() => setShowModal(false)}
+        onOk={onUpdated}
+      />
       <Typography
         style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
       >
@@ -410,53 +433,26 @@ const EditBusRoutes = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Typography style={{ fontWeight: 'bold' }}>Mã số tuyến</Typography>
-          <TextField
-            autoFocus
-            id="codeBusRoute"
-            name="codeBusRoute"
-            type="text"
-            value={formikRoute.values.codeBusRoute}
-            onChange={formikRoute.handleChange}
-            error={
-              formikRoute.touched.codeBusRoute ||
-              Boolean(formikRoute.errors.codeBusRoute)
-            }
-            helperText={formikRoute.errors.codeBusRoute}
-          />
+          <Typography style={{ fontSize: '20px', fontWeight: 'bold' }}>
+            {formikRoute.values?.codeBusRoute}
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography style={{ fontWeight: 'bold' }}>Tên tuyến</Typography>
-          <TextField
-            id="nameRoute"
-            name="nameRoute"
-            type="text"
-            value={formikRoute.values.nameRoute}
-            onChange={formikRoute.handleChange}
-            error={
-              formikRoute.touched.nameRoute ||
-              Boolean(formikRoute.errors.nameRoute)
-            }
-            helperText={formikRoute.errors.nameRoute}
-          />
+          <Typography style={{ fontSize: '20px', fontWeight: 'bold' }}>
+            {formikRoute.values?.nameRoute}
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <FormControl required sx={{ minWidth: 200 }}>
             <Typography style={{ fontWeight: 'bold' }}>
               Chiều của tuyến
             </Typography>
-            <Select
-              id="directionRoute"
-              name="directionRoute"
-              value={formikRoute.values.directionRoute}
-              onChange={formikRoute.handleChange}
-              error={
-                formikRoute.touched.directionRoute &&
-                Boolean(formikRoute.errors.directionRoute)
-              }
-            >
-              <MenuItem value={'turn'}>Chiều đi</MenuItem>
-              <MenuItem value={'return'}>Chiều về</MenuItem>
-            </Select>
+            <Typography style={{ fontSize: '20px', fontWeight: 'bold' }}>
+              {formikRoute.values?.directionRoute === 'turn'
+                ? 'Chiều đi'
+                : 'Chiều về'}
+            </Typography>
           </FormControl>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -499,17 +495,9 @@ const EditBusRoutes = () => {
           <Typography style={{ fontWeight: 'bold' }}>
             Thời gian tuyến hoạt động
           </Typography>
-          <TextField
-            id="operatingTime"
-            type="text"
-            name="operatingTime"
-            value={formikRoute.values.operatingTime}
-            onChange={formikRoute.handleChange}
-            error={
-              formikRoute.touched.operatingTime &&
-              Boolean(formikRoute.errors.operatingTime)
-            }
-          />
+          <Typography style={{ fontSize: '20px', fontWeight: 'bold' }}>
+            {formikRoute.values.operatingTime}
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <FormControl required sx={{ m: 1, minWidth: 200 }}>
@@ -528,10 +516,6 @@ const EditBusRoutes = () => {
           </FormControl>
         </Grid>
       </Grid>
-      <Button color="primary" variant="contained" type="submit">
-        Submit
-      </Button>
-
       <Typography
         style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
       >
@@ -620,7 +604,7 @@ const EditBusRoutes = () => {
         onCancel={() => {
           resetEditing()
         }}
-        onOk={() => {
+        onOk={e => {
           setDataSource(pre => {
             return pre.map(student => {
               if (student.id === editingStudent.id) {
@@ -630,6 +614,7 @@ const EditBusRoutes = () => {
               }
             })
           })
+          console.log(e.id)
           resetEditing()
         }}
       >

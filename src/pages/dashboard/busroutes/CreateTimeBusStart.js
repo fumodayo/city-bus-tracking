@@ -15,6 +15,8 @@ import * as Yup from 'yup'
 import { getTimeRange } from 'utilities/getTimeRange'
 import { Send } from '@mui/icons-material'
 import { Table } from 'react-bootstrap'
+import { Modal } from 'antd'
+import danabus from 'danabus'
 
 const CreateTimeBusStart = ({ dataBusRoutes }) => {
   const formik = useFormik({
@@ -26,15 +28,6 @@ const CreateTimeBusStart = ({ dataBusRoutes }) => {
     })
   })
 
-  // create time bus start API
-  const handleSubmit = () => {
-    console.log({
-      codeBusRoute: dataBusRoutes.codeBusRoute,
-      directionRoute: dataBusRoutes.directionRoute,
-      startingTime: tableTimeRange
-    })
-  }
-
   const [tableTimeRange, setTableTimeRange] = useState([])
 
   useEffect(() => {
@@ -42,8 +35,28 @@ const CreateTimeBusStart = ({ dataBusRoutes }) => {
     setTableTimeRange(timerange)
   }, [formik.values.timerange])
 
+  const [showModal, setShowModal] = useState(false)
+  const handleSubmit = () => {
+    setShowModal(true)
+  }
+
   return (
     <Box>
+      <Modal
+        title="Bạn có chắc với hành động này?"
+        open={showModal}
+        okText="Thêm mới"
+        cancelText="Hủy"
+        onCancel={() => setShowModal(false)}
+        onOk={async () => {
+          await danabus.createTimeBusStart({
+            codeBusRoute: dataBusRoutes.codeBusRoute,
+            directionRoute: dataBusRoutes.directionRoute,
+            startingTime: tableTimeRange
+          })
+          setShowModal(false)
+        }}
+      />
       <Typography
         style={{ fontSize: '20px', fontWeight: 'bold', padding: '20px' }}
       >
@@ -100,8 +113,8 @@ const CreateTimeBusStart = ({ dataBusRoutes }) => {
           </>
         )}
       </Box>
-      <Button variant="contained" endIcon={<Send />} onClick={handleSubmit}>
-        Xác nhận
+      <Button color="warning" variant="contained" onClick={handleSubmit}>
+        Tạo mới
       </Button>
     </Box>
   )
