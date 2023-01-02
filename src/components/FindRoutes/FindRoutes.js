@@ -10,7 +10,7 @@ import './FindRoutes.scss'
 import { setSearchLocation } from 'redux/slices/routes'
 import { useDispatch, useSelector } from 'react-redux'
 import { useAddress } from 'hooks/useAddress'
-import { MyLocation, Send } from '@mui/icons-material'
+import { MyLocation } from '@mui/icons-material'
 import { useLocationNear } from 'hooks/useLocationNear'
 import { useEffect } from 'react'
 import { useState } from 'react'
@@ -205,9 +205,9 @@ const FindRoutes = () => {
         </Box>
       </div>
       {directions?.map && (
-        <Source id="polylineLayer" type="geojson" data={directions?.map}>
+        <Source id="directionLayer" type="geojson" data={directions?.map}>
           <Layer
-            id="lineLayer"
+            id="lineDirectionLayer"
             type="line"
             source="my-data"
             layout={{

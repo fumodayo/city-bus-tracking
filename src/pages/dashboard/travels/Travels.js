@@ -188,11 +188,11 @@ function Travels() {
       location: Yup.object({
         lat: Yup.string()
           .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
-          .max(12, 'Kinh độ không được dài quá 12 kí tự!')
+          .max(30, 'Kinh độ không được dài quá 30 kí tự!')
           .required('Phải điền kinh độ địa điểm!'),
         lng: Yup.string()
           .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
-          .max(12, 'Vĩ độ không được dài quá 12 kí tự!')
+          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
           .required('Phải điền vĩ độ địa điểm!')
       })
     })
@@ -232,11 +232,11 @@ function Travels() {
       location: Yup.object({
         lat: Yup.string()
           .min(3, 'Kinh độ tối thiểu trên 3 kí tự!')
-          .max(12, 'Kinh độ không được dài quá 12 kí tự!')
+          .max(30, 'Kinh độ không được dài quá 30 kí tự!')
           .required('Phải điền kinh độ địa điểm!'),
         lng: Yup.string()
           .min(3, 'Vĩ độ tối thiểu trên 3 kí tự!')
-          .max(12, 'Vĩ độ không được dài quá 12 kí tự!')
+          .max(30, 'Vĩ độ không được dài quá 30 kí tự!')
           .required('Phải điền vĩ độ địa điểm!')
       })
     })

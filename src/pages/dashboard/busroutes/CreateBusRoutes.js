@@ -190,7 +190,7 @@ const CreateBusRoutes = ({ setDataBusRoutes }) => {
         <Typography
           style={{ fontWeight: 'bold', color: 'red', marginBottom: '10px' }}
         >
-          Bắt buộc "Tạo mới" trước khi đến các bước tiếp theo!
+          Vui lòng "Tạo mới" trước khi đến các bước tiếp theo!
         </Typography>
         <Button
           onClick={handleSubmit}

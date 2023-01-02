@@ -131,6 +131,15 @@ const EditBusRoutes = () => {
         popup.remove()
       })
     })
+    map.current.on('mousemove', e => {
+      document.getElementById('info').innerHTML =
+        // `e.point` is the x, y coordinates of the `mousemove` event
+        // relative to the top-left corner of the map.
+        JSON.stringify(e.point) +
+        '<br />' +
+        // `e.lngLat` is the longitude, latitude geographical position of the event.
+        JSON.stringify(e.lngLat.wrap())
+    })
   }, [directionMap, popupMap])
 
   const formik = useFormik({
@@ -235,8 +244,13 @@ const EditBusRoutes = () => {
   ]
 
   const onAddStudent = async () => {
-    console.log(formik.values)
-    await danabus.createOneBusStop(formik.values)
+    const createNew = {
+      codeBusRoute: busrouteParams[0].codeBusRoute,
+      directionRoute: busrouteParams[0].directionRoute,
+      ...formik.values
+    }
+    await danabus.createOneBusStop(createNew)
+    setDataSource(dataSource)
     setIsAdd(false)
   }
 
@@ -420,6 +434,7 @@ const EditBusRoutes = () => {
         Chỉnh sửa lộ trình tuyến xe buýt
       </Typography>
       <div>
+        <div id='info'></div>
         <div ref={mapContainer} className="map-container" />
       </div>
       <Button onClick={() => setIsAdd(true)}>Thêm trạm xe buýt mới</Button>
