@@ -1,3 +1,4 @@
-const REACT_APP_MAPBOX_KEY = process.env.REACT_APP_MAPBOX_KEY
+const REACT_APP_MAPBOX_KEY =
+  'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDdjb2ZnY3QxM2F6M3FtaW9zMDFpNWkzIn0.tPFJvhG-HJ0TdmJGolVjHA'
 
 export { REACT_APP_MAPBOX_KEY }
