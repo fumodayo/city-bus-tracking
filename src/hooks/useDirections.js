@@ -6,6 +6,7 @@ export const useDirections = () => {
   const points = useSelector(state => state.routes.direction)
   const [beginPoint, setBeginPoint] = useState([])
   const [endPoint, setEndPoint] = useState([])
+
   useEffect(() => {
     let start,
       end = []

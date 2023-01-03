@@ -406,7 +406,6 @@ function Travels() {
 
   const handleSubmit = async () => {
     setShowModal(true)
-    console.log(dataSource)
   }
   const [showModal, setShowModal] = useState(false)
 

@@ -8,7 +8,6 @@ import { setSearchLocation } from 'redux/slices/routes'
 const InputField = ({ idInput, placeholder }) => {
   const address = useAutoSuggestions()
   const { value, handleChange } = address
-  console.log(value)
   const [location, setLocation] = useState([])
   const dispatch = useDispatch()
 

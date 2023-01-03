@@ -28,7 +28,6 @@ export default function Login() {
       username: data.get('username'),
       password: data.get('password')
     }
-    console.log(newUser)
     danabus.loginUser(newUser, dispatch, navigate)
   }
 

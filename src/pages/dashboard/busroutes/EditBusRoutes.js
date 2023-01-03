@@ -21,6 +21,7 @@ import mapboxgl from '!mapbox-gl' // eslint-disable-line import/no-webpack-loade
 import { useBusRoutes } from 'hooks/useBusRoutes'
 import danabus from 'danabus'
 import { useRoad } from 'hooks/useRoad'
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoidGhhaXJ5byIsImEiOiJjbDc4OTMzNzkwN2ZzM3ZueXE0NWdyNHB0In0.G_TZ_zbzQ8T7512A44nK9g'
@@ -434,7 +435,7 @@ const EditBusRoutes = () => {
         Chỉnh sửa lộ trình tuyến xe buýt
       </Typography>
       <div>
-        <div id='info'></div>
+        <div id="info"></div>
         <div ref={mapContainer} className="map-container" />
       </div>
       <Button onClick={() => setIsAdd(true)}>Thêm trạm xe buýt mới</Button>
@@ -629,7 +630,6 @@ const EditBusRoutes = () => {
               }
             })
           })
-          console.log(e.id)
           resetEditing()
         }}
       >

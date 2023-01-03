@@ -129,6 +129,13 @@ const FindRoutes = () => {
         <Button variant="contained" onClick={handleFindNearBusStop}>
           Tìm trạm xe buýt
         </Button>
+        {location.length > 0 ? null : (
+          <Typography
+            style={{ fontSize: '15px', fontWeight: 'bold', color: 'red' }}
+          >
+            Không có trạm xe buýt ở gần đây!
+          </Typography>
+        )}
         <Typography style={{ marginTop: 10, fontSize: '20px' }}>
           Dẫn đường:
         </Typography>
@@ -204,12 +211,12 @@ const FindRoutes = () => {
           </Box>
         </Box>
       </div>
-      {directions?.map && (
-        <Source id="directionLayer" type="geojson" data={directions?.map}>
+      {directions.map && (
+        <Source id="directionLayer" type="geojson" data={directions.map}>
           <Layer
             id="lineDirectionLayer"
             type="line"
-            source="my-data"
+            source="data"
             layout={{
               'line-join': 'round',
               'line-cap': 'round'

@@ -111,7 +111,6 @@ export default function myDataProvider(apiUrl, httpClient) {
    */
   const convertHTTPResponse = (response, type, resource, params) => {
     const { headers, data } = response
-    console.log(type, response)
     switch (type) {
       case GET_LIST:
       case GET_MANY:
