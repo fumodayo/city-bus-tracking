@@ -10,6 +10,8 @@ import './listbusstop.scss'
 import { useBusStop } from 'hooks/useBusStop'
 
 const ListBusStopInRoute = ({ nameCodeRoute, turnRoute }) => {
+  console.log(nameCodeRoute, turnRoute)
+
   const busStop = useBusStop()
   const [listDataBusStop, setListDataBusStop] = useState([])
   useEffect(() => {

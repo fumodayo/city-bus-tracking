@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
-import danabus from 'danabus'
+import { locationTravelData } from 'actions/initialData/locationTravelData'
 
 export const useTravel = () => {
   const [travels, setTravels] = useState([])
   useEffect(() => {
     const fetchBusStop = async () => {
-      const res = await danabus.getFullTravel()
+      const res = await locationTravelData
       let tvs = []
       tvs = res.map(travel => ({
-        id: travel._id,
+        id: travel.id,
         title: travel.title,
         typeLocation: travel.typeLocation,
         image: travel.image,

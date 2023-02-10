@@ -45,8 +45,9 @@ const FilterRoutes = () => {
       .filter(route => route.isChecked)
       ?.map(i => i.codeBusRoute)
     dispatch(setFilterRoutes(routesChange))
-  }, [searchRoute])
+  }, [searchRoute, dispatch])
 
+  console.log(searchRoute)
   // show sidebar & get id in attribute element
   const [showSidebar, setShowSidebar] = useState(false)
   const [busRouteId, setBusRouteId] = useState('')

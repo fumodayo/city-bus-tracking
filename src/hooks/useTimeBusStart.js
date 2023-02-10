@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
-import danabus from 'danabus'
+import { timeBusStart } from 'actions/initialData/timeBusStart'
 
 export const useTimeBusStart = () => {
   const [time, setTime] = useState([])
   useEffect(() => {
     const fetchBusStop = async () => {
-      const res = await danabus.getTimeBusStart()
+      const res = await timeBusStart
       let bt = []
       bt = res.map(bus => ({
-        id: bus._id,
+        id: bus.id,
         codeBusRoute: bus.codeBusRoute,
         directionRoute: bus.directionRoute,
         startingTime: bus.startingTime,
