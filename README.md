@@ -52,5 +52,5 @@ $PROJECT_ROOT
 
 # Demo
 
-![Ảnh ví dụ](https://github.com/thairyo/city-bus-tracking/blob/master/documents/danabus-routes.gif)
-![Ảnh ví dụ](https://github.com/thairyo/city-bus-tracking/blob/master/documents/danabus-directions.gif)
+![Ảnh ví dụ](https://github.com/fumodayo/city-bus-tracking/blob/master/documents/danabus-routes.gif)
+![Ảnh ví dụ](https://github.com/fumodayo/city-bus-tracking/blob/master/documents/danabus-directions.gif)
